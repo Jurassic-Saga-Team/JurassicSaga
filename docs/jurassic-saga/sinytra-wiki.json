@@ -1,10 +1,10 @@
 {
-    "id": "jurassicsaga",
+    "id": "jurassic-saga",
     "platforms": {
         "modrinth": "jurassic-saga",
         "curseforge": "jurassic-saga"
     },
-    "modid": "jurassicsaga",
+    "modid": "jurassic-saga",
     "owners": [
       "Collinvht"
     ],

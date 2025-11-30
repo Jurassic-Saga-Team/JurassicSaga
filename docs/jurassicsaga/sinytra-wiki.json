@@ -1,0 +1,16 @@
+{
+    "id": "jurassicsaga",
+    "platforms": {
+        "modrinth": "jurassic-saga",
+        "curseforge": "jurassic-saga"
+    },
+    "modid": "jurassicsaga",
+    "owners": [
+      "Collinvht"
+    ],
+	"licenses": {
+        "project": {
+            "id": "ARR"
+        },
+	}
+}

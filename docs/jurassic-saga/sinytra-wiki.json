@@ -6,11 +6,11 @@
     },
     "modid": "jurassic-saga",
     "owners": [
-      "Collinvht"
+        "Collinvht"
     ],
-	"licenses": {
+    "licenses": {
         "project": {
             "id": "ARR"
-        },
-	}
+        }
+    }
 }

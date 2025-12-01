@@ -26,5 +26,9 @@
     "insectovores.mdx": {
         "name": "Insectovores",
         "icon": "Insectovore"
+    },
+    "fauna": {
+        "name": "Fauna",
+        "icon": "Fauna"
     }
 }

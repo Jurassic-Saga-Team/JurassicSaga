@@ -2,5 +2,9 @@
     "guides": {
         "name": "Guides",
         "icon": "Guides"
+    },
+    "fauna": {
+        "name": "Fauna",
+        "icon": "Fauna"
     }
 }

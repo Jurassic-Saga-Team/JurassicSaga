@@ -2,5 +2,9 @@
     "animal_cloning.mdx": {
         "name": "Animal Cloning",
         "icon": "Clone"
+    },
+    "fauna": {
+        "name": "Fauna",
+        "icon": "Fauna"
     }
 }

@@ -1,0 +1,14 @@
+{
+    "meganeura.mdx": {
+        "name": "Meganeura",
+        "icon": "Meganeura"
+    },
+    "basilisk.mdx": {
+        "name": "Basilisk",
+        "icon": "Basilisk"
+    },
+    "reed_frog.mdx": {
+        "name": "Reed Frog",
+        "icon": "Reed Frog"
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "apatosaurus.mdx": {
+        "name": "Apatosaurus",
+        "icon": "Apatosaurus"
+    },
+    "triceratops.mdx": {
+        "name": "Triceratops",
+        "icon": "Triceratops"
+    },
+    "dryosaurus.mdx": {
+        "name": "Dryosaurus",
+        "icon": "Dryosaurus"
+    },
+    "stegosaurus.mdx": {
+        "name": "Stegosaurus",
+        "icon": "Stegosaurus"
+    },
+    "parasaurolophus.mdx": {
+        "name": "Parasaurolophus",
+        "icon": "Parasaurolophus"
+    },
+    "ostritch.mdx": {
+        "name": "Ostritch",
+        "icon": "Ostritch"
+    },
+    "brachiosaurus.mdx": {
+        "name": "Brachiosaurus",
+        "icon": "Brachiosaurus"
+    },
+    "gallimimus.mdx": {
+        "name": "Gallimimus",
+        "icon": "Gallimimus"
+    },
+    "hadrosaurus.mdx": {
+        "name": "Hadrosaurus",
+        "icon": "Hadrosaurus"
+    }
+}

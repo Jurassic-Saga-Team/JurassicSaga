@@ -1,0 +1,22 @@
+{
+    "alligator.mdx": {
+        "name": "Alligator",
+        "icon": "Alligator"
+    },
+    "dilophosaurus.mdx": {
+        "name": "Dilophosaurus",
+        "icon": "Dilophosaurus"
+    },
+    "procompsognathus.mdx": {
+        "name": "Procompsognathus",
+        "icon": "Procompsognathus"
+    },
+    "tyrannosaurus.mdx": {
+        "name": "Tyrannosaurus",
+        "icon": "Tyrannosaurus"
+    },
+    "velociraptor.mdx": {
+        "name": "Velociraptor",
+        "icon": "Velociraptor"
+    }
+}

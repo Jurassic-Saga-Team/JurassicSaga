@@ -1,0 +1,30 @@
+{
+    "carnivores.mdx": {
+        "name": "Carnivores",
+        "icon": "Carnivore"
+    },
+    "herbivores.mdx": {
+        "name": "Herbivores",
+        "icon": "Herbivore"
+    },
+    "piscivores.mdx": {
+        "name": "Piscivores",
+        "icon": "Piscivore"
+    },
+    "omnivores.mdx": {
+        "name": "Omnivores",
+        "icon": "Omnivore"
+    },
+    "hemovores.mdx": {
+        "name": "Hemovores",
+        "icon": "Hemovore"
+    },
+    "ovivores.mdx": {
+        "name": "Ovivores",
+        "icon": "Ovivore"
+    },
+    "insectovores.mdx": {
+        "name": "Insectovores",
+        "icon": "Insectovore"
+    }
+}

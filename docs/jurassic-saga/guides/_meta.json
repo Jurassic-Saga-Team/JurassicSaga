@@ -2,5 +2,21 @@
     "animal_cloning.mdx": {
         "name": "Animal Cloning",
         "icon": "Clone"
+    },
+    "animal_info.mdx": {
+        "name": "Animal Information",
+        "icon": "Info"
+    },
+    "basic_gene.mdx": {
+        "name": "Basic Gene Tutorial",
+        "icon": "Genes"
+    },
+    "ore_levels.mdx": {
+        "name": "Ore Level",
+        "icon": "Ores"
+    },
+    "getting_started.mdx": {
+        "name": "Getting Started",
+        "icon": "Start"
     }
 }

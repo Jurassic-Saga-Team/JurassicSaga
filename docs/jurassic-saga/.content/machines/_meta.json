@@ -1,34 +1,30 @@
 {
-    "carnivores.mdx": {
-        "name": "Carnivores",
-        "icon": "Carnivore"
+    "genetic_analyzer.mdx": {
+        "name": "Genetic Analyzer",
+        "icon": "genetic_analyzer"
     },
-    "herbivores.mdx": {
-        "name": "Herbivores",
-        "icon": "Herbivore"
+    "gene_isolator.mdx": {
+        "name": "Gene Isolator",
+        "icon": "gene_isolator"
     },
-    "piscivores.mdx": {
-        "name": "Piscivores",
-        "icon": "Piscivore"
+    "dna_modifier.mdx": {
+        "name": "DNA Modifier",
+        "icon": "dna_modifier"
     },
-    "omnivores.mdx": {
-        "name": "Omnivores",
-        "icon": "Omnivore"
+    "incubator.mdx": {
+        "name": "Incubator",
+        "icon": "incubator"
     },
-    "hemovores.mdx": {
-        "name": "Hemovores",
-        "icon": "Hemovore"
+    "flora_cultivator.mdx": {
+        "name": "Flora Cultivator",
+        "icon": "flora_cultivator"
     },
-    "ovivores.mdx": {
-        "name": "Ovivores",
-        "icon": "Ovivore"
+    "feeder.mdx": {
+        "name": "Feeders",
+        "icon": "feeder"
     },
-    "insectovores.mdx": {
-        "name": "Insectovores",
-        "icon": "Insectovore"
-    },
-    "fauna.mdx": {
-        "name": "Fauna",
-        "icon": "Fauna"
+    "bug_zapper.mdx": {
+        "name": "Bug Zapper",
+        "icon": "bug_zapper"
     }
 }

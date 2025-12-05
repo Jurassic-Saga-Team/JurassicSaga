@@ -1,4 +1,16 @@
 {
+    "getting_started.mdx": {
+        "name": "Getting Started",
+        "icon": "Start"
+    },
+    "creating_an_egg.mdx": {
+        "name": "Creating an Egg",
+        "icon": "Create Egg"
+    },
+    "cultivating_eggs.mdx": {
+        "name": "Cultivating Eggs",
+        "icon": "Cultivate Egg"
+    },
     "animal_cloning.mdx": {
         "name": "Animal Cloning",
         "icon": "Clone"
@@ -14,9 +26,5 @@
     "ore_levels.mdx": {
         "name": "Ore Level",
         "icon": "Ores"
-    },
-    "getting_started.mdx": {
-        "name": "Getting Started",
-        "icon": "Start"
     }
 }

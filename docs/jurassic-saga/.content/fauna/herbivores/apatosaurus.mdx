@@ -63,12 +63,19 @@ When defeated, Apatosaurus may drop:
 
 ## Gallery
 <!-- Thumbnail -->
-<a href="jurassic-saga:images/apatosaurus_adult_male" target="_blank" rel="noopener">
-  <img src="jurassic-saga:images/apatosaurus_adult_male" 
-       alt="Apatosaurus Adult Male" 
-       width="256" 
-       style="cursor: zoom-in;">
-</a>
+<img src="jurassic-saga:images/apatosaurus_adult_male"
+     alt="Apatosaurus Adult Male"
+     width="256"
+     style="cursor: zoom-in;"
+     onclick="document.getElementById('apatoModal').style.display='block'">
+
+<!-- Modal -->
+<div id="apatoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); text-align:center;">
+  <img src="jurassic-saga:images/apatosaurus_adult_male"
+       alt="Apatosaurus Adult Male"
+       style="max-width:90%; max-height:90%; margin-top:5%;">
+  <p><button onclick="document.getElementById('apatoModal').style.display='none'">Close</button></p>
+</div>
 
 
 <Asset width={2000} location="jurassic-saga:images/apatosaurus_adult_male" title="Apatosaurus Adult Male"/>

@@ -72,27 +72,48 @@ When defeated, Apatosaurus may drop:
 ### Development Images
 
 <details>
-  <summary style={{display: 'inline-block', cursor: 'zoom-in'}}>
-    <div style={{
-      width: '256px',
-      height: '256px',
-      border: '2px solid #bbb',
-      borderRadius: '8px',
-      overflow: 'hidden'
-    }}>
-      <Asset width={256} location="jurassic-saga:images/brachiosaurus_showcase" title="Brachiosaurus"
-        style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+  <summary aria-label="Open Brachiosaurus image" style={{listStyle: 'none', cursor: 'zoom-in'}}>
+    <div
+      style={{
+        width: '256px',
+        height: '256px',
+        border: '2px solid #bbb',
+        borderRadius: '8px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
+        background: 'rgba(247, 247, 247, 0)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden'
+      }}
+    >
+      <Asset
+        width={256}
+        location="jurassic-saga:images/brachiosaurus_showcase"
+        title="Brachiosaurus"
+        style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+      />
     </div>
   </summary>
 
-  <!-- Expanded content below, not overlay -->
-  <div style={{ marginTop: '12px' }}>
-    <Asset width={1024} location="jurassic-saga:images/brachiosaurus_showcase" title="Brachiosaurus (Large)"
-      style={{ maxWidth: '90%', maxHeight: '85vh', objectFit: 'contain' }} />
+  <div
+    style={{
+      marginTop: '12px',
+      padding: '12px',
+      background: '#111',
+      borderRadius: '8px',
+      display: 'grid',
+      placeItems: 'center'
+    }}
+  >
+    <Asset
+      width={1024}
+      location="jurassic-saga:images/brachiosaurus_showcase"
+      title="Brachiosaurus (Large)"
+      style={{ maxWidth: '90vw', maxHeight: '85vh', objectFit: 'contain' }}
+    />
   </div>
 </details>
-
-
 
 
 <Asset width={256} location="jurassic-saga:images/brachiosaurus_showcase" title="Brachiosaurus"/>

@@ -58,7 +58,8 @@ When defeated, Apatosaurus may drop:
 
 ## Sounds
 <audio controls>
-  <Asset location="jurassic-saga:sounds/animal/v1/apatosaurus/apatosaurus_js_death01.ogg" title="Apatosaurus Death 01"/>
+  <source src="jurassic-saga:sounds/animal/v1/apatosaurus/apatosaurus_js_death01.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
 </audio>
 
 *(Placeholder — to be added once sound assets are finalized.)*  
@@ -66,9 +67,22 @@ When defeated, Apatosaurus may drop:
 ---
 
 ## Gallery
-<a href="jurassic-saga:images/apatosaurus_adult_male" target="_blank">
-  <Asset width={256} location="jurassic-saga:images/apatosaurus_adult_male" title="Apatosaurus Adult Male"/>
-</a>
+<!-- Thumbnail -->
+<img src="jurassic-saga:images/apatosaurus_adult_male" 
+     alt="Apatosaurus Adult Male" 
+     width="256" 
+     onclick="document.getElementById('apatoModal').showModal()">
+
+<!-- Modal -->
+<dialog id="apatoModal">
+  <img src="jurassic-saga:images/apatosaurus_adult_male" 
+       alt="Apatosaurus Adult Male" 
+       width="800">
+  <form method="dialog">
+    <button>Close</button>
+  </form>
+</dialog>
+
 
 <Asset width={2000} location="jurassic-saga:images/apatosaurus_adult_male" title="Apatosaurus Adult Male"/>
 *(Additional images and animations can be added here.)*

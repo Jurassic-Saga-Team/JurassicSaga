@@ -72,15 +72,13 @@ When defeated, Apatosaurus may drop:
 ### Development Images
 
 <details>
-  <summary aria-label="Open Brachiosaurus image" style={{listStyle: 'none', cursor: 'zoom-in'}}>
+  <summary style={{display: 'inline-block', listStyle: 'none', cursor: 'zoom-in'}}>
     <div
       style={{
         width: '256px',
         height: '256px',
         border: '2px solid #bbb',
         borderRadius: '8px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
-        background: '#f7f7f7',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -96,14 +94,16 @@ When defeated, Apatosaurus may drop:
     </div>
   </summary>
 
+  <!-- Fullscreen overlay -->
   <div
     style={{
-      marginTop: '12px',
-      padding: '12px',
-      background: '#111',
-      borderRadius: '8px',
-      display: 'grid',
-      placeItems: 'center'
+      position: 'fixed',
+      inset: 0,
+      background: 'rgba(0,0,0,0.65)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex: 9999
     }}
   >
     <Asset
@@ -114,6 +114,7 @@ When defeated, Apatosaurus may drop:
     />
   </div>
 </details>
+
 
 
 <Asset width={256} location="jurassic-saga:images/brachiosaurus_showcase" title="Brachiosaurus"/>

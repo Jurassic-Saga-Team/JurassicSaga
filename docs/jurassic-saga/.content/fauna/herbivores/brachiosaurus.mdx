@@ -67,55 +67,50 @@ When defeated, Apatosaurus may drop:
 ---
 
 ## Gallery
-### Community Images
-### Skins
-### Development Images
-
-<details>
-  <summary aria-label="Open Brachiosaurus image" style={{listStyle: 'none', cursor: 'zoom-in'}}>
-    <div
-      style={{
+{/* Define a simple wrapper component */}
+export const DinoShowcase = ({ name, location }) => (
+  <details>
+    <summary style={{ display: 'inline-block', cursor: 'zoom-in', listStyle: 'none' }}>
+      <div style={{
         width: '256px',
         height: '256px',
         border: '2px solid #bbb',
         borderRadius: '8px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
-        background: 'rgba(247, 247, 247, 0)',
+        overflow: 'hidden',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
-        overflow: 'hidden'
-      }}
-    >
-      <Asset
-        width={256}
-        location="jurassic-saga:images/brachiosaurus_showcase"
-        title="Brachiosaurus"
-        style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
-      />
-    </div>
-  </summary>
+        justifyContent: 'center'
+      }}>
+        <Asset
+          width={256}
+          location={location}
+          title={name}
+          style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+        />
+      </div>
+    </summary>
 
-  <div
-    style={{
+    <div style={{
       marginTop: '12px',
       padding: '12px',
       background: '#111',
       borderRadius: '8px',
       display: 'grid',
       placeItems: 'center'
-    }}
-  >
-    <Asset
-      width={1024}
-      location="jurassic-saga:images/brachiosaurus_showcase"
-      title="Brachiosaurus (Large)"
-      style={{ maxWidth: '90vw', maxHeight: '85vh', objectFit: 'contain' }}
-    />
-  </div>
-</details>
+    }}>
+      <Asset
+        width={1024}
+        location={location}
+        title={`${name} (Large)`}
+        style={{ maxWidth: '90vw', maxHeight: '85vh', objectFit: 'contain' }}
+      />
+    </div>
+  </details>
+);
 
-
+### Community Images
+### Skins
+### Development Images
 <Asset width={256} location="jurassic-saga:images/brachiosaurus_showcase" title="Brachiosaurus"/>
 <Asset width={256} location="jurassic-saga:images/baby_brachiosaurus_showcase" title="Baby Brachiosaurus"/>
 *(Additional images and animations can be added here.)*

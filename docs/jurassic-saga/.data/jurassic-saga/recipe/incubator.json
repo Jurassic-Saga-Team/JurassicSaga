@@ -31,6 +31,7 @@
   ],
   "result": {
     "count": 1,
-    "id": "jurassic-saga:textures/item/manmade/machine/incubator"
+    "id": "jurassic-saga:incubator",
+    "icon": "jurassic-saga:textures/item/manmade/machine/incubator"
   }
 }

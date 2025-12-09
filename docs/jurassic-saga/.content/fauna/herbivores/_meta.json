@@ -1,7 +1,7 @@
 {
     "apatosaurus.mdx": {
         "name": "Apatosaurus",
-        "icon": "apatosaurus_coin"
+        "icon": "item/natural/entity/animal/v1/extinct/apatosaurus/apatosaurus_coin"
     },
     "triceratops.mdx": {
         "name": "Triceratops",

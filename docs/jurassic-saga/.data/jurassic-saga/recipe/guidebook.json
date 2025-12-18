@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "tag": "jurassicsaga:fossil"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "jurassic-saga:guidebook"
+  }
+}

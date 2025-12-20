@@ -1,0 +1,18 @@
+{
+  "values": [
+    "jurassicsaga:carboniferous_plants_in_amber",
+    "jurassicsaga:permian_cicadomorph_in_amber",
+    "jurassicsaga:triassic_cicada_in_amber",
+    "jurassicsaga:triassic_mosquito_in_amber",
+    "jurassicsaga:jurassic_cicada_in_amber",
+    "jurassicsaga:jurassic_mosquito_in_amber",
+    "jurassicsaga:cretaceous_cicada_in_amber",
+    "jurassicsaga:cretaceous_mosquito_in_amber",
+    "jurassicsaga:paleogene_cicada_in_amber",
+    "jurassicsaga:paleogene_mosquito_in_amber",
+    "jurassicsaga:neogene_cicada_in_amber",
+    "jurassicsaga:neogene_mosquito_in_amber",
+    "jurassicsaga:quaternary_cicada_in_amber",
+    "jurassicsaga:quaternary_mosquito_in_amber"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "values": [
+    "jurassicsaga:egg_alligator",
+    "minecraft:egg",
+    "jurassicsaga:egg_ostrich",
+    "jurassicsaga:egg_spider",
+    "jurassicsaga:egg_fish",
+    "jurassicsaga:egg_basilisk",
+    "jurassicsaga:egg_frog",
+    "#minecraft:villager_plantable_seeds"
+  ]
+}

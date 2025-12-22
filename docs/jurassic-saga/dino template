@@ -1,0 +1,74 @@
+---
+title: Apatosaurus
+type: other
+id: jurassic-saga:apatosaurus
+icon: jurassic-saga:gifs/apatosaurus.gif
+history:
+  - 0.1: Added Apatosaurus
+custom: 
+    Health: Adult 100 Health (x50 Hearts)
+    Behavior: Neutral
+    Diet: Herbivore
+    Size: 29 Blocks Long, 7 Blocks Tall
+    Drops: Apatosaurus Raw Meat, Apatosaurus Remains
+    Egg Type: Ostrich Egg
+    Region: North America, Europe
+    Achievement: You're Making Them Nervous
+---
+
+# Scientific Name
+
+Description
+
+---
+
+## Appearance
+- 
+
+---
+
+## Behavior
+- 
+
+---
+
+## Diet
+- 
+
+---
+
+## Health
+-  
+
+---
+
+## Drops
+When defeated, Dinosaur may drop:  
+- 
+
+---
+
+## Sounds
+*(Placeholder: will features all the sounds once that feature is added to Wiki.)*
+
+---
+
+## Gallery
+### Community Images
+### Skins
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td><Asset width={256} location="jurassic-saga:images/apatosaurus_ocean" title="Apatosaurus Cosmetic Gene - Ocean"/></td>
+  </tr>
+</table>
+### Development Images
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td><Asset width={256} location="jurassic-saga:images/apatosaurus_showcase" title="Apatosaurus Showcase"/></td>
+  </tr>
+</table>
+
+---
+
+## Trivia
+- 

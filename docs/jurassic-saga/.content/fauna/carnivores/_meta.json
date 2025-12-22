@@ -1,7 +1,9 @@
 {
     "achillobator.mdx": {
-        "name": "Achillobator",
-        "icon": "Achillobator"
+        "name": "Achillobator"
+    },
+    "baryonyx.mdx": {
+        "name": "Baryonyx"
     },
     "alligator.mdx": {
         "name": "Alligator",

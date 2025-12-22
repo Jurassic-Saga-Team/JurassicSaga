@@ -1,7 +1,9 @@
 {
+    "alamosaurus.mdx": {
+        "name": "Alamosaurus"
+    },
     "apatosaurus.mdx": {
-        "name": "Apatosaurus",
-        "icon": "jurassic-saga:item/natural/entity/animal/v1/extinct/apatosaurus/apatosaurus_coin.png"
+        "name": "Apatosaurus"
     },
     "triceratops.mdx": {
         "name": "Triceratops",

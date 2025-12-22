@@ -5,6 +5,9 @@
     "apatosaurus.mdx": {
         "name": "Apatosaurus"
     },
+    "brachiosaurus.mdx": {
+        "name": "Brachiosaurus"
+    },
     "triceratops.mdx": {
         "name": "Triceratops",
         "icon": "triceratops_coin"
@@ -25,10 +28,7 @@
         "name": "Ostritch",
         "icon": "Ostritch"
     },
-    "brachiosaurus.mdx": {
-        "name": "Brachiosaurus",
-        "icon": "Brachiosaurus"
-    },
+    
     "gallimimus.mdx": {
         "name": "Gallimimus",
         "icon": "Gallimimus"

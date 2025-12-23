@@ -8,6 +8,9 @@
     "brachiosaurus.mdx": {
         "name": "Brachiosaurus"
     },
+    "callovosaurus.mdx": {
+        "name": "Callovosaurus"
+    },
     "triceratops.mdx": {
         "name": "Triceratops",
         "icon": "triceratops_coin"

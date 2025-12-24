@@ -11,13 +11,12 @@
     "callovosaurus.mdx": {
         "name": "Callovosaurus"
     },
+    "dryosaurus.mdx": {
+        "name": "Dryosaurus"
+    },
     "triceratops.mdx": {
         "name": "Triceratops",
         "icon": "triceratops_coin"
-    },
-    "dryosaurus.mdx": {
-        "name": "Dryosaurus",
-        "icon": "Dryosaurus"
     },
     "stegosaurus.mdx": {
         "name": "Stegosaurus",

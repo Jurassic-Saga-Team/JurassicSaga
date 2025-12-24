@@ -11,13 +11,12 @@
     "compsognathus.mdx": {
         "name": "Compsognathus"
     },
+    "dilophosaurus.mdx": {
+        "name": "Dilophosaurus"
+    },
     "alligator.mdx": {
         "name": "Alligator",
         "icon": "Alligator"
-    },
-    "dilophosaurus.mdx": {
-        "name": "Dilophosaurus",
-        "icon": "Dilophosaurus"
     },
     "procompsognathus.mdx": {
         "name": "Procompsognathus",

@@ -23,20 +23,28 @@
     "hadrosaurus.mdx": {
         "name": "Hadrosaurus"
     },
-    "triceratops.mdx": {
-        "name": "Triceratops",
-        "icon": "triceratops_coin"
+    "maiasaura.mdx": {
+        "name": "Maiasaura"
     },
-    "stegosaurus.mdx": {
-        "name": "Stegosaurus",
-        "icon": "Stegosaurus"
+    "microceratus.mdx": {
+        "name": "Microceratus"
+    },
+    "othnielie.mdx": {
+        "name": "Othnielia"
     },
     "parasaurolophus.mdx": {
-        "name": "Parasaurolophus",
-        "icon": "Parasaurolophus"
+        "name": "Parasaurolophus"
     },
-    "ostritch.mdx": {
-        "name": "Ostritch",
-        "icon": "Ostritch"
+    "protoceratops.mdx": {
+        "name": "Protoceratops"
+    },
+    "stegosaurus.mdx": {
+        "name": "Stegosaurus"
+    },
+    "styracosaurus.mdx": {
+        "name": "Styracosaurus"
+    },
+    "triceratops.mdx": {
+        "name": "Triceratops"
     }
 }

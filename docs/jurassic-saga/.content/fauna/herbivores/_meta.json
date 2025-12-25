@@ -20,6 +20,9 @@
     "gallimimus.mdx": {
         "name": "Gallimimus"
     },
+    "hadrosaurus.mdx": {
+        "name": "Hadrosaurus"
+    },
     "triceratops.mdx": {
         "name": "Triceratops",
         "icon": "triceratops_coin"
@@ -35,9 +38,5 @@
     "ostritch.mdx": {
         "name": "Ostritch",
         "icon": "Ostritch"
-    },
-    "hadrosaurus.mdx": {
-        "name": "Hadrosaurus",
-        "icon": "Hadrosaurus"
     }
 }

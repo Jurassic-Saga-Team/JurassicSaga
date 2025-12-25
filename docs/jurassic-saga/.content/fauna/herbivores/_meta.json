@@ -17,6 +17,9 @@
     "euoplocephalus.mdx": {
         "name": "Euoplocephalus"
     },
+    "gallimimus.mdx": {
+        "name": "Gallimimus"
+    },
     "triceratops.mdx": {
         "name": "Triceratops",
         "icon": "triceratops_coin"
@@ -32,11 +35,6 @@
     "ostritch.mdx": {
         "name": "Ostritch",
         "icon": "Ostritch"
-    },
-    
-    "gallimimus.mdx": {
-        "name": "Gallimimus",
-        "icon": "Gallimimus"
     },
     "hadrosaurus.mdx": {
         "name": "Hadrosaurus",

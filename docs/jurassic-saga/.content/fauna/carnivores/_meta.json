@@ -17,16 +17,19 @@
     "metriacanthosaurus.mdx": {
         "name": "Metriacanthosaurus"
     },
+    "proceratosaurus.mdx": {
+        "name": "Proceratosaurus"
+    },
     "procompsognathus.mdx": {
-        "name": "Procompsognathus",
-        "icon": "Procompsognathus"
+        "name": "Procompsognathus"
+    },
+    "troodon.mdx": {
+        "name": "Troodon"
     },
     "tyrannosaurus.mdx": {
-        "name": "Tyrannosaurus",
-        "icon": "Tyrannosaurus"
+        "name": "Tyrannosaurus"
     },
     "velociraptor.mdx": {
-        "name": "Velociraptor",
-        "icon": "Velociraptor"
+        "name": "Velociraptor"
     }
 }

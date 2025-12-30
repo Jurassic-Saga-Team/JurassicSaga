@@ -1,0 +1,232 @@
+---
+title: Genes
+id: jurassic-saga:genes
+icon: jurassic-saga:
+type: item
+history:
+  - 0.1: And start
+---
+
+Types of genes
+Cosmetic Genes:
+Pretty obvious what they do, they change the texture of the animal
+
+Lux Gene:
+If the animal supports it allows a glow layer to the animal based of lighting outside (currently unimplemented)
+
+Toxic Skin:
+When hitting an mob get wither effect for 100 ticks
+
+Venom Bite:
+Mob attack deals 100 ticks of wither
+
+Aggressive Instict:
+Raises aggresion of an mob by 0.25%
+
+Bone Density:
+Adds 10 armor toughness and 10 armor
+
+Tooth Hardness:
+Adds 8 attack damage
+
+Skin Toughness:
+Adds 5 armor toughness and 20 armor
+
+Light Skeleton:
+Adds and 0.25 speed boost to the animal
+
+Intensive Repair:
+Makes regeneration health 5 hearts instead of 1
+
+Macrosoma (can be applied 4 times):
+Increases mob model scale by 0.1%
+
+Microsoma (can be applied 4 times):
+Decreases mob model scale by 0.1%
+
+Gender Lean Male/Female:
+Applies the gender specified
+
+Infertility:
+Makes an mob unable to breed
+
+Lysine Deficiency:
+Unused,
+Intention will be that mobs need an source of lysine later
+
+Freq. Ovulation:
+Makes mob breed more
+
+Parental Investment:
+Makes baby grow up faster near parents
+
+Immune Response:
+No use yet.
+
+How to obtain:
+Aggressive Instict: Allay,
+Skin Toughness: Armadillo
+Arid Cosmetic: Camel
+Male Gender Lean: Cod
+Pasture Cosmetic: Cow
+Ocean Cosmetic: Dolphin
+Lightweight Skeleton: Enderman
+Taiga Cosmetic: Fox
+Female Gender Lean: Frog
+
+# Genetic Modifications
+
+Genes are special items that can be applied to prehistoric creatures to alter their appearance, behavior, stats, or biological traits.  
+Some genes provide cosmetic changes, while others grant powerful combat or survival bonuses.  
+Not all creatures support every gene, and some genes may be stackable or have future planned functionality.
+
+---
+
+# Gene Categories
+
+## Cosmetic Genes
+Purely visual modifications.  
+These genes change the **texture**, **pattern**, or **coloration** of a creature.
+
+Examples include:
+- **Arid Cosmetic**
+- **Pasture Cosmetic**
+- **Ocean Cosmetic**
+- **Taiga Cosmetic**
+- **Chaos Effect**, **Forest**, etc. (species‑specific)
+
+---
+
+# Functional Genes
+
+Below is a list of all functional genes and their effects.
+
+### **Lux Gene**
+- Adds a glow layer based on external lighting.  
+- *Currently unimplemented.*
+
+### **Toxic Skin**
+- When the creature is hit, the attacker receives **100 ticks of Wither**.
+
+### **Venom Bite**
+- The creature’s melee attacks inflict **100 ticks of Wither**.
+
+### **Aggressive Instinct**
+- Increases aggression level by **0.25%**.
+
+### **Bone Density**
+- Grants **+10 Armor Toughness**  
+- Grants **+10 Armor**
+
+### **Tooth Hardness**
+- Adds **+8 Attack Damage**
+
+### **Skin Toughness**
+- Grants **+5 Armor Toughness**  
+- Grants **+20 Armor**
+
+### **Light Skeleton**
+- Increases movement speed by **+0.25**
+
+### **Intensive Repair**
+- Increases natural regeneration from **1 heart → 5 hearts**
+
+### **Macrosoma** *(stackable up to 4 times)*
+- Increases creature model scale by **+0.1%** per application
+
+### **Microsoma** *(stackable up to 4 times)*
+- Decreases creature model scale by **–0.1%** per application
+
+### **Gender Lean (Male/Female)**
+- Forces the creature to become the specified gender
+
+### **Infertility**
+- Prevents the creature from breeding
+
+### **Lysine Deficiency**
+- *Unused.*  
+- Planned: creatures will require lysine supplements to survive.
+
+### **Frequent Ovulation**
+- Increases breeding frequency
+
+### **Parental Investment**
+- Baby grows faster when near its parents
+
+### **Immune Response**
+- *No current use.*
+
+---
+
+# How to Obtain Genes
+
+Some genes drop from specific vanilla mobs:
+
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent", fontWeight: "bold"}}>
+    <td>Gene</td>
+    <td>Dropped By</td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td>Aggressive Instinct</td>
+    <td>Allay</td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td>Skin Toughness</td>
+    <td>Armadillo</td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td>Arid Cosmetic</td>
+    <td>Camel</td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td>Male Gender Lean</td>
+    <td>Cod</td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td>Pasture Cosmetic</td>
+    <td>Cow</td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td>Ocean Cosmetic</td>
+    <td>Dolphin</td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td>Light Skeleton</td>
+    <td>Enderman</td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td>Taiga Cosmetic</td>
+    <td>Fox</td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td>Female Gender Lean</td>
+    <td>Frog</td>
+  </tr>
+</table>
+
+
+*(More sources may be added in future updates.)*
+
+---
+
+# Usage
+
+- Genes are applied directly to a creature using the [**DNA Modifier**](@jurassic-saga:dna_modifier) (or equivalent mechanic in your mod).  
+- Some genes can stack (e.g., **Macrosoma**, **Microsoma**).  
+- Cosmetic genes override the creature’s default texture.  
+- Functional genes modify stats immediately upon application.
+
+---
+
+# Notes & Limitations
+
+- Some genes are **species‑restricted** and will not apply to all creatures.  
+- Unimplemented genes will have no effect until future updates.  
+- Genes cannot be removed once applied.  
+- Applying multiple powerful genes may significantly alter balance.
+
+---
+
+# Trivia
+- 

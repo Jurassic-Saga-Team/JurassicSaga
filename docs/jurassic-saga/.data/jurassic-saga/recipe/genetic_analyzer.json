@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_bars"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "E": {
+      "item": "jurassicsaga:empty_syringe"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "L": {
+      "item": "minecraft:lever"
+    },
+    "P": {
+      "tag": "minecraft:wooden_pressure_plates"
+    }
+  },
+  "pattern": [
+    "PBE",
+    "GAL",
+    "IIL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "jurassicsaga:genetic_analyzer"
+  }
+}

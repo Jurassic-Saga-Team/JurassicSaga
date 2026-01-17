@@ -11,6 +11,9 @@
     "callovosaurus.mdx": {
         "name": "Callovosaurus"
     },
+    "corythosaurus.mdx": {
+        "name": "Corythosaurus"
+    },
     "dryosaurus.mdx": {
         "name": "Dryosaurus"
     },
@@ -26,8 +29,14 @@
     "maiasaura.mdx": {
         "name": "Maiasaura"
     },
+    "mamenchisaurus.mdx": {
+        "name": "Mamenchisaurus"
+    },
     "microceratus.mdx": {
         "name": "Microceratus"
+    },
+    "mussaurus.mdx": {
+        "name": "Mussaurus"
     },
     "othnielia.mdx": {
         "name": "Othnielia"

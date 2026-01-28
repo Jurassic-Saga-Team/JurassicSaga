@@ -9,223 +9,227 @@ history:
 
 ## Genetic Modifications
 
-Genes are special items that can be applied to prehistoric creatures to alter their appearance, behavior, stats, or biological traits.  
-Some genes provide cosmetic changes, while others grant powerful combat or survival bonuses.  
-Not all creatures support every gene, and some genes may be stackable or have future planned functionality.
+**Genes** are items that can be applied to prehistoric creatures to change appearance, behavior, stats, or biological traits.
+Some genes are **cosmetic** only; others provide **functional** bonuses that affect combat, survival, or life cycle.
+Not every gene works on every creature. Some genes are **stackable**, some are **species‑restricted**, and some are **unimplemented** or reserved for future updates.
 
 ---
 
-## Gene Categories
+## Categories
 
 ### Cosmetic Genes
-Purely visual modifications.  
-These genes change the **texture**, **pattern**, or **coloration** of a creature.
+Purely visual changes that alter a creature’s **texture**, **pattern**, or **coloration**.
+Cosmetic genes do not change stats or behavior.
 
-Examples include:
-- **Arid Cosmetic**
-- **Pasture Cosmetic**
-- **Ocean Cosmetic**
-- **Taiga Cosmetic**
-- **Chaos Effect**, **Forest**, etc. (species‑specific)
+**Examples**
+- **Arid Cosmetic** 
+- **Pasture Cosmetic** 
+- **Ocean Cosmetic** 
+- **Taiga Cosmetic** 
+- **Species‑specific cosmetics** such as **Chaos Effect**, **Forest**, etc.
+
+---
+
+### Functional Genes
+Modify stats, abilities, or life cycle. See the list below for details and current status.
 
 ---
 
 ## Functional Genes
 
-Below is a list of all functional genes and their effects.
+> Each entry lists the gene name, its effect, and whether it is currently implemented.
 
-#### **Lux Gene**
-- Adds a glow layer based on external lighting.  
-- *Currently unimplemented.*
+#### Lux Gene
+- **Effect:** Adds a glow layer based on external lighting.
+- **Status:** Unimplemented.
 
-#### **Toxic Skin**
-- When the creature is hit, the attacker receives **100 ticks of Wither**.
+#### Toxic Skin
+- **Effect:** When the creature is hit, the attacker receives **100 ticks of Wither**.
 
-#### **Venom Bite**
-- The creature’s melee attacks inflict **100 ticks of Wither**.
+#### Venom Bite
+- **Effect:** Creature melee attacks inflict **100 ticks of Wither**.
 
-#### **Aggressive Instinct**
-- Increases aggression level by **0.25%**.
+#### Aggressive Instinct
+- **Effect:** Increases aggression by **0.25**.
 
-#### **Bone Density**
-- Grants **+10 Armor Toughness**  
-- Grants **+10 Armor**
+#### Bone Density
+- **Effect:** **+10 Armor Toughness**; **+10 Armor**.
 
-#### **Tooth Hardness**
-- Adds **+8 Attack Damage**
+#### Tooth Hardness
+- **Effect:** **+8 Attack Damage**.
 
-#### **Skin Toughness**
-- Grants **+5 Armor Toughness**  
-- Grants **+20 Armor**
+#### Skin Toughness
+- **Effect:** **+5 Armor Toughness**; **+20 Armor**.
 
-#### **Light Skeleton**
-- Increases movement speed by **+0.25**
+#### Light Skeleton
+- **Effect:** **+0.25** movement speed.
 
-#### **Intensive Repair**
-- Increases natural regeneration from **1 heart → 5 hearts**
+#### Intensive Repair
+- **Effect:** Increases natural regeneration from **1 heart** to **5 hearts**.
 
-#### **Macrosoma** *(stackable up to 4 times)*
-- Increases creature model scale by **+0.1%** per application
+#### Macrosoma
+- **Effect:** Increases model scale by **+0.1%** per application.
+- **Stacking:** Up to **4** times.
 
-#### **Microsoma** *(stackable up to 4 times)*
-- Decreases creature model scale by **–0.1%** per application
+#### Microsoma
+- **Effect:** Decreases model scale by **−0.1%** per application.
+- **Stacking:** Up to **4** times.
 
-#### **Gender Lean (Male/Female)**
-- Forces the creature to become the specified gender
+#### Gender Lean (Male / Female)
+- **Effect:** Forces the creature to the specified gender.
 
-#### **Infertility**
-- Prevents the creature from breeding
+#### Infertility
+- **Effect:** Prevents the creature from breeding.
 
-#### **Lysine Deficiency**
-- *Unused.*  
+#### Lysine Deficiency
+- **Effect:** Currently unused.
 
-#### **Frequent Ovulation**
-- Increases breeding frequency
+#### Frequent Ovulation
+- **Effect:** Increases breeding frequency.
 
-#### **Parental Investment**
-- Baby grows faster when near its parents
+#### Parental Investment
+- **Effect:** Babies grow faster when near their parents.
 
-#### **Immune Response**
-- *No current use.*
+#### Immune Response
+- **Effect:** No current use.
 
 ---
 
 ## How to Obtain Genes
 
-Genes are not dropped by mobs.
-Instead, players must use a Syringe on a specific vanilla mob to obtain that mob’s associated gene.
+Genes are **not** dropped by mobs. Use a **Syringe** on a specific vanilla mob to extract that mob’s associated gene.
 
-The table below lists which mob yields which gene when extracted:
-
-<table style={{borderCollapse: "collapse"}}>
-    <tr style={{backgroundColor: "transparent", fontWeight: "bold"}}>
-        <td>Gene</td>
-        <td>Dropped By</td>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Gene</th>
+      <th style="text-align:left">Extracted From</th>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Aggressive Instinct</td>
-        <td>Allay</td>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aggressive Instinct</td>
+      <td>Allay</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Skin Toughness</td>
-        <td>Armadillo</td>
+    <tr>
+      <td>Skin Toughness</td>
+      <td>Armadillo</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Arid Cosmetic</td>
-        <td>Camel</td>
+    <tr>
+      <td>Arid Cosmetic</td>
+      <td>Camel</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Male Gender Lean</td>
-        <td>Cod</td>
+    <tr>
+      <td>Male Gender Lean</td>
+      <td>Cod</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Pasture Cosmetic</td>
-        <td>Cow</td>
+    <tr>
+      <td>Pasture Cosmetic</td>
+      <td>Cow</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Ocean Cosmetic</td>
-        <td>Dolphin</td>
+    <tr>
+      <td>Ocean Cosmetic</td>
+      <td>Dolphin</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Light Skeleton</td>
-        <td>Enderman</td>
+    <tr>
+      <td>Light Skeleton</td>
+      <td>Enderman</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Taiga Cosmetic</td>
-        <td>Fox</td>
+    <tr>
+      <td>Taiga Cosmetic</td>
+      <td>Fox</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Female Gender Lean</td>
-        <td>Frog</td>
+    <tr>
+      <td>Female Gender Lean</td>
+      <td>Frog</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Lux</td>
-        <td>Glow Squid</td>
+    <tr>
+      <td>Lux</td>
+      <td>Glow Squid</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Alpine Cosmetic</td>
-        <td>Goat</td>
+    <tr>
+      <td>Alpine Cosmetic</td>
+      <td>Goat</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Steppe Cosmetic</td>
-        <td>Llama</td>
+    <tr>
+      <td>Steppe Cosmetic</td>
+      <td>Llama</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Lysine Deficiency</td>
-        <td>Llama</td>
+    <tr>
+      <td>Lysine Deficiency</td>
+      <td>Llama</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Parental Investment</td>
-        <td>Panda</td>
+    <tr>
+      <td>Parental Investment</td>
+      <td>Panda</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Rainforest Cosmetic</td>
-        <td>Parrot</td>
+    <tr>
+      <td>Rainforest Cosmetic</td>
+      <td>Parrot</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Tundra Cosmetic</td>
-        <td>Polar Bear</td>
+    <tr>
+      <td>Tundra Cosmetic</td>
+      <td>Polar Bear</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Frequent Ovulation</td>
-        <td>Rabbit</td>
+    <tr>
+      <td>Frequent Ovulation</td>
+      <td>Rabbit</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Forest Cosmetic</td>
-        <td>Rabbit</td>
+    <tr>
+      <td>Forest Cosmetic</td>
+      <td>Rabbit</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Macrosoma</td>
-        <td>Ravager</td>
+    <tr>
+      <td>Macrosoma</td>
+      <td>Ravager</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>River Cosmetic</td>
-        <td>Salmon</td>
+    <tr>
+      <td>River Cosmetic</td>
+      <td>Salmon</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Microsoma</td>
-        <td>Silverfish</td>
+    <tr>
+      <td>Microsoma</td>
+      <td>Silverfish</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Lysine Deficiency</td>
-        <td>Llama</td>
+    <tr>
+      <td>Bone Density</td>
+      <td>Skeleton</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Bone Density</td>
-        <td>Skeleton</td>
+    <tr>
+      <td>Intensive Repair</td>
+      <td>Sniffer</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Intensive Repair</td>
-        <td>Sniffer</td>
+    <tr>
+      <td>Immune Response</td>
+      <td>Snow Golem</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Immune Response</td>
-        <td>Snow Golem</td>
+    <tr>
+      <td>Tooth Hardness</td>
+      <td>Wolf</td>
     </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td>Tooth Hardness</td>
-        <td>Wolf</td>
-    </tr>
+  </tbody>
 </table>
-*(More sources may be added in future updates.)*
+
+*(This list may be expanded or corrected in future updates.)*
 
 ---
 
 ## Usage
 
-- Genes are applied directly to a creature using the [**DNA Modifier**](@jurassic-saga:dna_modifier).  
-- Some genes can stack (e.g., **Macrosoma**, **Microsoma**).  
-- Cosmetic genes override the creature’s default texture.  
-- Functional genes modify stats immediately upon application.
+- Apply genes using the **DNA Modifier** component.
+- **Cosmetic genes** override the creature’s default texture immediately.
+- **Functional genes** apply their stat or behavior changes immediately upon application.
+- Some genes **stack** (for example, **Macrosoma** and **Microsoma**); stacking limits are noted above.
+- **Genes are permanent** once applied and cannot be removed.
 
 ---
 
 ## Notes & Limitations
 
-- Some genes are **species‑restricted** and will not apply to all creatures.  
-- Unimplemented genes will have no effect until future updates.  
-- Genes cannot be removed once applied.  
-- Applying multiple powerful genes may significantly alter balance.
+- **Species restrictions:** Some genes will not apply to certain creatures.
+- **Unimplemented genes:** Genes marked unimplemented or unused have no effect until implemented.
+- **Balance:** Applying multiple powerful genes can significantly change gameplay balance.
+- **Irreversibility:** Genes cannot be removed after application.
 
 ---
 

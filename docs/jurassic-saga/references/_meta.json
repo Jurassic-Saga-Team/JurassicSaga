@@ -1,0 +1,14 @@
+{
+    "animal_info.mdx": {
+        "name": "Animal Information",
+        "icon": "Info"
+    },
+    "ore_levels.mdx": {
+        "name": "Ore Level",
+        "icon": "Ores"
+    },
+    "experimental.mdx": {
+        "name":"Experimental Features",
+        "icon": "Experimental"
+    }
+}

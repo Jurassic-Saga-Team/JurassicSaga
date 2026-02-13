@@ -7,32 +7,12 @@
         "name": "Creating an Egg",
         "icon": "Create Egg"
     },
-    "cultivating_eggs.mdx": {
-        "name": "Cultivating Eggs",
-        "icon": "Cultivate Egg"
-    },
-    "modifying_dna.mdx": {
+        "modifying_dna.mdx": {
         "name": "DNA Modification",
         "icon": "DNA Modification"
     },
-    "animal_info.mdx": {
-        "name": "Animal Information",
-        "icon": "Info"
-    },
-    "ore_levels.mdx": {
-        "name": "Ore Level",
-        "icon": "Ores"
-    },
-    "experimental.mdx": {
-        "name":"Experimental Features",
-        "icon": "Experimental"
-    },
-    "installing_addons.mdx": {
-        "name": "Installing a Addon",
-        "icon": "Addon"
-    },
-    "creating_addons.mdx": {
-        "name": "Creating an Addon",
-        "icon": "Addon Creation"
+    "cultivating_eggs.mdx": {
+        "name": "Cultivating Eggs",
+        "icon": "Cultivate Egg"
     }
 }

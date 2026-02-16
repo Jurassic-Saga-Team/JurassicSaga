@@ -7,10 +7,13 @@ history:
   - 0.1: Added Troodon
 custom: 
     Health: Adult 25 Health (x12.5 Hearts)
-    Behavior: Neutral
+    Behavior: Hostile
     Diet: Carnivore
     Size: 3 Blocks Long, 1 Block Tall
     Drops: Troodon Raw Meat, Troodon Remains
+    Tameable: No
+    Breedable: Not yet implemented
+    Obtained: Fossil Revival
     Egg Type: Chicken Egg
     Region: North America
     Achievement: "They're Everywhere!"
@@ -18,50 +21,45 @@ custom:
 
 # Troodon pectinodon
 
-A small theropod from the **Late Cretaceous**, Troodon had one of the largest brain‑to‑body ratios among dinosaurs.  
+A small theropod from the **Late Cretaceous**, Troodon had one of the largest brain-to-body ratios among dinosaurs.  
 Its keen senses, grasping hands, and serrated teeth suggest it was an intelligent and adaptable predator or omnivore.  
-In‑game, Troodon is fast, alert, and dangerous in groups.
+In-game, Troodon is fast, alert, and dangerous in groups.
 
 ---
 
 ## Appearance
-- Small, lightly built theropod with long legs for speed.  
-- Large eyes adapted for low‑light hunting.  
-- Narrow snout with finely serrated teeth.  
-- Adults reach up to **3 blocks in length** and **1 block in height** in‑game.
+- Small, lightly built theropod with long legs for speed
+- Large eyes adapted for low-light hunting
+- Narrow snout with finely serrated teeth
+- In-game size: **3 blocks long** and **1 block tall**
 
 ---
 
 ## Behavior
-- **Hostile**:  
-  - Actively attacks players and small creatures on sight.  
-  - Hunts in coordinated packs, overwhelming prey with speed and numbers.  
-  - Uses quick darting movements and rapid bites to harass targets.  
+- **Hostile**: Actively attacks players and small creatures on sight
+- Hunts in coordinated packs, overwhelming prey with speed and numbers
+- Uses quick darting movements and rapid bites to harass targets
+
+---
+
+## Obtaining
+Troodon does not spawn naturally. To obtain one, you must:
+1. Find ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/troodon/troodon_fossil_remains) [**Troodon Remains**](@jurassic-saga:fossil) or fossils
+2. Use the fossil revival process to create a Troodon
+3. Hatch from a **Chicken Egg** type egg
 
 ---
 
 ## Diet
-- **Carnivore**  
-- Feeds primarily on:  
-  - ![](@jurassic-saga:gifs/carnivore_edible.gif) **Meats**  
-- In‑game, it hunts small to medium animals and scavenges opportunistically.  
-
----
-
-## Health
-- **Adult**: 25 health (x12.5 hearts)  
+- **Carnivore**: feeds on ![](@jurassic-saga:gifs/carnivore_edible.gif) meat sources
+- Hunts small to medium animals and scavenges opportunistically
 
 ---
 
 ## Drops
 When defeated, Troodon may drop:  
-- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/troodon/troodon_raw) **[Troodon Raw Meat](@jurassic-saga:meats)**
-- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/troodon/troodon_fossil_remains) **[Troodon Remains](@jurassic-saga:fossil)**
-
----
-
-## Sounds
-*(Placeholder — to be added once sound assets are finalized.)*  
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/troodon/troodon_fossil_remains) [**Troodon Remains**](@jurassic-saga:fossil)
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/troodon/troodon_raw) [**Troodon Raw Meat**](@jurassic-saga:meats)
 
 ---
 
@@ -80,38 +78,90 @@ When defeated, Troodon may drop:
       <Asset width={256} location="jurassic-saga:images/community/troodon_haussbigsaucee" title="Troodon by HaussBigSauce"/>
       <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
         Troodon by HaussBigSauce
-        <sup>[[1]](https://discord.com/channels/476209601075740672/615231162893205521/1466188989722787893)</sup>
+        <sup>[[2]](https://discord.com/channels/476209601075740672/615231162893205521/1466188989722787893)</sup>
       </div>
     </td>
   </tr>
 </table>
+
 ### Skins
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/troodon_ocean" title="Troodon Cosmetic Gene - Ocean"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/troodon_savannah" title="Troodon Cosmetic Gene - Savannah"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/troodon_tundra" title="Troodon Cosmetic Gene - Tundra"/></td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/troodon_ocean" title="Troodon Cosmetic Gene - Ocean"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Ocean
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/troodon_savannah" title="Troodon Cosmetic Gene - Savannah"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Savannah
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/troodon_tundra" title="Troodon Cosmetic Gene - Tundra"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Tundra
+      </div>
+    </td>
   </tr>
 </table>
+
 ### Development Images
 <table style={{borderCollapse: "collapse"}}>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td><Asset width={256} location="jurassic-saga:images/troodon_showcase" title="Troodon Showcase"/></td>
-        <td><Asset width={256} location="jurassic-saga:images/troodon_savannah_showcase" title="Troodon Savannah Showcase"/></td>
-        <td><Asset width={256} location="jurassic-saga:images/troodon_rework_showcase" title="Troodon Rework Showcase"/></td>
-    </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td><Asset width={256} location="jurassic-saga:images/troodon_tundra_showcase" title="Troodon Tundra Showcase"/></td>
-        <td><Asset width={256} location="jurassic-saga:images/troodon_savannah_rework_showcase" title="Troodon Savannah Rework Showcase"/></td>
-        <td><Asset width={256} location="jurassic-saga:images/troodon_ocean_showcase" title="Troodon Ocean Showcase"/></td>
-    </tr>
-    <tr style={{backgroundColor: "transparent"}}>
-        <td><Asset width={256} location="jurassic-saga:images/baby_troodon_showcase" title="Baby Troodon Showcase"/></td>
-    </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/troodon_showcase" title="Troodon Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Troodon Showcase
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/troodon_savannah_showcase" title="Troodon Savannah Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Troodon Savannah Showcase
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/troodon_rework_showcase" title="Troodon Rework Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Troodon Rework Showcase
+      </div>
+    </td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/troodon_tundra_showcase" title="Troodon Tundra Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Troodon Tundra Showcase
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/troodon_savannah_rework_showcase" title="Troodon Savannah Rework Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Troodon Savannah Rework Showcase
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/troodon_ocean_showcase" title="Troodon Ocean Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Troodon Ocean Showcase
+      </div>
+    </td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/baby_troodon_showcase" title="Baby Troodon Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Baby Troodon Showcase
+      </div>
+    </td>
+  </tr>
 </table>
-*(Additional images and animations can be added here.)*
 
 ---
 
 ## Trivia
-- 
+- The achievement "They're Everywhere!" references Troodon's pack hunting behavior and their reputation as cunning, ubiquitous predators
+- Troodon was featured in the *Jurassic Park: The Game* (2011) as intelligent, venomous nocturnal hunters, though there is no scientific evidence for venom in real Troodon

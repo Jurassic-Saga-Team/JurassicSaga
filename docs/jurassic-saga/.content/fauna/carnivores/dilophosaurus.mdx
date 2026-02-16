@@ -11,6 +11,9 @@ custom:
     Diet: Carnivore
     Size: 4 Blocks Long, 2 Blocks Tall
     Drops: Dilophosaurus Remains, Dilophosaurus Raw Meat
+    Tameable: No
+    Breedable: Not yet implemented
+    Obtained: Fossil Revival
     Egg Type: Alligator Egg
     Region: United States
     Achievement: "Fetch The Stick Stupid"
@@ -18,35 +21,38 @@ custom:
 
 # Dilophosaurus wetherilli
 
-Dilophosaurus was a medium‑sized theropod from the **Early Jurassic period**, discovered in what is now the southwestern United States.  
+Dilophosaurus was a medium-sized theropod from the **Early Jurassic period**, discovered in what is now the southwestern United States.  
 It is most recognizable for the pair of distinctive crests on its head, which were likely used for display or species recognition.  
 Evidence suggests Dilophosaurus may have been a scavenger or opportunistic predator. Contrary to popular depictions, there is **no evidence** of venom or a neck frill.
 
 ---
 
 ## Appearance
-- Slender body with long legs adapted for running.  
-- Pair of thin, arched crests on the skull.  
-- Sharp teeth and claws suited for opportunistic predation.  
-- In‑game size: up to **4 blocks in length** and **2 blocks in height**.  
+- Slender body with long legs adapted for running
+- Pair of thin, arched crests on the skull
+- Sharp teeth and claws suited for opportunistic predation
+- In-game size: up to **4 blocks in length** and **2 blocks in height**
 
 ---
 
 ## Behavior
-- **Hostile**: Attacks players and other mobs on sight.  
-- May hunt smaller creatures or scavenge remains.  
-- Displays aggressive territorial behavior.  
+- **Hostile**: Attacks players and other mobs on sight
+- May hunt smaller creatures or scavenge remains
+- Displays aggressive territorial behavior
+
+---
+
+## Obtaining
+Dilophosaurus does not spawn naturally. To obtain one, you must:
+1. Find ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/dilophosaurus/dilophosaurus_fossil_remains) [**Dilophosaurus Remains**](@jurassic-saga:fossil) or fossils
+2. Use the fossil revival process to create a Dilophosaurus
+3. Hatch from an **Alligator Egg** type egg
 
 ---
 
 ## Diet
-- **Carnivore**: feeds on ![](@jurassic-saga:gifs/carnivore_edible.gif) meat sources.
-- Opportunistic predator, may scavenge when hunting is not possible.  
-
----
-
-## Health
-- **Adult**: 30 health (x15 hearts)  
+- **Carnivore**: feeds on ![](@jurassic-saga:gifs/carnivore_edible.gif) meat sources
+- Opportunistic predator, may scavenge when hunting is not possible
 
 ---
 
@@ -54,11 +60,6 @@ Evidence suggests Dilophosaurus may have been a scavenger or opportunistic preda
 When defeated, Dilophosaurus may drop:  
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/dilophosaurus/dilophosaurus_fossil_remains) [**Dilophosaurus Remains**](@jurassic-saga:fossil)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/dilophosaurus/dilophosaurus_raw) [**Dilophosaurus Raw Meat**](@jurassic-saga:meats)
-
----
-
-## Sounds
-*(Placeholder — to be added once sound assets are finalized.)*  
 
 ---
 
@@ -77,38 +78,90 @@ When defeated, Dilophosaurus may drop:
       <Asset width={256} location="jurassic-saga:images/community/dilophosaurus_iron6372" title="Dilophosaurus by Iron"/>
       <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
         Dilophosaurus by Iron
-        <sup>[[1]](https://discord.com/channels/476209601075740672/615231162893205521/1472712134201970840)</sup>
+        <sup>[[2]](https://discord.com/channels/476209601075740672/615231162893205521/1472712134201970840)</sup>
       </div>
     </td>
   </tr>
 </table>
+
 ### Skins
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/dilophosaurus_jungle" title="Dilophosaurus Cosmetic Gene - Jungle"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/dilophosaurus_ocean" title="Dilophosaurus Cosmetic Gene - Ocean"/></td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/dilophosaurus_jungle" title="Dilophosaurus Cosmetic Gene - Jungle"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Jungle
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/dilophosaurus_ocean" title="Dilophosaurus Cosmetic Gene - Ocean"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Ocean
+      </div>
+    </td>
   </tr>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/dilophosaurus_pasture" title="Dilophosaurus Cosmetic Gene - Pasture"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/dilophosaurus_rainforest" title="Dilophosaurus Cosmetic Gene - Rainforest"/></td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/dilophosaurus_pasture" title="Dilophosaurus Cosmetic Gene - Pasture"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Pasture
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/dilophosaurus_rainforest" title="Dilophosaurus Cosmetic Gene - Rainforest"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Rainforest
+      </div>
+    </td>
   </tr>
 </table>
+
 ### Development Images
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/dilophosaurus_showcase" title="Dilophosaurus Showcase"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/dilophosaurus_jungle_showcase" title="Jungle Dilophosaurus"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/dilophosaurus_ocean_showcase" title="Ocean Dilophosaurus"/></td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/dilophosaurus_showcase" title="Dilophosaurus Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Dilophosaurus Showcase
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/dilophosaurus_jungle_showcase" title="Dilophosaurus Jungle Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Dilophosaurus Jungle Showcase
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/dilophosaurus_ocean_showcase" title="Dilophosaurus Ocean Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Dilophosaurus Ocean Showcase
+      </div>
+    </td>
   </tr>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/dilophosaurus_pasture_showcase" title="Tundra Gallimimus"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/dilophosaurus_rainforest_showcase" title="Vivid Gallimimus"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/baby_dilophosaurus_showcase" title="Baby Dilophosaurus Showcase"/></td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/dilophosaurus_pasture_showcase" title="Dilophosaurus Pasture Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Dilophosaurus Pasture Showcase
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/dilophosaurus_rainforest_showcase" title="Dilophosaurus Rainforest Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Dilophosaurus Rainforest Showcase
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/baby_dilophosaurus_showcase" title="Baby Dilophosaurus Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Baby Dilophosaurus Showcase
+      </div>
+    </td>
   </tr>
 </table>
-*(Additional images and animations can be added here.)*
 
 ---
 
 ## Trivia
-- Dilophosaurus' Ocean Cosmetic Skin is based on the Dilophosaurus hologram seen in Jurassic World's climax. The model used in the scene  actually being Blue's model with a different head<sup>[[2]](https://jurassicpark.fandom.com/wiki/Dilophosaurus?file=Dilophasaurus_Delta.png)</sup>
+- The achievement "Fetch The Stick Stupid" references Dennis Nedry's encounter with a Dilophosaurus in the original *Jurassic Park* (1993) film
+- Dilophosaurus' Ocean Cosmetic Skin is based on the Dilophosaurus hologram seen in Jurassic World's climax, with the model actually being Blue's model with a different head<sup>[[3]](https://jurassicpark.fandom.com/wiki/Dilophosaurus?file=Dilophasaurus_Delta.png)</sup>

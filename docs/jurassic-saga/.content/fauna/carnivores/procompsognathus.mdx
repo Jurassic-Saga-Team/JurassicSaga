@@ -11,6 +11,9 @@ custom:
     Diet: Carnivore
     Size: 2 Blocks Long, 1 Block Tall
     Drops: Procompsognathus Raw Meat, Procompsognathus Remains
+    Tameable: No
+    Breedable: Not yet implemented
+    Obtained: Fossil Revival
     Egg Type: Chicken Egg
     Region: Germany
     Achievement: "Caution: Venom"
@@ -25,43 +28,39 @@ Its small size and speed made it effective at darting through underbrush, and it
 ---
 
 ## Appearance
-- Small, slender theropod with a lightweight frame.  
-- Long legs adapted for quick bursts of speed.  
-- Narrow snout with small, sharp teeth suited for catching insects and tiny prey.  
-- Adults reach up to **2 blocks in length** and **1 block in height** in‑game.  
+- Small, slender theropod with a lightweight frame
+- Long legs adapted for quick bursts of speed
+- Narrow snout with small, sharp teeth suited for catching insects and tiny prey
+- In-game size: **2 blocks long** and **1 block tall**
 
 ---
 
 ## Behavior
 - **Hostile (Requires 3)**:  
-  - A single Procompsognathus will not attack the player.  
-  - When **three or more** are present, they become aggressive and swarm their target.  
-  - Uses quick darting movements to harass prey and overwhelm through numbers.  
+    - A single Procompsognathus will not attack the player
+    - When **three or more** are present, they become aggressive and swarm their target
+- Uses quick darting movements to harass prey and overwhelm through numbers
+
+---
+
+## Obtaining
+Procompsognathus does not spawn naturally. To obtain one, you must:
+1. Find ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/procompsognathus/procompsognathus_fossil_remains) [**Procompsognathus Remains**](@jurassic-saga:fossil) or fossils
+2. Use the fossil revival process to create a Procompsognathus
+3. Hatch from a **Chicken Egg** type egg
 
 ---
 
 ## Diet
-- **Carnivore**  
-- Feeds primarily on:  
-  - ![](@jurassic-saga:gifs/carnivore_edible.gif) **Meats**  
-- In‑game, it hunts small creatures and scavenges scraps left by larger predators.  
-
----
-
-## Health
-- **Adult**: 9 health (x4.5 hearts)  
+- **Carnivore**: feeds on ![](@jurassic-saga:gifs/carnivore_edible.gif) meat sources
+- Hunts small creatures and scavenges scraps left by larger predators
 
 ---
 
 ## Drops
 When defeated, Procompsognathus may drop:  
-- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/procompsognathus/procompsognathus_raw) **[Procompsognathus Raw Meat](@jurassic-saga:meats)**
-- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/procompsognathus/procompsognathus_fossil_remains) **[Procompsognathus Remains](@jurassic-saga:fossil)**
-
----
-
-## Sounds
-*(Placeholder — to be added once sound assets are finalized.)*  
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/procompsognathus/procompsognathus_fossil_remains) [**Procompsognathus Remains**](@jurassic-saga:fossil)
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/procompsognathus/procompsognathus_raw) [**Procompsognathus Raw Meat**](@jurassic-saga:meats)
 
 ---
 
@@ -78,27 +77,53 @@ When defeated, Procompsognathus may drop:
     </td>
   </tr>
 </table>
+
 ### Skins
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/procompsognathus_jungle" title="Procompsognathus Cosmetic Gene - Jungle"/></td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/procompsognathus_jungle" title="Procompsognathus Cosmetic Gene - Jungle"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Jungle
+      </div>
+    </td>
   </tr>
 </table>
 
 ### Development Images
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/procompsognathus_showcase" title="Procompsognathus Showcase"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/procompsognathus_rework_showcase" title="Procompsognathus Rework Showcase"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/procompsognathus_jungle_showcase" title="Procompsognathus Jungle Showcase"/></td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/procompsognathus_showcase" title="Procompsognathus Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Procompsognathus Showcase
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/procompsognathus_rework_showcase" title="Procompsognathus Rework Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Procompsognathus Rework Showcase
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/procompsognathus_jungle_showcase" title="Procompsognathus Jungle Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Procompsognathus Jungle Showcase
+      </div>
+    </td>
   </tr>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/baby_procompsognathus_showcase" title="Baby Procompsognathus Showcase"/></td>
+    <td style={{textAlign: "center"}}>
+      <Asset width={256} location="jurassic-saga:images/baby_procompsognathus_showcase" title="Baby Procompsognathus Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Baby Procompsognathus Showcase
+      </div>
+    </td>
   </tr>
 </table>
-*(Additional images and animations can be added here.)*
 
 ---
 
 ## Trivia
--
+- The achievement "Caution: Venom" references the venomous bite attributed to "Compys" in Michael Crichton's *Jurassic Park* novels, though there is no scientific evidence for venom in real Procompsognathus
+- In the *Jurassic Park* franchise, Procompsognathus is often conflated with Compsognathus, with both being referred to as "Compys"

@@ -1,0 +1,22 @@
+{
+    "balloon_tour.mdx": {
+        "name": "Balloon tour",
+        "icon": "balloon_tour"
+    },
+    "visitor_helicopter.mdx": {
+        "name": "Visitor Helicopter",
+        "icon": "visitor_helicopter"
+    },
+    "ford_explorer.mdx": {
+        "name": "Ford Explorer",
+        "icon": "ford_explorer"
+    },
+    "jpog_helicopter.mdx": {
+        "name": "JPOG Helicopter",
+        "icon": "jpog_helicopter"
+    },
+    "jeep_wrangler.mdx": {
+        "name": "Jeep Wrangler",
+        "icon": "jeep_wrangler"
+    }
+}

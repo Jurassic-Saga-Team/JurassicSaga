@@ -4,64 +4,67 @@ type: other
 id: jurassic-saga:parasaurolophus
 icon: jurassic-saga:icons/parasaurolophus.gif
 history:
-  - 0.1: Added Parasaurolophus
+  - version: 0.1
+    changes:
+        - Added Parasaurolophus
+  - version: 0.1.5
+    changes:
+        - Added Rainforest Parasaurolophus
 custom: 
-    Health: Adult 85 Health (x42.5 Hearts)
+    Health: Adult 240 Health (x120 Hearts)
     Behavior: Neutral
     Diet: Herbivore
     Size: 12 Blocks Long, 5 Blocks Tall
     Drops: Parasaurolophus Raw Meat, Parasaurolophus Remains
+    Breedable: Not yet implemented
+    Obtained: Fossil Revival
     Egg Type: Ostrich Egg
-    Region: North America
+    Time Period: Cretaceous
     Achievement: "The One With A Pompadour"
 ---
 
 # Parasaurolophus cyrtocristatus
 
-A herbivorous dinosaur from the **Late Cretaceous**, known for its long, backward‑curving crest.  
+A herbivorous dinosaur from the **Late Cretaceous**, known for its long, backward-curving crest.  
 The crest may have been used for **visual display**, **sound resonance**, or **thermoregulation**.  
 Parasaurolophus likely lived in herds and fed on a variety of vegetation.
 
 ---
 
 ## Appearance
-- Large hadrosaur with a long, sweeping cranial crest.  
-- Slender body with strong hind limbs and a balancing tail.  
-- Smooth, rounded snout typical of hadrosaurids.  
-- Adults reach up to **12 blocks in length** and **5 blocks in height** in‑game.  
+- Large hadrosaur with a long, sweeping cranial crest
+- Slender body with strong hind limbs and a balancing tail
+- Smooth, rounded snout typical of hadrosaurids
+- In-game size: **12 blocks long** and **5 blocks tall**
 
 ---
 
 ## Behavior
-- **Neutral**:  
-  - Will retaliate when attacked.  
-  - Often found in herds, using group movement for safety.  
-  - Uses its crest to produce low‑frequency calls that alert nearby herd members.  
+- **Neutral**: Will not attack unless provoked
+- Retaliates when attacked
+- Often found in herds, using group movement for safety
+- Uses its crest to produce low-frequency calls that alert nearby herd members
+
+---
+
+## Obtaining
+Parasaurolophus does not spawn naturally. To obtain one, you must:
+1. Find ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/parasaurolophus/parasaurolophus_fossil_remains) [**Parasaurolophus Remains**](@jurassic-saga:fossil) or fossils
+2. Use the fossil revival process to create a Parasaurolophus
+3. Hatch from an **Ostrich Egg** type egg
 
 ---
 
 ## Diet
-- **Herbivore**  
-- Feeds primarily on:  
-  - ![](@jurassic-saga:gifs/leaves.gif) [**Leaves**](https://minecraft.wiki/w/Leaves)  
-- In‑game, it grazes peacefully in open plains and forest edges.  
-
----
-
-## Health
-- **Adult**: 85 health (x42.5 hearts)  
+- **Herbivore**: feeds primarily on <img src="https://i.imgur.com/INKBvsq.gif" width={32} height={32} style={{imageRendering: "pixelated"}}/> [**Leaves**](https://minecraft.wiki/w/Leaves)
+- Grazes peacefully in open plains and forest edges
 
 ---
 
 ## Drops
 When defeated, Parasaurolophus may drop:  
-- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/parasaurolophus/parasaurolophus_raw) **[Parasaurolophus Raw Meat](@jurassic-saga:meats)**  
-- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/parasaurolophus/parasaurolophus_fossil_remains) **[Parasaurolophus Remains](@jurassic-saga:fossil)**  
-
----
-
-## Sounds
-*(Placeholder — to be added once sound assets are finalized.)*  
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/parasaurolophus/parasaurolophus_fossil_remains) [**Parasaurolophus Remains**](@jurassic-saga:fossil)
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/parasaurolophus/parasaurolophus_raw) [**Parasaurolophus Raw Meat**](@jurassic-saga:meats)
 
 ---
 
@@ -70,14 +73,7 @@ When defeated, Parasaurolophus may drop:
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
     <td style={{textAlign: "center"}}>
-      <Asset width={256} location="jurassic-saga:images/community/parasaurolophus_calebdinoking" title="Parasaurolophus by Calebdinoking10"/>
-      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-        Parasaurolophus by Calebdinoking10
-        <sup>[[1]](https://discord.com/channels/476209601075740672/615231162893205521/1467226680698339401)</sup>
-      </div>
-    </td>
-    <td style={{textAlign: "center"}}>
-      <Asset width={256} location="jurassic-saga:images/community/parasaurolophus_leosaure" title="Parasaurolophus by Leosaure"/>
+      <img width={256} src="https://i.imgur.com/PSbnRWY.png" alt="Parasaurolophus by Leosaure"/>
       <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
         Parasaurolophus by Leosaure
         <sup>[[1]](https://discord.com/channels/476209601075740672/615231162893205521/1472615944961392800)</sup>
@@ -85,26 +81,76 @@ When defeated, Parasaurolophus may drop:
     </td>
   </tr>
 </table>
+
 ### Skins
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/parasaurolophus_forest" title="Hadrosaurus Cosmetic Gene - Forest"/></td>
+    <td style={{textAlign: "center"}}>
+      <img width={256} src="https://i.imgur.com/OnFzlFk.png" alt="Parasaurolophus Cosmetic Gene - Forest"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Forest
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <img width={256} src="https://i.imgur.com/UAMo28G.png" alt="Parasaurolophus Cosmetic Gene - Rainforest"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Rainforest
+      </div>
+    </td>
   </tr>
 </table>
+
 ### Development Images
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/parasaurolophus_showcase" title="Parasaurolophus Showcase"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/parasaurolophus_rework_showcase" title="Parasaurolophus Rework Showcase"/></td>
-    <td><Asset width={256} location="jurassic-saga:images/parasaurolophus_forest_showcase" title="Parasaurolophus Forest Showcase"/></td>
+    <td style={{textAlign: "center"}}>
+      <img width={256} src="https://i.imgur.com/esGXr5l.png" alt="Parasaurolophus Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Parasaurolophus Showcase
+        <sup>[[2]](https://discord.com/channels/476209601075740672/620220431294529536/620966509329776641)</sup>
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <img width={256} src="https://i.imgur.com/0A6d2dA.png" alt="Parasaurolophus Rework Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Parasaurolophus Rework Showcase
+        <sup>[[3]](https://discord.com/channels/476209601075740672/620220431294529536/1432832936045969548)</sup>
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <img width={256} src="https://i.imgur.com/HVpLr4k.png" alt="Baby Parasaurolophus Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Baby Parasaurolophus Showcase
+        <sup>[[4]](https://discord.com/channels/476209601075740672/620220431294529536/869646366081699890)</sup>
+      </div>
+    </td>
   </tr>
   <tr style={{backgroundColor: "transparent"}}>
-    <td><Asset width={256} location="jurassic-saga:images/baby_parasaurolophus_showcase" title="Baby Parasaurolophus Showcase"/></td>
+    <td style={{textAlign: "center"}}>
+      <img width={256} src="https://i.imgur.com/HebTaQ9.png" alt="Parasaurolophus Forest Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Parasaurolophus Forest Showcase
+        <sup>[[5]](https://discord.com/channels/476209601075740672/620220431294529536/1117153278313123850)</sup>
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <img width={256} src="https://i.imgur.com/7anboCO.png" alt="Parasaurolophus Rainforest Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Parasaurolophus Rainforest Showcase
+        <sup>[[6]](https://discord.com/channels/476209601075740672/620220431294529536/1453528744177303676)</sup>
+      </div>
+    </td>
   </tr>
 </table>
-*(Additional images and animations can be added here.)*
 
 ---
 
 ## Trivia
-- 
+- The achievement "The One With A Pompadour" is a playful reference to Parasaurolophus's distinctive backward-curving crest, which resembles a pompadour hairstyle
+- Parasaurolophus's hollow crest could produce distinctive trumpeting sounds, making it one of the few dinosaurs that scientists believe could vocalize in unique ways
+
+---
+
+<Callout variant="info">
+    Found an issue or have a suggestion? [Submit feedback](https://forms.gle/qpxsiVat9f6eVm2CA) • [Join Discord](https://discord.gg/3b8k78f)
+</Callout>

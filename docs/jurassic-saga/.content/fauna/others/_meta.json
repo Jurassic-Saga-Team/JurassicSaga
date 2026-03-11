@@ -13,5 +13,11 @@
     },
     "ostrich.mdx": {
         "name": "Ostrich"
+    },
+    "reed_frog.mdx": {
+        "name": "Reed Frog"
+    },
+    "tree_frog.mdx": {
+        "name": "Tree Frog"
     }
 }

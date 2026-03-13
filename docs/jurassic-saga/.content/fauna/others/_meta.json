@@ -2,14 +2,23 @@
     "alligator.mdx": {
         "name": "Alligator"
     },
+    "bonito.mdx": {
+        "name": "Bonito"
+    },
     "basilisk.mdx": {
         "name": "Basilisk"
+    },
+    "goat.mdx": {
+        "name": "Goat"
     },
     "guapote.mdx": {
         "name": "Guapote"
     },
     "mesolimulus.mdx": {
         "name": "Mesolimulus"
+    },
+    "mosquito.mdx": {
+        "name": "Mosquito"
     },
     "ostrich.mdx": {
         "name": "Ostrich"

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "F": {
+      "item": "jurassicsaga:facility_concrete"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "P": {
+      "item": "minecraft:piston"
+    }
+  },
+  "pattern": [
+    "IFI",
+    "PCP",
+    "IFI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "jurassic-saga:carnivore_feeder"
+  }
+}

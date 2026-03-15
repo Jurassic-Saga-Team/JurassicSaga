@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "D": {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    "F": {
+      "item": "jurassicsaga:facility_concrete"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "P": {
+      "item": "minecraft:piston"
+    }
+  },
+  "pattern": [
+    "IDI",
+    "FCF",
+    "PDP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "jurassic-saga:aquatic_feeder"
+  }
+}

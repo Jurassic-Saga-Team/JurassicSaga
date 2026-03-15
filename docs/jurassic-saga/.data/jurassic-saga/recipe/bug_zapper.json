@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "F": {
+      "item": "minecraft:soul_torch"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " C ",
+    "IFI",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "jurassic-saga:bug_zapper"
+  }
+}

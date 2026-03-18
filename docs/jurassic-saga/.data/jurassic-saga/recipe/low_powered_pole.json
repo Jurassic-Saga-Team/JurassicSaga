@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "I R",
+    "CI ",
+    "CI "
+  ],
+  "result": {
+    "count": 3,
+    "id": "jurassic-saga:low_powered_pole"
+  }
+}

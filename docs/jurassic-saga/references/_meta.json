@@ -10,5 +10,9 @@
     "experimental.mdx": {
         "name": "Experimental Features",
         "icon": "Experimental"
+    },
+    "upcoming_features.mdx": {
+        "name": "Upcoming Features",
+        "icon": "calendar-check"
     }
 }

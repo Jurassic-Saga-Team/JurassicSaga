@@ -1,10 +1,10 @@
 {
     "installing_addons.mdx": {
         "name": "Installing an Addon",
-        "icon": "Addon"
+        "icon": "Download"
     },
     "creating_addons.mdx": {
         "name": "Creating an Addon",
-        "icon": "Addon Creation"
+        "icon": "Wrench"
     }
 }

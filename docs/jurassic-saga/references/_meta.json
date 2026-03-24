@@ -5,14 +5,14 @@
     },
     "ore_levels.mdx": {
         "name": "Ore Level",
-        "icon": "Ores"
+        "icon": "Stone"
     },
     "experimental.mdx": {
         "name": "Experimental Features",
-        "icon": "Experimental"
+        "icon": "CircleAlert"
     },
     "upcoming_features.mdx": {
         "name": "Upcoming Features",
-        "icon": "Calendar Check"
+        "icon": "CalendarCheck"
     }
 }

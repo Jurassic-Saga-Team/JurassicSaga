@@ -7,6 +7,10 @@
         "name": "Creating an Egg",
         "icon": "Create Egg"
     },
+    "plant_creation.mdx": {
+        "name": "Creating an Plant",
+        "icon": "Plant"
+    },
         "modifying_dna.mdx": {
         "name": "DNA Modification",
         "icon": "DNA Modification"

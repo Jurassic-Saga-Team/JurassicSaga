@@ -1,11 +1,11 @@
 {
     "getting_started.mdx": {
         "name": "Getting Started",
-        "icon": "Start"
+        "icon": "Star"
     },
     "creating_an_egg.mdx": {
         "name": "Creating an Egg",
-        "icon": "Create Egg"
+        "icon": "Egg"
     },
     "plant_creation.mdx": {
         "name": "Creating an Plant",
@@ -13,10 +13,10 @@
     },
         "modifying_dna.mdx": {
         "name": "DNA Modification",
-        "icon": "DNA Modification"
+        "icon": "Dna"
     },
     "cultivating_eggs.mdx": {
         "name": "Cultivating Eggs",
-        "icon": "Cultivate Egg"
+        "icon": "EggFried"
     }
 }

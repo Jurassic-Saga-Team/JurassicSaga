@@ -14,5 +14,13 @@
     "upcoming_features.mdx": {
         "name": "Upcoming Features",
         "icon": "CalendarCheck"
+    },
+    "faq.mdx": {
+        "name": "Frequently Asked Questions",
+        "icon": "MessageCircleQuestionMark"
+    },
+    "commands.mdx": {
+        "name": "Commands",
+        "icon": "Terminal"
     }
 }

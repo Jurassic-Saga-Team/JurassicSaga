@@ -1,9 +1,5 @@
-<Callout variant="warning">
-    **Work in Progress:** This page is currently being compiled. Command documentation will be added as they are discovered and tested.
-</Callout>
-
 <Callout variant="info">
-    The last update on this page was on: 28th March 2026
+    The last update on this page was on: 29th March 2026
 </Callout>
 
 # Commands
@@ -15,89 +11,184 @@ This page provides a comprehensive list of all commands available in Jurassic Sa
 ## Overview
 
 Commands in Jurassic Saga allow players and server administrators to:
-- Manage creatures and their behavior
-- Control experimental features
-- Debug and troubleshoot issues
-- Adjust gameplay settings
-- Access administrative tools
+- Control creature breeding and growth
+- Manage feeding and metabolism systems
+- Toggle power requirements for fences
+- Adjust machine processing speeds
+- Enable or disable plant spreading
 
 ---
 
 ## Command Syntax
 
 Commands follow standard Minecraft syntax:
-- `/command <required> [optional]`
-- Arguments in `<brackets>` are required
-- Arguments in `[brackets]` are optional
+- `/gamerule <ruleName> <value>`
+- Most game rules accept `true` or `false` values
+- Some game rules accept numeric values within a specific range
 
 ---
 
-## Available Commands
+## Available Game Rules
 
-### General Commands
+### jsDropEggs
+**Syntax:** `/gamerule jsDropEggs <true|false>`  
+**Default:** `false`  
+**Description:** Controls whether creatures can lay eggs naturally.
 
-/gamerule jsDropEggs - true/false - allows animals to lay eggs.
-/gamerule jsFasterGrowth - true/false - allows animals to grow faster.
-/gamerule jsFeederDrain - true/false - disables consuming the items inside the feeders
-/gamerule jsFencesAlwaysOn - true/false - allows fence operate without power.
-/gamerule jsMachineSpeed - value - 10-500? (according to coder?)
-/gamerule jsMetabolism - true/false - disables or enables food/thirst
-/gamerule jsPlantSpread - true/false - allows plants to spread to nearby blocks
-<Callout variant="info">
-    Command documentation will be added here as they are discovered.
-</Callout>
+When enabled, creatures will produce eggs over time without requiring the genetic engineering system.
 
----
-
-### Administrative Commands
-
-<Callout variant="info">
-    Administrative command documentation will be added here as they are discovered.
-</Callout>
+**Usage Example:**
+```
+/gamerule jsDropEggs true
+```
 
 ---
 
-### Creature Management
+### jsFasterGrowth
+**Syntax:** `/gamerule jsFasterGrowth <true|false>`  
+**Default:** `false`  
+**Description:** Accelerates creature growth from baby to adult stage.
 
-<Callout variant="info">
-    Creature-related command documentation will be added here as they are discovered.
-</Callout>
+Useful for testing or speeding up park development.
+
+**Usage Example:**
+```
+/gamerule jsFasterGrowth true
+```
 
 ---
 
-### Debug & Development
+### jsFeederDrain
+**Syntax:** `/gamerule jsFeederDrain <true|false>`  
+**Default:** `true`  
+**Description:** Controls whether [**Feeders**](@jurassic-saga:feeder) consume food items when feeding creatures.
 
-<Callout variant="info">
-    Debug command documentation will be added here as they are discovered.
-</Callout>
+When set to `false`, feeders will feed creatures without depleting their food supply, effectively providing unlimited food.
+
+**Usage Example:**
+```
+/gamerule jsFeederDrain false
+```
+
+---
+
+### jsFencesAlwaysOn
+**Syntax:** `/gamerule jsFencesAlwaysOn <true|false>`  
+**Default:** `false`  
+**Description:** Allows [**Fence Poles**](@jurassic-saga:fence_pole) to operate without requiring power from a Geothermal Power Generator.
+
+When enabled, electric fences remain active without a power source.
+
+**Usage Example:**
+```
+/gamerule jsFencesAlwaysOn true
+```
+
+---
+
+### jsMachineSpeed
+**Syntax:** `/gamerule jsMachineSpeed <value>`  
+**Range:** `10-500` (approximate)  
+**Default:** `100` (assumed)  
+**Description:** Adjusts the processing speed of machines like the [**Genetic Analyzer**](@jurassic-saga:genetic_analyzer), [**DNA Modifier**](@jurassic-saga:dna_modifier), and [**Incubator**](@jurassic-saga:incubator).
+
+Higher values increase processing speed. Lower values slow down machines.
+
+**Usage Example:**
+```
+/gamerule jsMachineSpeed 200
+```
+
+---
+
+### jsMetabolism
+**Syntax:** `/gamerule jsMetabolism <true|false>`  
+**Default:** `true`  
+**Description:** Controls whether creatures require food and water to survive.
+
+When disabled, creatures will not become hungry or thirsty. Useful for creative building or testing.
+
+**Usage Example:**
+```
+/gamerule jsMetabolism false
+```
+
+---
+
+### jsPlantSpread
+**Syntax:** `/gamerule jsPlantSpread <true|false>`  
+**Default:** `false`  
+**Description:** Allows prehistoric plants to spread naturally to nearby blocks.
+
+When enabled, plants grown from the [**Flora Cultivator**](@jurassic-saga:flora_cultivator) can propagate like vanilla plants.
+
+**Usage Example:**
+```
+/gamerule jsPlantSpread true
+```
 
 ---
 
 ## Permissions
 
-Information about required permissions for each command will be added once commands are documented.
+All game rule commands require operator permissions on servers. Players must have OP level 2 or higher to use `/gamerule` commands.
+
+**To grant operator permissions:**
+```
+/op <playername>
+```
 
 ---
 
 ## Usage Examples
 
-Practical examples will be provided for each command once they are documented.
+### Creative Mode Setup
+Disable metabolism and enable unlimited food for building:
+```
+/gamerule jsMetabolism false
+/gamerule jsFeederDrain false
+```
+
+### Fast Development
+Speed up creature growth and machine processing:
+```
+/gamerule jsFasterGrowth true
+/gamerule jsMachineSpeed 500
+```
+
+### Natural Ecosystem
+Enable egg laying and plant spreading for a self-sustaining park:
+```
+/gamerule jsDropEggs true
+/gamerule jsPlantSpread true
+```
+
+### Easy Mode
+Disable power requirements and metabolism:
+```
+/gamerule jsFencesAlwaysOn true
+/gamerule jsMetabolism false
+```
 
 ---
 
 ## Tips
 
-- Commands may require operator permissions on servers
-- Some commands may only work in development or debug modes
-- Command availability may vary depending on your game version
-- Check the [Discord server](https://discord.gg/3b8k78f) for community-discovered commands
+- Game rules persist across server restarts and world saves
+- Changes to game rules take effect immediately
+- Use `/gamerule` without arguments to see all available game rules
+- Experiment with different combinations to find the best settings for your playstyle
+- For multiplayer servers, communicate game rule changes with your players
+- Some game rules (like `jsMachineSpeed`) may impact server performance at extreme values
 
 ---
 
 ## Trivia
 
-- Command documentation is being actively compiled from testing and community feedback
-- This page will be continuously updated as new commands are discovered or added to the mod
+- The `js` prefix in all game rules stands for "Jurassic Saga"
+- Game rules allow players to customize their experience without modifying game files
+- The `jsMachineSpeed` range was determined through developer testing for optimal balance
+- These game rules were added to accommodate different playstyles, from hardcore survival to creative park building
 
 ---
 

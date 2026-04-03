@@ -7,7 +7,7 @@
         "name": "Herbivores",
         "icon": "Leaf"
     },
-    "piscivores.mdx": {
+    "piscivores": {
         "name": "Piscivores",
         "icon": "Fish"
     },

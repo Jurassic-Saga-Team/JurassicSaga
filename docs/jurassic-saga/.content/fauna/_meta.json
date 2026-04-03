@@ -1,7 +1,6 @@
 {
-    "carnivores.mdx": {
-        "name": "Carnivores",
-        "icon": "Carnivore"
+    "carnivores": {
+        "name": "Carnivores"
     },
     "herbivores.mdx": {
         "name": "Herbivores",

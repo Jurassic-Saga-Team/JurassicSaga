@@ -1,35 +1,11 @@
 {
-    "alligator.mdx": {
-        "name": "Alligator"
-    },
-    "basilisk.mdx": {
-        "name": "Basilisk"
-    },
-    "bonito.mdx": {
-        "name": "Bonito"
-    },
-    "butterfly.mdx": {
-        "name": "Butterfly"
-    },
-    "goat.mdx": {
-        "name": "Goat"
-    },
-    "guapote.mdx": {
-        "name": "Guapote"
+    "bananogmius.mdx": {
+        "name": "Bananogmius"
     },
     "mesolimulus.mdx": {
         "name": "Mesolimulus"
     },
-    "mosquito.mdx": {
-        "name": "Mosquito"
-    },
-    "ostrich.mdx": {
-        "name": "Ostrich"
-    },
-    "reed_frog.mdx": {
-        "name": "Reed Frog"
-    },
-    "tree_frog.mdx": {
-        "name": "Tree Frog"
+    "oreochima.mdx": {
+        "name": "Oreochima"
     }
 }

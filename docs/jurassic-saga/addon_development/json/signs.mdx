@@ -11,11 +11,13 @@ You could use a plain datapack + resource-pack, but for simplicity we'll use a [
 [addon_name]/
     addon_data/
     data/
-        [addon_name]/
-            pack.mcmeta
+        data/
+            [addon_name]/
+        pack.mcmeta
     resources/
-        [addon_name]/
-            pack.mcmeta
+        assets/
+            [addon_name]/
+        pack.mcmeta
 ```
 <Callout variant="warning">
     I won't reference pack.mcmeta anymore from this point forwards, it should still be there.
@@ -27,13 +29,14 @@ Inside the data folder we'll start adding the necessary folders.
 [addon_name]/
     addon_data/
     data/
-        [addon_name]/
-            paddock_signs/
-                custom/
-                    [paddock_sign_name].json
-            facility_signs/
-                custom/
-                    [facility_sign_name].json
+        data/
+            [addon_name]/
+                paddock_signs/
+                    custom/
+                        [paddock_sign_name].json
+                facility_signs/
+                    custom/
+                        [facility_sign_name].json
     resources/
 ```
 We're using the custom folder inside the data to avoid confusion

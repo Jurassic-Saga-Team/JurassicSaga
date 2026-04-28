@@ -13,11 +13,13 @@ You could use a plain datapack + resource-pack, but for simplicity we'll use a [
 [addon_name]/
     addon_data/
     data/
-        [addon_name]/
-            pack.mcmeta
+        data/
+            [addon_name]/
+        pack.mcmeta
     resources/
-        [addon_name]/
-            pack.mcmeta
+        assets/
+            [addon_name]/
+        pack.mcmeta
 ```
 <Callout variant="warning">
     I won't reference pack.mcmeta anymore from this point forwards, it should still be there.
@@ -29,9 +31,10 @@ Inside the data folder we'll start adding the necessary folders.
 [addon_name]/
     addon_data/
     data/
-        [addon_name]/
-            animal_modifiers/
-                [animal_you_want_to_edit].json
+        data/
+            [addon_name]/
+                animal_modifiers/
+                    [animal_you_want_to_edit].json
     resources/
 ```
 <Callout variant="info">
@@ -101,18 +104,20 @@ which is usually mentioned on the spawn egg under the item title if you hover ov
 
     Version has to start with a v, so if you have 1.0 add v in front (v1.0)
 </Callout>
+
 ```
 [addon_name]/
     addon_data/
     data/
     resources/
-        [namespace]/
-            textures/
-                geo/
-                    animal/
-                        [version]/
-                            [path]/
-                                variants/
+        assets/
+            [namespace]/
+                textures/
+                    geo/
+                        animal/
+                            [version]/
+                                [path]/
+                                    variants/
 ```
 
 That might seem a bit complex, but it's pretty easy if you look at it!

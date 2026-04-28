@@ -17,11 +17,13 @@ So your folder structure should look like this now:
     addon_data/
         animals/
     data/
-        [addon_name]/
-            pack.mcmeta
+        data/
+            [addon_name]/
+        pack.mcmeta
     resources/
-        [addon_name]/
-            pack.mcmeta
+        assets/
+            [addon_name]/
+        pack.mcmeta
 ```
 <Callout variant="warning">
     I won't reference pack.mcmeta anymore from this point forwards, it should still be there.
@@ -1375,12 +1377,13 @@ These go here:
 [addon_name]/
     addon_data/
     data/
-        [addon_name]/
-            advancement/
-                recipes/
-                    [animal_name]_cooked_campfire.json
-                    [animal_name]_cooked_smelt.json
-                    [animal_name]_cooked_smoke.json
+        data/
+            [addon_name]/
+                advancement/
+                    recipes/
+                        [animal_name]_cooked_campfire.json
+                        [animal_name]_cooked_smelt.json
+                        [animal_name]_cooked_smoke.json
     resources/
 ```
 
@@ -1480,16 +1483,17 @@ Now let's add the actual recipes, these go here:
 ```
 [addon_name]/
     data/
-        [addon_name]/
-            advancement/
-                recipes/
+        data/
+            [addon_name]/
+                advancement/
+                    recipes/
+                        [animal_name]_cooked_campfire.json
+                        [animal_name]_cooked_smelt.json
+                        [animal_name]_cooked_smoke.json
+                recipe/
                     [animal_name]_cooked_campfire.json
                     [animal_name]_cooked_smelt.json
                     [animal_name]_cooked_smoke.json
-            recipe/
-                [animal_name]_cooked_campfire.json
-                [animal_name]_cooked_smelt.json
-                [animal_name]_cooked_smoke.json
 ```
 <br>
 </br>
@@ -1545,16 +1549,17 @@ Next we'll register our items into the relevant tags, these go here:
 ```
 [addon_name]/
     data/
-        [addon_name]/
-            advancement/
-            recipe/
-        jurassicsaga/
-            tags/
-                item/
-                    carnivore_edible.json
-                    fertilized_eggs.json
-                    fossil.json
-                    dna.json
+        data/
+            [addon_name]/
+                advancement/
+                recipe/
+            jurassicsaga/
+                tags/
+                    item/
+                        carnivore_edible.json
+                        fertilized_eggs.json
+                        fossil.json
+                        dna.json
 ```
 
 <br>

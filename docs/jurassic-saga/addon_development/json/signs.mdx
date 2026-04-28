@@ -1,0 +1,196 @@
+# How to add custom signs
+
+In this guide we'll cover how to:
+- Adding custom paddock sign
+- Adding custom facility sign
+
+## Folder Structure
+
+You could use a plain datapack + resource-pack, but for simplicity we'll use a [**JS-addon**](creating_json_addons).
+```
+[addon_name]/
+    addon_data/
+    data/
+        [addon_name]/
+            pack.mcmeta
+    resources/
+        [addon_name]/
+            pack.mcmeta
+```
+<Callout variant="warning">
+    I won't reference pack.mcmeta anymore from this point forwards, it should still be there.
+</Callout>
+We'll not use the addon_data/ folder, but it needs to be there for the parser
+
+Inside the data folder we'll start adding the necessary folders.
+```
+[addon_name]/
+    addon_data/
+    data/
+        [addon_name]/
+            paddock_signs/
+                custom/
+                    [paddock_sign_name].json
+            facility_signs/
+                custom/
+                    [facility_sign_name].json
+    resources/
+```
+We're using the custom folder inside the data to avoid confusion
+
+
+#### Paddock Sign Colors
+| Value | Color                   |
+|-------|-------------------------|
+| `0`   | `BLUE`                  |
+| `1`   | `GREEN`                 |
+| `2`   | `PURPLE`                |
+| `3`   | `RED`                   |
+| `4`   | `WHITE`                 |
+| `5`   | `YELLOW`                |
+| `6`   | `FACILITY` (Pure White) |
+<CodeTabs>
+    ```json !!tabs Facility Sign
+    {
+        "name": "[Facility Sign Name]",
+        "location": "[addon_name]:[facility_sign_name]"
+    }
+    ```
+    ```json !!tabs Paddock Sign
+    {
+        "name": "[Paddock Sign Name]",
+        "location": "[addon_name]:[paddock_sign_name]",
+        "color_index": 4
+    }
+    ```
+</CodeTabs>
+<Callout variant="warning">
+    "name": is going to get changed to
+
+    "translation": "[addon_name].[facility_sign_name]"
+
+    in the near future.
+
+    If you want your future signs to be compatible, feel free to add it early
+</Callout>
+
+
+The name here is the display name in the designated items
+
+That's all for data, lets move on to resources.
+
+## Resources
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        [addon_name]/
+            models/
+                signs/
+```
+We're going to add the JSON files for the signs first!
+
+Texture name has to be equal to the location set in the data files.
+
+```
+...
+    models/
+        signs/
+            facility/
+                custom/
+                    [facility_sign_name].json
+            paddock/
+                custom/
+                    [paddock_sign_name].json
+```
+<br></br>
+<CodeTabs>
+    ```json !!tabs Facility Sign
+    {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": "[addon_name]:block/facility_sign/[facility_sign_name]"
+        }
+    }
+    ```
+    ```json !!tabs Paddock Sign
+    {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": "[addon_name]:block/paddock_sign/[paddock_sign_name]"
+        }
+    }
+    ```
+</CodeTabs>
+
+Now let's add the textures!
+
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        [addon_name]/
+            models/
+            textures/
+                block/
+                    facility_sign/
+                        [facility_sign_name].png
+                    paddock_sign/
+                        [paddock_sign_name].png
+```
+<Callout variant="info">
+    If you are wondering why this is different from [**New Species**](new_species#resources), it's because this has been registered as an custom sign!
+</Callout>
+
+The paddock signs still needs one extra thing! (You can skip this for the facility sign)
+
+Let's add the coin.
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        [addon_name]/
+            models/
+            textures/
+                block/
+                gui/
+                    icon/
+                        [paddock_sign_name].png
+```
+
+And that should be all for the signs!
+
+### Translation file
+<Callout variant="warning">
+    This hasn't been implemented yet, but feel free to add it in advance to make sure your maintain compatibility.
+</Callout>
+Let's add the default language file:
+
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        [addon_name]/
+            models/
+            textures/
+            lang/
+                en_us.json
+```
+
+en_us.json is the main JSON file used by Minecraft.
+
+Inside this file:
+<CodeTabs>
+    ```json !!tabs Signs
+    {
+        "[addon_name].[facility_sign_name]": "[Facility Sign Name]",
+        "[addon_name].[paddock_sign_name]": "[Paddock Sign Name]"
+    }
+    ```
+</CodeTabs>
+
+That should be all!

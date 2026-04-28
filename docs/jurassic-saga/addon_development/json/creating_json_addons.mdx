@@ -1,0 +1,89 @@
+# Creating JSON Addons
+
+Jurassic Saga's JSON addon system supports dynamic animal loading through an __experimental__ system
+
+This page is for guiding you through the creation process and what you need
+
+---
+
+## Requirements
+To create an addon, you will need:
+
+- A basic understanding of Block bench, Modeling, Texturing
+- An JSON Editor
+
+This system is fully data-resource driven, no code is required.
+
+---
+
+## Structure
+This is the generic structure of how your addon should look:
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+```
+
+#### Where to put it?
+In the config directory there is a new directory called jurassic_saga,
+in that jurassic_saga folder there should be a folder called addons.
+You drop your addon in there.
+
+It should look something like this:
+```
+.minecraft/config/jurassic_saga/addons/
+  [addon_name]/
+    addon_data/
+    data/
+    resources/
+```
+
+To start off lets the generic structure.
+
+```
+[addon_name]/
+    addon_data/
+    data/
+        [addon_name]/
+            pack.mcmeta
+    resources/
+        [addon_name]/
+            pack.mcmeta
+            pack.png [*]
+```
+<Callout variant="info">
+    Adding an pack.png is optional, but it'd standout more.
+</Callout>
+
+<CodeTabs>
+    ```json !!tabs data/pack.mcmeta
+    {
+        "pack": {
+            "pack_format": 34,
+            "description": "[your pack description]"
+        }
+    }
+    ```
+    ```json !!tabs resources/pack.mcmeta
+    {
+        "pack": {
+            "pack_format": 34,
+            "description": "[your pack description]"
+        }
+    }
+    ```
+</CodeTabs>
+
+---
+
+## What's next?
+
+Let's look at what you want to do;
+
+- [**Adding a new species**](guides/new_species)
+- [**Modifying an existing species**](guides/existing_modification)
+- [**Additional Paddock Signs**](guides/paddock_sign)
+- [**Additional Facility Signs**](guides/facility_sign)
+
+---

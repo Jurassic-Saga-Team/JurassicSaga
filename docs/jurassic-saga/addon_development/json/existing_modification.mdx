@@ -1,0 +1,149 @@
+# How to edit an animal
+
+In this guide we'll cover how to:
+- Add skins to an animal
+- Add hunt targets to an animal
+- Add herd targets to an animal
+- Add scared targets to an animal
+
+## Folder Structure
+
+You could use a plain datapack + resource-pack, but for simplicity we'll use a [**JS-addon**](creating_json_addons).
+```
+[addon_name]/
+    addon_data/
+    data/
+        [addon_name]/
+            pack.mcmeta
+    resources/
+        [addon_name]/
+            pack.mcmeta
+```
+<Callout variant="warning">
+    I won't reference pack.mcmeta anymore from this point forwards, it should still be there.
+</Callout>
+We'll not use the addon_data/ folder, but it needs to be there for the parser
+
+Inside the data folder we'll start adding the necessary folders.
+```
+[addon_name]/
+    addon_data/
+    data/
+        [addon_name]/
+            animal_modifiers/
+                [animal_you_want_to_edit].json
+    resources/
+```
+<Callout variant="info">
+    The filename of [animal_you_want_to_edit] doesn't necessary matter.
+</Callout>
+
+#### Fields
+| Field               | Type       | Required | Description                                           |
+|---------------------|------------|----------|-------------------------------------------------------|
+| `animal`            | `string`   | Required | Resource key of the animal to edit                    |
+| `add_genes`         | `string[]` | Optional | List of skin gene resource keys to add to the animal  |
+| `gendered_variants` | `string[]` | Optional | List of skin genes that have gendered variants        |
+| `herd_targets`      | `string[]` | Optional | List of animal resource keys to add as herd targets   |
+| `hunt_targets`      | `string[]` | Optional | List of animal resource keys to add as hunt targets   |
+| `scared_off`        | `string[]` | Optional | List of entity resource keys to add as scared targets |
+
+<CodeTabs>
+    ```json !!tabs Visual
+    {
+        "animal": [String],
+        "add_genes": [String[]],
+        "gendered_variants": [String[]],
+        "herd_targets": [String[]],
+        "hunt_targets": [String[]],
+        "scared_off": [String[]]
+    }
+    ```
+    ```json !!tabs Example
+    {
+        "animal": "jurassicsaga:velociraptor",
+        "add_genes": [
+            "jurassicsaga:savanna"
+        ],
+        "gendered_variants": [
+            "jurassicsaga:savanna"
+        ],
+        "herd_targets": [
+            "jurassicsaga:tyrannosaurus"
+        ],
+        "hunt_targets": [
+            "jurassicsaga:achillobator"
+        ],
+        "scared_off": [
+            "minecraft:player"
+        ]
+    }
+    ```
+</CodeTabs>
+
+That's how you modify an animal, pretty simple right?
+
+Let's now make sure the textures work.
+<Callout variant="info">
+    Did you not add any genes? Or did u not modify gendered variants?
+
+    Then you are done! You've modified an animal.
+</Callout>
+Let's go back to the start
+
+So the way this works is, you've edited an animal with an identifier, which is namespace:path.
+
+We'll have to remember both, we'll also have to look ingame which version the animal is from,
+which is usually mentioned on the spawn egg under the item title if you hover over it.
+
+<Callout variant="info">
+    We'll use namespace as [namespace], path as [path] and version as [version]
+
+    Version has to start with a v, so if you have 1.0 add v in front (v1.0)
+</Callout>
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        [namespace]/
+            textures/
+                geo/
+                    animal/
+                        [version]/
+                            [path]/
+                                variants/
+```
+
+That might seem a bit complex, but it's pretty easy if you look at it!
+
+Let's now see what gene(s) we've added.
+<Callout variant="info">
+    We'll use the gene as [gene_name]
+</Callout>
+Depending on if we have added the same gene in gendered_variants, the texture file should be named appropriately:
+
+(This also applies if you've made an existing gene gendered)
+
+gendered_variants:
+
+2 files:
+- Male -> `[path]_adult_[gene_name]_male.png`
+- Female -> `[path]_adult_[gene_name]_female.png`
+
+Otherwise, just one file -> `[path]_adult_[gene_name].png`
+
+```
+...
+    [version]/
+        [path]/
+            variants/
+                [files]
+```
+<Callout variant="info">
+    Put the files where [files] are!
+
+    Repeat the same process for every gene you've edited/added
+</Callout>
+
+That's actually all it takes!

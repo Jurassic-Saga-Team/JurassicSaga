@@ -1,0 +1,1606 @@
+
+# Adding a new species
+<Callout variant="info">
+    Replace `[addon_name]` and `[animal_name]` with your actual addon and animal names throughout this guide.
+</Callout>
+
+## Structure
+
+Let's start off with where to put these files
+If you haven't read the [**folder format**](creating_json_addons) please do that first.
+
+So inside the [addon-names]'s addon-data folder we'll be making a new folder named "**animals**".
+
+So your folder structure should look like this now:
+```
+[addon_name]/
+    addon_data/
+        animals/
+    data/
+        [addon_name]/
+            pack.mcmeta
+    resources/
+        [addon_name]/
+            pack.mcmeta
+```
+<Callout variant="warning">
+    I won't reference pack.mcmeta anymore from this point forwards, it should still be there.
+</Callout>
+If that's done let's move onto the next part.
+
+---
+
+### JSON File
+Inside the animals folder create a new JSON file with the name of your desired animal.
+<Callout variant="warning">
+    An animal name can't contain capital letters!
+</Callout>
+
+
+```
+[addon_name]/
+    addon_data/
+        animals/
+            [animal_name].json
+    data/
+    resources/
+```
+
+Let's start setting up the animal attributes!
+
+Open the [animal_name].json
+Let's start by giving the animal an identifier!
+<CodeTabs>
+    ```json !!tabs Identifier
+    {
+        "id": "[addon_name]:[animal_name]"
+    }
+    ```
+</CodeTabs>
+
+This is how the game will recognize it, it will also be summoned that way!
+
+Let's also pick an animation style.
+At this point in time only "simple" exists.
+<CodeTabs>
+    ```json !!tabs Animation Style
+    {
+        "animation_style": "simple"
+    }
+    ```
+
+    ```json !!tabs How to combine?
+    {
+        "id": "[addon_name]:[animal_name]",
+        "animation_style": "simple"
+    }
+    ```
+</CodeTabs>
+
+Let's start implementing each module individually.
+
+---
+
+## Modules
+
+### Sounds Module
+
+<Callout variant="info">
+    This module is optional - all fields are optional.
+</Callout>
+
+The sounds module lets you assign sounds to various animal actions.
+
+| Field     | Required | Description                                |
+|-----------|----------|--------------------------------------------|
+| `attack`  | Optional | Sound that plays on attack                 |
+| `ambient` | Optional | Sound that plays randomly in ambient state |
+| `death`   | Optional | Sound that plays on death                  |
+| `hurt`    | Optional | Sound that plays on hurt                   |
+
+<CodeTabs>
+    ```json !!tabs Sound Module
+    {
+        "sounds": {
+            "attack": "[addon_name]:[animal_name]_attack",
+            "ambient": "[addon_name]:[animal_name]_ambient",
+            "death": "[addon_name]:[animal_name]_death",
+            "hurt": "[addon_name]:[animal_name]_hurt"
+        }
+    }
+    ```
+    ```json !!tabs How to combine?
+    {
+        "id": "[addon_name]:[animal_name]",
+        "animation_style": "simple",
+        "sounds": {
+            "attack": "[addon_name]:[animal_name]_attack",
+            "ambient": "[addon_name]:[animal_name]_ambient",
+            "death": "[addon_name]:[animal_name]_death",
+            "hurt": "[addon_name]:[animal_name]_hurt"
+        }
+    }
+    ```
+</CodeTabs>
+
+
+<Callout variant="warning">
+    I won't show the full files going forwards, this would be to intensive. Every module's full json will be shown
+</Callout>
+
+### Genetics
+<Callout variant="danger">
+    This is an mandatory module, without this your animal won't load
+</Callout>
+
+This module has some fields that are mandatory, and some that are optional.
+
+#### Fields
+| Field                      | Type             | Required | Default | Description                                                  |
+|----------------------------|------------------|----------|---------|--------------------------------------------------------------|
+| `growthStageScaling`       | `float`          | Required | -       | Scale multiplier of the animal during the baby growth stage  |
+| `growthStageSize`          | `[float, float]` | Required | -       | Baby hitbox size as `[width, height]`                        |
+| `growthNextStageScaling`   | `float`          | Required | -       | Scale multiplier when transitioning to the next growth stage |
+| `growthStageMaxGrowthDays` | `float`          | Required | -       | Max days the baby growth stage lasts                         |
+| `growthProgressCapDays`    | `float`          | Required | -       | Max days before growth progress is capped                    |
+| `supportedGenes`           | `string[]`       | Required | -       | List of gene resource keys supported by this animal          |
+| `defaultGenes`             | `string[]`       | Optional | `[]`    | List of gene resource keys the animal spawns with by default |
+| `growthProgressCap`        | `int`            | Optional | `72000` | Override growth progress cap in ticks                        |
+| `eggRenderScale`           | `double`         | Optional | `1.0`   | Scale of the egg when rendered in the world                  |
+| `eggHatchTicks`            | `int`            | Optional | `1200`  | Number of ticks before the egg hatches                       |
+
+<CodeTabs>
+    ```json !!tabs Genetic Module
+    "genetics": {
+        "growthStageScaling": [Float],
+        "growthStageSize": [[Float], [Float]],
+        "growthNextStageScaling": [Float],
+        "growthStageMaxGrowthDays": [Int],
+        "growthProgressCapDays": [Int],
+        "supportedGenes": [],
+        "defaultGenes": [],
+        "growthProgressCap": [Int],
+        "eggRenderScale": [Float],
+        "eggHatchTicks": [Int]
+    }
+    ```
+    ```json !!tabs Example
+    "genetics": {
+        "growthStageScaling": 0.8,
+        "growthStageSize": [0.3, 1.2],
+        "growthNextStageScaling": 1.3,
+        "growthStageMaxGrowthDays": 20,
+        "growthProgressCapDays": 5,
+        "supportedGenes": [
+            "jurassicsaga:chaos_effect"
+        ],
+        "defaultGenes": [
+            "jurassicsaga:chaos_effect",
+            "jurassicsaga:intolerance"
+        ],
+        "growthProgressCap": 80,
+        "eggRenderScale": 0.75,
+        "eggHatchTicks": 12000
+    }
+    ```
+</CodeTabs>
+
+### Metabolism
+<Callout variant="danger">
+    This is an mandatory module, without this your animal won't load
+</Callout>
+
+This module has some fields that are mandatory, and some that are optional.
+
+<div style={{ display: 'flex', gap: '2rem' }}>
+    <div style={{ flex: 1 }}>
+        #### Fields
+        | Field | Type | Required | Default | Description |
+        |-------|------|----------|---------|-------------|
+        | `diet` | `string` | Required | - | Diet type of the animal (e.g. `CARNIVORE`, `HERBIVORE`) |
+        | `maxWaterDays` | `float` | Required | - | Max days the animal can go without water |
+        | `maxFoodDays` | `float` | Required | - | Max days the animal can go without food |
+        | `stalkingSpeedMultiplier` | `float` | Optional | `1.0` | Speed multiplier when stalking prey |
+        | `accelerationSpeedMultiplier` | `float` | Optional | `1.0` | Speed multiplier when accelerating |
+        | `breedCooldown` | `int` | Optional | `24000` | Cooldown in ticks between breeding |
+        | `gestationTicks` | `int` | Optional | `6000` | Gestation period in ticks |
+        | `maxStamina` | `int` | Optional | `1000` | Maximum stamina of the animal |
+        | `canSleep` | `boolean` | Optional | `true` | Whether the animal can sleep |
+        | `canBreed` | `boolean` | Optional | `true` | Whether the animal can breed |
+        | `hungerEnabled` | `boolean` | Optional | `true` | Whether the animal has a hunger mechanic |
+        | `thirstEnabled` | `boolean` | Optional | `true` | Whether the animal has a thirst mechanic |
+        | `hasLiveBirth` | `boolean` | Optional | `false` | Whether the animal gives live birth instead of laying eggs |
+    </div>
+    <div style={{ flexShrink: 0 }}>
+        #### Diet Types
+        | Value | Description |
+        |-------|-------------|
+        | `CARNIVORE` | Meat eater |
+        | `HERBIVORE` | Plant eater |
+        | `OMNIVORE` | Eats both |
+        | `PISCIVORE` | Fish eater |
+        | `INSECTOVORE` | Insect eater |
+        | `OVIVORE` | Egg eater |
+        | `NONE` | No diet |
+    </div>
+</div>
+
+<CodeTabs>
+    ```json !!tabs Metabolism Module
+    "metabolism": {
+        "diet": [String],
+        "maxWaterDays": [Float],
+        "maxFoodDays": [Float],
+        "stalkingSpeedMultiplier": [Float],
+        "breedCooldown": [Int],
+        "gestationTicks": [Int],
+        "accelerationSpeedMultiplier": [Float],
+        "canSleep": [Boolean],
+        "canBreed": [Boolean],
+        "hungerEnabled": [Boolean],
+        "thirstEnabled": [Boolean],
+        "hasLiveBirth": [Boolean],
+        "maxStamina": [Int]
+    }
+    ```
+    ```json !!tabs Example
+    "metabolism": {
+        "diet": "CARNIVORE",
+        "maxWaterDays": 2.0,
+        "maxFoodDays": 1.0,
+        "stalkingSpeedMultiplier": 0.7,
+        "breedCooldown": 50,
+        "gestationTicks": 50,
+        "accelerationSpeedMultiplier": 1,
+        "canSleep": false,
+        "canBreed": false,
+        "hungerEnabled": false,
+        "thirstEnabled": false,
+        "hasLiveBirth": false,
+        "maxStamina": 1000
+    }
+    ```
+</CodeTabs>
+
+
+### Misc
+<Callout variant="danger">
+    This is an mandatory module, without this your animal won't load
+</Callout>
+
+This module has some fields that are mandatory, and some that are optional.
+
+#### Fields
+| Field                     | Type             | Required | Default      | Description                                             |
+|---------------------------|------------------|----------|--------------|---------------------------------------------------------|
+| `era`                     | `string`         | Required | -            | Era the animal lived in (e.g. `JURASSIC`, `CRETACEOUS`) |
+| `maxHeadRotation`         | `[float, float]` | Required | -            | Max head X and Y rotation                               |
+| `babyAnimations`          | `boolean`        | Optional | `false`      | Whether the animal has baby animations                  |
+| `genderedVariants`        | `boolean`        | Optional | `false`      | Whether the animal has gendered variants                |
+| `mammal`                  | `boolean`        | Optional | `false`      | Whether the animal is a mammal                          |
+| `requiresGlow`            | `boolean`        | Optional | `false`      | Whether the animal requires glow                        |
+| `leashable`               | `boolean`        | Optional | `false`      | Whether the animal can be leashed                       |
+| `guidebookPose`           | `boolean`        | Optional | `false`      | Whether the animal has a guidebook pose                 |
+| `attacksCar`              | `boolean`        | Optional | `false`      | Whether the animal attacks cars                         |
+| `isNew`                   | `boolean`        | Optional | `false`      | Whether the animal is newly added                       |
+| `disableCorpseDrops`      | `boolean`        | Optional | `false`      | Whether the animal's corpse drops items                 |
+| `extinct`                 | `boolean`        | Optional | `false`      | Whether the animal is extinct                           |
+| `hasEyeLid`               | `boolean`        | Optional | `true`       | Whether the animal has eyelids                          |
+| `babyGuidebook`           | `boolean`        | Optional | `true`       | Whether the animal has a baby guidebook entry           |
+| `showInGuidebook`         | `boolean`        | Optional | `false`      | Whether the animal appears in the guidebook             |
+| `machineScale`            | `float`          | Optional | `1.0`        | Scale of the animal in machines                         |
+| `corpseDropTimes`         | `int`            | Optional | `2`          | How many times the corpse can be looted                 |
+| `corpseMeatDropRange`     | `[int, int]`     | Optional | `[1, 4]`     | Min and max meat drops from corpse                      |
+| `corpseBoneDropRange`     | `[int, int]`     | Optional | `[1, 4]`     | Min and max bone drops from corpse                      |
+| `guidebookScaling`        | `[float, float]` | Optional | `[1.0, 1.0]` | Baby and adult scale in the guidebook                   |
+| `guidebookOffset`         | `object`         | Optional | `[0,0]`      | Baby and adult position offset in the guidebook         |
+| `signColor`               | `string`         | Optional | -            | Color override for the paddock sign                     |
+| `version`                 | `string`         | Optional | `1.0`        | Version the animal was added                            |
+<div style={{ display: 'flex', gap: '2rem' }}>
+    <div style={{ flex: 1 }}>
+        #### Eras
+        | Era             | Description          |
+        |-----------------|----------------------|
+        | `NONE`          | No era assigned      |
+        | `CAMBRIAN`      | Cambrian period      |
+        | `ORDOVICIAN`    | Ordovician period    |
+        | `SILURIAN`      | Silurian period      |
+        | `DEVONIAN`      | Devonian period      |
+        | `CARBONIFEROUS` | Carboniferous period |
+        | `PERMIAN`       | Permian period       |
+        | `TRIASSIC`      | Triassic period      |
+        | `JURASSIC`      | Jurassic period      |
+        | `CRETACEOUS`    | Cretaceous period    |
+        | `PALEOGENE`     | Paleogene period     |
+        | `NEOGENE`       | Neogene period       |
+        | `QUATERNARY`    | Quaternary period    |
+    </div>
+    <div style={{ flex: 1 }}>
+        #### Sign Colors
+        | Color      |
+        |------------|
+        | `BLUE`     |
+        | `GREEN`    |
+        | `PURPLE`   |
+        | `RED`      |
+        | `WHITE`    |
+        | `YELLOW`   |
+        | `FACILITY` |
+    </div>
+</div>
+
+<CodeTabs>
+    ```json !!tabs Misc Module
+    "misc": {
+        "era": [String],
+        "maxHeadRotation": [[Float], [Float]],
+        "babyAnimations": [Boolean],
+        "genderedVariants": [Boolean],
+        "mammal": [Boolean],
+        "requiresGlow": [Boolean],
+        "leashable": [Boolean],
+        "guidebookPose": [Boolean],
+        "attacksCar": [Boolean],
+        "isNew": [Boolean],
+        "disableCorpseDrops": [Boolean],
+        "extinct": [Boolean],
+        "hasEyeLid": [Boolean],
+        "babyGuidebook": [Boolean],
+        "showInGuidebook": [Boolean],
+        "machineScale": [Float],
+        "corpseDropTimes": [Int],
+        "corpseMeatDropRange": [[Int], [Int]],
+        "corpseBoneDropRange": [[Int], [Int]],
+        "guidebookScaling": [[Float], [Float]],
+        "guidebookOffset": {
+            "baby": [[Float], [Float]],
+            "adult": [[Float], [Float]]
+        },
+        "signColor": [String],
+        "version": [String]
+    }
+    ```
+    ```json !!tabs Example
+    "misc": {
+        "era": "JURASSIC",
+        "maxHeadRotation": [20, 46],
+        "babyAnimations": true,
+        "genderedVariants": true,
+        "mammal": true,
+        "requiresGlow": true,
+        "leashable": true,
+        "guidebookPose": true,
+        "attacksCar": true,
+        "isNew": true,
+        "disableCorpseDrops": true,
+        "extinct": true,
+        "hasEyeLid": false,
+        "babyGuidebook": false,
+        "showInGuidebook": false,
+        "machineScale": 1.0,
+        "corpseDropTimes": 2,
+        "corpseMeatDropRange": [1, 4],
+        "corpseBoneDropRange": [1, 4],
+        "guidebookScaling": [1.1, 0.75],
+        "guidebookOffset": {
+            "baby": [0.5, 0.0],
+            "adult": [5.5, 0.0]
+        },
+        "signColor": "RED",
+        "version": "4.0"
+    }
+    ```
+</CodeTabs>
+
+### Social
+<Callout variant="danger">
+    This is an mandatory module, without this your animal won't load
+</Callout>
+
+#### Fields
+| Field                 | Type       | Required | Default | Description                                                   |
+|-----------------------|------------|----------|---------|---------------------------------------------------------------|
+| `huntTargets`         | `string[]` | Required | `[]`    | List of fully qualified class names the animal will hunt      |
+| `scaredOf`            | `string[]` | Required | `[]`    | List of fully qualified class names the animal is scared of   |
+| `herdTargets`         | `string[]` | Required | `[]`    | List of fully qualified class names the animal will herd with |
+| `maxDistanceToLeader` | `float`    | Required | `500.0` | Max distance the animal can be from the pack leader           |
+| `minDistanceToLeader` | `float`    | Required | `100.0` | Min distance the animal keeps from the pack leader            |
+| `maxHerdSize`         | `int`      | Required | `1`     | Maximum number of animals in a herd                           |
+| `naturalAggression`   | `float`    | Required | `0.0`   | Natural aggression level, clamped between `0` and `5`         |
+| `herd_with_self`      | `boolean`  | Optional | `false` | Whether the animal will herd with its own kind                |
+| `usesNest`            | `boolean`  | Optional | `false` | Whether the animal uses a nest                                |
+
+<CodeTabs>
+    ```json !!tabs Social Module
+    "social": {
+        "huntTargets": [String[]],
+        "scaredOf": [String[]],
+        "herdTargets": [String[]],
+        "maxDistanceToLeader": [Float],
+        "minDistanceToLeader": [Float],
+        "maxHerdSize": [Int],
+        "naturalAggression": [Float],
+        "herd_with_self": [Boolean],
+        "usesNest": [Boolean]
+    }
+    ```
+    ```json !!tabs Example
+    "social": {
+        "huntTargets": [
+            "net.minecraft.world.entity.npc.AbstractVillager",
+            "net.minecraft.world.entity.player.Player"
+        ],
+        "scaredOf": [
+            "jp.jurassicsaga.server.animal.entity.extant.terrestial.v1.TroodonEntity"
+        ],
+        "herdTargets": [
+            "jp.jurassicsaga.server.animal.entity.extant.terrestial.v2.AchillobatorEntity"
+        ],
+        "maxDistanceToLeader": 900,
+        "minDistanceToLeader": 400,
+        "maxHerdSize": 2,
+        "naturalAggression": 0.2,
+        "herd_with_self": true,
+        "usesNest": true
+    }
+    ```
+</CodeTabs>
+
+### Items
+<Callout variant="danger">
+    This is an mandatory module, without this your animal won't load
+</Callout>
+
+#### Fields
+| Field                | Type         | Required | Default   | Description                                       |
+|----------------------|--------------|----------|-----------|---------------------------------------------------|
+| `eggType`            | `string`     | Required | `CHICKEN` | The type of egg the animal lays                   |
+| `spawnEggColors`     | `[int, int]` | Required | -         | Primary and secondary color of the spawn egg      |
+| `spawnEggColorsMale` | `[int, int]` | Optional | -         | Primary and secondary color of the male spawn egg |
+| `sampleColour`       | `string`     | Optional | `RED`     | Color of the sample item                          |
+| `hasCoin`            | `boolean`    | Optional | `false`   | Whether the animal drops a coin                   |
+| `hasMeat`            | `boolean`    | Optional | `true`    | Whether the animal drops meat                     |
+| `hasDrops`           | `boolean`    | Optional | `true`    | Whether the animal has any drops                  |
+| `hasFossil`          | `boolean`    | Optional | `true`    | Whether the animal has a fossil item              |
+| `hasPlushie`         | `boolean`    | Optional | `false`   | Whether the animal has a plushie item             |
+| `hasEgg`             | `boolean`    | Optional | `true`    | Whether the animal has an egg item                |
+| `bucketable`         | `boolean`    | Optional | `false`   | Whether the animal can be bucketed                |
+
+<div style={{ display: 'flex', gap: '2rem' }}>
+    <div style={{ flex: 1 }}>
+        #### Sample Colours
+        | Value    | Description   |
+        |----------|---------------|
+        | `EMPTY`  | Empty sample  |
+        | `DIRTY`  | Dirty sample  |
+        | `RED`    | Red sample    |
+        | `BLUE`   | Blue sample   |
+        | `INSECT` | Insect sample |
+        | `PLANT`  | Plant sample  |
+    </div>
+    <div style={{ flex: 1 }}>
+        #### Egg Types
+        | Value      | Description       |
+        |------------|-------------------|
+        | `FROG`     | Frog egg          |
+        | `CHICKEN`  | Chicken egg       |
+        | `OSTRICH`  | Ostrich egg       |
+        | `ALLIGATOR`| Alligator egg     |
+        | `SPIDER`   | Spider egg sac    |
+        | `FISH`     | Fish egg          |
+        | `BASILISK` | Basilisk egg      |
+    </div>
+</div>
+
+<CodeTabs>
+    ```json !!tabs Items Module
+    "items": {
+        "eggType": [String],
+        "spawnEggColors": [[Int], [Int]],
+        "spawnEggColorsMale": [[Int], [Int]],
+        "sampleColour": [String],
+        "hasCoin": [Boolean],
+        "hasMeat": [Boolean],
+        "hasDrops": [Boolean],
+        "hasFossil": [Boolean],
+        "hasPlushie": [Boolean],
+        "hasEgg": [Boolean],
+        "bucketable": [Boolean]
+    }
+    ```
+    ```json !!tabs Example
+    "items": {
+        "eggType": "ALLIGATOR",
+        "spawnEggColors": [494949, 262626],
+        "spawnEggColorsMale": [262626, 8145951],
+        "sampleColour": "RED",
+        "hasCoin": false,
+        "hasMeat": true,
+        "hasDrops": true,
+        "hasFossil": true,
+        "hasPlushie": false,
+        "hasEgg": true,
+        "bucketable": false
+    }
+    ```
+</CodeTabs>
+
+### Base
+<Callout variant="danger">
+    This is an mandatory module, without this your animal won't load
+</Callout>
+
+#### Fields
+| Field               | Type      | Required | Default | Description                                        |
+|---------------------|-----------|----------|---------|----------------------------------------------------|
+| `animalType`        | `string`  | Required | -       | The type of animal (e.g. `REPTILE`, `MAMMAL`)      |
+| `fov`               | `int`     | Required | -       | Field of view of the animal in degrees             |
+| `maxTurnRate`       | `float`   | Required | -       | Maximum turn rate of the animal                    |
+| `turnSmoothRate`    | `float`   | Required | -       | How smoothly the animal turns                      |
+| `renderScale`       | `float`   | Required | -       | Scale of the animal when rendered                  |
+| `locator`           | `string`  | Required | -       | The locator bone used for attachments              |
+| `sizeDimorphism`    | `float`   | Optional | `0`     | Size difference in percent between male and female |
+| `adult_only`        | `boolean` | Optional | `false` | Whether the animal only spawns as an adult         |
+| `has_genders`       | `boolean` | Optional | `false` | Whether the animal has genders                     |
+| `entity_properties` | `object`  | Optional | -       | Controller task configuration for the animal       |
+
+#### Animal Types
+| Value                          | Description                                          |
+|--------------------------------|------------------------------------------------------|
+| `MAMMAL`                       | Warm-blooded vertebrates e.g. wolf, human            |
+| `AQUATIC_MAMMAL`               | Water-dwelling mammals e.g. dolphin, seal            |
+| `SYNAPSID`                     | Mammal-like reptiles e.g. dimetrodon                 |
+| `REPTILE`                      | Scaled vertebrates e.g. snake, lizard                |
+| `AQUATIC_REPTILE`              | Water-dwelling reptiles e.g. crocodile, sea turtle   |
+| `AMPHIBIAN`                    | Cold-blooded vertebrates e.g. frog, salamander       |
+| `FISH`                         | Ray-finned fish e.g. cod, trout                      |
+| `CARTILAGINOUS_FISH`           | Cartilage-skeleton fish e.g. shark, ray              |
+| `BIRD`                         | Avians e.g. eagle, penguin                           |
+| `ARTHROPOD`                    | Exoskeleton invertebrates e.g. crab, centipede       |
+| `INSECT`                       | Six-legged arthropods e.g. ant, beetle               |
+| `ARACHNID`                     | Eight-legged arthropods e.g. spider, scorpion        |
+| `CRUSTACEAN`                   | Hard-shelled arthropods e.g. lobster, shrimp         |
+| `MOLLUSK`                      | Soft-bodied invertebrates e.g. snail, octopus        |
+| `CEPHALOPOD`                   | Head-footed mollusks e.g. squid, cuttlefish          |
+
+**See [**Jurassic Saga Task Sheet**](js_tasks) for all the tasks and information about them.**
+
+<CodeTabs>
+    ```json !!tabs Base Module
+    "base": {
+        "animalType": [String],
+        "fov": [Int],
+        "maxTurnRate": [Float],
+        "sizeDimorphism": [Float],
+        "turnSmoothRate": [Float],
+        "renderScale": [Float],
+        "locator": [String],
+        "adult_only": [Boolean],
+        "has_genders": [Boolean],
+        "entity_properties": {
+            "main_controller": [String | Object],
+            "targeting_controller": [String | Object]
+        }
+    }
+    ```
+    ```json !!tabs Example
+    "base": {
+        "animalType": "REPTILE",
+        "fov": 90,
+        "maxTurnRate": 55,
+        "sizeDimorphism": 40,
+        "turnSmoothRate": 0.45,
+        "renderScale": 2,
+        "locator": "base_locator",
+        "adult_only": true,
+        "has_genders": true,
+        "entity_properties": {
+            "main_controller": [
+                "jp.jurassicsaga.server.animal.entity.obj.tasks.JSFloatTask",
+                {
+                    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSFleeTask",
+                    "range": 30
+                },
+                {
+                    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSRandomStrollTask",
+                    "xRange": 15,
+                    "yRange": 6
+                },
+                "jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSFindFoodTask",
+                "jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSFindWaterTask",
+                "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSRevengeOrRunTask",
+                "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSHerdCombatFollowTask",
+                "jp.jurassicsaga.server.animal.entity.obj.tasks.misc.JSRestTask"
+            ],
+            "targeting_controller": [
+                {
+                    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSTargetTask",
+                    "mustSee": true
+                }
+            ]
+        }
+    }
+    ```
+</CodeTabs>
+
+### Attributes
+<Callout variant="danger">
+    This is an mandatory module, without this your animal won't load
+</Callout>
+
+#### Fields
+| Field                    | Type             | Required | Default  | Description                                           |
+|--------------------------|------------------|----------|----------|-------------------------------------------------------|
+| `maxHealth`              | `double`         | Required | -        | Maximum health of the animal                          |
+| `dimensions`             | `[float, float]` | Required | -        | Hitbox size as `[width, height]`                      |
+| `movementSpeedKmh`       | `float`          | Required | -        | Movement speed of the animal in km/h                  |
+| `attackDamage`           | `float`          | Required | -        | Base attack damage of the animal                      |
+| `animal_type`            | `string`         | Required | `land`   | Entity type, one of `land`, `aquatic`, `avian`        |
+| `eyeHeight`              | `float`          | Optional | 0.9      | Eye height of the animal                              |
+| `category`               | `string`         | Optional | CREATURE | Mob category (e.g. `CREATURE`, `MONSTER`)             |
+| `trackingRange`          | `int`            | Optional | 32       | Range in blocks at which the animal is tracked        |
+| `waterEfficiency`        | `float`          | Optional | -        | How efficiently the animal moves in water             |
+| `runningSpeedMultiplier` | `float`          | Optional | -        | Speed multiplier when running                         |
+| `flyingSpeed`            | `float`          | Optional | -        | Flying speed, only used when `animal_type` is `avian` |
+| `attackSpeed`            | `float`          | Optional | -        | Attack speed of the animal                            |
+| `attackKnockback`        | `float`          | Optional | -        | Knockback applied on attack                           |
+| `followRange`            | `float`          | Optional | 32       | Range at which the animal follows its target          |
+
+#### Mob Categories
+| Value                        | Description                          |
+|------------------------------|--------------------------------------|
+| `MONSTER`                    | Hostile mobs e.g. zombies, skeletons |
+| `CREATURE`                   | Passive or neutral mobs e.g. animals |
+| `AMBIENT`                    | Ambient mobs e.g. bats               |
+| `AXOLOTLS`                   | Axolotl-type aquatic mobs            |
+| `UNDERGROUND_WATER_CREATURE` | Water creatures found underground    |
+| `WATER_CREATURE`             | Surface water creatures e.g. squid   |
+| `WATER_AMBIENT`              | Ambient water mobs e.g. fish         |
+| `MISC`                       | Miscellaneous mobs, no spawn cap     |
+
+<CodeTabs>
+    ```json !!tabs Attributes Module
+    "attributes": {
+        "maxHealth": [Double],
+        "dimensions": [[Float], [Float]],
+        "movementSpeedKmh": [Float],
+        "attackDamage": [Float],
+        "animal_type": [String],
+        "eyeHeight": [Float],
+        "category": [String],
+        "trackingRange": [Int],
+        "waterEfficiency": [Float],
+        "runningSpeedMultiplier": [Float],
+        "flyingSpeed": [Float],
+        "attackSpeed": [Float],
+        "attackKnockback": [Float],
+        "followRange": [Float]
+    }
+    ```
+    ```json !!tabs Example
+    "attributes": {
+        "maxHealth": 320,
+        "dimensions": [3, 5],
+        "movementSpeedKmh": 25.5,
+        "attackDamage": 25.0,
+        "animal_type": "land",
+        "eyeHeight": 0.95,
+        "category": "CREATURE",
+        "trackingRange": 64,
+        "waterEfficiency": 0.8,
+        "runningSpeedMultiplier": 3.25,
+        "flyingSpeed": 0.5,
+        "attackSpeed": 2.0,
+        "attackKnockback": 0.5,
+        "followRange": 100.0
+    }
+    ```
+</CodeTabs>
+
+# Client Animator
+<Callout variant="info">
+    This module is optional - all fields are optional.
+</Callout>
+
+#### Fields
+| Field                   | Type       | Required | Default | Description                                              |
+|-------------------------|------------|----------|---------|----------------------------------------------------------|
+| `neck_pieces`           | `string[]` | Optional | `[]`    | List of bone names that make up the neck chain           |
+| `neck_rotation_divisor` | `float`    | Optional | `1.0`   | Divides the neck rotation amount, higher = less rotation |
+| `tail_pieces`           | `string[]` | Optional | `[]`    | List of bone names that make up the tail chain           |
+| `max_tail_angle`        | `float`    | Optional | `180.0` | Maximum angle the tail can swing                         |
+| `tail_buffer_time`      | `int`      | Optional | `4`     | How many ticks the tail swing is buffered                |
+| `tail_angle_decrement`  | `float`    | Optional | `0.5`   | How fast the tail angle decreases per tick               |
+| `tail_divisor`          | `float`    | Optional | `0.75`  | Divides the tail swing amount, higher = less swing       |
+
+<CodeTabs>
+    ```json !!tabs Client Anim Module
+    "client_anim": {
+        "neck_pieces": [String],
+        "neck_rotation_divisor": [Float],
+        "tail_pieces": [String],
+        "max_tail_angle": [Float],
+        "tail_buffer_time": [Int],
+        "tail_angle_decrement": [Float],
+        "tail_divisor": [Float]
+    }
+    ```
+    ```json !!tabs Example
+    "client_anim": {
+        "neck_pieces": [
+            "Body2",
+            "Neck1",
+            "Neck5",
+            "Head"
+        ],
+        "neck_rotation_divisor": 1.7,
+        "tail_pieces": [
+            "Tail1",
+            "Tail2",
+            "Tail3",
+            "Tail4",
+            "Tail5"
+        ],
+        "max_tail_angle": 180.0,
+        "tail_buffer_time": 4,
+        "tail_angle_decrement": 0.5,
+        "tail_divisor": 0.75
+    }
+    ```
+</CodeTabs>
+
+----
+
+And that's it!
+That should be everything you need to register an animal.
+
+## <div style={{ fontSize: '2.5rem', fontWeight: '600'}}>Resources</div>
+<Callout variant="info">
+    Reminder:
+    Replace `[addon_name]` and `[animal_name]` with your actual addon and animal names throughout this guide.
+</Callout>
+
+Now that the animal is registered, lets get into the asset distribution.
+
+Reminder of the folder structure:
+```
+[addon_name]/
+    addon_data/
+        animals/
+            [animal_name].json
+    data/
+    resources/
+```
+
+### <div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }}>Models</div>
+
+#### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Animal Model Files</div>
+Let's start by adding the model files, but before we do that we have to find out a few things first.
+
+What version did we use? (You can find this in "misc" under "version" in the JSON file, if it's not there use 1.0)
+<Callout variant="info">
+    Replace `[version]` with the version you've found above.
+
+    The version needs a v in front of it! so if you have 1.0 use v1.0
+</Callout>
+
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]/
+```
+
+<Callout variant="warning">
+    An animal name can't contain capital letters!
+</Callout>
+
+Let's now add the geo and animal folder, and add our animal data in there.
+
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]
+                geo/
+                    animal/
+                        [version]/
+                            [animal_name]/
+```
+
+Drop your geo files in there, with the following format.
+
+Baby
+-> [animal_name]_baby.geo.json
+
+Adult
+-> [animal_name]_adult.geo.json
+
+So it'd look like this:
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]
+                geo/
+                    animal/
+                        [version]/
+                            [animal_name]/
+                                [animal_name]_baby.geo.json [*]
+                                [animal_name]_adult.geo.json
+```
+<Callout variant="info">
+    If you have "adult_only" set in "base" in the JSON file, you don't need the baby model file.
+</Callout>
+
+That's the animal model added.
+
+#### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Item Model Files</div>
+Let's start of figuring out where we will put our files!
+
+Let's start by making a "models" folder, and an item folder in the same directory.
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]
+                geo/
+                models/
+                    item/
+```
+
+So for the items it's pretty simple, but first we'll have to figure some things out.
+All these questions can be answered with the item module in the JSON file:
+
+1. Do we have a coin enabled? (or is the animal extinct? because extinct animals always have a coin)
+2. Do we have meat enabled?
+3. Do we have drops enabled?
+4. Do we have fossil enabled?
+5. Is the animal bucket-able?
+
+Let's create files based of the questionnaire.
+
+If you've answered yes to 3. you can skip this part of the guide.
+```
+...
+    models/
+        item/
+            [animal_name]_coin.json [1.]
+            [animal_name]_cooked.json [2.]
+            [animal_name]_raw.json [2.]
+            [animal_name]_hatch_egg.json
+            [animal_name]_spawn_egg.json
+            [animal_name]_fossil_remains.json [4.]
+            [animal_name]_bucket.json [5.]
+```
+<Callout variant="info">
+    Follow the questionnaire, add only the files where you've answered yes.
+</Callout>
+
+
+For the examples there are two last questions,
+1. What eggType did we set?
+    - You can find eggType in the JSON file under the module items.
+2. What kind of coin do we want?
+    - There are a few options:
+
+| File               | Type        | Used When                  |
+|--------------------|-------------|----------------------------|
+| `coin_amphibian`   | Animal Type | Animal type is `AMPHIBIAN` |
+| `coin_bird`        | Animal Type | Animal type is `BIRD`      |
+| `coin_fish`        | Animal Type | Animal type is `FISH`      |
+| `coin_insect`      | Animal Type | Animal type is `INSECT`    |
+| `coin_carnivore`   | Diet Type   | Diet is `CARNIVORE`        |
+| `coin_herbivore`   | Diet Type   | Diet is `HERBIVORE`        |
+| `coin_insectovore` | Diet Type   | Diet is `INSECTOVORE`      |
+| `coin_none`        | Diet Type   | Diet is `NONE`             |
+| `coin_omnivore`    | Diet Type   | Diet is `OMNIVORE`         |
+| `coin_piscivore`   | Diet Type   | Diet is `PISCIVORE`        |
+
+We'll reference the eggType as [egg_type] and the coin as [coin]. Make sure the types are always used in lowercase, so OSTRICH becomes ostrich!
+
+Examples for the [animal_name].json files, reminder that these names aren't representative.
+
+Use the format above for the actual file names.
+<CodeTabs>
+    ```json !!tabs Coin
+    {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": "jurassicsaga:item/natural/entity/default_coins/coin_[coin]",
+            "layer1": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_coin"
+        }
+    }
+    ```
+    ```json !!tabs Cooked Meat
+    {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_cooked"
+        }
+    }
+    ```
+    ```json !!tabs Raw Meat
+    {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_raw"
+        }
+    }
+    ```
+    ```json !!tabs Hatched Egg
+    {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": "jurassicsaga:item/natural/entity/eggs/egg_[egg_type]_hatched"
+        }
+    }
+    ```
+    ```json !!tabs Fossil Remains
+    {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_fossil_remains"
+        }
+    }
+    ```
+    ```json !!tabs Spawn Egg
+    {
+        "parent": "minecraft:item/template_spawn_egg"
+    }
+    ```
+    ```json !!tabs Bucket
+    {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_bucket"
+        }
+    }
+    ```
+</CodeTabs>
+<Callout variant="info">
+    Replace `[version]` with the version you've found above.
+
+    The version needs a v in front of it! so if you have 1.0 use v1.0
+
+    Replace `[addon_name]` and `[animal_name]` with your actual addon and animal names.
+
+</Callout>
+
+That should be all the animal item models!
+
+#### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Paddock Sign Model File</div>
+
+Let's add the paddock sign model now,
+
+Let's start by making a "signs" folder inside the models folder, in their lets also add a "paddock" folder.
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]
+                geo/
+                models/
+                    item/
+                    signs/
+                        paddock/
+```
+
+In that folder we'll add a new file with our animal name:
+```
+[addon_name]/
+...
+    models/
+        item/
+        signs/
+            paddock/
+                [animal_name].json
+```
+Inside that file add the following:
+<CodeTabs>
+    ```json !!tabs Paddock Sign
+    {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": "[addon_name]:block/manmade/other/paddock_sign/[animal_name]"
+        }
+    }
+    ```
+</CodeTabs>
+----
+
+### <div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }}>Animations</div>
+Now let's continue with the animation files
+
+Let's add an animations folder above the geo folder, and we'll follow the same structure as before,
+the animation files should be named appropriately:
+
+Baby
+-> [animal_name]_baby.animation.json
+
+Adult
+-> [animal_name].animation.json
+
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]/
+                models/
+                animations/
+                    animal/
+                        [version]/
+                            [animal_name]/
+                                [animal_name]_baby.animation.json [*]
+                                [animal_name].animation.json
+                geo/
+```
+
+<Callout variant="info">
+    [*] If you have adult only set in "base" in the JSON file, you don't need the baby animations file.
+
+    Or if you've set "babyAnimations" to False in "misc"
+</Callout>
+
+----
+
+That's the animations added!
+
+### <div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }}>Textures</div>
+----
+
+#### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Animal Textures</div>
+
+Now let's add the animal base textures
+
+Let's start off by creating a new folder named textures:
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]/
+                animations/
+                models/
+                geo/
+                textures/
+```
+
+Add a few more folders like we've done previous, by starting of with a geo folder __inside the textures folder__ and then an animal folder:
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]/
+                animations/
+                models/
+                geo/
+                textures/
+                    geo/
+                        animal/
+                            [version]/
+                                [animal_name]/
+```
+
+Then inside the [animal_name] folder we'll add the textures needed for this animal
+
+Naming scheme:
+
+Adults:
+- Female -> [animal_name]_adult_female.png
+- Male -> [animal_name]_adult_male.png
+
+Baby -> [animal_name]_baby.png
+
+So it'd look like this:
+
+```
+...
+    animal/
+        [version]/
+            [animal_name]/
+                [animal_name]_adult_female.png
+                [animal_name]_adult_male.png
+                [animal_name]_baby.png [*]
+```
+<Callout variant="info">
+    [*] If you have adult only set in "base" in the JSON file, you don't need the baby png file.
+</Callout>
+
+If you want to add variants that's done like this:
+```
+...
+    animal/
+        [version]/
+            [animal_name]/
+                variants/
+                    [animal_name]_adult_chaos_effect.png
+                [animal_name]_adult_female.png
+                [animal_name]_adult_male.png
+                [animal_name]_baby.png
+```
+<Callout variant="info">
+    I've used chaos_effect as an example, but you can do this for any of the skin genes.
+    `_adult_female` and `_adult_male` are only used when `has_genders: true`, otherwise use `_adult`.
+</Callout>
+
+----
+
+#### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Item Textures</div>
+Now let's add the item textures
+
+Let's first of all figure out if the animal is extinct or extant, you can find this in "misc" under "extinct"
+<Callout variant="info">
+    Replace [extinct_or_extant] based of the found information, if you dont have extinct set, use extant.
+</Callout>
+
+Since some things like paddock signs use this for locating, this has to be very specific.
+
+```
+[addon_name]/
+...
+    textures/
+        item/
+            natural/
+                entity/
+                    animal/
+                        [version]/
+                            [extinct_or_extant]/
+                                [animal_name]/
+        geo/
+```
+
+Now that you have that structure implemented let's add the files necessary, but to do this we'll have to figure some things out first.
+
+All these questions can be answered with the item module in the JSON file:
+
+1. Do we have a coin enabled? (or is the animal extinct? because extinct animals always have a coin)
+2. Do we have meat enabled?
+3. Do we have drops enabled?
+4. Do we have fossil enabled?
+5. Is the animal bucket-able?
+
+If you've answered no to 3, skip the following step.
+```
+...
+    [extinct_or_extant]/
+        [animal_name]/
+            [animal_name]_coin.png [1.]
+            [animal_name]_cooked.png [2.]
+            [animal_name]_raw.png [2.]
+            [animal_name]_fossil_remains.png [4.]
+            [animal_name]_bucket.png [5.]
+```
+<Callout variant="info">
+    Follow the questionnaire, add only the files where you've answered yes.
+</Callout>
+
+----
+
+#### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Paddock Sign Texture</div>
+Let's add the paddock sign, this step should be fairly simple.
+
+You'll have to start with the block folder, because the paddock sign is on the block atlas:
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]/
+                animations/
+                models/
+                geo/
+                textures/
+                    block/
+```
+
+Let's now let's add the paddock sign to the designated folder:
+```
+...
+    textures/
+        block/
+            manmade/
+                other/
+                    paddock_sign/
+                        [animal_name].png
+```
+As you can see this is very specific again, and this is because the paddock sign renderer references it.
+
+That's all from the texture side!
+
+### <div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }}>Sounds</div>
+<Callout variant="info">
+    If you don't have a sounds module in your json file, you can skip this step.
+</Callout>
+
+#### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Sounds JSON</div>
+Inside the assets folder's [addon_name] we'll add a new file called sounds.json
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]/
+                animations/
+                geo/
+                models/
+                textures/
+                sounds.json
+```
+
+The sounds.json file is where you register all the sounds for your animal. Each sound event follows the pattern `[animal_name]_[event]`, and contains a list of sound file references in the format `[addon_name]:animal/[animal_name]/[sound_file]`.
+
+The four sound events you'll need are:
+
+- `[animal_name]_death` - played when the animal dies
+- `[animal_name]_hurt` - played when the animal is hurt, you can add multiple for variety
+- `[animal_name]_ambient` - played during idle/ambient behavior, you can add as many as you like
+- `[animal_name]_attack` - played when the animal attacks
+
+<CodeTabs>
+```json !!tabs Example
+{
+    "[animal_name]_death": {
+        "sounds": [
+            "[addon_name]:animal/[animal_name]/[sound_file]"
+        ]
+    },
+    "[animal_name]_hurt": {
+        "sounds": [
+            "[addon_name]:animal/[animal_name]/[sound_file]",
+            "[addon_name]:animal/[animal_name]/[sound_file]"
+        ]
+    },
+    "[animal_name]_ambient": {
+        "sounds": [
+            "[addon_name]:animal/[animal_name]/[sound_file]",
+            "[addon_name]:animal/[animal_name]/[sound_file]"
+        ]
+    },
+    "[animal_name]_attack": {
+        "sounds": [
+            "[addon_name]:animal/[animal_name]/[sound_file]",
+            "[addon_name]:animal/[animal_name]/[sound_file]"
+        ]
+    }
+}
+```
+</CodeTabs>
+<Callout variant="info">
+    The sound files themselves are `.ogg` files and go in the sounds folder, which we'll set up in the next step.
+</Callout>
+
+#### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Sound Files</div>
+Now let's add the actual sound files, these go inside a sounds folder in your assets:
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]/
+                animations/
+                geo/
+                models/
+                textures/
+                sounds/
+                    animal/
+                        [animal_name]/
+                            [sound_file].ogg
+                sounds.json
+```
+<Callout variant="info">
+    Sound files must be in `.ogg` format. The file names here must match what you referenced in your `sounds.json`.
+</Callout>
+
+Repeat this process for every file you've referenced.
+
+### <div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }}>Language file</div>
+
+The language file is where you define all the display names for your animal. It goes here:
+```
+[addon_name]/
+    addon_data/
+    data/
+    resources/
+        assets/
+            [addon_name]/
+                animations/
+                geo/
+                models/
+                textures/
+                sounds/
+                lang/
+                    en_us.json
+                sounds.json
+```
+
+Inside `en_us.json` you'll want to add the following entries, replacing the values with your own:
+
+<CodeTabs>
+    ```json !!tabs en_us.json
+    {
+        "entity.[addon_name].[animal_name]": "Display Name",
+        "guidebook.[addon_name].[animal_name].description": "Guidebook description",
+        "guidebook.[addon_name].[animal_name].scientific_name": "Scientific Name",
+        "guidebook.[addon_name].[animal_name].source": "Region or source",
+        "item.[addon_name].[animal_name]_coin": "[Animal Name] DNA",
+        "item.[addon_name].[animal_name]_cooked": "[Animal Name] Cooked Meat",
+        "item.[addon_name].[animal_name]_fossil_remains": "[Animal Name] Remains",
+        "item.[addon_name].[animal_name]_hatch_egg": "[Animal Name] Hatched Egg",
+        "item.[addon_name].[animal_name]_raw": "[Animal Name] Raw Meat",
+        "item.[addon_name].[animal_name]_spawn_egg": "[Animal Name] Spawn Egg",
+        "advancements.[addon_name].[animal_name].desc": "Advancement description",
+        "advancements.[addon_name].[animal_name].title": "Advancement title"
+    }
+    ```
+</CodeTabs>
+
+<Callout variant="info">
+    Not all entries are required - only add the ones relevant to your animal. For example if you have `hasMeat: false` you won't need the raw and cooked meat entries.
+</Callout>
+
+
+That should be everything from the resources!
+
+## <div style={{ fontSize: '2.5rem', fontWeight: '600'}}>Data</div>
+<Callout variant="info">
+    Reminder:
+    Replace `[addon_name]` and `[animal_name]` with your actual addon and animal names throughout this guide.
+</Callout>
+
+You are nearly there, it's just a few simple things now!
+
+Let's start with the advancements for the cooking recipes. You can skip this if you don't have meats.
+
+These go here:
+```
+[addon_name]/
+    addon_data/
+    data/
+        [addon_name]/
+            advancement/
+                recipes/
+                    [animal_name]_cooked_campfire.json
+                    [animal_name]_cooked_smelt.json
+                    [animal_name]_cooked_smoke.json
+    resources/
+```
+
+You'll need one advancement file per cooking method — campfire, smelting, and smoking:
+
+<CodeTabs>
+    ```json !!tabs Campfire
+    {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+            "has_[animal_name]_cooked": {
+                "conditions": {
+                    "items": [{ "items": "[addon_name]:[animal_name]_cooked" }]
+                },
+                "trigger": "minecraft:inventory_changed"
+            },
+            "has_[animal_name]_raw": {
+                "conditions": {
+                    "items": [{ "items": "[addon_name]:[animal_name]_raw" }]
+                },
+                "trigger": "minecraft:inventory_changed"
+            },
+            "has_the_recipe": {
+                "conditions": {
+                    "recipe": "[addon_name]:[animal_name]_cooked_campfire"
+                },
+                "trigger": "minecraft:recipe_unlocked"
+            }
+        },
+        "requirements": [["has_the_recipe", "has_[animal_name]_raw", "has_[animal_name]_cooked"]],
+        "rewards": {
+            "recipes": ["[addon_name]:[animal_name]_cooked_campfire"]
+        }
+    }
+    ```
+    ```json !!tabs Smelt
+    {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+            "has_[animal_name]_cooked": {
+                "conditions": {
+                    "items": [{ "items": "[addon_name]:[animal_name]_cooked" }]
+                },
+                "trigger": "minecraft:inventory_changed"
+            },
+            "has_[animal_name]_raw": {
+                "conditions": {
+                    "items": [{ "items": "[addon_name]:[animal_name]_raw" }]
+                },
+                "trigger": "minecraft:inventory_changed"
+            },
+            "has_the_recipe": {
+                "conditions": {
+                    "recipe": "[addon_name]:[animal_name]_cooked_smelt"
+                },
+                "trigger": "minecraft:recipe_unlocked"
+            }
+        },
+        "requirements": [["has_the_recipe", "has_[animal_name]_raw", "has_[animal_name]_cooked"]],
+        "rewards": {
+            "recipes": ["[addon_name]:[animal_name]_cooked_smelt"]
+        }
+    }
+    ```
+    ```json !!tabs Smoke
+    {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+            "has_[animal_name]_cooked": {
+                "conditions": {
+                    "items": [{ "items": "[addon_name]:[animal_name]_cooked" }]
+                },
+                "trigger": "minecraft:inventory_changed"
+            },
+            "has_[animal_name]_raw": {
+                "conditions": {
+                    "items": [{ "items": "[addon_name]:[animal_name]_raw" }]
+                },
+                "trigger": "minecraft:inventory_changed"
+            },
+            "has_the_recipe": {
+                "conditions": {
+                    "recipe": "[addon_name]:[animal_name]_cooked_smoke"
+                },
+                "trigger": "minecraft:recipe_unlocked"
+            }
+        },
+        "requirements": [["has_the_recipe", "has_[animal_name]_raw", "has_[animal_name]_cooked"]],
+        "rewards": {
+            "recipes": ["[addon_name]:[animal_name]_cooked_smoke"]
+        }
+    }
+    ```
+</CodeTabs>
+
+Now let's add the actual recipes, these go here:
+```
+[addon_name]/
+    data/
+        [addon_name]/
+            advancement/
+                recipes/
+                    [animal_name]_cooked_campfire.json
+                    [animal_name]_cooked_smelt.json
+                    [animal_name]_cooked_smoke.json
+            recipe/
+                [animal_name]_cooked_campfire.json
+                [animal_name]_cooked_smelt.json
+                [animal_name]_cooked_smoke.json
+```
+<br>
+</br>
+<CodeTabs>
+    ```json !!tabs Campfire
+    {
+        "type": "minecraft:campfire_cooking",
+        "category": "food",
+        "cookingtime": 600,
+        "experience": 0.5,
+        "ingredient": {
+            "item": "[addon_name]:[animal_name]_raw"
+        },
+        "result": {
+            "count": 1,
+            "id": "[addon_name]:[animal_name]_cooked"
+        }
+    }
+    ```
+    ```json !!tabs Smelt
+    {
+        "type": "minecraft:smelting",
+        "category": "food",
+        "cookingtime": 300,
+        "experience": 0.5,
+        "ingredient": {
+            "item": "[addon_name]:[animal_name]_raw"
+        },
+        "result": {
+            "count": 1,
+            "id": "[addon_name]:[animal_name]_cooked"
+        }
+    }
+    ```
+    ```json !!tabs Smoke
+    {
+        "type": "minecraft:smoking",
+        "category": "food",
+        "cookingtime": 240,
+        "experience": 0.5,
+        "ingredient": {
+            "item": "[addon_name]:[animal_name]_raw"
+        },
+        "result": {
+            "count": 1,
+            "id": "[addon_name]:[animal_name]_cooked"
+        }
+    }
+    ```
+</CodeTabs>
+
+Next we'll register our items into the relevant tags, these go here:
+```
+[addon_name]/
+    data/
+        [addon_name]/
+            advancement/
+            recipe/
+        jurassicsaga/
+            tags/
+                item/
+                    carnivore_edible.json
+                    fertilized_eggs.json
+                    fossil.json
+                    dna.json
+```
+
+<br>
+</br>
+
+<CodeTabs>
+    ```json !!tabs carnivore_edible
+    {
+        "replace": false,
+        "values": [
+            "[addon_name]:[animal_name]_raw",
+            "[addon_name]:[animal_name]_cooked"
+        ]
+    }
+    ```
+    ```json !!tabs fertilized_eggs
+    {
+        "replace": false,
+        "values": [
+            "[addon_name]:[animal_name]_hatch_egg"
+        ]
+    }
+    ```
+    ```json !!tabs fossil
+    {
+        "replace": false,
+        "values": [
+            "[addon_name]:[animal_name]_fossil_remains"
+        ]
+    }
+    ```
+    ```json !!tabs dna
+    {
+        "replace": false,
+        "values": [
+            "[addon_name]:[animal_name]_coin"
+        ]
+    }
+    ```
+</CodeTabs>
+<Callout variant="info">
+    Only add the tags relevant to your animal based on what you enabled in the items module.
+</Callout>
+
+That's it, the whole guide!
+
+<Callout variant="warning">
+    Advancements are not covered in this guide as they depend on your animal type. If you need help with this, ask in the Discord.
+</Callout>

@@ -1,0 +1,22 @@
+{
+    "creating_json_addons.mdx": {
+        "name": "Creating an Addon",
+        "icon": "Wrench"
+    },
+    "new_species.mdx": {
+        "name": "New species",
+        "icon": "Plus"
+    },
+    "js_tasks.mdx": {
+        "name": "Species Task Properties",
+        "icon": "Plus"
+    },
+    "existing_modification.mdx": {
+        "name": "Modifying an animal",
+        "icon": "Wrench"
+    },
+    "signs.mdx": {
+        "name": "Adding Signs",
+        "icon": "Wrench"
+    }
+}

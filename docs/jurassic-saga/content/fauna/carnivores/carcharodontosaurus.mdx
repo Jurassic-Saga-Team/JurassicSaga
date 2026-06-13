@@ -1,13 +1,15 @@
 ---
-title: Carcharodontosaurus
+ref: carcharodontosaurus
 type: other
 id: jurassic-saga:carcharodontosaurus
 icon: jurassic-saga:icons/carcharodontosaurus.gif
+
 history:
   - version: 0.1.8
     date: 26.01.2026
     changes:
         - Added Carcharodontosaurus (Experimental Feature)
+
 custom: 
     Health: Adult 260 Health (x130 Hearts)
     Behavior: Hostile
@@ -19,6 +21,17 @@ custom:
     Egg Type: Ostrich Egg
     Time Period: Late Cretaceous
     Achievement: Shark-Toothed Lizard
+
+infobox:
+  title: Carcharodontosaurus
+  inventory:
+    - jurassic-saga:inventory/carcharodontosaurus_fossil_remains
+    - jurassic-saga:inventory/carcharodontosaurus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_carcharodontosaurus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_carcharodontosaurus.png
 ---
 
 <Callout variant="danger">
@@ -26,7 +39,7 @@ custom:
 </Callout>
 
 <Callout variant="info">
-    The last update on this page was on: 3rd May 2026
+    The last update on this page was on: 13th June 2026 (v0.1.11.1)
 </Callout>
 
 # Carcharodontosaurus saharicus
@@ -70,6 +83,90 @@ Carcharodontosaurus does not spawn naturally. To obtain one, you must:
 When defeated, Carcharodontosaurus may drop:
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v5_5/extinct/carcharodontosaurus/carcharodontosaurus_fossil_remains) [**Carcharodontosaurus Remains**](@jurassic-saga:fossil)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v5_5/extinct/carcharodontosaurus/carcharodontosaurus_raw) [**Carcharodontosaurus Raw Meat**](@jurassic-saga:meats)
+
+---
+
+## Sounds
+
+### Roars
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Roar 1</td>
+    <td>Played periodically while idle</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_roar01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Roar 2</td>
+    <td>Played periodically while idle</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_roar02.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td>Played when taking damage</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td>Played when taking damage</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td>Played when taking damage</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td>Played when taking damage</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_js_hurt04.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 1</td>
+    <td>Played randomly while alive</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 2</td>
+    <td>Played randomly while alive</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 3</td>
+    <td>Played randomly while alive</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_js_living03.ogg" /></td>
+  </tr>
+</table>
+
+### Attack Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 1</td>
+    <td>Played when attacking</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_attack01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 2</td>
+    <td>Played when attacking</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_attack02.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 1</td>
+    <td>Played when it dies</td>
+    <td><Audio controls src="jurassic-saga:sounds/carcharodontosaurus/carcharodontosaurus_js_death.ogg" /></td>
+  </tr>
+</table>
 
 ---
 

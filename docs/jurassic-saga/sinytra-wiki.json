@@ -4,18 +4,23 @@
         "modrinth": "jurassic-saga",
         "curseforge": "jurassic-saga"
     },
+    
     "modid": "jurassic-saga",
     "owners": [
         "Collinvh",
         "MLGMagicHoodini"
     ],
+
     "licenses": {
         "project": {
             "id": "ARR"
         }
     },
+
     "versions": {
       "1.21.1": "main",
       "1.20.1": "main"
-    }
+    },
+
+    "schema": "1"
 }

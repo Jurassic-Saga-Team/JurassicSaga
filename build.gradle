@@ -1,0 +1,11 @@
+plugins {
+    id 'org.moddedmc.wiki.toolkit' version '<version>'
+}
+
+wiki {
+    docs {
+        'jurassic-saga' {
+            root = file('docs/jurassic-saga')
+        }
+    }
+}

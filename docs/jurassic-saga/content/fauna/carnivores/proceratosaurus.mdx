@@ -1,10 +1,12 @@
 ---
-title: Proceratosaurus
+ref: proceratosaurus
 type: other
 id: jurassic-saga:proceratosaurus
-icon: jurassic-saga:icons/proceratosaurus.gif
+icon: jurassic-saga:inventory/proceratosaurus_coin
+
 history:
   - 0.1: Added Proceratosaurus
+
 custom: 
     Health: Adult 15 Health (x7.5 Hearts)
     Behavior: Neutral
@@ -14,12 +16,25 @@ custom:
     Breedable: Not yet implemented
     Obtained: Fossil Revival
     Egg Type: Chicken Egg
-    Region: England
+    Time Period: "Middle Jurassic"
     Achievement: "Clever Little Hunter"
+
+infobox:
+  title: Proceratosaurus
+  inventory:
+    - jurassic-saga:inventory/proceratosaurus_fossil_remains
+    - jurassic-saga:inventory/proceratosaurus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_proceratosaurus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_proceratosaurus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_proceratosaurus.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 19th April 2026
+    The last update on this page was on: 25th June 2026 (v0.1.11.1)
 </Callout>
 
 # Proceratosaurus bradleyi
@@ -66,6 +81,138 @@ When defeated, Proceratosaurus may drop:
 
 ---
 
+## Sounds
+
+### Attack Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_attack01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_attack02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_attack03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_attack04.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_death.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_hurt03.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_living10.ogg" /></td>
+  </tr>
+</table>
+
+### Mating Call Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_mating_call01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_mating_call02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_mating_call03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_mating_call04.ogg" /></td>
+  </tr>
+</table>
+
+### Threat Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_threat01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_threat02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_threat03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/proceratosaurus/proceratosaurus_js_threat04.ogg" /></td>
+  </tr>
+</table>
+
+---
+
 ## Gallery
 ### Community Images
 <table style={{borderCollapse: "collapse"}}>
@@ -102,7 +249,7 @@ When defeated, Proceratosaurus may drop:
 
 ---
 
-## Trivia
+## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
 - The achievement "Clever Little Hunter" reflects Proceratosaurus's role as an intelligent small predator during the Middle Jurassic
 
 ---

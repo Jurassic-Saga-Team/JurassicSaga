@@ -1,31 +1,55 @@
 ---
-title: Procompsognathus
+ref: procompsognathus
 type: other
 id: jurassic-saga:procompsognathus
-icon: jurassic-saga:icons/procompsognathus.gif
+icon: jurassic-saga:inventory/procompsognathus_coin
+
 history:
-  - 0.1: Added Procompsognathus
+  - version: "0.1"
+    date:
+    changes:
+      - Added Procompsognathus
   - version: "0.1.9"
     date: 06.03.2026
     changes:
       - Updated Procompsognathus model
+
 custom: 
-    Health: Adult 9 Health (x4.5 Hearts)
-    Behavior: Hostile (Requires 3)
-    Diet: Carnivore
-    Size: 2 Blocks Long, 1 Block Tall
-    Drops: Procompsognathus Raw Meat, Procompsognathus Remains
-    Breedable: Not yet implemented
-    Obtained: Fossil Revival
-    Egg Type: Chicken Egg
-    Region: Germany
+    Health: "Adult 9 Health (x4.5 Hearts)"
+    Behavior: "Hostile (Requires 3)"
+    Diet: "Carnivore"
+    Size: "2 Blocks Long, 1 Block Tall"
+    Drops: "Procompsognathus Raw Meat, Procompsognathus Remains"
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
+    Egg Type: "Chicken Egg"
+    Time Period: "Late Triassic"
     Achievement: "Caution: Venom"
+
+infobox:
+  title: Procompsognathus
+  inventory:
+    - jurassic-saga:inventory/procompsognathus_fossil_remains
+    - jurassic-saga:inventory/procompsognathus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_procompsognathus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_procompsognathus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_procompsognathus.png
+    - name: Jungle
+      display: jurassic-saga:tabs/jungle_procompsognathus.png
 ---
+
+<Callout variant="info">
+    The last update on this page was on: 25th June 2026 (v0.1.11.1)
+</Callout>
 
 # Procompsognathus triassicus
 
-Procompsognathus was a small, lightly built dinosaur from the **Late Triassic period** of Europe, with fossils discovered in Germany.  
-It was a fast runner and likely insectivorous or carnivorous, feeding on insects and small vertebrates.  
+*Procompsognathus* was a small, lightly built dinosaur from the **Late Triassic period** of Europe, with fossils discovered in Germany.
+It was a fast runner and likely insectivorous or carnivorous, feeding on insects and small vertebrates.
 Its small size and speed made it effective at darting through underbrush, and it may have lived in groups for protection.
 
 ---
@@ -39,7 +63,7 @@ Its small size and speed made it effective at darting through underbrush, and it
 ---
 
 ## Behavior
-- **Hostile (Requires 3)**:  
+- **Hostile (Requires 3)**:
     - A single Procompsognathus will not attack the player
     - When **three or more** are present, they become aggressive and swarm their target
 - Uses quick darting movements to harass prey and overwhelm through numbers
@@ -67,6 +91,150 @@ When defeated, Procompsognathus may drop:
 
 ---
 
+## Sounds
+
+### Alarm Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_alarm01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_alarm02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_alarm03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_alarm04.ogg" /></td>
+  </tr>
+</table>
+
+### Attack Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_attack01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_attack02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_attack03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_attack04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_attack05.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_death.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_hurt04.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living10.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 11</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_living11.ogg" /></td>
+  </tr>
+</table>
+
+### Threat Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_threat01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_threat02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_threat03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/procompsognathus/procompsognathus_js_threat04.ogg" /></td>
+  </tr>
+</table>
+
+---
+
 ## Gallery
 ### Community Images
 <table style={{borderCollapse: "collapse"}}>
@@ -85,7 +253,7 @@ When defeated, Procompsognathus may drop:
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
     <td style={{textAlign: "center"}}>
-      <img width={256} src="https://i.imgur.com/DRVcF2K.png" alt="Procompsognathus Jungle Showcase"/>
+      <img width={256} src="https://i.imgur.com/DRVcF2K.png" alt="Procompsognathus Cosmetic Gene - Jungle"/>
       <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
         Procompsognathus Cosmetic Gene - Jungle
       </div>
@@ -127,6 +295,12 @@ When defeated, Procompsognathus may drop:
 
 ---
 
-## Trivia
-- The achievement "Caution: Venom" references the venomous bite attributed to "Compys" in Michael Crichton's *Jurassic Park* novels, though there is no scientific evidence for venom in real Procompsognathus
-- In the *Jurassic Park* franchise, Procompsognathus is often conflated with Compsognathus, with both being referred to as "Compys"
+## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
+- The achievement "Caution: Venom" references the venomous bite attributed to "Compys" in Michael Crichton's *Jurassic Park* novels, though there is no scientific evidence for venom in real Procompsognathus.
+- In the *Jurassic Park* franchise, Procompsognathus is often conflated with Compsognathus, with both being referred to as "Compys".
+
+---
+
+<Callout variant="info">
+    Found an issue or have a suggestion? [Submit feedback](https://forms.gle/qpxsiVat9f6eVm2CA) • [Join Discord](https://discord.gg/3b8k78f)
+</Callout>

@@ -1,8 +1,9 @@
 ---
-title: Tyrannosaurus
+ref: tyrannosaurus
 type: other
 id: jurassic-saga:tyrannosaurus
-icon: jurassic-saga:icons/tyrannosaurus.gif
+icon: jurassic-saga:inventory/tyrannosaurus_coin
+
 history:
   - version: 0.1
     changes:
@@ -20,6 +21,7 @@ history:
     date: 06.03.2026
     changes:
         - Tyrannosaurus — Chaos Effect
+
 custom: 
     Health: Adult 120 Health (x60 Hearts)
     Behavior: Hostile
@@ -31,10 +33,31 @@ custom:
     Egg Type: Ostrich Egg
     Time Period: Late Cretaceous
     Achievement: "We Have A T-rex!"
+
+infobox:
+  title: Tyrannosaurus
+  inventory:
+    - jurassic-saga:inventory/tyrannosaurus_fossil_remains
+    - jurassic-saga:inventory/tyrannosaurus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_tyrannosaurus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_tyrannosaurus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_tyrannosaurus.png
+    - name: River
+      display: jurassic-saga:tabs/river_tyrannosaurus.png
+    - name: Forest
+      display: jurassic-saga:tabs/forest_tyrannosaurus.png
+    - name: Forest (Secret)
+      display: jurassic-saga:tabs/forest_secret_tyrannosaurus.png
+    - name: Chaos Effect
+      display: jurassic-saga:tabs/chaos_effect_tyrannosaurus.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 18th March 2026
+    The last update on this page was on: 26th June 2026 (v0.1.11.1)
 </Callout>
 
 # Tyrannosaurus rex
@@ -79,6 +102,174 @@ Tyrannosaurus does not spawn naturally. To obtain one, you must:
 When defeated, Tyrannosaurus may drop:  
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/tyrannosaurus/tyrannosaurus_fossil_remains) [**Tyrannosaurus Remains**](@jurassic-saga:fossil)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/tyrannosaurus/tyrannosaurus_raw) [**Tyrannosaurus Raw Meat**](@jurassic-saga:meats)
+
+---
+
+## Sounds
+
+### Attack Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_attack01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_attack02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_attack03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_attack04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_attack05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_attack06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_attack07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_attack08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_attack09.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_death01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_death02.ogg" /></td>
+  </tr>
+</table>
+
+### Familial Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Familial 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_familial01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Familial 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_familial02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Familial 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_familial03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Familial 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_familial04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Familial 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_familial05.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_hurt04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_hurt05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_hurt06.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living10.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 11</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_living11.ogg" /></td>
+  </tr>
+</table>
+
+### Roar Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Roar 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_roar01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Roar 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/rex/rex_js_roar02.ogg" /></td>
+  </tr>
+</table>
 
 ---
 

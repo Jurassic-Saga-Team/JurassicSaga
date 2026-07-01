@@ -1,36 +1,51 @@
 ---
-title: Alligator
+ref: alligator
 type: other
 id: jurassic-saga:alligator
 icon: jurassic-saga:icons/alligator.gif
+
 history:
-  - version: 0.1
+  - version: "0.1"
+    date:
     changes:
-        - Added Alligator
+      - Added Alligator
   - version: "0.1.9"
     date: 06.03.2026
     changes:
       - Updated icons
+
 custom: 
-    Health: Adult 35 Health (x17.5 Hearts)
-    Behavior: Hostile
-    Size: 7 Blocks Long, 1 Block Tall
-    Drops: Alligator Eggs
-    Breedable: Yes (Raw Fish)
-    Obtained: Natural Spawn
-    Egg Type: N/A
-    Time Period: Modern (Extant)
-    Achievement: N/A
+    Health: "Adult 35 Health (x17.5 Hearts)"
+    Behavior: "Hostile"
+    Size: "7 Blocks Long, 1 Block Tall"
+    Drops: "Alligator Eggs"
+    Breedable: "Yes (Raw Fish)"
+    Obtained: "Natural Spawn"
+    Egg Type: "Alligator"
+    Time Period: "Modern (Extant)"
+    Achievement: "N/A"
+
+infobox:
+  title: Alligator
+  inventory:
+    - jurassic-saga:inventory/alligator_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_alligator.png
+    - name: Female
+      display: jurassic-saga:tabs/female_alligator.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_alligator.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 11th March 2026
+    The last update on this page was on: 1st July 2026
 </Callout>
 
 # Alligator
 
-The alligator is a large, semi-aquatic reptile native to **North America**.  
-Known for its powerful jaws and armored body, it thrives in rivers, swamps, and wetlands.  
+The *Alligator* is a large, semi-aquatic reptile native to **North America**.
+Known for its powerful jaws and armored body, it thrives in rivers, swamps, and wetlands.
 In-game, the alligator is a hostile mob that can pose a danger to players who wander too close to water.
 
 ---
@@ -55,9 +70,151 @@ Alligator spawns naturally in swamps near Witch Huts.
 
 ---
 
+## Diet
+- **Carnivore**: feeds on <img src="https://i.imgur.com/4K6xsJA.gif" width={32} height={32} style={{imageRendering: "pixelated"}}/> meat sources
+- Hunts fish and small creatures, ambushing prey from the water
+
+---
+
 ## Drops
 When defeated, Alligator may drop:  
 - ![](@jurassic-saga:textures/item/natural/entity/eggs/egg_alligator) [**Alligator Egg**](@jurassic-saga:eggs)
+
+---
+
+## Sounds
+
+### Attack Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_attack01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_attack02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_attack03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_attack04.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_death.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_hurt04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_hurt05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_hurt06.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_living06.ogg" /></td>
+  </tr>
+</table>
+
+### Mating Call Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_mating_call01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_mating_call02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_mating_call03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_mating_call04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_mating_call05.ogg" /></td>
+  </tr>
+</table>
+
+### Threat Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_threat01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_threat02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_threat03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_threat04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/alligator/alligator_js_threat05.ogg" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -84,9 +241,9 @@ When defeated, Alligator may drop:
 
 ---
 
-## Trivia
-- Alligators are one of the few modern animals included in Jurassic Saga, serving as a source of Alligator Eggs needed for hatching medium-sized dinosaurs
-- Real-world alligators have remained virtually unchanged for millions of years, making them living fossils alongside dinosaurs in the mod
+## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
+- Alligators are one of the few modern animals included in Jurassic Saga, serving as a source of Alligator Eggs needed for hatching medium-sized dinosaurs.
+- Real-world alligators have remained virtually unchanged for millions of years, making them living fossils alongside dinosaurs in the mod.
 
 ---
 

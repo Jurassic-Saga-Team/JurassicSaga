@@ -1,32 +1,47 @@
 ---
-title: Ostrich
+ref: ostrich
 type: other
 id: jurassic-saga:ostrich
-icon: jurassic-saga:icons/ostrich.gif
+icon: jurassic-saga:inventory/ostrich_coin
+
 history:
-  - version: 0.1
+  - version: "0.1"
+    date:
     changes:
-        - Added Ostrich
+      - Added Ostrich
+
 custom: 
-    Health: Adult 29 Health (x14.5 Hearts)
-    Behavior: Neutral
-    Size: 3 Blocks Long, 3 Blocks Tall
-    Drops: Ostrich Eggs
-    Breedable: Yes (Seeds)
-    Obtained: Natural Spawn
-    Egg Type: N/A
-    Time Period: Modern (Extant)
-    Achievement: N/A
+    Health: "Adult 29 Health (x14.5 Hearts)"
+    Behavior: "Neutral"
+    Size: "3 Blocks Long, 3 Blocks Tall"
+    Drops: "Ostrich Eggs"
+    Breedable: "Yes (Seeds)"
+    Obtained: "Natural Spawn"
+    Egg Type: "N/A"
+    Time Period: "Modern (Extant)"
+    Achievement: "N/A"
+
+infobox:
+  title: Ostrich
+  inventory:
+    - jurassic-saga:inventory/ostrich_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_ostrich.png
+    - name: Female
+      display: jurassic-saga:tabs/female_ostrich.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_ostrich.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 11th March 2026
+    The last update on this page was on: 3rd July 2026 (v0.1.11.1)
 </Callout>
 
 # Ostrich
 
-The ostrich is the largest living bird, native to the savannas and deserts of **Africa**.  
-It is flightless but highly adapted for running, with long legs capable of reaching speeds up to 70 km/h.  
+The *Ostrich* is the largest living bird, native to the savannas and deserts of **Africa**.
+It is flightless but highly adapted for running, with long legs capable of reaching speeds up to 70 km/h.
 Ostriches are known for their distinctive long necks, powerful legs, and large eggs — the biggest of any living bird.
 
 ---
@@ -52,9 +67,107 @@ Ostrich spawns naturally in savanna biomes.
 
 ---
 
+## Diet
+- **Herbivore**: feeds on seeds, plants, and occasional insects
+- Grazes across open savanna terrain
+
+---
+
 ## Drops
 The Ostrich may occasionally lay:  
 - ![](@jurassic-saga:textures/item/natural/entity/eggs/egg_ostrich) [**Ostrich Egg**](@jurassic-saga:eggs)
+
+---
+
+## Sounds
+
+### Aggressive Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Aggressive 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_aggressive01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Aggressive 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_aggressive02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Aggressive 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_aggressive03.ogg" /></td>
+  </tr>
+</table>
+
+### Attack Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_attack01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_attack02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_attack03.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_death01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_death02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_death03.ogg" /></td>
+  </tr>
+</table>
+
+### Idle Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Idle 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_idle01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Idle 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_idle02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Idle 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_idle03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Idle 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_idle04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Idle 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_idle05.ogg" /></td>
+  </tr>
+</table>
+
+### Injured Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Injured 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_injured01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Injured 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_injured02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Injured 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/ostrich/ostrich_js_injured03.ogg" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -81,10 +194,10 @@ The Ostrich may occasionally lay:
 
 ---
 
-## Trivia
-- Ostriches are one of the few modern animals included in Jurassic Saga, serving as a source of Ostrich Eggs needed for hatching large dinosaurs
-- Ostrich Eggs are the largest eggs used in the mod, required for creatures like Tyrannosaurus, Triceratops, Parasaurolophus, and other massive dinosaurs
-- Despite popular myth, ostriches don't actually bury their heads in sand when frightened — this misconception comes from their habit of lying flat to avoid detection
+## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
+- Ostriches are one of the few modern animals included in Jurassic Saga, serving as a source of Ostrich Eggs needed for hatching large dinosaurs.
+- Ostrich Eggs are the largest eggs used in the mod, required for creatures like Tyrannosaurus, Triceratops, Parasaurolophus, and other massive dinosaurs.
+- Despite popular myth, ostriches don't actually bury their heads in sand when frightened — this misconception comes from their habit of lying flat to avoid detection.
 
 ---
 

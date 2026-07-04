@@ -1,53 +1,193 @@
 ---
-title: Dryosaurus
-type: other
+ref: dryosaurus
 id: jurassic-saga:dryosaurus
-icon: jurassic-saga:icons/dryosaurus.gif
+icon: jurassic-saga:inventory/dryosaurus_coin
+
 history:
-  - 0.1: Added Dryosaurus
+  - version: "0.1"
+    date:
+    changes:
+      - Added Dryosaurus
+
 custom: 
-    Health: Adult 15 Health (x7.5 Hearts)
-    Behavior: Passive
-    Diet: Herbivore
-    Size: 3 Blocks Long, 1 Block Tall
-    Drops: Dryosaurus Raw Meat, Dryosaurus Remains
-    Breedable: Not yet implemented
-    Obtained: Fossil Revival
-    Egg Type: Chicken Egg
-    Time Period: TBD
+    Health: "Adult 15 Health (x7.5 Hearts)"
+    Behavior: "Passive"
+    Diet: "Herbivore"
+    Size: "3 Blocks Long, 1 Block Tall"
+    Drops: "Dryosaurus Raw Meat, Dryosaurus Remains"
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
+    Egg Type: "Chicken Egg"
+    Time Period: "Late Jurassic"
     Achievement: "Gentle Jurassic Herbivore"
+
+infobox:
+  title: Dryosaurus
+  inventory:
+    - jurassic-saga:inventory/dryosaurus_fossil_remains
+    - jurassic-saga:inventory/dryosaurus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_dryosaurus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_dryosaurus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_dryosaurus.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 5th May 2026
+    The last update on this page was on: 4th July 2026 (v0.1.11.1)
 </Callout>
 
 # Dryosaurus altus
 
-Dryosaurus was a small, swift ornithopod from the **Late Jurassic period**.
-Its name means *“oak lizard”*, referencing the forested environments it inhabited.
-Dryosaurus relied on speed and agility to avoid predators, living in groups and feeding on low‑lying vegetation.
+*Dryosaurus* was a small, swift ornithopod from the **Late Jurassic period**.
+Its name means **"oak lizard"**, referencing the forested environments it inhabited.
+Dryosaurus relied on speed and agility to avoid predators, living in groups and feeding on low-lying vegetation.
 
 ---
 
 ## Appearance
-- Slender body built for speed and agility.
-- Long tail used for balance while running.
-- Small head with beak‑like mouth adapted for cropping plants.
-- In‑game size: up to **3 blocks in length** and **1 block in height** (with the model extending slightly into the second block).
+- Slender body built for speed and agility
+- Long tail used for balance while running
+- Small head with beak-like mouth adapted for cropping plants
+- In-game size: **3 blocks long** and **1 block tall**
 
 ---
 
 ## Behavior
-- **Passive**: Dryosaurus does not attack players.
-- Moves quickly and nervously, reflecting its real‑world reliance on speed.
-- Often found in small groups, grazing together.
+- **Passive**: Will not attack players
+- Moves quickly and nervously, reflecting its real-world reliance on speed
+- Often found in small groups, grazing together
+
+---
+
+## Obtaining
+Dryosaurus does not spawn naturally. To obtain one, you must:
+1. Find ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/dryosaurus/dryosaurus_fossil_remains) [**Dryosaurus Remains**](@jurassic-saga:fossil) or fossils
+2. Use the fossil revival process to create a Dryosaurus
+3. Hatch from a **Chicken Egg** type egg
 
 ---
 
 ## Diet
-- **Herbivore**: feeds primarily on <img src="https://i.imgur.com/INKBvsq.gif" width={32} height={32} style={{imageRendering: "pixelated"}}/> [**Leaves**](https://minecraft.wiki/w/Leaves).
-- Prefers low‑lying plants and foliage.
+- **Herbivore**: feeds primarily on <img src="https://i.imgur.com/INKBvsq.gif" width={32} height={32} style={{imageRendering: "pixelated"}}/> [**Leaves**](https://minecraft.wiki/w/Leaves)
+- Prefers low-lying plants and foliage
+
+---
+
+## Drops
+When defeated, Dryosaurus may drop:
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/dryosaurus/dryosaurus_fossil_remains) [**Dryosaurus Remains**](@jurassic-saga:fossil)
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/dryosaurus/dryosaurus_raw) [**Dryosaurus Raw Meat**](@jurassic-saga:meats)
+
+---
+
+## Sounds
+
+### Alarm Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_alarm01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_alarm02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_alarm03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_alarm04.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_death.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_hurt04.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living10.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 11</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living11.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 12</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living12.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 13</td>
+    <td><Audio controls src="jurassic-saga:sounds/dryosaurus/dryosaurus_js_living13.ogg" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -93,7 +233,7 @@ Dryosaurus relied on speed and agility to avoid predators, living in groups and 
 ---
 
 ## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
-- A fossil of a Dryosaurus hatchling confirmed that Dryosaurus followed similar patterns of craniofacial development to other vertebrates, with it's eyes being proportionally large while young and the muzzle proportionally short!
+- A fossil of a Dryosaurus hatchling confirmed that Dryosaurus followed similar patterns of craniofacial development to other vertebrates, with its eyes being proportionally large while young and the muzzle proportionally short!
 - Dryosaurus fed on low growing vegetation in the floodplains of the Late Jurassic, in the Morrison Formation!
 - Dryosaurus lived among giant animals such as Apatosaurus, Brachiosaurus and Diplodocus!
 

@@ -1,13 +1,14 @@
 ---
-title: Apatosaurus
-type: other
+ref: apatosaurus
 id: jurassic-saga:apatosaurus
-icon: jurassic-saga:icons/apatosaurus.gif
+icon: jurassic-saga:inventory/apatosaurus_coin
+
 history:
-  - version: 0.1
+  - version: "0.1"
     date: 00.00.2025
-    changes: 
+    changes:
       - Added Apatosaurus
+
 custom: 
     Health: "Adult 600 Health (x300 Hearts)"
     Behavior: "Neutral"
@@ -19,38 +20,63 @@ custom:
     Egg Type: "Ostrich Egg"
     Time Period: "Late Jurassic"
     Achievement: "You're Making Them Nervous"
+
+infobox:
+  title: Apatosaurus
+  inventory:
+    - jurassic-saga:inventory/apatosaurus_fossil_remains
+    - jurassic-saga:inventory/apatosaurus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_apatosaurus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_apatosaurus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_apatosaurus.png
+    - name: Tundra
+      display: jurassic-saga:tabs/tundra_apatosaurus.png
+    - name: Ocean
+      display: jurassic-saga:tabs/ocean_apatosaurus.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 9th May 2026
+    The last update on this page was on: 4th July 2026 (v0.1.11.1)
 </Callout>
 
 # Apatosaurus louisae
 
-Apatosaurus was a massive, long‑necked sauropod from the **Late Jurassic period**.
-Known for its enormous size and whip‑like tail, it lived in herds and fed on low‑ to mid‑level vegetation.
+*Apatosaurus* was a massive, long-necked sauropod from the **Late Jurassic period**.
+Known for its enormous size and whip-like tail, it lived in herds and fed on low- to mid-level vegetation.
 Fossils of Apatosaurus have been discovered in **North America and Europe**, making it one of the most iconic sauropods of its time.
 
 ---
 
 ## Appearance
-- Long neck and heavy body, adapted for browsing vegetation.
-- Thick legs to support its immense weight.
-- Tail used for balance and possibly defense.
-- Adults reach up to **29 blocks in length** and **7 blocks in height** in‑game. 
+- Long neck and heavy body, adapted for browsing vegetation
+- Thick legs to support its immense weight
+- Tail used for balance and possibly defense
+- In-game size: **29 blocks long** and **7 blocks tall**
 
 ---
 
 ## Behavior
-- **Neutral**: Apatosaurus does not attack players unless provoked.
-- Moves slowly in herds, grazing on leaves and plant matter.
-- Occasionally rests or sleeps, reflecting herd life.
+- **Neutral**: Will not attack unless provoked
+- Moves slowly in herds, grazing on leaves and plant matter
+- Occasionally rests or sleeps, reflecting herd life
+
+---
+
+## Obtaining
+Apatosaurus does not spawn naturally. To obtain one, you must:
+1. Find ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/apatosaurus/apatosaurus_fossil_remains) [**Apatosaurus Remains**](@jurassic-saga:fossil) or fossils
+2. Use the fossil revival process to create an Apatosaurus
+3. Hatch from an **Ostrich Egg** type egg
 
 ---
 
 ## Diet
-- **Herbivore**: feeds primarily on <img src="https://i.imgur.com/INKBvsq.gif" width={32} height={32} style={{imageRendering: "pixelated"}}/> [**Leaves**](https://minecraft.wiki/w/Leaves).  
-- Will graze on low‑lying plants and foliage.
+- **Herbivore**: feeds primarily on <img src="https://i.imgur.com/INKBvsq.gif" width={32} height={32} style={{imageRendering: "pixelated"}}/> [**Leaves**](https://minecraft.wiki/w/Leaves)
+- Will graze on low-lying plants and foliage
 
 ---
 
@@ -58,6 +84,118 @@ Fossils of Apatosaurus have been discovered in **North America and Europe**, mak
 When defeated, Apatosaurus may drop:
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/apatosaurus/apatosaurus_raw) [**Apatosaurus Raw Meat**](@jurassic-saga:meats)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/apatosaurus/apatosaurus_fossil_remains) [**Apatosaurus Remains**](@jurassic-saga:fossil)
+
+---
+
+## Sounds
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_death01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_death02.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_hurt04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_hurt05.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living10.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 11</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living11.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 12</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living12.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 13</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_living13.ogg" /></td>
+  </tr>
+</table>
+
+### Tail Strike Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Tail Strike 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_tail_strike01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Tail Strike 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_tail_strike02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Tail Strike 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/apatosaurus/apatosaurus_js_tail_strike03.ogg" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -109,10 +247,10 @@ When defeated, Apatosaurus may drop:
 
 ## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
 - Apatosaurus was the first dinosaur discovered from the Carnegie Quarry, when Paleontologist Earl Douglass found eight articulated tail vertebrae of it!
-- Apatosaurus lived in what is now the Morrison Formation of North America, alongside animals like Stegosaurus, Allosaurus and it's cousin Diplodocus!
+- Apatosaurus lived in what is now the Morrison Formation of North America, alongside animals like Stegosaurus, Allosaurus and its cousin Diplodocus!
 - For over a century, Brontosaurus was thought to have been synonymous with Apatosaurus, however, recent studies have concluded that they were separate genera!
-- Apatosaurus Ocean cosmetic skin is based on the Brontosaurus seen in King Kong (2005)<sup>[[1]](https://kingkong.fandom.com/wiki/Brontosaurus)</sup>
-- While Apatosaurus is technically a Jurassic World era animal, it is included in Update 1 due to it's appearance in some versions of the Jurassic Park novel<sup>[[2]](https://jurassicpark.fandom.com/wiki/Apatosaurus/Novels)</sup>
+- The Apatosaurus Ocean cosmetic skin is based on the Brontosaurus seen in King Kong (2005).<sup>[[1]](https://kingkong.fandom.com/wiki/Brontosaurus)</sup>
+- While Apatosaurus is technically a Jurassic World era animal, it is included in Update 1 due to its appearance in some versions of the Jurassic Park novel.<sup>[[2]](https://jurassicpark.fandom.com/wiki/Apatosaurus/Novels)</sup>
 
 ---
 

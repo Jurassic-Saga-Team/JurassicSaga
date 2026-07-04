@@ -1,33 +1,54 @@
 ---
-title: Brachiosaurus
-type: other
+ref: brachiosaurus
 id: jurassic-saga:brachiosaurus
-icon: jurassic-saga:icons/brachiosaurus.gif
+icon: jurassic-saga:brachiosaurus_coin
+
 history:
-  - version: 0.1
+  - version: "0.1"
+    date:
     changes:
-        - Added Brachiosaurus
+      - Added Brachiosaurus
+
 custom: 
-    Health: Adult 120 Health (x60 Hearts)
-    Behavior: Neutral
-    Diet: Herbivore
-    Size: 22 Blocks Long, 19 Blocks Tall
-    Drops: Brachiosaurus Raw Meat, Brachiosaurus Remains
-    Breedable: Not yet implemented
-    Obtained: Fossil Revival
-    Egg Type: Ostrich Egg
-    Time Period: Late Jurassic
-    Achievement: Reach For The Treetops
+    Health: "Adult 120 Health (x60 Hearts)"
+    Behavior: "Neutral"
+    Diet: "Herbivore"
+    Size: "22 Blocks Long, 19 Blocks Tall"
+    Drops: "Brachiosaurus Raw Meat, Brachiosaurus Remains"
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
+    Egg Type: "Ostrich Egg"
+    Time Period: "Late Jurassic"
+    Achievement: "Reach For The Treetops"
+
+infobox:
+  title: Brachiosaurus
+  inventory:
+    - jurassic-saga:inventory/brachiosaurus_fossil_remains
+    - jurassic-saga:inventory/brachiosaurus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_brachiosaurus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_brachiosaurus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_brachiosaurus.png
+    - name: Vivid
+      display: jurassic-saga:tabs/vivid_brachiosaurus.png
+    - name: Ocean
+      display: jurassic-saga:tabs/ocean_brachiosaurus.png
+    - name: Forest
+      display: jurassic-saga:tabs/forest_brachiosaurus.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 4th May 2026
+    The last update on this page was on: 4th July 2026 (v0.1.11.1)
 </Callout>
 
 # Brachiosaurus altithorax
 
-Brachiosaurus was one of the largest sauropods of the **Late Jurassic period**, instantly recognizable by its towering neck and upright stance.  
-Unlike most sauropods, its forelimbs were longer than its hindlimbs, giving it a distinctive posture and allowing it to browse vegetation far above the reach of other dinosaurs.  
+*Brachiosaurus* was one of the largest sauropods of the **Late Jurassic period**, instantly recognizable by its towering neck and upright stance.
+Unlike most sauropods, its forelimbs were longer than its hindlimbs, giving it a distinctive posture and allowing it to browse vegetation far above the reach of other dinosaurs.
 It likely moved in herds and required enormous amounts of plant material each day to sustain its size.
 
 ---
@@ -62,9 +83,133 @@ Brachiosaurus does not spawn naturally. To obtain one, you must:
 ---
 
 ## Drops
-When defeated, Brachiosaurus may drop:  
+When defeated, Brachiosaurus may drop:
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/brachiosaurus/brachiosaurus_fossil_remains) [**Brachiosaurus Remains**](@jurassic-saga:fossil)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/brachiosaurus/brachiosaurus_raw) [**Brachiosaurus Raw Meat**](@jurassic-saga:meats)
+
+---
+
+## Sounds
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_death01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_death02.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_hurt04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_hurt05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_hurt06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_hurt07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_hurt08.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living10.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 11</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living11.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 12</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living12.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 13</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living13.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 14</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living14.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 15</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living15.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 16</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living16.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 17</td>
+    <td><Audio controls src="jurassic-saga:sounds/brachiosaurus/brachiosaurus_js_living17.ogg" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -138,10 +283,9 @@ When defeated, Brachiosaurus may drop:
 ---
 
 ## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
-
 - Brachiosaurus was once thought to have been the largest dinosaur to ever exist!
 - An adult Brachiosaurus could easily crush any foolish predator that dared to attack it!
-- Brachiosaurus lived in the Morrison Formation alongside animals such as Diplodocus, Allosaurus, Stegosaurus and Ceratosaurus, being one of the largest in it's ecosystem!
+- Brachiosaurus lived in the Morrison Formation alongside animals such as Diplodocus, Allosaurus, Stegosaurus and Ceratosaurus, being one of the largest in its ecosystem!
 
 ---
 

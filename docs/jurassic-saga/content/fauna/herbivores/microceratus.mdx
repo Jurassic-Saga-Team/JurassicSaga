@@ -1,36 +1,52 @@
 ---
-title: Microceratus
-type: other
+ref: microceratus
 id: jurassic-saga:microceratus
-icon: jurassic-saga:icons/microceratus.gif
+icon: jurassic-saga:inventory/microceratus_coin
+
 history:
-  - version: 0.1.2
+  - version: "0.1.2"
+    date:
     changes:
-        - Added Microceratus
-  - version: 0.1.9
+      - Added Microceratus
+  - version: "0.1.9"
+    date:
     changes:
-        - Baby Microceratus
+      - Baby Microceratus
+
 custom: 
-    Health: Adult 15 Health (x7.5 Hearts)
-    Behavior: Neutral (Requires 2)
-    Diet: Herbivore
-    Size: 1 Block Long, 1 Block Tall
-    Drops: Microceratus Raw Meat, Microceratus Remains
-    Breedable: Not yet implemented
-    Obtained: Fossil Revival
-    Egg Type: Basilisk Egg
-    Region: China, Mongolia
+    Health: "Adult 15 Health (x7.5 Hearts)"
+    Behavior: "Neutral (Requires 2)"
+    Diet: "Herbivore"
+    Size: "1 Block Long, 1 Block Tall"
+    Drops: "Microceratus Raw Meat, Microceratus Remains"
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
+    Egg Type: "Basilisk Egg"
+    Region: "China, Mongolia"
     Achievement: "Please Do Not Litter"
+
+infobox:
+  title: Microceratus
+  inventory:
+    - jurassic-saga:inventory/microceratus_fossil_remains
+    - jurassic-saga:inventory/microceratus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_microceratus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_microceratus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_microceratus.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 15th March 2026
+    The last update on this page was on: 5th July 2026 (v0.1.11.1)
 </Callout>
 
 # Microceratus gobiensis
 
-*Microceratus* (meaning **"small-horned"**) is a small ceratopsian dinosaur from the Cretaceous period of Mongolia.  
-It walked on two legs, had short forelimbs, a small frill, and a beak-like mouth typical of early ceratopsians.  
+*Microceratus* (meaning **"small-horned"**) is a small ceratopsian dinosaur from the Cretaceous period of Mongolia.
+It walked on two legs, had short forelimbs, a small frill, and a beak-like mouth typical of early ceratopsians.
 Despite its size, it was agile and well-adapted to forested environments.
 
 ---
@@ -64,15 +80,146 @@ Microceratus does not spawn naturally. To obtain one, you must:
 ---
 
 ## Drops
-When defeated, Microceratus may drop:  
+When defeated, Microceratus may drop:
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/microceratus/microceratus_fossil_remains) [**Microceratus Remains**](@jurassic-saga:fossil)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/microceratus/microceratus_raw) [**Microceratus Raw Meat**](@jurassic-saga:meats)
 
 ---
 
-## Gallery
+## Sounds
 
-### Development Images
+### Alarm Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_alarm01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_alarm02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_alarm03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_alarm04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_alarm05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_alarm06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_alarm07.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_death.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_hurt03.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living10.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 11</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living11.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 12</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_living12.ogg" /></td>
+  </tr>
+</table>
+
+### Threat Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_threat01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_threat02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_threat03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/microceratus/microceratus_js_threat04.ogg" /></td>
+  </tr>
+</table>
+
+---
+
+## Gallery
+### Community Images
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
     <td style={{textAlign: "center"}}>
@@ -115,8 +262,8 @@ When defeated, Microceratus may drop:
 ---
 
 ## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
-- The achievement "Please Do Not Litter" is likely a playful reference to Microceratus's small size and the importance of noticing small creatures in their environment
-- Despite the name *Microceratus* meaning "small-horned," this dinosaur actually had no horns—only a small frill
+- The achievement "Please Do Not Litter" is likely a playful reference to Microceratus's small size and the importance of noticing small creatures in their environment.
+- Despite the name *Microceratus* meaning "small-horned," this dinosaur actually had no horns — only a small frill.
 
 ---
 

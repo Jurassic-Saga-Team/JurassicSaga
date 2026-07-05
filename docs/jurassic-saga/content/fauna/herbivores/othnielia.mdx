@@ -1,31 +1,53 @@
 ---
-title: Othnielia
-type: other
+ref: othnielia
 id: jurassic-saga:othnielia
-icon: jurassic-saga:icons/othnielia.gif
+icon: jurassic-saga:inventory/othnielia_coin
+
 history:
-  - version: 0.1.3
+  - version: "0.1.3"
+    date:
     changes:
-        - Added Othnielia
-  - version: 0.1.4
+      - Added Othnielia
+  - version: "0.1.4"
+    date:
     changes:
-        - Added Baby Othnielia
+      - Added Baby Othnielia
+
 custom: 
-    Health: Adult 30 Health (x15 Hearts)
-    Behavior: Neutral
-    Diet: Herbivore
-    Size: 3 Blocks Long, 1 Block Tall
-    Drops: Othnielia Raw Meat, Othnielia Remains
-    Breedable: Not yet implemented
-    Obtained: Fossil Revival
-    Egg Type: Basilisk Egg
+    Health: "Adult 30 Health (x15 Hearts)"
+    Behavior: "Neutral"
+    Diet: "Herbivore"
+    Size: "3 Blocks Long, 1 Block Tall"
+    Drops: "Othnielia Raw Meat, Othnielia Remains"
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
+    Egg Type: "Basilisk Egg"
     Time Period: "Jurassic"
     Achievement: "Tiny Survivor"
+
+infobox:
+  title: Othnielia
+  inventory:
+    - jurassic-saga:inventory/othnielia_fossil_remains
+    - jurassic-saga:inventory/othnielia_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_othnielia.png
+    - name: Female
+      display: jurassic-saga:tabs/female_othnielia.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_othnielia.png
+    - name: Legacy
+      display: jurassic-saga:tabs/legacy_othnielia.png
 ---
+
+<Callout variant="info">
+    The last update on this page was on: 5th July 2026 (v0.1.11.1)
+</Callout>
 
 # Othnielia rex
 
-*Othnielia* is a genus of hypsilophodontid dinosaur featured in **Jurassic Park (1992)**.  
+*Othnielia* is a genus of hypsilophodontid dinosaur featured in **Jurassic Park (1992)**.
 In Jurassic Saga, it represents a small, agile herbivore often found darting between vegetation in lightly wooded areas.
 
 ---
@@ -61,9 +83,109 @@ Othnielia does not spawn naturally. To obtain one, you must:
 ---
 
 ## Drops
-When defeated, Othnielia may drop:  
+When defeated, Othnielia may drop:
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/othnielia/othnielia_fossil_remains) [**Othnielia Remains**](@jurassic-saga:fossil)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/othnielia/othnielia_raw) [**Othnielia Raw Meat**](@jurassic-saga:meats)
+
+---
+
+## Sounds
+
+### Alarm Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_alarm01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_alarm02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_alarm03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_alarm04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_alarm05.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_death.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_hurt04.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/othnielia/othnielia_js_living10.ogg" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -130,8 +252,8 @@ When defeated, Othnielia may drop:
 ---
 
 ## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
-- The achievement "Tiny Survivor" reflects Othnielia's small size and agile nature, allowing it to survive in environments with larger predators
-- Othnielia appeared in Michael Crichton's novel *Jurassic Park* (1990) as one of the dinosaurs featured in the park
+- The achievement "Tiny Survivor" reflects Othnielia's small size and agile nature, allowing it to survive in environments with larger predators.
+- Othnielia appeared in Michael Crichton's novel *Jurassic Park* (1990) as one of the dinosaurs featured in the park.
 
 ---
 

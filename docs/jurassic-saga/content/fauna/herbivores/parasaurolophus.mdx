@@ -1,36 +1,56 @@
 ---
-title: Parasaurolophus
-type: other
+ref: parasaurolophus
 id: jurassic-saga:parasaurolophus
-icon: jurassic-saga:icons/parasaurolophus.gif
+icon: jurassic-saga:inventory/parasaurolophus_coin
+
 history:
-  - version: 0.1
+  - version: "0.1"
+    date:
     changes:
-        - Added Parasaurolophus
-  - version: 0.1.5
+      - Added Parasaurolophus
+  - version: "0.1.5"
+    date:
     changes:
-        - Added Rainforest Parasaurolophus
+      - Added Rainforest Parasaurolophus
+
 custom: 
-    Health: Adult 240 Health (x120 Hearts)
-    Behavior: Neutral
-    Diet: Herbivore
-    Size: 12 Blocks Long, 5 Blocks Tall
-    Drops: Parasaurolophus Raw Meat, Parasaurolophus Remains
-    Breedable: Not yet implemented
-    Obtained: Fossil Revival
-    Egg Type: Ostrich Egg
-    Time Period: Cretaceous
+    Health: "Adult 240 Health (x120 Hearts)"
+    Behavior: "Neutral"
+    Diet: "Herbivore"
+    Size: "12 Blocks Long, 5 Blocks Tall"
+    Drops: "Parasaurolophus Raw Meat, Parasaurolophus Remains"
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
+    Egg Type: "Ostrich Egg"
+    Time Period: "Cretaceous"
     Achievement: "The One With A Pompadour"
+
+infobox:
+  title: Parasaurolophus
+  inventory:
+    - jurassic-saga:inventory/parasaurolophus_fossil_remains
+    - jurassic-saga:inventory/parasaurolophus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_parasaurolophus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_parasaurolophus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_parasaurolophus.png
+    - name: Rainforest
+      display: jurassic-saga:tabs/rainforest_parasaurolophus.png
+    - name: Forest
+      display: jurassic-saga:tabs/forest_parasaurolophus.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 3rd May 2026
+    The last update on this page was on: 5th July 2026 (v0.1.11.1)
 </Callout>
 
 # Parasaurolophus cyrtocristatus
 
-A herbivorous dinosaur from the **Late Cretaceous**, known for its long, backward-curving crest.  
-The crest may have been used for **visual display**, **sound resonance**, or **thermoregulation**.  
+*Parasaurolophus* was a herbivorous dinosaur from the **Late Cretaceous**, known for its long, backward-curving crest.
+The crest may have been used for **visual display**, **sound resonance**, or **thermoregulation**.
 Parasaurolophus likely lived in herds and fed on a variety of vegetation.
 
 ---
@@ -66,9 +86,129 @@ Parasaurolophus does not spawn naturally. To obtain one, you must:
 ---
 
 ## Drops
-When defeated, Parasaurolophus may drop:  
+When defeated, Parasaurolophus may drop:
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/parasaurolophus/parasaurolophus_fossil_remains) [**Parasaurolophus Remains**](@jurassic-saga:fossil)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/parasaurolophus/parasaurolophus_raw) [**Parasaurolophus Raw Meat**](@jurassic-saga:meats)
+
+---
+
+## Sounds
+
+### Alarm Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_alarm01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_alarm02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_alarm03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_alarm04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Alarm 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_alarm05.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_death.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_hurt04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_hurt05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_hurt06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_hurt07.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living10.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 11</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living11.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 12</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasaurolophus/parasaurolophus_js_living12.ogg" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -151,14 +291,10 @@ When defeated, Parasaurolophus may drop:
 
 ## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
 - Parasaurolophus was no joke! A fully grown and healthy Parasaurolophus was strong enough to pose a challenge to most predators!
-- Parasaurolophus used it's unusual crest as a resonating chamber!
-- Parasaurolophus' name references another Hadrosaur called Saurolophus, with it's name meaning "Almost Saurolophus"!
-
----
-
-## Trivia
-- The achievement "The One With A Pompadour" is a playful reference to Parasaurolophus's distinctive backward-curving crest, which resembles a pompadour hairstyle
-- Parasaurolophus's hollow crest could produce distinctive trumpeting sounds, making it one of the few dinosaurs that scientists believe could vocalize in unique ways
+- Parasaurolophus used its unusual crest as a resonating chamber!
+- Parasaurolophus' name references another Hadrosaur called Saurolophus, with its name meaning "Almost Saurolophus"!
+- The achievement "The One With A Pompadour" is a playful reference to Parasaurolophus's distinctive backward-curving crest, which resembles a pompadour hairstyle.
+- Parasaurolophus's hollow crest could produce distinctive trumpeting sounds, making it one of the few dinosaurs that scientists believe could vocalize in unique ways.
 
 ---
 

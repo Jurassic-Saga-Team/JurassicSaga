@@ -1,27 +1,44 @@
 ---
-title: Stegosaurus
-type: other
+ref: stegosaurus
 id: jurassic-saga:stegosaurus
-icon: jurassic-saga:icons/stegosaurus.gif
+icon: jurassic-saga:inventory/stegosaurus_coin
+
 history:
-  - version: 0.1
+  - version: "0.1"
+    date:
     changes:
-        - Added Stegosaurus
+      - Added Stegosaurus
+
 custom: 
-    Health: Adult 270 Health (x135 Hearts)
-    Behavior: Neutral
-    Diet: Herbivore
-    Size: 14 Blocks Long, 7 Blocks Tall
-    Drops: Stegosaurus Raw Meat, Stegosaurus Remains
-    Breedable: Not yet implemented
-    Obtained: Fossil Revival
-    Egg Type: Ostrich Egg
-    Time Period: Late Jurassic
+    Health: "Adult 270 Health (x135 Hearts)"
+    Behavior: "Neutral"
+    Diet: "Herbivore"
+    Size: "14 Blocks Long, 7 Blocks Tall"
+    Drops: "Stegosaurus Raw Meat, Stegosaurus Remains"
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
+    Egg Type: "Ostrich Egg"
+    Time Period: "Late Jurassic"
     Achievement: "That's how it always starts.."
+
+infobox:
+  title: Stegosaurus
+  inventory:
+    - jurassic-saga:inventory/stegosaurus_fossil_remains
+    - jurassic-saga:inventory/stegosaurus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_stegosaurus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_stegosaurus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_stegosaurus.png
+    - name: Tropical
+      display: jurassic-saga:tabs/tropical_stegosaurus.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 9th March 2026
+    The last update on this page was on: 11th July 2026 (v0.1.11.1)
 </Callout>
 
 # Stegosaurus stenops
@@ -63,9 +80,105 @@ Stegosaurus does not spawn naturally. To obtain one, you must:
 ---
 
 ## Drops
-When defeated, Stegosaurus may drop:  
+When defeated, Stegosaurus may drop:
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/stegosaurus/stegosaurus_fossil_remains) [**Stegosaurus Remains**](@jurassic-saga:fossil)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/stegosaurus/stegosaurus_raw) [**Stegosaurus Raw Meat**](@jurassic-saga:meats)
+
+---
+
+## Sounds
+
+### Threat Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_threat01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_threat02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_threat03.ogg" /></td>
+  </tr>
+</table>
+
+### Tailswipe Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Tailswipe</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_tailswipe.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_living10.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_hurt03.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/stegosaurus/stegosaurus_js_death.ogg" /></td>
+  </tr>
+</table>
 
 ---
 

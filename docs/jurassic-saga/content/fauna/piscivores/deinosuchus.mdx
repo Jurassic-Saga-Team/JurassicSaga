@@ -1,60 +1,185 @@
 ---
-title: Deinosuchus
-type: other
+ref: deinosuchus
 id: jurassic-saga:deinosuchus
-icon: jurassic-saga:icons/deinosuchus.gif
+icon: jurassic-saga:inventory/deinosuchus_coin
+
 history:
-  - 0.1.11: Added Deinosuchus
+  - version: "0.1.11"
+    changes:
+      - Added Deinosuchus
+
 custom: 
-    Health: Adult TBD Health (xTBD Hearts)
-    Behavior: TBD
-    Diet: Piscivore
-    Size: TBD Blocks Long, TBD Blocks Tall
-    Drops: Deinosuchus Raw Meat, Deinosuchus Remains
-    Breedable: Not yet implemented
-    Obtained: Fossil Revival
-    Time Period: TBD
-    Achievement: TBD
+    Health: "Adult 200 Health (x100 Hearts)"
+    Behavior: "Hostile"
+    Diet: "Piscivore"
+    Size: "12 Blocks Long, 1 Blocks Tall"
+    Drops: "Deinosuchus Raw Meat, Deinosuchus Remains"
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
+    Egg Type: "Alligator"
+    Time Period: "Late Cretaceous"
+    Achievement: "King of the Lakeside"
+
+infobox:
+  title: Deinosuchus
+  inventory:
+    - jurassic-saga:inventory/deinosuchus_fossil_remains
+    - jurassic-saga:inventory/deinosuchus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_deinosuchus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_deinosuchus.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 5th May 2026
+    The last update on this page was on: 25 July 2026 (v0.1.11.1)
 </Callout>
 
 # Deinosuchus
 
-TBD
+*Deinosuchus* was a colossal crocodylian from the **Late Cretaceous**, one of the largest predators of its ecosystem despite not being a dinosaur.
+It lurked in rivers, swamps, and coastal waters, ambushing anything unlucky enough to wander too close to the water's edge.
+Its sheer size and bite force allowed it to prey on creatures many other predators wouldn't dare challenge.
 
 ---
 
 ## Appearance
-- TBD
+- Massive, heavily built crocodylian body with a long, powerful tail
+- Rows of thick, bony armored plates (osteoderms) running down its back and tail
+- Elongated snout lined with large, banana-sized conical teeth
+- Short, sturdy legs suited for lurking submerged and lunging explosively onto land
+- Dark olive-brown coloration with mottled, camouflage-like patterning
+- In-game size: **12 blocks long** and **1 block tall**
 
 ---
 
 ## Behavior
-- TBD
+- **Hostile**: will attack players and other creatures on sight
+- Acts as an ambush predator, lurking beneath the water's surface before striking
+- Uses its immense bite force to seize and drag prey underwater
+- Known to prey on both fish and unwary dinosaurs that stray too close to lakes, rivers, and coastlines
 
 ---
 
 ## Obtaining
 Deinosuchus does not spawn naturally. To obtain one, you must:
 1. Find ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/deinosuchus/deinosuchus_fossil_remains) [**Deinosuchus Remains**](@jurassic-saga:fossil) or fossils
-2. Use the fossil revival process to create an Deinosuchus
-3. Hatch from an **TBD Egg** type egg
+2. Use the fossil revival process to create a Deinosuchus
+3. Hatch from a **Alligator Egg** type egg
 
 ---
 
 ## Diet
-- **Piscivore**: feeds primarily on <img src="https://i.imgur.com/INKBvsq.gif" width={32} height={32} style={{imageRendering: "pixelated"}}/> [**Leaves**](https://minecraft.wiki/w/Leaves)
-- TBD
+- **Piscivore**: feeds primarily on <img src="https://i.imgur.com/qICGNC1.gif" width={32} height={32} style={{imageRendering: "pixelated"}}/> fish sources
+- Also ambushes and preys on dinosaurs that venture too near the water
 
 ---
 
 ## Drops
 When defeated, Deinosuchus may drop:
-- ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/alamosaurus/alamosaurus_raw) [**Deinosuchus Raw Meat**](@jurassic-saga:meats)
-- ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/alamosaurus/alamosaurus_fossil_remains) [**Deinosuchus Remains**](@jurassic-saga:fossil)
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/deinosuchus/deinosuchus_fossil_remains) [**Deinosuchus Remains**](@jurassic-saga:fossil)
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/deinosuchus/deinosuchus_raw) [**Deinosuchus Raw Meat**](@jurassic-saga:meats)
+
+---
+
+## Sounds
+
+### Attack Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_attack01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_attack02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_attack03.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_death.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_hurt04.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_living04.ogg" /></td>
+  </tr>
+</table>
+
+### Mating Call Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_matingcall01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_matingcall02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Mating Call 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_matingcall03.ogg" /></td>
+  </tr>
+</table>
+
+### Threat Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_threat01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_threat02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/deinosuchus/deinosuchus_js_threat03.ogg" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -78,11 +203,6 @@ When defeated, Deinosuchus may drop:
 - Deinosuchus was among one of the largest Crocodylomorphs to ever exist, only rivaled by Purussaurus!
 - Deinosuchus used it's large banana-sized teeth to take down large prey, such as dinosaurs like Edmontonia and Kritosaurus!
 - Deinosuchus was present at both sides of the Western Interior Seaway, adding onto the list of nightmarish creatures that lived on it!
-
----
-
-## Trivia
-- TBD
 
 ---
 

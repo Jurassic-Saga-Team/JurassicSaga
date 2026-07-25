@@ -1,12 +1,13 @@
 ---
-title: Tylosaurus
-type: other
+ref: tylosaurus
 id: jurassic-saga:tylosaurus
-icon: jurassic-saga:icons/tylosaurus.gif
+icon: jurassic-saga:inventory/tylosaurus_coin
+
 history:
-  - version: 0.1
+  - version: "0.1"
     changes:
-        - Added Tylosaurus
+      - Added Tylosaurus
+
 custom: 
     Health: Adult 600 Health (x300 Hearts)
     Behavior: Hostile
@@ -18,10 +19,29 @@ custom:
     Egg Type: Alligator Egg
     Time Period: Late Cretaceous
     Achievement: "Devil From The Deep"
+
+infobox:
+  title: Tylosaurus
+  inventory:
+    - jurassic-saga:inventory/tylosaurus_fossil_remains
+    - jurassic-saga:inventory/tylosaurus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_tylosaurus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_tylosaurus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_tylosaurus.png
+    - name: Rainforest
+      display: jurassic-saga:tabs/rainforest_tylosaurus.png
+    - name: Steppe
+      display: jurassic-saga:tabs/steppe_tylosaurus.png
+    - name: Tundra
+      display: jurassic-saga:tabs/tundra_tylosaurus.png
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 3rd May 2026
+    The last update on this page was on: 25th July 2026 (v0.1.11.1)
 </Callout>
 
 # Tylosaurus proriger
@@ -37,6 +57,8 @@ As a top predator, it fed on fish, other marine reptiles, and even smaller mosas
 - Narrow, elongated snout used for ramming and stunning prey
 - Large, conical teeth ideal for gripping slippery marine animals
 - Paddle-like limbs and a strong tail fluke for rapid propulsion
+- Row of small bony spines running along the back and tail, absent in juveniles
+- Coloration varies by variant, from cool blue-grey and near-black tones to warmer tan and brown patterning
 - In-game size: **18 blocks long** and **2 blocks tall**
 
 ---
@@ -63,9 +85,85 @@ Tylosaurus does not spawn naturally. To obtain one, you must:
 ---
 
 ## Drops
-When defeated, Tylosaurus may drop:  
+When defeated, Tylosaurus may drop:
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/tylosaurus/tylosaurus_fossil_remains) [**Tylosaurus Remains**](@jurassic-saga:fossil)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v1/extinct/tylosaurus/tylosaurus_raw) [**Tylosaurus Raw Meat**](@jurassic-saga:meats)
+
+---
+
+## Sounds
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_death.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_hurt03.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living10.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 11</td>
+    <td><Audio controls src="jurassic-saga:sounds/tylosaurus/tylosaurus_js_living11.ogg" /></td>
+  </tr>
+</table>
 
 ---
 

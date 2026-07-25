@@ -1,30 +1,31 @@
 ---
-title: Ludodactylus 
-type: other
+ref: ludodactylus
 id: jurassic-saga:ludodactylus
-icon: jurassic-saga:icons/ludodactylus.gif
+icon: jurassic-saga:inventory/ludodactylus_coin
+
 history:
-  - version: 0.1
+  - version: "0.1"
     date: 25.08.2025
     changes:
-        - Added Ludodactylus
-  - version: 0.1.2
+      - Added Ludodactylus
+  - version: "0.1.2"
     date: 11.11.2025
     changes:
       - Added tilt and gliding for avian creatures
-  - version: 0.1.3
+  - version: "0.1.3"
     date: 01.12.2025
     changes:
       - Fixed an issue where the avians would fall from the air
       - Adjusted coins
-  - version: 0.1.8
+  - version: "0.1.8"
     date: 26.01.2026
     changes:
       - Avians no longer softlock during landing
-  - version: 0.1.8.1
+  - version: "0.1.8.1"
     date: 27.01.2026
     changes:
       - Fixed pterodactyl's going straight through blocks
+
 custom: 
     Health: Adult 220 Health (x110 Hearts)
     Behavior: Hostile
@@ -36,10 +37,24 @@ custom:
     Egg Type: Ostrich Egg
     Time Period: Early Cretaceous
     Achievement: "It's a Birdcage"
+
+infobox:
+  title: Ludodactylus
+  inventory:
+    - jurassic-saga:inventory/ludodactylus_fossil_remains
+    - jurassic-saga:inventory/ludodactylus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_ludodactylus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_ludodactylus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_ludodactylus.png
+
 ---
 
 <Callout variant="info">
-    The last update on this page was on: 9th May 2026
+    The last update on this page was on: 25th July 2026 (v0.1.11.1)
 </Callout>
 
 # Ludodactylus sibbicki
@@ -54,6 +69,10 @@ It is notable for its long, toothed beak and crest, resembling a blend of featur
 - Distinctive cranial crest extending from the snout
 - Large, membranous wings supported by elongated finger bones
 - Lightweight, hollow-boned body adapted for agile flight
+- Sharply clawed feet for gripping perches and prey
+- Displays strong sexual dimorphism:
+  - **Males** have a striking orange-and-black banded crest and a darker, near-black body
+  - **Females** have a more muted, mottled brown-and-tan coloration with a duller crest
 - In-game size: **5 blocks long** and **4 blocks tall** when wings are extended
 
 ---
@@ -84,6 +103,130 @@ Ludodactylus does not spawn naturally. To obtain one, you must:
 When defeated, Ludodactylus may drop:
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/ludodactylus/ludodactylus_fossil_remains) [**Ludodactylus Remains**](@jurassic-saga:fossil)
 - ![](@jurassic-saga:textures/item/natural/entity/animal/v2/extinct/ludodactylus/ludodactylus_raw) [**Ludodactylus Raw Meat**](@jurassic-saga:meats)
+
+---
+
+## Sounds
+
+### Attack Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_attack01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_attack02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_attack03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_attack04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_attack05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Attack 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_attack06.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_death.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_hurt04.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_living08.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 9</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_living09.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Living 10</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_living10.ogg" /></td>
+  </tr>
+</table>
+
+### Threat Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_threat01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_threat02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_threat03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/ludodactylus/ludodactylus_js_threat04.ogg" /></td>
+  </tr>
+</table>
 
 ---
 

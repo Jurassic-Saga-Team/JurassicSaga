@@ -1,162 +1,200 @@
 ---
-ref: dinosaur
-type: other
-id: jurassic-saga:dinosaur
-icon: jurassic-saga:inventory/dinosaur_coin
+ref: palaeoloxodon
+id: jurassic-saga:palaeoloxodon
+icon: jurassic-saga:inventory/palaeoloxodon_coin
 
 history:
-  - version: "0.0"
-    date: 00.00.0000
+  - version: "0.2"
+    date: 25.06.2026
     changes:
-        - Added [DINOSAUR NAME]
+      - Added Palaeoloxodon
 
 custom:
-    Health: Adult [X] Health ([X] Hearts)
-    Behavior: [Behavior]
-    Diet: [Diet]
-    Size: [X] Blocks Long, [X] Blocks Tall
-    Drops: [Name] Remains, [Name] Raw Meat
+    Health: Adult 30 Health (x15 Hearts)
+    Behavior: Neutral
+    Diet: Herbivore
+    Size: 2 Blocks Long, 1 Blocks Tall
+    Drops: Palaeoloxodon Remains, Palaeoloxodon Raw Meat
     Breedable: Not yet implemented
     Obtained: Fossil Revival
-    Egg Type: [Egg Type]
-    Time Period: [Time Period]
-    Achievement: "[Achievement Name]"
+    Egg Type: Gestation Chamber (Not Possible Yet)
+    Time Period: Pleistocene
+    Achievement: "Small But Angry"
 
 infobox:
-  title: [DINOSAUR NAME]
+  title: Palaeoloxodon
   inventory:
-    - jurassic-saga:inventory/dinosaur_fossil_remains
-    - jurassic-saga:inventory/dinosaur_coin
+    - jurassic-saga:inventory/palaeoloxodon_fossil_remains
+    - jurassic-saga:inventory/palaeoloxodon_coin
   tabs:
     - name: Male
-      display: jurassic-saga:tabs/male_dinosaur.png
+      display: jurassic-saga:tabs/male_palaeoloxodon.png
     - name: Female
-      display: jurassic-saga:tabs/female_dinosaur.png
+      display: jurassic-saga:tabs/female_palaeoloxodon.png
     - name: Baby
-      display: jurassic-saga:tabs/baby_dinosaur.png
+      display: jurassic-saga:tabs/baby_palaeoloxodon.png
 ---
 
-<Callout variant="danger">
-    This creature is still not fully implemented, you must enable Experimental Features to be able get it. It's also subjected to changes!
-</Callout>
-
 <Callout variant="info">
-    The last update on this page was on: [Xth Month XXXX (version)]
+    The last update on this page was on: 13th August 2026 (v0.2.1)
 </Callout>
 
-# [Genus]
+# Palaeoloxodon falconeri
 
-[Description]
+*Palaeoloxodon*, meaning **"ancient straight-tusked elephant,"** is a genus of extinct elephant from the **Pleistocene** of Europe and Asia.  
+The dwarf island form, *P. falconeri*, is one of the most extreme examples of insular dwarfism ever recorded — shrinking from a mainland ancestor over 4 meters tall down to less than 1 meter at the shoulder.
 
 ---
 
 ## Appearance
-- [Appearance detail]
-- [Appearance detail]
-- [Appearance detail]
-- In-game size: **[X] blocks long** and **[X] blocks tall**
+- Compact, heavily built elephant with four stout pillar-like legs and a broad rectangular body
+- Short, downward-curved trunk compared to modern elephants
+- Both sexes share the same uniform medium grey coat with subtle darker shading across the back and sides
+- **Male**: Features a prominent pair of long, forward-sweeping ivory-white tusks
+- **Female**: Tuskless, otherwise identical in build and coloration to the male
+- In-game size: **2 blocks long** and **1 block tall**
 
 ---
 
 ## Behavior
-- **[Behavior type]**: [Description of behavior]
-- [Additional behavior note]
-- [Additional behavior note]
+- **Neutral**: Will not attack unless provoked; once agitated, will charge and attack the offending player or mob
+- Despite its small stature, it is surprisingly aggressive when threatened — do not underestimate it
+- Moves in a slow, plodding gait while passive
 
 ---
 
 ## Obtaining
-[DINOSAUR NAME] does not spawn naturally. To obtain one, you must:
-1. Enable [Experimental Features]($references/experimental)
-2. Find ![](@jurassic-saga:textures/item/natural/entity/animal/[PATH]/[NAME]_fossil_remains) [**[NAME] Remains**](@jurassic-saga:fossil) or fossils
-3. Use the fossil revival process to create a [DINOSAUR NAME]
-4. Hatch from a **[Egg Type]** type egg
+Palaeoloxodon does not spawn naturally. To obtain one, you must:
+1. Find ![](@jurassic-saga:textures/item/natural/entity/animal/v5/extinct/palaeoloxodon/palaeoloxodon_fossil_remains) [**Palaeoloxodon Remains**](@jurassic-saga:fossil) or fossils
+2. Use the fossil revival process to create a Palaeoloxodon
+3. Born from a **Gestation Chamber** (not yet possible)
 
 ---
 
 ## Diet
-- **[Diet type]**: [Description of diet]
-- [Additional diet note]
+- **Herbivore**: feeds on <img src="https://i.imgur.com/INKBvsq.gif" width={32} height={32} style={{imageRendering: "pixelated"}}/> leaves, grasses, and plant matter
 
 ---
 
 ## Drops
-When defeated, [DINOSAUR NAME] may drop:
-- ![](@jurassic-saga:textures/item/natural/entity/animal/[PATH]/[NAME]_fossil_remains) [**[NAME] Remains**](@jurassic-saga:fossil)
-- ![](@jurassic-saga:textures/item/natural/entity/animal/[PATH]/[NAME]_raw) [**[NAME] Raw Meat**](@jurassic-saga:meats)
+When defeated, Palaeoloxodon may drop:
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v5/extinct/palaeoloxodon/palaeoloxodon_fossil_remains) [**Palaeoloxodon Remains**](@jurassic-saga:fossil)
+- ![](@jurassic-saga:textures/item/natural/entity/animal/v5/extinct/palaeoloxodon/palaeoloxodon_raw) [**Palaeoloxodon Raw Meat**](@jurassic-saga:meats)
 
 ---
 
 ## Sounds
 
-### [Sound Category, e.g. Barks]
+### Alarm Sounds
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
-    <td style={{fontWeight: "bold"}}>[Sound Name] 1</td>
-    <td>[Description, e.g. Played periodically while idle]</td>
-    <td><Audio controls src="jurassic-saga:sounds/[name]/[name]_js_[sound]01.ogg" /></td>
+    <td style={{fontWeight: "bold"}}>Alarm 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_alarm01.ogg" /></td>
   </tr>
   <tr style={{backgroundColor: "transparent"}}>
-    <td style={{fontWeight: "bold"}}>[Sound Name] 2</td>
-    <td>[Description]</td>
-    <td><Audio controls src="jurassic-saga:sounds/[name]/[name]_js_[sound]02.ogg" /></td>
+    <td style={{fontWeight: "bold"}}>Alarm 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_alarm02.ogg" /></td>
   </tr>
   <tr style={{backgroundColor: "transparent"}}>
-    <td style={{fontWeight: "bold"}}>[Sound Name] 3</td>
-    <td>[Description]</td>
-    <td><Audio controls src="jurassic-saga:sounds/[name]/[name]_js_[sound]03.ogg" /></td>
+    <td style={{fontWeight: "bold"}}>Alarm 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_alarm03.ogg" /></td>
+  </tr>
+</table>
+
+### Threat Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_threat01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_threat02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_threat03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Threat 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_threat04.ogg" /></td>
+  </tr>
+</table>
+
+### Hurt Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_hurt01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_hurt02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_hurt03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Hurt 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_hurt04.ogg" /></td>
+  </tr>
+</table>
+
+### Living Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_living01.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 2</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_living02.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 3</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_living03.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 4</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_living04.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 5</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_living05.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 6</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_living06.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 7</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_living07.ogg" /></td>
+  </tr>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Ambient 8</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_living08.ogg" /></td>
+  </tr>
+</table>
+
+### Death Sounds
+<table style={{borderCollapse: "collapse"}}>
+  <tr style={{backgroundColor: "transparent"}}>
+    <td style={{fontWeight: "bold"}}>Death 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/palaeoloxodon/palaeoloxodon_death.ogg" /></td>
   </tr>
 </table>
 
 ---
 
 ## Gallery
-### Community Images
-<table style={{borderCollapse: "collapse"}}>
-  <tr style={{backgroundColor: "transparent"}}>
-    <td style={{textAlign: "center"}}>
-      <img width={256} src="[IMAGE URL]" alt="[DINOSAUR NAME] by [Author]"/>
-      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-        [DINOSAUR NAME] by [Author]
-        <sup>[[1]]([Discord Message URL])</sup>
-      </div>
-    </td>
-  </tr>
-</table>
 
-### Skins
-<table style={{borderCollapse: "collapse"}}>
-  <tr style={{backgroundColor: "transparent"}}>
-    <td style={{textAlign: "center"}}>
-      <img width={256} src="[IMAGE URL]" alt="[DINOSAUR NAME] Cosmetic Gene - [Skin Name]"/>
-      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-        [Skin Name]
-      </div>
-    </td>
-  </tr>
-</table>
-
-### Development Images
-<table style={{borderCollapse: "collapse"}}>
-  <tr style={{backgroundColor: "transparent"}}>
-    <td style={{textAlign: "center"}}>
-      <img width={256} src="[IMAGE URL]" alt="[DINOSAUR NAME] Showcase"/>
-      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-        [DINOSAUR NAME] Showcase
-        <sup>[[1]]([Discord Message URL])</sup>
-      </div>
-    </td>
-  </tr>
-</table>
+### Nothing Found
 
 ---
 
 ## <img width={64} src="https://i.imgur.com/DTOgOBL.png" alt="Mr.DNA"/> Mr. DNA's Fun Trivia
-- [Trivia fact]
-- [Trivia fact]
-- [Trivia fact]
-- [Trivia fact — achievement reference if applicable]
-- [Trivia fact — in-universe inspiration note if applicable]
+- Not Implemented
 
 ---
 

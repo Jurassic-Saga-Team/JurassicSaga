@@ -20,11 +20,11 @@
     "deinonychus.mdx": {
         "name": "Deinonychus"
     },
+    "deinosuchus.mdx": {
+        "name": "Deinosuchus"
+    },
     "dilophosaurus.mdx": {
         "name": "Dilophosaurus"
-    },
-    "dimorphodon.mdx": {
-        "name": "Dimorphodon"
     },
     "dracovenator.mdx": {
         "name": "Dracovenator"
@@ -38,6 +38,12 @@
     "ornithosuchus.mdx": {
         "name": "Ornithosuchus"
     },
+    "ostafrikasaurus.mdx": {
+        "name": "Ostafrikasaurus"
+    },
+    "parasuchus.mdx": {
+        "name": "Parasuchus"
+    },
     "proceratosaurus.mdx": {
         "name": "Proceratosaurus"
     },
@@ -46,6 +52,9 @@
     },
     "troodon.mdx": {
         "name": "Troodon"
+    },
+    "spinosaurus.mdx": {
+        "name": "Spinosaurus"
     },
     "tyrannosaurus.mdx": {
         "name": "Tyrannosaurus"

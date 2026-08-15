@@ -1,6 +1,5 @@
 ---
 ref: parasuchus
-type: other
 id: jurassic-saga:parasuchus
 icon: jurassic-saga:inventory/parasuchus_coin
 
@@ -9,15 +8,20 @@ history:
     date: "00.00.0000"
     changes:
         - Added Parasuchus
+  - version: "0.2"
+    date: "25.06.2026"
+    changes:
+        - Parasuchus Retexture
+        - New Arid Cosmetic
 
 custom:
     Health: "Adult 18 Health (x9 Hearts)"
-    Behavior: "Hostile (If back turned)"
+    Behavior: "Hostile"
     Diet: "Carnivore"
     Size: "4 Blocks Long, 1 Blocks Tall"
     Drops: "Parasuchus Remains, Parasuchus Raw Meat"
-    Breedable: Not yet implemented
-    Obtained: Fossil Revival
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
     Egg Type: "Alligator Egg"
     Time Period: "Late Triassic"
     Achievement: "Look Out For Barasuchas"
@@ -34,6 +38,8 @@ infobox:
       display: jurassic-saga:tabs/female_parasuchus.png
     - name: Baby
       display: jurassic-saga:tabs/baby_parasuchus.png
+    - name: Arid
+      display: jurassic-saga:tabs/arid_parasuchus.png
 ---
 
 <Callout variant="danger">
@@ -41,96 +47,90 @@ infobox:
 </Callout>
 
 <Callout variant="info">
-    The last update on this page was on: 7th of August 2026 (0.2.1)
+    The last update on this page was on: 15th of August 2026 (v0.2.1)
 </Callout>
 
 # Parasuchus hislopi
 
-[Description]
+*Parasuchus* is a genus of phytosaur from the **Late Triassic** period, with fossils discovered in what is now **India**.  
+Despite their striking resemblance to modern crocodilians, phytosaurs belong to an entirely separate lineage of archosauriformes and are not closely related to crocodiles.  
+Parasuchus possessed a long, narrow snout lined with sharp teeth, well suited for catching fish and small prey near rivers and floodplains.
 
 ---
 
 ## Appearance
-- [Appearance detail]
-- [Appearance detail]
-- [Appearance detail]
-- In-game size: **[X] blocks long** and **[X] blocks tall**
+- Long, low-slung body with a broad, flat snout lined with sharp, interlocking teeth
+- Prominent dorsal scutes and ridges running the length of the back and tail
+- Displays sexual dimorphism in coloration:
+  - **Males** are near-black with a very subtle warm brownish hue on the flanks and a dark grey underside
+  - **Females** are similarly near-black with a slightly cooler charcoal tone and dark grey underside, nearly indistinguishable from males
+  - The **Arid** cosmetic variant has a warm medium brown body with darker brown dorsal scutes and ridges, and a pale beige-grey underside
+- In-game size: **4 blocks long** and **1 block tall**
 
 ---
 
 ## Behavior
-- **[Behavior type]**: [Description of behavior]
-- [Additional behavior note]
-- [Additional behavior note]
+- **Hostile**: Attacks players and small creatures on sight
+- Lurks near water sources, ambushing prey that approaches to drink
+- Low profile and slow movement on land; considerably more dangerous near rivers and wetlands
 
 ---
 
 ## Obtaining
 Parasuchus does not spawn naturally. To obtain one, you must:
 1. Enable [Experimental Features]($references/experimental)
-2. Find ![](@jurassic-saga:textures/item/natural/entity/animal/[PATH]/[NAME]_fossil_remains) [**[NAME] Remains**](@jurassic-saga:fossil) or fossils
-3. Use the fossil revival process to create a [parasuchus NAME]
-4. Hatch from a **[Egg Type]** type egg
+2. Find ![](@jurassic-saga:textures/item/natural/entity/animal/[PATH]/parasuchus_fossil_remains) [**Parasuchus Remains**](@jurassic-saga:fossil) or fossils
+3. Use the fossil revival process to create a Parasuchus
+4. Hatch from an **Alligator Egg** type egg
 
 ---
 
 ## Diet
-- **[Diet type]**: [Description of diet]
-- [Additional diet note]
+- **Carnivore**: feeds on <img src="https://i.imgur.com/4K6xsJA.gif" width={32} height={32} style={{imageRendering: "pixelated"}}/> meat sources
+- An ambush predator that likely targeted fish and small animals near waterways
 
 ---
 
 ## Drops
-When defeated, [parasuchus NAME] may drop:
-- ![](@jurassic-saga:textures/item/natural/entity/animal/[PATH]/[NAME]_fossil_remains) [**[NAME] Remains**](@jurassic-saga:fossil)
-- ![](@jurassic-saga:textures/item/natural/entity/animal/[PATH]/[NAME]_raw) [**[NAME] Raw Meat**](@jurassic-saga:meats)
+When defeated, Parasuchus may drop:
+- ![](@jurassic-saga:textures/item/natural/entity/animal/[PATH]/parasuchus_fossil_remains) [**Parasuchus Remains**](@jurassic-saga:fossil)
+- ![](@jurassic-saga:textures/item/natural/entity/animal/[PATH]/parasuchus_raw) [**Parasuchus Raw Meat**](@jurassic-saga:meats)
 
 ---
 
-## Sounds
+{/* ## Sounds
 
-### [Sound Category, e.g. Barks]
+### Living Sounds
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
-    <td style={{fontWeight: "bold"}}>[Sound Name] 1</td>
-    <td>[Description, e.g. Played periodically while idle]</td>
-    <td><Audio controls src="jurassic-saga:sounds/[name]/[name]_js_[sound]01.ogg" /></td>
-  </tr>
-  <tr style={{backgroundColor: "transparent"}}>
-    <td style={{fontWeight: "bold"}}>[Sound Name] 2</td>
-    <td>[Description]</td>
-    <td><Audio controls src="jurassic-saga:sounds/[name]/[name]_js_[sound]02.ogg" /></td>
-  </tr>
-  <tr style={{backgroundColor: "transparent"}}>
-    <td style={{fontWeight: "bold"}}>[Sound Name] 3</td>
-    <td>[Description]</td>
-    <td><Audio controls src="jurassic-saga:sounds/[name]/[name]_js_[sound]03.ogg" /></td>
+    <td style={{fontWeight: "bold"}}>Living 1</td>
+    <td><Audio controls src="jurassic-saga:sounds/parasuchus/parasuchus_js_living01.ogg" /></td>
   </tr>
 </table>
 
----
+--- */}
 
 ## Gallery
-### Community Images
+{/* ### Community Images
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
     <td style={{textAlign: "center"}}>
-      <img width={256} src="[IMAGE URL]" alt="[parasuchus NAME] by [Author]"/>
+      <img width={256} src="[IMAGE URL]" alt="Parasuchus by [Author]"/>
       <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-        [parasuchus NAME] by [Author]
+        Parasuchus by [Author]
         <sup>[[1]]([Discord Message URL])</sup>
       </div>
     </td>
   </tr>
-</table>
+</table> */}
 
 ### Skins
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
     <td style={{textAlign: "center"}}>
-      <img width={256} src="[IMAGE URL]" alt="[parasuchus NAME] Cosmetic Gene - [Skin Name]"/>
+      <img width={256} src="[IMAGE URL]" alt="Parasuchus Cosmetic Gene - Arid"/>
       <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-        [Skin Name]
+        Arid
       </div>
     </td>
   </tr>
@@ -140,10 +140,24 @@ When defeated, [parasuchus NAME] may drop:
 <table style={{borderCollapse: "collapse"}}>
   <tr style={{backgroundColor: "transparent"}}>
     <td style={{textAlign: "center"}}>
-      <img width={256} src="[IMAGE URL]" alt="[parasuchus NAME] Showcase"/>
+      <img width={256} src="https://i.imgur.com/rIA9HLG.png" alt="Parasuchus Showcase"/>
       <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-        [parasuchus NAME] Showcase
-        <sup>[[1]]([Discord Message URL])</sup>
+        Parasuchus Showcase
+        <sup>[[1]](https://discord.com/channels/476209601075740672/620220431294529536/747136635879292989)</sup>
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <img width={256} src="https://i.imgur.com/fOBq5tY.png" alt="Parasuchus Rework Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Parasuchus Rework Showcase
+        <sup>[[2]](https://discord.com/channels/476209601075740672/620220431294529536/1505887647007244308)</sup>
+      </div>
+    </td>
+    <td style={{textAlign: "center"}}>
+      <img width={256} src="https://i.imgur.com/xjnEPTg.png" alt="Parasuchus Arid Showcase"/>
+      <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+        Parasuchus Arid Showcase
+        <sup>[[3]](https://discord.com/channels/476209601075740672/620220431294529536/1506027431402934556)</sup>
       </div>
     </td>
   </tr>
@@ -155,8 +169,6 @@ When defeated, [parasuchus NAME] may drop:
 - Parasuchus lived in the Late Triassic of what is now India, belonging to an order of archosauriformes called Phytosauria, which despite looking like crocodiles, were a completely separate lineage!
 - Parasuchus was initially deemed a chimera, meaning it would've been actually multiple animals that were mistaken as only one, until new fossils of it were described in the late 1970s!
 - Parasuchus' name means "Near Crocodile", in reference to it looking like a crocodile despite belonging to a separate lineage of animals!
-- [Trivia fact — achievement reference if applicable]
-- [Trivia fact — in-universe inspiration note if applicable]
 
 ---
 

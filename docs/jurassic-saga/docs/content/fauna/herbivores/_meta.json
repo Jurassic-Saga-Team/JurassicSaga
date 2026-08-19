@@ -1,59 +1,59 @@
 {
-    "alamosaurus.mdx": {
-        "name": "Alamosaurus"
-    },
-    "apatosaurus.mdx": {
-        "name": "Apatosaurus"
-    },
-    "brachiosaurus.mdx": {
-        "name": "Brachiosaurus"
-    },
-    "callovosaurus.mdx": {
-        "name": "Callovosaurus"
-    },
-    "corythosaurus.mdx": {
-        "name": "Corythosaurus"
-    },
-    "dryosaurus.mdx": {
-        "name": "Dryosaurus"
-    },
-    "euoplocephalus.mdx": {
-        "name": "Euoplocephalus"
-    },
-    "hadrosaurus.mdx": {
-        "name": "Hadrosaurus"
-    },
-    "maiasaura.mdx": {
-        "name": "Maiasaura"
-    },
-    "mamenchisaurus.mdx": {
-        "name": "Mamenchisaurus"
-    },
-    "microceratus.mdx": {
-        "name": "Microceratus"
-    },
-    "mussaurus.mdx": {
-        "name": "Mussaurus"
-    },
-    "othnielia.mdx": {
-        "name": "Othnielia"
-    },
-    "palaeoloxodon.mdx": {
-        "name": "Palaeoloxodon"
-    },
-    "parasaurolophus.mdx": {
-        "name": "Parasaurolophus"
-    },
-    "protoceratops.mdx": {
-        "name": "Protoceratops"
-    },
-    "stegosaurus.mdx": {
-        "name": "Stegosaurus"
-    },
-    "styracosaurus.mdx": {
-        "name": "Styracosaurus"
-    },
-    "triceratops.mdx": {
-        "name": "Triceratops"
-    }
+  "alamosaurus.mdx": {
+    "name": "Alamosaurus"
+  },
+  "apatosaurus.mdx": {
+    "name": "Apatosaurus"
+  },
+  "brachiosaurus.mdx": {
+    "name": "Brachiosaurus"
+  },
+  "callovosaurus.mdx": {
+    "name": "Callovosaurus"
+  },
+  "corythosaurus.mdx": {
+    "name": "Corythosaurus"
+  },
+  "dryosaurus.mdx": {
+    "name": "Dryosaurus"
+  },
+  "euoplocephalus.mdx": {
+    "name": "Euoplocephalus"
+  },
+  "hadrosaurus.mdx": {
+    "name": "Hadrosaurus"
+  },
+  "maiasaura.mdx": {
+    "name": "Maiasaura"
+  },
+  "mamenchisaurus.mdx": {
+    "name": "Mamenchisaurus"
+  },
+  "microceratus.mdx": {
+    "name": "Microceratus"
+  },
+  "mussaurus.mdx": {
+    "name": "Mussaurus"
+  },
+  "othnielia.mdx": {
+    "name": "Othnielia"
+  },
+  "palaeoloxodon.mdx": {
+    "name": "Palaeoloxodon"
+  },
+  "parasaurolophus.mdx": {
+    "name": "Parasaurolophus"
+  },
+  "protoceratops.mdx": {
+    "name": "Protoceratops"
+  },
+  "stegosaurus.mdx": {
+    "name": "Stegosaurus"
+  },
+  "styracosaurus.mdx": {
+    "name": "Styracosaurus"
+  },
+  "triceratops.mdx": {
+    "name": "Triceratops"
+  }
 }

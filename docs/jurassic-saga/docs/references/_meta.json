@@ -1,34 +1,34 @@
 {
-    "animal_info.mdx": {
-        "name": "Animal Information",
-        "icon": "Info"
-    },
-    "ore_levels.mdx": {
-        "name": "Ore Levels",
-        "icon": "Pickaxe"
-    },
-    "experimental.mdx": {
-        "name": "Experimental Features",
-        "icon": "CircleAlert"
-    },
-    "upcoming_features.mdx": {
-        "name": "Upcoming Features",
-        "icon": "CalendarCheck"
-    },
-    "updates.mdx": {
-        "name": "Update History",
-        "icon": "History"
-    },
-    "commands.mdx": {
-        "name": "Commands",
-        "icon": "Terminal"
-    },
-    "faq.mdx": {
-        "name": "Frequently Asked Questions",
-        "icon": "MessageCircleQuestion"
-    },
-    "team.mdx": {
-        "name": "The Team",
-        "icon": "Users"
-    }
+  "animal_info.mdx": {
+    "name": "Animal Information",
+    "icon": "Info"
+  },
+  "ore_levels.mdx": {
+    "name": "Ore Levels",
+    "icon": "Pickaxe"
+  },
+  "experimental.mdx": {
+    "name": "Experimental Features",
+    "icon": "CircleAlert"
+  },
+  "upcoming_features.mdx": {
+    "name": "Upcoming Features",
+    "icon": "CalendarCheck"
+  },
+  "updates.mdx": {
+    "name": "Update History",
+    "icon": "History"
+  },
+  "commands.mdx": {
+    "name": "Commands",
+    "icon": "Terminal"
+  },
+  "faq.mdx": {
+    "name": "Frequently Asked Questions",
+    "icon": "MessageCircleQuestion"
+  },
+  "team.mdx": {
+    "name": "The Team",
+    "icon": "Users"
+  }
 }

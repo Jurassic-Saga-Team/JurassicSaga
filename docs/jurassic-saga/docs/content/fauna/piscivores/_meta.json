@@ -1,20 +1,20 @@
 {
-    "cearadactylus.mdx": {
-        "name": "Cearadactylus"
-    },
-    "dimorphodon.mdx": {
-        "name": "Dimorphodon"
-    },
-    "geosternbergia.mdx": {
-        "name": "Geosternbergia"
-    },
-    "ludodactylus.mdx": {
-        "name": "Ludodactylus"
-    },
-    "tapejara.mdx": {
-        "name": "Tapejara"
-    },
-    "tylosaurus.mdx": {
-        "name": "Tylosaurus"
-    }
+  "cearadactylus.mdx": {
+    "name": "Cearadactylus"
+  },
+  "dimorphodon.mdx": {
+    "name": "Dimorphodon"
+  },
+  "geosternbergia.mdx": {
+    "name": "Geosternbergia"
+  },
+  "ludodactylus.mdx": {
+    "name": "Ludodactylus"
+  },
+  "tapejara.mdx": {
+    "name": "Tapejara"
+  },
+  "tylosaurus.mdx": {
+    "name": "Tylosaurus"
+  }
 }

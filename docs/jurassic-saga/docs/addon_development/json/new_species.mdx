@@ -115,11 +115,11 @@ The sounds module lets you assign sounds to various animal actions.
     ```json !!tabs Sound Module
     {
         "sounds": {
-            "attack": "[addon_name]:[animal_name]_attack",
-            "ambient": "[addon_name]:[animal_name]_ambient",
-            "death": "[addon_name]:[animal_name]_death",
-            "hurt": "[addon_name]:[animal_name]_hurt"
-        }
+        "attack": "[addon_name]:[animal_name]_attack",
+        "ambient": "[addon_name]:[animal_name]_ambient",
+        "death": "[addon_name]:[animal_name]_death",
+        "hurt": "[addon_name]:[animal_name]_hurt"
+    }
     }
     ```
     ```json !!tabs How to combine?
@@ -127,11 +127,11 @@ The sounds module lets you assign sounds to various animal actions.
         "id": "[addon_name]:[animal_name]",
         "animation_style": "simple",
         "sounds": {
-            "attack": "[addon_name]:[animal_name]_attack",
-            "ambient": "[addon_name]:[animal_name]_ambient",
-            "death": "[addon_name]:[animal_name]_death",
-            "hurt": "[addon_name]:[animal_name]_hurt"
-        }
+        "attack": "[addon_name]:[animal_name]_attack",
+        "ambient": "[addon_name]:[animal_name]_ambient",
+        "death": "[addon_name]:[animal_name]_death",
+        "hurt": "[addon_name]:[animal_name]_hurt"
+    }
     }
     ```
 </CodeTabs>
@@ -165,36 +165,36 @@ This module has some fields that are mandatory, and some that are optional.
 <CodeTabs>
     ```json !!tabs Genetic Module
     "genetics": {
-        "growthStageScaling": [Float],
-        "growthStageSize": [[Float], [Float]],
-        "growthNextStageScaling": [Float],
-        "growthStageMaxGrowthDays": [Int],
-        "growthProgressCapDays": [Int],
-        "supportedGenes": [],
-        "defaultGenes": [],
-        "growthProgressCap": [Int],
-        "eggRenderScale": [Float],
-        "eggHatchTicks": [Int]
-    }
+    "growthStageScaling": [Float],
+    "growthStageSize": [[Float], [Float]],
+    "growthNextStageScaling": [Float],
+    "growthStageMaxGrowthDays": [Int],
+    "growthProgressCapDays": [Int],
+    "supportedGenes": [],
+    "defaultGenes": [],
+    "growthProgressCap": [Int],
+    "eggRenderScale": [Float],
+    "eggHatchTicks": [Int]
+}
     ```
     ```json !!tabs Example
     "genetics": {
-        "growthStageScaling": 0.8,
-        "growthStageSize": [0.3, 1.2],
-        "growthNextStageScaling": 1.3,
-        "growthStageMaxGrowthDays": 20,
-        "growthProgressCapDays": 5,
-        "supportedGenes": [
-            "jurassicsaga:chaos_effect"
-        ],
-        "defaultGenes": [
-            "jurassicsaga:chaos_effect",
-            "jurassicsaga:intolerance"
-        ],
-        "growthProgressCap": 80,
-        "eggRenderScale": 0.75,
-        "eggHatchTicks": 12000
-    }
+    "growthStageScaling": 0.8,
+    "growthStageSize": [0.3, 1.2],
+    "growthNextStageScaling": 1.3,
+    "growthStageMaxGrowthDays": 20,
+    "growthProgressCapDays": 5,
+    "supportedGenes": [
+    "jurassicsaga:chaos_effect"
+    ],
+    "defaultGenes": [
+    "jurassicsaga:chaos_effect",
+    "jurassicsaga:intolerance"
+    ],
+    "growthProgressCap": 80,
+    "eggRenderScale": 0.75,
+    "eggHatchTicks": 12000
+}
     ```
 </CodeTabs>
 
@@ -205,73 +205,73 @@ This module has some fields that are mandatory, and some that are optional.
 
 This module has some fields that are mandatory, and some that are optional.
 
-<div style={{ display: 'flex', gap: '2rem' }}>
-    <div style={{ flex: 1 }}>
-        #### Fields
-        | Field | Type | Required | Default | Description |
-        |-------|------|----------|---------|-------------|
-        | `diet` | `string` | Required | - | Diet type of the animal (e.g. `CARNIVORE`, `HERBIVORE`) |
-        | `maxWaterDays` | `float` | Required | - | Max days the animal can go without water |
-        | `maxFoodDays` | `float` | Required | - | Max days the animal can go without food |
-        | `stalkingSpeedMultiplier` | `float` | Optional | `1.0` | Speed multiplier when stalking prey |
-        | `accelerationSpeedMultiplier` | `float` | Optional | `1.0` | Speed multiplier when accelerating |
-        | `breedCooldown` | `int` | Optional | `24000` | Cooldown in ticks between breeding |
-        | `gestationTicks` | `int` | Optional | `6000` | Gestation period in ticks |
-        | `maxStamina` | `int` | Optional | `1000` | Maximum stamina of the animal |
-        | `canSleep` | `boolean` | Optional | `true` | Whether the animal can sleep |
-        | `canBreed` | `boolean` | Optional | `true` | Whether the animal can breed |
-        | `hungerEnabled` | `boolean` | Optional | `true` | Whether the animal has a hunger mechanic |
-        | `thirstEnabled` | `boolean` | Optional | `true` | Whether the animal has a thirst mechanic |
-        | `hasLiveBirth` | `boolean` | Optional | `false` | Whether the animal gives live birth instead of laying eggs |
-    </div>
-    <div style={{ flexShrink: 0 }}>
-        #### Diet Types
-        | Value | Description |
-        |-------|-------------|
-        | `CARNIVORE` | Meat eater |
-        | `HERBIVORE` | Plant eater |
-        | `OMNIVORE` | Eats both |
-        | `PISCIVORE` | Fish eater |
-        | `INSECTOVORE` | Insect eater |
-        | `OVIVORE` | Egg eater |
-        | `NONE` | No diet |
-    </div>
+<div style={{display: 'flex', gap: '2rem'}}>
+  <div style={{flex: 1}}>
+#### Fields
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `diet` | `string` | Required | - | Diet type of the animal (e.g. `CARNIVORE`, `HERBIVORE`) |
+| `maxWaterDays` | `float` | Required | - | Max days the animal can go without water |
+| `maxFoodDays` | `float` | Required | - | Max days the animal can go without food |
+| `stalkingSpeedMultiplier` | `float` | Optional | `1.0` | Speed multiplier when stalking prey |
+| `accelerationSpeedMultiplier` | `float` | Optional | `1.0` | Speed multiplier when accelerating |
+| `breedCooldown` | `int` | Optional | `24000` | Cooldown in ticks between breeding |
+| `gestationTicks` | `int` | Optional | `6000` | Gestation period in ticks |
+| `maxStamina` | `int` | Optional | `1000` | Maximum stamina of the animal |
+| `canSleep` | `boolean` | Optional | `true` | Whether the animal can sleep |
+| `canBreed` | `boolean` | Optional | `true` | Whether the animal can breed |
+| `hungerEnabled` | `boolean` | Optional | `true` | Whether the animal has a hunger mechanic |
+| `thirstEnabled` | `boolean` | Optional | `true` | Whether the animal has a thirst mechanic |
+| `hasLiveBirth` | `boolean` | Optional | `false` | Whether the animal gives live birth instead of laying eggs |
+  </div>
+  <div style={{flexShrink: 0}}>
+#### Diet Types
+| Value | Description |
+|-------|-------------|
+| `CARNIVORE` | Meat eater |
+| `HERBIVORE` | Plant eater |
+| `OMNIVORE` | Eats both |
+| `PISCIVORE` | Fish eater |
+| `INSECTOVORE` | Insect eater |
+| `OVIVORE` | Egg eater |
+| `NONE` | No diet |
+  </div>
 </div>
 
 <CodeTabs>
     ```json !!tabs Metabolism Module
     "metabolism": {
-        "diet": [String],
-        "maxWaterDays": [Float],
-        "maxFoodDays": [Float],
-        "stalkingSpeedMultiplier": [Float],
-        "breedCooldown": [Int],
-        "gestationTicks": [Int],
-        "accelerationSpeedMultiplier": [Float],
-        "canSleep": [Boolean],
-        "canBreed": [Boolean],
-        "hungerEnabled": [Boolean],
-        "thirstEnabled": [Boolean],
-        "hasLiveBirth": [Boolean],
-        "maxStamina": [Int]
-    }
+    "diet": [String],
+    "maxWaterDays": [Float],
+    "maxFoodDays": [Float],
+    "stalkingSpeedMultiplier": [Float],
+    "breedCooldown": [Int],
+    "gestationTicks": [Int],
+    "accelerationSpeedMultiplier": [Float],
+    "canSleep": [Boolean],
+    "canBreed": [Boolean],
+    "hungerEnabled": [Boolean],
+    "thirstEnabled": [Boolean],
+    "hasLiveBirth": [Boolean],
+    "maxStamina": [Int]
+}
     ```
     ```json !!tabs Example
     "metabolism": {
-        "diet": "CARNIVORE",
-        "maxWaterDays": 2.0,
-        "maxFoodDays": 1.0,
-        "stalkingSpeedMultiplier": 0.7,
-        "breedCooldown": 50,
-        "gestationTicks": 50,
-        "accelerationSpeedMultiplier": 1,
-        "canSleep": false,
-        "canBreed": false,
-        "hungerEnabled": false,
-        "thirstEnabled": false,
-        "hasLiveBirth": false,
-        "maxStamina": 1000
-    }
+    "diet": "CARNIVORE",
+    "maxWaterDays": 2.0,
+    "maxFoodDays": 1.0,
+    "stalkingSpeedMultiplier": 0.7,
+    "breedCooldown": 50,
+    "gestationTicks": 50,
+    "accelerationSpeedMultiplier": 1,
+    "canSleep": false,
+    "canBreed": false,
+    "hungerEnabled": false,
+    "thirstEnabled": false,
+    "hasLiveBirth": false,
+    "maxStamina": 1000
+}
     ```
 </CodeTabs>
 
@@ -309,99 +309,99 @@ This module has some fields that are mandatory, and some that are optional.
 | `guidebookOffset`         | `object`         | Optional | `[0,0]`      | Baby and adult position offset in the guidebook         |
 | `signColor`               | `string`         | Optional | -            | Color override for the paddock sign                     |
 | `version`                 | `string`         | Optional | `JP1`        | Version the animal was added                            |
-<div style={{ display: 'flex', gap: '2rem' }}>
-    <div style={{ flex: 1 }}>
-        #### Eras
-        | Era             | Description          |
-        |-----------------|----------------------|
-        | `NONE`          | No era assigned      |
-        | `CAMBRIAN`      | Cambrian period      |
-        | `ORDOVICIAN`    | Ordovician period    |
-        | `SILURIAN`      | Silurian period      |
-        | `DEVONIAN`      | Devonian period      |
-        | `CARBONIFEROUS` | Carboniferous period |
-        | `PERMIAN`       | Permian period       |
-        | `TRIASSIC`      | Triassic period      |
-        | `JURASSIC`      | Jurassic period      |
-        | `CRETACEOUS`    | Cretaceous period    |
-        | `PALEOGENE`     | Paleogene period     |
-        | `NEOGENE`       | Neogene period       |
-        | `QUATERNARY`    | Quaternary period    |
-    </div>
-    <div style={{ flex: 1 }}>
-        #### Sign Colors
-        | Color      |
-        |------------|
-        | `BLUE`     |
-        | `GREEN`    |
-        | `PURPLE`   |
-        | `RED`      |
-        | `WHITE`    |
-        | `YELLOW`   |
-        | `FACILITY` |
-    </div>
+<div style={{display: 'flex', gap: '2rem'}}>
+  <div style={{flex: 1}}>
+#### Eras
+| Era | Description |
+|-----------------|----------------------|
+| `NONE` | No era assigned |
+| `CAMBRIAN` | Cambrian period |
+| `ORDOVICIAN` | Ordovician period |
+| `SILURIAN` | Silurian period |
+| `DEVONIAN` | Devonian period |
+| `CARBONIFEROUS` | Carboniferous period |
+| `PERMIAN` | Permian period |
+| `TRIASSIC` | Triassic period |
+| `JURASSIC` | Jurassic period |
+| `CRETACEOUS` | Cretaceous period |
+| `PALEOGENE` | Paleogene period |
+| `NEOGENE` | Neogene period |
+| `QUATERNARY` | Quaternary period |
+  </div>
+  <div style={{flex: 1}}>
+#### Sign Colors
+| Color |
+|------------|
+| `BLUE` |
+| `GREEN` |
+| `PURPLE` |
+| `RED` |
+| `WHITE` |
+| `YELLOW` |
+| `FACILITY` |
+  </div>
 </div>
 
 <CodeTabs>
     ```json !!tabs Misc Module
     "misc": {
-        "era": [String],
-        "maxHeadRotation": [[Float], [Float]],
-        "babyAnimations": [Boolean],
-        "genderedVariants": [Boolean],
-        "mammal": [Boolean],
-        "requiresGlow": [Boolean],
-        "leashable": [Boolean],
-        "guidebookPose": [Boolean],
-        "attacksCar": [Boolean],
-        "isNew": [Boolean],
-        "disableCorpseDrops": [Boolean],
-        "extinct": [Boolean],
-        "hasEyeLid": [Boolean],
-        "babyGuidebook": [Boolean],
-        "showInGuidebook": [Boolean],
-        "machineScale": [Float],
-        "corpseDropTimes": [Int],
-        "corpseMeatDropRange": [[Int], [Int]],
-        "corpseBoneDropRange": [[Int], [Int]],
-        "guidebookScaling": [[Float], [Float]],
-        "guidebookOffset": {
-            "baby": [[Float], [Float]],
-            "adult": [[Float], [Float]]
-        },
-        "signColor": [String],
-        "version": [String]
-    }
+    "era": [String],
+    "maxHeadRotation": [[Float], [Float]],
+    "babyAnimations": [Boolean],
+    "genderedVariants": [Boolean],
+    "mammal": [Boolean],
+    "requiresGlow": [Boolean],
+    "leashable": [Boolean],
+    "guidebookPose": [Boolean],
+    "attacksCar": [Boolean],
+    "isNew": [Boolean],
+    "disableCorpseDrops": [Boolean],
+    "extinct": [Boolean],
+    "hasEyeLid": [Boolean],
+    "babyGuidebook": [Boolean],
+    "showInGuidebook": [Boolean],
+    "machineScale": [Float],
+    "corpseDropTimes": [Int],
+    "corpseMeatDropRange": [[Int], [Int]],
+    "corpseBoneDropRange": [[Int], [Int]],
+    "guidebookScaling": [[Float], [Float]],
+    "guidebookOffset": {
+    "baby": [[Float], [Float]],
+    "adult": [[Float], [Float]]
+},
+    "signColor": [String],
+    "version": [String]
+}
     ```
     ```json !!tabs Example
     "misc": {
-        "era": "JURASSIC",
-        "maxHeadRotation": [20, 46],
-        "babyAnimations": true,
-        "genderedVariants": true,
-        "mammal": true,
-        "requiresGlow": true,
-        "leashable": true,
-        "guidebookPose": true,
-        "attacksCar": true,
-        "isNew": true,
-        "disableCorpseDrops": true,
-        "extinct": true,
-        "hasEyeLid": false,
-        "babyGuidebook": false,
-        "showInGuidebook": false,
-        "machineScale": 1.0,
-        "corpseDropTimes": 2,
-        "corpseMeatDropRange": [1, 4],
-        "corpseBoneDropRange": [1, 4],
-        "guidebookScaling": [1.1, 0.75],
-        "guidebookOffset": {
-            "baby": [0.5, 0.0],
-            "adult": [5.5, 0.0]
-        },
-        "signColor": "RED",
-        "version": "JP1"
-    }
+    "era": "JURASSIC",
+    "maxHeadRotation": [20, 46],
+    "babyAnimations": true,
+    "genderedVariants": true,
+    "mammal": true,
+    "requiresGlow": true,
+    "leashable": true,
+    "guidebookPose": true,
+    "attacksCar": true,
+    "isNew": true,
+    "disableCorpseDrops": true,
+    "extinct": true,
+    "hasEyeLid": false,
+    "babyGuidebook": false,
+    "showInGuidebook": false,
+    "machineScale": 1.0,
+    "corpseDropTimes": 2,
+    "corpseMeatDropRange": [1, 4],
+    "corpseBoneDropRange": [1, 4],
+    "guidebookScaling": [1.1, 0.75],
+    "guidebookOffset": {
+    "baby": [0.5, 0.0],
+    "adult": [5.5, 0.0]
+},
+    "signColor": "RED",
+    "version": "JP1"
+}
     ```
 </CodeTabs>
 
@@ -426,36 +426,36 @@ This module has some fields that are mandatory, and some that are optional.
 <CodeTabs>
     ```json !!tabs Social Module
     "social": {
-        "huntTargets": [String[]],
-        "scaredOf": [String[]],
-        "herdTargets": [String[]],
-        "maxDistanceToLeader": [Float],
-        "minDistanceToLeader": [Float],
-        "maxHerdSize": [Int],
-        "naturalAggression": [Float],
-        "herd_with_self": [Boolean],
-        "usesNest": [Boolean]
-    }
+    "huntTargets": [String[]],
+    "scaredOf": [String[]],
+    "herdTargets": [String[]],
+    "maxDistanceToLeader": [Float],
+    "minDistanceToLeader": [Float],
+    "maxHerdSize": [Int],
+    "naturalAggression": [Float],
+    "herd_with_self": [Boolean],
+    "usesNest": [Boolean]
+}
     ```
     ```json !!tabs Example
     "social": {
-        "huntTargets": [
-            "net.minecraft.world.entity.npc.AbstractVillager",
-            "net.minecraft.world.entity.player.Player"
-        ],
-        "scaredOf": [
-            "jp.jurassicsaga.server.animal.entity.extant.terrestial.v1.TroodonEntity"
-        ],
-        "herdTargets": [
-            "jp.jurassicsaga.server.animal.entity.extant.terrestial.v2.AchillobatorEntity"
-        ],
-        "maxDistanceToLeader": 900,
-        "minDistanceToLeader": 400,
-        "maxHerdSize": 2,
-        "naturalAggression": 0.2,
-        "herd_with_self": true,
-        "usesNest": true
-    }
+    "huntTargets": [
+    "net.minecraft.world.entity.npc.AbstractVillager",
+    "net.minecraft.world.entity.player.Player"
+    ],
+    "scaredOf": [
+    "jp.jurassicsaga.server.animal.entity.extant.terrestial.v1.TroodonEntity"
+    ],
+    "herdTargets": [
+    "jp.jurassicsaga.server.animal.entity.extant.terrestial.v2.AchillobatorEntity"
+    ],
+    "maxDistanceToLeader": 900,
+    "minDistanceToLeader": 400,
+    "maxHerdSize": 2,
+    "naturalAggression": 0.2,
+    "herd_with_self": true,
+    "usesNest": true
+}
     ```
 </CodeTabs>
 
@@ -479,62 +479,62 @@ This module has some fields that are mandatory, and some that are optional.
 | `hasEgg`             | `boolean`    | Optional | `true`    | Whether the animal has an egg item                |
 | `bucketable`         | `boolean`    | Optional | `false`   | Whether the animal can be bucketed                |
 
-<div style={{ display: 'flex', gap: '2rem' }}>
-    <div style={{ flex: 1 }}>
-        #### Sample Colours
-        | Value    | Description   |
-        |----------|---------------|
-        | `EMPTY`  | Empty sample  |
-        | `DIRTY`  | Dirty sample  |
-        | `RED`    | Red sample    |
-        | `BLUE`   | Blue sample   |
-        | `INSECT` | Insect sample |
-        | `PLANT`  | Plant sample  |
-    </div>
-    <div style={{ flex: 1 }}>
-        #### Egg Types
-        | Value      | Description       |
-        |------------|-------------------|
-        | `FROG`     | Frog egg          |
-        | `CHICKEN`  | Chicken egg       |
-        | `OSTRICH`  | Ostrich egg       |
-        | `ALLIGATOR`| Alligator egg     |
-        | `SPIDER`   | Spider egg sac    |
-        | `FISH`     | Fish egg          |
-        | `BASILISK` | Basilisk egg      |
-    </div>
+<div style={{display: 'flex', gap: '2rem'}}>
+  <div style={{flex: 1}}>
+#### Sample Colours
+| Value | Description |
+|----------|---------------|
+| `EMPTY` | Empty sample |
+| `DIRTY` | Dirty sample |
+| `RED` | Red sample |
+| `BLUE` | Blue sample |
+| `INSECT` | Insect sample |
+| `PLANT` | Plant sample |
+  </div>
+  <div style={{flex: 1}}>
+#### Egg Types
+| Value | Description |
+|------------|-------------------|
+| `FROG` | Frog egg |
+| `CHICKEN` | Chicken egg |
+| `OSTRICH` | Ostrich egg |
+| `ALLIGATOR`| Alligator egg |
+| `SPIDER` | Spider egg sac |
+| `FISH` | Fish egg |
+| `BASILISK` | Basilisk egg |
+  </div>
 </div>
 
 <CodeTabs>
     ```json !!tabs Items Module
     "items": {
-        "eggType": [String],
-        "spawnEggColors": [[Int], [Int]],
-        "spawnEggColorsMale": [[Int], [Int]],
-        "sampleColour": [String],
-        "hasCoin": [Boolean],
-        "hasMeat": [Boolean],
-        "hasDrops": [Boolean],
-        "hasFossil": [Boolean],
-        "hasPlushie": [Boolean],
-        "hasEgg": [Boolean],
-        "bucketable": [Boolean]
-    }
+    "eggType": [String],
+    "spawnEggColors": [[Int], [Int]],
+    "spawnEggColorsMale": [[Int], [Int]],
+    "sampleColour": [String],
+    "hasCoin": [Boolean],
+    "hasMeat": [Boolean],
+    "hasDrops": [Boolean],
+    "hasFossil": [Boolean],
+    "hasPlushie": [Boolean],
+    "hasEgg": [Boolean],
+    "bucketable": [Boolean]
+}
     ```
     ```json !!tabs Example
     "items": {
-        "eggType": "ALLIGATOR",
-        "spawnEggColors": [494949, 262626],
-        "spawnEggColorsMale": [262626, 8145951],
-        "sampleColour": "RED",
-        "hasCoin": false,
-        "hasMeat": true,
-        "hasDrops": true,
-        "hasFossil": true,
-        "hasPlushie": false,
-        "hasEgg": true,
-        "bucketable": false
-    }
+    "eggType": "ALLIGATOR",
+    "spawnEggColors": [494949, 262626],
+    "spawnEggColorsMale": [262626, 8145951],
+    "sampleColour": "RED",
+    "hasCoin": false,
+    "hasMeat": true,
+    "hasDrops": true,
+    "hasFossil": true,
+    "hasPlushie": false,
+    "hasEgg": true,
+    "bucketable": false
+}
     ```
 </CodeTabs>
 
@@ -581,58 +581,58 @@ This module has some fields that are mandatory, and some that are optional.
 <CodeTabs>
     ```json !!tabs Base Module
     "base": {
-        "animalType": [String],
-        "fov": [Int],
-        "maxTurnRate": [Float],
-        "sizeDimorphism": [Float],
-        "turnSmoothRate": [Float],
-        "renderScale": [Float],
-        "locator": [String],
-        "adult_only": [Boolean],
-        "has_genders": [Boolean],
-        "entity_properties": {
-            "main_controller": [String | Object],
-            "targeting_controller": [String | Object]
-        }
-    }
+    "animalType": [String],
+    "fov": [Int],
+    "maxTurnRate": [Float],
+    "sizeDimorphism": [Float],
+    "turnSmoothRate": [Float],
+    "renderScale": [Float],
+    "locator": [String],
+    "adult_only": [Boolean],
+    "has_genders": [Boolean],
+    "entity_properties": {
+    "main_controller": [String | Object],
+    "targeting_controller": [String | Object]
+}
+}
     ```
     ```json !!tabs Example
     "base": {
-        "animalType": "REPTILE",
-        "fov": 90,
-        "maxTurnRate": 55,
-        "sizeDimorphism": 40,
-        "turnSmoothRate": 0.45,
-        "renderScale": 2,
-        "locator": "base_locator",
-        "adult_only": true,
-        "has_genders": true,
-        "entity_properties": {
-            "main_controller": [
-                "jp.jurassicsaga.server.animal.entity.obj.tasks.JSFloatTask",
-                {
-                    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSFleeTask",
-                    "range": 30
-                },
-                {
-                    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSRandomStrollTask",
-                    "xRange": 15,
-                    "yRange": 6
-                },
-                "jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSFindFoodTask",
-                "jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSFindWaterTask",
-                "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSRevengeOrRunTask",
-                "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSHerdCombatFollowTask",
-                "jp.jurassicsaga.server.animal.entity.obj.tasks.misc.JSRestTask"
-            ],
-            "targeting_controller": [
-                {
-                    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSTargetTask",
-                    "mustSee": true
-                }
-            ]
-        }
-    }
+    "animalType": "REPTILE",
+    "fov": 90,
+    "maxTurnRate": 55,
+    "sizeDimorphism": 40,
+    "turnSmoothRate": 0.45,
+    "renderScale": 2,
+    "locator": "base_locator",
+    "adult_only": true,
+    "has_genders": true,
+    "entity_properties": {
+    "main_controller": [
+    "jp.jurassicsaga.server.animal.entity.obj.tasks.JSFloatTask",
+{
+    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSFleeTask",
+    "range": 30
+},
+{
+    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSRandomStrollTask",
+    "xRange": 15,
+    "yRange": 6
+},
+    "jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSFindFoodTask",
+    "jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSFindWaterTask",
+    "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSRevengeOrRunTask",
+    "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSHerdCombatFollowTask",
+    "jp.jurassicsaga.server.animal.entity.obj.tasks.misc.JSRestTask"
+    ],
+    "targeting_controller": [
+{
+    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSTargetTask",
+    "mustSee": true
+}
+    ]
+}
+}
     ```
 </CodeTabs>
 
@@ -674,39 +674,39 @@ This module has some fields that are mandatory, and some that are optional.
 <CodeTabs>
     ```json !!tabs Attributes Module
     "attributes": {
-        "maxHealth": [Double],
-        "dimensions": [[Float], [Float]],
-        "movementSpeedKmh": [Float],
-        "attackDamage": [Float],
-        "animal_type": [String],
-        "eyeHeight": [Float],
-        "category": [String],
-        "trackingRange": [Int],
-        "waterEfficiency": [Float],
-        "runningSpeedMultiplier": [Float],
-        "flyingSpeed": [Float],
-        "attackSpeed": [Float],
-        "attackKnockback": [Float],
-        "followRange": [Float]
-    }
+    "maxHealth": [Double],
+    "dimensions": [[Float], [Float]],
+    "movementSpeedKmh": [Float],
+    "attackDamage": [Float],
+    "animal_type": [String],
+    "eyeHeight": [Float],
+    "category": [String],
+    "trackingRange": [Int],
+    "waterEfficiency": [Float],
+    "runningSpeedMultiplier": [Float],
+    "flyingSpeed": [Float],
+    "attackSpeed": [Float],
+    "attackKnockback": [Float],
+    "followRange": [Float]
+}
     ```
     ```json !!tabs Example
     "attributes": {
-        "maxHealth": 320,
-        "dimensions": [3, 5],
-        "movementSpeedKmh": 25.5,
-        "attackDamage": 25.0,
-        "animal_type": "land",
-        "eyeHeight": 0.95,
-        "category": "CREATURE",
-        "trackingRange": 64,
-        "waterEfficiency": 0.8,
-        "runningSpeedMultiplier": 3.25,
-        "flyingSpeed": 0.5,
-        "attackSpeed": 2.0,
-        "attackKnockback": 0.5,
-        "followRange": 100.0
-    }
+    "maxHealth": 320,
+    "dimensions": [3, 5],
+    "movementSpeedKmh": 25.5,
+    "attackDamage": 25.0,
+    "animal_type": "land",
+    "eyeHeight": 0.95,
+    "category": "CREATURE",
+    "trackingRange": 64,
+    "waterEfficiency": 0.8,
+    "runningSpeedMultiplier": 3.25,
+    "flyingSpeed": 0.5,
+    "attackSpeed": 2.0,
+    "attackKnockback": 0.5,
+    "followRange": 100.0
+}
     ```
 </CodeTabs>
 
@@ -729,36 +729,36 @@ This module has some fields that are mandatory, and some that are optional.
 <CodeTabs>
     ```json !!tabs Client Anim Module
     "client_anim": {
-        "neck_pieces": [String],
-        "neck_rotation_divisor": [Float],
-        "tail_pieces": [String],
-        "max_tail_angle": [Float],
-        "tail_buffer_time": [Int],
-        "tail_angle_decrement": [Float],
-        "tail_divisor": [Float]
-    }
+    "neck_pieces": [String],
+    "neck_rotation_divisor": [Float],
+    "tail_pieces": [String],
+    "max_tail_angle": [Float],
+    "tail_buffer_time": [Int],
+    "tail_angle_decrement": [Float],
+    "tail_divisor": [Float]
+}
     ```
     ```json !!tabs Example
     "client_anim": {
-        "neck_pieces": [
-            "Body2",
-            "Neck1",
-            "Neck5",
-            "Head"
-        ],
-        "neck_rotation_divisor": 1.7,
-        "tail_pieces": [
-            "Tail1",
-            "Tail2",
-            "Tail3",
-            "Tail4",
-            "Tail5"
-        ],
-        "max_tail_angle": 180.0,
-        "tail_buffer_time": 4,
-        "tail_angle_decrement": 0.5,
-        "tail_divisor": 0.75
-    }
+    "neck_pieces": [
+    "Body2",
+    "Neck1",
+    "Neck5",
+    "Head"
+    ],
+    "neck_rotation_divisor": 1.7,
+    "tail_pieces": [
+    "Tail1",
+    "Tail2",
+    "Tail3",
+    "Tail4",
+    "Tail5"
+    ],
+    "max_tail_angle": 180.0,
+    "tail_buffer_time": 4,
+    "tail_angle_decrement": 0.5,
+    "tail_divisor": 0.75
+}
     ```
 </CodeTabs>
 
@@ -901,9 +901,9 @@ If you've answered yes to 3. you can skip this part of the guide.
 
 For the examples there are two last questions,
 1. What eggType did we set?
-    - You can find eggType in the JSON file under the module items.
+ - You can find eggType in the JSON file under the module items.
 2. What kind of coin do we want?
-    - There are a few options:
+ - There are a few options:
 
 | File               | Type        | Used When                  |
 |--------------------|-------------|----------------------------|
@@ -928,41 +928,41 @@ Use the format above for the actual file names.
     {
         "parent": "minecraft:item/generated",
         "textures": {
-            "layer0": "jurassicsaga:item/natural/entity/default_coins/coin_[coin]",
-            "layer1": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_coin"
-        }
+        "layer0": "jurassicsaga:item/natural/entity/default_coins/coin_[coin]",
+        "layer1": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_coin"
+    }
     }
     ```
     ```json !!tabs Cooked Meat
     {
         "parent": "minecraft:item/generated",
         "textures": {
-            "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_cooked"
-        }
+        "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_cooked"
+    }
     }
     ```
     ```json !!tabs Raw Meat
     {
         "parent": "minecraft:item/generated",
         "textures": {
-            "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_raw"
-        }
+        "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_raw"
+    }
     }
     ```
     ```json !!tabs Hatched Egg
     {
         "parent": "minecraft:item/generated",
         "textures": {
-            "layer0": "jurassicsaga:item/natural/entity/eggs/egg_[egg_type]_hatched"
-        }
+        "layer0": "jurassicsaga:item/natural/entity/eggs/egg_[egg_type]_hatched"
+    }
     }
     ```
     ```json !!tabs Fossil Remains
     {
         "parent": "minecraft:item/generated",
         "textures": {
-            "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_fossil_remains"
-        }
+        "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_fossil_remains"
+    }
     }
     ```
     ```json !!tabs Spawn Egg
@@ -974,8 +974,8 @@ Use the format above for the actual file names.
     {
         "parent": "minecraft:item/generated",
         "textures": {
-            "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_bucket"
-        }
+        "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_bucket"
+    }
     }
     ```
 </CodeTabs>
@@ -1025,8 +1025,8 @@ Inside that file add the following:
     {
         "parent": "minecraft:item/generated",
         "textures": {
-            "layer0": "[addon_name]:block/manmade/other/paddock_sign/[animal_name]"
-        }
+        "layer0": "[addon_name]:block/manmade/other/paddock_sign/[animal_name]"
+    }
     }
     ```
 </CodeTabs>
@@ -1265,33 +1265,33 @@ The four sound events you'll need are:
 - `[animal_name]_attack` - played when the animal attacks
 
 <CodeTabs>
-```json !!tabs Example
-{
-    "[animal_name]_death": {
+    ```json !!tabs Example
+    {
+        "[animal_name]_death": {
         "sounds": [
-            "[addon_name]:animal/[animal_name]/[sound_file]"
+        "[addon_name]:animal/[animal_name]/[sound_file]"
         ]
     },
-    "[animal_name]_hurt": {
+        "[animal_name]_hurt": {
         "sounds": [
-            "[addon_name]:animal/[animal_name]/[sound_file]",
-            "[addon_name]:animal/[animal_name]/[sound_file]"
+        "[addon_name]:animal/[animal_name]/[sound_file]",
+        "[addon_name]:animal/[animal_name]/[sound_file]"
         ]
     },
-    "[animal_name]_ambient": {
+        "[animal_name]_ambient": {
         "sounds": [
-            "[addon_name]:animal/[animal_name]/[sound_file]",
-            "[addon_name]:animal/[animal_name]/[sound_file]"
+        "[addon_name]:animal/[animal_name]/[sound_file]",
+        "[addon_name]:animal/[animal_name]/[sound_file]"
         ]
     },
-    "[animal_name]_attack": {
+        "[animal_name]_attack": {
         "sounds": [
-            "[addon_name]:animal/[animal_name]/[sound_file]",
-            "[addon_name]:animal/[animal_name]/[sound_file]"
+        "[addon_name]:animal/[animal_name]/[sound_file]",
+        "[addon_name]:animal/[animal_name]/[sound_file]"
         ]
     }
-}
-```
+    }
+    ```
 </CodeTabs>
 <Callout variant="info">
     The sound files themselves are `.ogg` files and go in the sounds folder, which we'll set up in the next step.
@@ -1362,7 +1362,8 @@ Inside `en_us.json` you'll want to add the following entries, replacing the valu
 </CodeTabs>
 
 <Callout variant="info">
-    Not all entries are required - only add the ones relevant to your animal. For example if you have `hasMeat: false` you won't need the raw and cooked meat entries.
+    Not all entries are required - only add the ones relevant to your animal. For example if you have `hasMeat: false`
+    you won't need the raw and cooked meat entries.
 </Callout>
 
 
@@ -1400,87 +1401,87 @@ You'll need one advancement file per cooking method  campfire, smelting, and smo
     {
         "parent": "minecraft:recipes/root",
         "criteria": {
-            "has_[animal_name]_cooked": {
-                "conditions": {
-                    "items": [{ "items": "[addon_name]:[animal_name]_cooked" }]
-                },
-                "trigger": "minecraft:inventory_changed"
-            },
-            "has_[animal_name]_raw": {
-                "conditions": {
-                    "items": [{ "items": "[addon_name]:[animal_name]_raw" }]
-                },
-                "trigger": "minecraft:inventory_changed"
-            },
-            "has_the_recipe": {
-                "conditions": {
-                    "recipe": "[addon_name]:[animal_name]_cooked_campfire"
-                },
-                "trigger": "minecraft:recipe_unlocked"
-            }
-        },
+        "has_[animal_name]_cooked": {
+        "conditions": {
+        "items": [{"items": "[addon_name]:[animal_name]_cooked"}]
+    },
+        "trigger": "minecraft:inventory_changed"
+    },
+        "has_[animal_name]_raw": {
+        "conditions": {
+        "items": [{"items": "[addon_name]:[animal_name]_raw"}]
+    },
+        "trigger": "minecraft:inventory_changed"
+    },
+        "has_the_recipe": {
+        "conditions": {
+        "recipe": "[addon_name]:[animal_name]_cooked_campfire"
+    },
+        "trigger": "minecraft:recipe_unlocked"
+    }
+    },
         "requirements": [["has_the_recipe", "has_[animal_name]_raw", "has_[animal_name]_cooked"]],
         "rewards": {
-            "recipes": ["[addon_name]:[animal_name]_cooked_campfire"]
-        }
+        "recipes": ["[addon_name]:[animal_name]_cooked_campfire"]
+    }
     }
     ```
     ```json !!tabs Smelt
     {
         "parent": "minecraft:recipes/root",
         "criteria": {
-            "has_[animal_name]_cooked": {
-                "conditions": {
-                    "items": [{ "items": "[addon_name]:[animal_name]_cooked" }]
-                },
-                "trigger": "minecraft:inventory_changed"
-            },
-            "has_[animal_name]_raw": {
-                "conditions": {
-                    "items": [{ "items": "[addon_name]:[animal_name]_raw" }]
-                },
-                "trigger": "minecraft:inventory_changed"
-            },
-            "has_the_recipe": {
-                "conditions": {
-                    "recipe": "[addon_name]:[animal_name]_cooked_smelt"
-                },
-                "trigger": "minecraft:recipe_unlocked"
-            }
-        },
+        "has_[animal_name]_cooked": {
+        "conditions": {
+        "items": [{"items": "[addon_name]:[animal_name]_cooked"}]
+    },
+        "trigger": "minecraft:inventory_changed"
+    },
+        "has_[animal_name]_raw": {
+        "conditions": {
+        "items": [{"items": "[addon_name]:[animal_name]_raw"}]
+    },
+        "trigger": "minecraft:inventory_changed"
+    },
+        "has_the_recipe": {
+        "conditions": {
+        "recipe": "[addon_name]:[animal_name]_cooked_smelt"
+    },
+        "trigger": "minecraft:recipe_unlocked"
+    }
+    },
         "requirements": [["has_the_recipe", "has_[animal_name]_raw", "has_[animal_name]_cooked"]],
         "rewards": {
-            "recipes": ["[addon_name]:[animal_name]_cooked_smelt"]
-        }
+        "recipes": ["[addon_name]:[animal_name]_cooked_smelt"]
+    }
     }
     ```
     ```json !!tabs Smoke
     {
         "parent": "minecraft:recipes/root",
         "criteria": {
-            "has_[animal_name]_cooked": {
-                "conditions": {
-                    "items": [{ "items": "[addon_name]:[animal_name]_cooked" }]
-                },
-                "trigger": "minecraft:inventory_changed"
-            },
-            "has_[animal_name]_raw": {
-                "conditions": {
-                    "items": [{ "items": "[addon_name]:[animal_name]_raw" }]
-                },
-                "trigger": "minecraft:inventory_changed"
-            },
-            "has_the_recipe": {
-                "conditions": {
-                    "recipe": "[addon_name]:[animal_name]_cooked_smoke"
-                },
-                "trigger": "minecraft:recipe_unlocked"
-            }
-        },
+        "has_[animal_name]_cooked": {
+        "conditions": {
+        "items": [{"items": "[addon_name]:[animal_name]_cooked"}]
+    },
+        "trigger": "minecraft:inventory_changed"
+    },
+        "has_[animal_name]_raw": {
+        "conditions": {
+        "items": [{"items": "[addon_name]:[animal_name]_raw"}]
+    },
+        "trigger": "minecraft:inventory_changed"
+    },
+        "has_the_recipe": {
+        "conditions": {
+        "recipe": "[addon_name]:[animal_name]_cooked_smoke"
+    },
+        "trigger": "minecraft:recipe_unlocked"
+    }
+    },
         "requirements": [["has_the_recipe", "has_[animal_name]_raw", "has_[animal_name]_cooked"]],
         "rewards": {
-            "recipes": ["[addon_name]:[animal_name]_cooked_smoke"]
-        }
+        "recipes": ["[addon_name]:[animal_name]_cooked_smoke"]
+    }
     }
     ```
 </CodeTabs>
@@ -1511,12 +1512,12 @@ Now let's add the actual recipes, these go here:
         "cookingtime": 600,
         "experience": 0.5,
         "ingredient": {
-            "item": "[addon_name]:[animal_name]_raw"
-        },
+        "item": "[addon_name]:[animal_name]_raw"
+    },
         "result": {
-            "count": 1,
-            "id": "[addon_name]:[animal_name]_cooked"
-        }
+        "count": 1,
+        "id": "[addon_name]:[animal_name]_cooked"
+    }
     }
     ```
     ```json !!tabs Smelt
@@ -1526,12 +1527,12 @@ Now let's add the actual recipes, these go here:
         "cookingtime": 300,
         "experience": 0.5,
         "ingredient": {
-            "item": "[addon_name]:[animal_name]_raw"
-        },
+        "item": "[addon_name]:[animal_name]_raw"
+    },
         "result": {
-            "count": 1,
-            "id": "[addon_name]:[animal_name]_cooked"
-        }
+        "count": 1,
+        "id": "[addon_name]:[animal_name]_cooked"
+    }
     }
     ```
     ```json !!tabs Smoke
@@ -1541,12 +1542,12 @@ Now let's add the actual recipes, these go here:
         "cookingtime": 240,
         "experience": 0.5,
         "ingredient": {
-            "item": "[addon_name]:[animal_name]_raw"
-        },
+        "item": "[addon_name]:[animal_name]_raw"
+    },
         "result": {
-            "count": 1,
-            "id": "[addon_name]:[animal_name]_cooked"
-        }
+        "count": 1,
+        "id": "[addon_name]:[animal_name]_cooked"
+    }
     }
     ```
 </CodeTabs>
@@ -1576,8 +1577,8 @@ Next we'll register our items into the relevant tags, these go here:
     {
         "replace": false,
         "values": [
-            "[addon_name]:[animal_name]_raw",
-            "[addon_name]:[animal_name]_cooked"
+        "[addon_name]:[animal_name]_raw",
+        "[addon_name]:[animal_name]_cooked"
         ]
     }
     ```
@@ -1585,7 +1586,7 @@ Next we'll register our items into the relevant tags, these go here:
     {
         "replace": false,
         "values": [
-            "[addon_name]:[animal_name]_hatch_egg"
+        "[addon_name]:[animal_name]_hatch_egg"
         ]
     }
     ```
@@ -1593,7 +1594,7 @@ Next we'll register our items into the relevant tags, these go here:
     {
         "replace": false,
         "values": [
-            "[addon_name]:[animal_name]_fossil_remains"
+        "[addon_name]:[animal_name]_fossil_remains"
         ]
     }
     ```
@@ -1601,7 +1602,7 @@ Next we'll register our items into the relevant tags, these go here:
     {
         "replace": false,
         "values": [
-            "[addon_name]:[animal_name]_coin"
+        "[addon_name]:[animal_name]_coin"
         ]
     }
     ```
@@ -1613,7 +1614,8 @@ Next we'll register our items into the relevant tags, these go here:
 That's it, the whole guide!
 
 <Callout variant="warning">
-    Advancements are not covered in this guide as they depend on your animal type. If you need help with this, ask in the Discord.
+    Advancements are not covered in this guide as they depend on your animal type. If you need help with this, ask in
+    the Discord.
 </Callout>
 
 ---

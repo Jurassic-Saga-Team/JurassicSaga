@@ -1,17 +1,17 @@
 {
-    "bananogmius.mdx": {
-        "name": "Bananogmius"
-    },
-    "cameroceras.mdx": {
-        "name": "Cameroceras"
-    },
-    "diplomystus.mdx": {
-        "name": "Diplomystus"
-    },
-    "mesolimulus.mdx": {
-        "name": "Mesolimulus"
-    },
-    "oreochima.mdx": {
-        "name": "Oreochima"
-    }
+  "bananogmius.mdx": {
+    "name": "Bananogmius"
+  },
+  "cameroceras.mdx": {
+    "name": "Cameroceras"
+  },
+  "diplomystus.mdx": {
+    "name": "Diplomystus"
+  },
+  "mesolimulus.mdx": {
+    "name": "Mesolimulus"
+  },
+  "oreochima.mdx": {
+    "name": "Oreochima"
+  }
 }

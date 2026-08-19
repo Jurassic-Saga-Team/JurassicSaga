@@ -1,702 +1,1975 @@
 # Creature Index
 
 <Callout variant="warning" title="Experimental creatures">
-    Cards outlined in red are **experimental**. They are unfinished, subject to change, and only obtainable once you [enable Experimental Features]($references/experimental) in the mod settings.
+    Cards outlined in yellow are **experimental**. They are unfinished, subject to change, and only obtainable once you
+    [enable Experimental Features]($references/experimental) in the mod settings.
 </Callout>
 
-<div style={{display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "14px", marginTop: "16px"}}>
+<Callout variant="danger" title="Not added creatures">
+    Cards outlined in red are **not added yet.**
+</Callout>
 
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+{/*
+  ==========================================================================
+  HOW TO ADD A CREATURE
 
-[<Asset location="jurassic-saga:tabs/male_achillobator.png" width={187} height={130} />]($content/fauna/carnivores/achillobator)
+  Copy one block below and fill in: NAME, ASSET, WIDTH/HEIGHT, PATH.
+  Keep the cards in alphabetical order.
+
+  !! IMPORTANT !!
+  The two [link] lines MUST start at column 0, with a blank line above and
+  below them. If they get indented, Markdown treats them as a code block and
+  EVERY link on this page silently stops working.
+  Do not let your editor "reformat" this file - indenting those lines is what
+  breaks it. Indenting the <div> tags is fine.
+
+  --- normal creature -------------------------------------------------------
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+  [<Asset location="jurassic-saga:tabs/male_NAME.png" width={190} height={110}/>]($content/fauna/GROUP/NAME)
+
+    </div>
+
+  [**Name**]($content/fauna/GROUP/NAME)
 
   </div>
+
+  --- status badge (optional) -----------------------------------------------
+  Put this just before the card's closing </div>.
+  Experimental -> border "2px solid #DBB600", badge color "#DBB600", text EXPERIMENTAL
+  Not added    -> border "2px solid #e0533d", badge color "#e0533d", text NOT ADDED
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#DBB600"
+    }}>EXPERIMENTAL</div>
+  ==========================================================================
+*/}
+
+<div style={{
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+  gap: "14px",
+  marginTop: "16px"
+}}>
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_achillobator.png" width={187} height={130}/>]($content/fauna/carnivores/achillobator)
+
+    </div>
 
 [**Achillobator**]($content/fauna/carnivores/achillobator)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_alamosaurus.png" width={190} height={97} />]($content/fauna/herbivores/alamosaurus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_alamosaurus.png" width={190} height={97}/>]($content/fauna/herbivores/alamosaurus)
+
+    </div>
 
 [**Alamosaurus**]($content/fauna/herbivores/alamosaurus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_alligator.png" width={190} height={94} />]($content/fauna/extant/alligator)
-
   </div>
+
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_albertosaurus.png" width={187} height={130}/>]($content/fauna/carnivores/albertosaurus)
+
+    </div>
+
+[**Albertosaurus**]($content/fauna/carnivores/albertosaurus)
+
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>NOT ADDED</div>
+  </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_alligator.png" width={190} height={94}/>]($content/fauna/extant/alligator)
+
+    </div>
 
 [**Alligator**]($content/fauna/extant/alligator)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_apatosaurus.png" width={190} height={95} />]($content/fauna/herbivores/apatosaurus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_apatosaurus.png" width={190} height={95}/>]($content/fauna/herbivores/apatosaurus)
+
+    </div>
 
 [**Apatosaurus**]($content/fauna/herbivores/apatosaurus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_bananogmius.png" width={167} height={130} />]($content/fauna/others/bananogmius)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_bananogmius.png" width={167} height={130}/>]($content/fauna/others/bananogmius)
+
+    </div>
 
 [**Bananogmius**]($content/fauna/others/bananogmius)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_baryonyx.png" width={190} height={119} />]($content/fauna/carnivores/baryonyx)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_baryonyx.png" width={190} height={119}/>]($content/fauna/carnivores/baryonyx)
+
+    </div>
 
 [**Baryonyx**]($content/fauna/carnivores/baryonyx)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_basilisk.png" width={190} height={94} />]($content/fauna/extant/basilisk)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_basilisk.png" width={190} height={94}/>]($content/fauna/extant/basilisk)
+
+    </div>
 
 [**Basilisk**]($content/fauna/extant/basilisk)
 
-</div>
+  </div>
 
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-[<Asset location="jurassic-saga:tabs/male_bonito.png" width={189} height={130} />]($content/fauna/extant/bonito)
+[<Asset location="jurassic-saga:tabs/male_boa_imperator.png" width={190} height={92}/>]($content/fauna/extant/boa_imperator)
+
+    </div>
+
+[**Boa Imperator**]($content/fauna/extant/boa_imperator)
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_bonito.png" width={189} height={130}/>]($content/fauna/extant/bonito)
+
+    </div>
 
 [**Bonito**]($content/fauna/extant/bonito)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_brachiosaurus.png" width={136} height={130} />]($content/fauna/herbivores/brachiosaurus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_brachiosaurus.png" width={136} height={130}/>]($content/fauna/herbivores/brachiosaurus)
+
+    </div>
 
 [**Brachiosaurus**]($content/fauna/herbivores/brachiosaurus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/birdwing_butterfly.png" width={95} height={130} />]($content/fauna/extant/butterfly)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/birdwing_butterfly.png" width={95} height={130}/>]($content/fauna/extant/butterfly)
+
+    </div>
 
 [**Butterfly**]($content/fauna/extant/butterfly)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_callovosaurus.png" width={190} height={122} />]($content/fauna/herbivores/callovosaurus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_callovosaurus.png" width={190} height={122}/>]($content/fauna/herbivores/callovosaurus)
+
+    </div>
 
 [**Callovosaurus**]($content/fauna/herbivores/callovosaurus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_cameroceras.png" width={190} height={87} />]($content/fauna/others/cameroceras)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_cameroceras.png" width={190} height={87}/>]($content/fauna/others/cameroceras)
+
+    </div>
 
 [**Cameroceras**]($content/fauna/others/cameroceras)
 
-</div>
-
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_carcharodontosaurus.png" width={190} height={113} />]($content/fauna/carnivores/carcharodontosaurus)
-
   </div>
+
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_carcharodontosaurus.png" width={190} height={113}/>]($content/fauna/carnivores/carcharodontosaurus)
+
+    </div>
 
 [**Carcharodontosaurus**]($content/fauna/carnivores/carcharodontosaurus)
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
-
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_cearadactylus.png" width={126} height={130} />]($content/fauna/piscivores/cearadactylus)
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_cearadactylus.png" width={126} height={130}/>]($content/fauna/piscivores/cearadactylus)
+
+    </div>
 
 [**Cearadactylus**]($content/fauna/piscivores/cearadactylus)
 
-</div>
-
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_ceratosaurus.png" width={190} height={114} />]($content/fauna/carnivores/ceratosaurus)
-
   </div>
+
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_ceratosaurus.png" width={190} height={114}/>]($content/fauna/carnivores/ceratosaurus)
+
+    </div>
 
 [**Ceratosaurus**]($content/fauna/carnivores/ceratosaurus)
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
-
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_coelurus.png" width={182} height={130} />]($content/fauna/carnivores/coelurus)
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_coelophysis.png" width={190} height={125}/>]($content/fauna/carnivores/coelophysis)
+
+    </div>
+
+[**Coelophysis**]($content/fauna/carnivores/coelophysis)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#e0533d"
+    }}>NOT ADDED</div>
+
+  </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_coelurus.png" width={182} height={130}/>]($content/fauna/carnivores/coelurus)
+
+    </div>
 
 [**Coelurus**]($content/fauna/carnivores/coelurus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_compsognathus.png" width={190} height={121} />]($content/fauna/carnivores/compsognathus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_compsognathus.png" width={190} height={121}/>]($content/fauna/carnivores/compsognathus)
+
+    </div>
 
 [**Compsognathus**]($content/fauna/carnivores/compsognathus)
 
-</div>
-
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_corythosaurus.png" width={190} height={120} />]($content/fauna/herbivores/corythosaurus)
-
   </div>
+
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_corythosaurus.png" width={190} height={120}/>]($content/fauna/herbivores/corythosaurus)
+
+    </div>
 
 [**Corythosaurus**]($content/fauna/herbivores/corythosaurus)
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
-
-</div>
-
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_deinonychus.png" width={164} height={130} />]($content/fauna/carnivores/deinonychus)
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_deinonychus.png" width={164} height={130}/>]($content/fauna/carnivores/deinonychus)
+
+    </div>
 
 [**Deinonychus**]($content/fauna/carnivores/deinonychus)
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
-
-</div>
-
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_deinosuchus.png" width={190} height={96} />]($content/fauna/carnivores/deinosuchus)
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_deinosuchus.png" width={190} height={96}/>]($content/fauna/carnivores/deinosuchus)
+
+    </div>
 
 [**Deinosuchus**]($content/fauna/carnivores/deinosuchus)
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
-
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_dilophosaurus.png" width={190} height={119} />]($content/fauna/carnivores/dilophosaurus)
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_dilophosaurus.png" width={190} height={119}/>]($content/fauna/carnivores/dilophosaurus)
+
+    </div>
 
 [**Dilophosaurus**]($content/fauna/carnivores/dilophosaurus)
 
-</div>
+  </div>
 
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-[<Asset location="jurassic-saga:tabs/male_dimorphodon.png" width={178} height={130} />]($content/fauna/piscivores/dimorphodon)
+[<Asset location="jurassic-saga:tabs/male_dimorphodon.png" width={178} height={130}/>]($content/fauna/piscivores/dimorphodon)
+
+    </div>
+
+[**Dimorphodon**]($content/fauna/piscivores/dimorphodon)
+
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
 
-[**Dimorphodon macronyx**]($content/fauna/piscivores/dimorphodon)
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
+[<Asset location="jurassic-saga:tabs/male_dinilysia.png" width={190} height={93}/>]($content/fauna/carnivores/dinilysia)
 
-</div>
+    </div>
 
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+[**Dinilysia**]($content/fauna/carnivores/dinilysia)
 
-[<Asset location="jurassic-saga:tabs/male_diplomystus.png" width={165} height={130} />]($content/fauna/others/diplomystus)
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#DBB600"
+    }}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_diplomystus.png" width={165} height={130}/>]($content/fauna/others/diplomystus)
+
+    </div>
 
 [**Diplomystus**]($content/fauna/others/diplomystus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_dracovenator.png" width={190} height={127} />]($content/fauna/carnivores/dracovenator)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_dracovenator.png" width={190} height={127}/>]($content/fauna/carnivores/dracovenator)
+
+    </div>
 
 [**Dracovenator**]($content/fauna/carnivores/dracovenator)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_dryosaurus.png" width={190} height={123} />]($content/fauna/herbivores/dryosaurus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_dryosaurus.png" width={190} height={123}/>]($content/fauna/herbivores/dryosaurus)
+
+    </div>
 
 [**Dryosaurus**]($content/fauna/herbivores/dryosaurus)
 
-</div>
+  </div>
 
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-[<Asset location="jurassic-saga:tabs/male_euoplocephalus.png" width={190} height={118} />]($content/fauna/herbivores/euoplocephalus)
+[<Asset location="jurassic-saga:tabs/male_erythrosuchus.png" width={190} height={106}/>]($content/fauna/carnivores/erythrosuchus)
+
+    </div>
+
+[**Erythrosuchus**]($content/fauna/carnivores/erythrosuchus)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#e0533d"
+    }}>NOT ADDED</div>
 
   </div>
+
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_estemmenosuchus.png" width={190} height={128}/>]($content/fauna/herbivores/estemmenosuchus)
+
+    </div>
+
+[**Estemmenosuchus**]($content/fauna/herbivores/estemmenosuchus)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#e0533d"
+    }}>NOT ADDED</div>
+
+  </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_euoplocephalus.png" width={190} height={118}/>]($content/fauna/herbivores/euoplocephalus)
+
+    </div>
 
 [**Euoplocephalus**]($content/fauna/herbivores/euoplocephalus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_gallimimus.png" width={161} height={130} />]($content/fauna/omnivore/gallimimus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_gallimimus.png" width={161} height={130}/>]($content/fauna/omnivore/gallimimus)
+
+    </div>
 
 [**Gallimimus**]($content/fauna/omnivore/gallimimus)
 
-</div>
+  </div>
 
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-[<Asset location="jurassic-saga:tabs/baby_jpog_goat.png" width={139} height={130} />]($content/fauna/extant/goat)
+[<Asset location="jurassic-saga:tabs/male_geosternbergia.png" width={119} height={130}/>]($content/fauna/piscivores/geosternbergia)
+
+    </div>
+
+[**Geosternbergia**]($content/fauna/piscivores/geosternbergia)
+
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/baby_jpog_goat.png" width={139} height={130}/>]($content/fauna/extant/goat)
+
+    </div>
 
 [**Goat**]($content/fauna/extant/goat)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_guapote.png" width={141} height={130} />]($content/fauna/extant/guapote)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_guapote.png" width={141} height={130}/>]($content/fauna/extant/guapote)
+
+    </div>
 
 [**Guapote**]($content/fauna/extant/guapote)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_hadrosaurus.png" width={190} height={129} />]($content/fauna/herbivores/hadrosaurus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_hadrosaurus.png" width={190} height={129}/>]($content/fauna/herbivores/hadrosaurus)
+
+    </div>
 
 [**Hadrosaurus**]($content/fauna/herbivores/hadrosaurus)
 
-</div>
+  </div>
 
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-[<Asset location="jurassic-saga:tabs/male_herrerasaurus.png" width={190} height={117} />]($content/fauna/carnivores/herrerasaurus)
+[<Asset location="jurassic-saga:tabs/male_hainosaurus.png" width={190} height={110}/>]($content/fauna/piscivores/hainosaurus)
+
+    </div>
+
+[**Hainosaurus**]($content/fauna/piscivores/hainosaurus)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#e0533d"
+    }}>NOT ADDED</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_herrerasaurus.png" width={190} height={117}/>]($content/fauna/carnivores/herrerasaurus)
+
+    </div>
 
 [**Herrerasaurus**]($content/fauna/carnivores/herrerasaurus)
 
-</div>
+  </div>
 
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-[<Asset location="jurassic-saga:tabs/male_ludodactylus.png" width={100} height={130} />]($content/fauna/piscivores/ludodactylus)
+[<Asset location="jurassic-saga:tabs/female_indominus.png" width={190} height={118}/>]($content/fauna/carnivores/indominus)
+
+    </div>
+
+[**Indominus**]($content/fauna/carnivores/indominus)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#DBB600"
+    }}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_lambeosaurus.png" width={190} height={117}/>]($content/fauna/carnivores/lambeosaurus)
+
+    </div>
+
+[**Lambeosaurus**]($content/fauna/carnivores/lambeosaurus)
+
+  </div>
+
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_leptoceratops.png" width={187} height={130}/>]($content/fauna/carnivores/leptoceratops)
+
+    </div>
+
+[**Leptoceratops**]($content/fauna/carnivores/leptoceratops)
+
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>NOT ADDED</div>
+  </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_ludodactylus.png" width={100} height={130}/>]($content/fauna/piscivores/ludodactylus)
+
+    </div>
 
 [**Ludodactylus**]($content/fauna/piscivores/ludodactylus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_maiasaura.png" width={190} height={124} />]($content/fauna/herbivores/maiasaura)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_maiasaura.png" width={190} height={124}/>]($content/fauna/herbivores/maiasaura)
+
+    </div>
 
 [**Maiasaura**]($content/fauna/herbivores/maiasaura)
 
-</div>
-
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_mamenchisaurus.png" width={190} height={86} />]($content/fauna/herbivores/mamenchisaurus)
-
   </div>
+
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_mamenchisaurus.png" width={190} height={86}/>]($content/fauna/herbivores/mamenchisaurus)
+
+    </div>
 
 [**Mamenchisaurus**]($content/fauna/herbivores/mamenchisaurus)
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
-
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/arid_meganeura.png" width={190} height={101} />]($content/fauna/insectivores/meganeura)
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_mawsonia.png" width={176} height={130}/>]($content/fauna/others/mawsonia)
+
+    </div>
+
+[**Mawsonia**]($content/fauna/others/mawsonia)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#e0533d"
+    }}>NOT ADDED</div>
+
+  </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/arid_meganeura.png" width={190} height={101}/>]($content/fauna/insectivores/meganeura)
+
+    </div>
 
 [**Meganeura**]($content/fauna/insectivores/meganeura)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_mesolimulus.png" width={190} height={98} />]($content/fauna/others/mesolimulus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_mesolimulus.png" width={190} height={98}/>]($content/fauna/others/mesolimulus)
+
+    </div>
 
 [**Mesolimulus**]($content/fauna/others/mesolimulus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_metriacanthosaurus.png" width={190} height={122} />]($content/fauna/carnivores/metriacanthosaurus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_metriacanthosaurus.png" width={190} height={122}/>]($content/fauna/carnivores/metriacanthosaurus)
+
+    </div>
 
 [**Metriacanthosaurus**]($content/fauna/carnivores/metriacanthosaurus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_microceratus.png" width={190} height={103} />]($content/fauna/herbivores/microceratus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_microceratus.png" width={190} height={103}/>]($content/fauna/herbivores/microceratus)
+
+    </div>
 
 [**Microceratus**]($content/fauna/herbivores/microceratus)
 
-</div>
+  </div>
 
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-[<Asset location="jurassic-saga:mosquito.png" width={130} height={130} />]($content/fauna/extant/mosquito)
+[<Asset location="jurassic-saga:tabs/male_minmi.png" width={190} height={113}/>]($content/fauna/herbivores/minmi)
+
+    </div>
+
+[**Minmi**]($content/fauna/herbivores/minmi)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#DBB600"
+    }}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:mosquito.png" width={130} height={130}/>]($content/fauna/extant/mosquito)
+
+    </div>
 
 [**Mosquito**]($content/fauna/extant/mosquito)
 
-</div>
-
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_mussaurus.png" width={190} height={103} />]($content/fauna/herbivores/mussaurus)
-
   </div>
+
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_mussaurus.png" width={190} height={103}/>]($content/fauna/herbivores/mussaurus)
+
+    </div>
 
 [**Mussaurus**]($content/fauna/herbivores/mussaurus)
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
-
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_oreochima.png" width={187} height={130} />]($content/fauna/others/oreochima)
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_oreochima.png" width={187} height={130}/>]($content/fauna/others/oreochima)
+
+    </div>
 
 [**Oreochima**]($content/fauna/others/oreochima)
 
-</div>
-
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_ornithosuchus.png" width={190} height={114} />]($content/fauna/carnivores/ornithosuchus)
-
   </div>
+
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_ornithosuchus.png" width={190} height={114}/>]($content/fauna/carnivores/ornithosuchus)
+
+    </div>
 
 [**Ornithosuchus**]($content/fauna/carnivores/ornithosuchus)
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
-
-</div>
-
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_ostafrikasaurus.png" width={190} height={112} />]($content/fauna/carnivores/ostafrikasaurus)
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_orodromeus.png" width={190} height={98}/>]($content/fauna/herbivores/orodromeus)
+
+    </div>
+
+[**Orodromeus**]($content/fauna/herbivores/orodromeus)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#e0533d"
+    }}>NOT ADDED</div>
+
+  </div>
+
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_ostafrikasaurus.png" width={190} height={112}/>]($content/fauna/carnivores/ostafrikasaurus)
+
+    </div>
 
 [**Ostafrikasaurus**]($content/fauna/carnivores/ostafrikasaurus)
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
-
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_ostrich.png" width={112} height={130} />]($content/fauna/extant/ostrich)
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_ostrich.png" width={112} height={130}/>]($content/fauna/extant/ostrich)
+
+    </div>
 
 [**Ostrich**]($content/fauna/extant/ostrich)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_othnielia.png" width={190} height={96} />]($content/fauna/herbivores/othnielia)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_othnielia.png" width={190} height={96}/>]($content/fauna/herbivores/othnielia)
+
+    </div>
 
 [**Othnielia**]($content/fauna/herbivores/othnielia)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_palaeoloxodon.png" width={177} height={130} />]($content/fauna/herbivores/palaeoloxodon)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_palaeoloxodon.png" width={177} height={130}/>]($content/fauna/herbivores/palaeoloxodon)
+
+    </div>
 
 [**Palaeoloxodon**]($content/fauna/herbivores/palaeoloxodon)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_parasaurolophus.png" width={190} height={126} />]($content/fauna/herbivores/parasaurolophus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_parasaurolophus.png" width={190} height={126}/>]($content/fauna/herbivores/parasaurolophus)
+
+    </div>
 
 [**Parasaurolophus**]($content/fauna/herbivores/parasaurolophus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_parasuchus.png" width={190} height={99} />]($content/fauna/carnivores/parasuchus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_parasuchus.png" width={190} height={99}/>]($content/fauna/carnivores/parasuchus)
+
+    </div>
 
 [**Parasuchus**]($content/fauna/carnivores/parasuchus)
 
-</div>
+  </div>
 
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-[<Asset location="jurassic-saga:tabs/male_proceratosaurus.png" width={190} height={118} />]($content/fauna/carnivores/proceratosaurus)
+[<Asset location="jurassic-saga:tabs/male_postosuchus.png" width={190} height={113}/>]($content/fauna/carnivores/postosuchus)
+
+    </div>
+
+[**Postosuchus**]($content/fauna/carnivores/postosuchus)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#DBB600"
+    }}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_proceratosaurus.png" width={190} height={118}/>]($content/fauna/carnivores/proceratosaurus)
+
+    </div>
 
 [**Proceratosaurus**]($content/fauna/carnivores/proceratosaurus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_procompsognathus.png" width={190} height={120} />]($content/fauna/carnivores/procompsognathus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_procompsognathus.png" width={190} height={120}/>]($content/fauna/carnivores/procompsognathus)
+
+    </div>
 
 [**Procompsognathus**]($content/fauna/carnivores/procompsognathus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_protoceratops.png" width={166} height={130} />]($content/fauna/herbivores/protoceratops)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_protoceratops.png" width={166} height={130}/>]($content/fauna/herbivores/protoceratops)
+
+    </div>
 
 [**Protoceratops**]($content/fauna/herbivores/protoceratops)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:reed_frog.png" width={130} height={130} />]($content/fauna/extant/reed_frog)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:reed_frog.png" width={130} height={130}/>]($content/fauna/extant/reed_frog)
+
+    </div>
 
 [**Reed Frog**]($content/fauna/extant/reed_frog)
 
-</div>
+  </div>
 
-<div style={{border: "2px solid #e0533d", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-[<Asset location="jurassic-saga:tabs/male_spinosaurus.png" width={190} height={119} />]($content/fauna/carnivores/spinosaurus)
+[<Asset location="jurassic-saga:tabs/male_rhamphorhynchus.png" width={130} height={130}/>]($content/fauna/piscivores/rhamphorhynchus)
+
+    </div>
+
+[**Rhamphorhynchus**]($content/fauna/piscivores/rhamphorhynchus)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#e0533d"
+    }}>NOT ADDED</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_segisaurus.png" width={166} height={130}/>]($content/fauna/herbivores/segisaurus)
+
+    </div>
+
+[**Segisaurus**]($content/fauna/herbivores/segisaurus)
+
+  </div>
+
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_smilodon.png" width={147} height={130}/>]($content/fauna/carnivores/smilodon)
+
+    </div>
+
+[**Smilodon**]($content/fauna/carnivores/smilodon)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#e0533d"
+    }}>NOT ADDED</div>
+
+  </div>
+
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_spinosaurus.png" width={190} height={119}/>]($content/fauna/carnivores/spinosaurus)
+
+    </div>
 
 [**Spinosaurus**]($content/fauna/carnivores/spinosaurus)
 
-<div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#e0533d"}}>EXPERIMENTAL</div>
-
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_stegosaurus.png" width={174} height={130} />]($content/fauna/herbivores/stegosaurus)
+    <div style={{fontSize: "11px", fontWeight: 700, letterSpacing: "0.06em", color: "#DBB600"}}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_stegosaurus.png" width={174} height={130}/>]($content/fauna/herbivores/stegosaurus)
+
+    </div>
 
 [**Stegosaurus**]($content/fauna/herbivores/stegosaurus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_styracosaurus.png" width={184} height={130} />]($content/fauna/herbivores/styracosaurus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_styracosaurus.png" width={184} height={130}/>]($content/fauna/herbivores/styracosaurus)
+
+    </div>
 
 [**Styracosaurus**]($content/fauna/herbivores/styracosaurus)
 
-</div>
+  </div>
 
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+  <div style={{
+    border: "2px solid #DBB600",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
 
-[<Asset location="jurassic-saga:tabs/male_tree_frog.png" width={171} height={130} />]($content/fauna/extant/tree_frog)
+[<Asset location="jurassic-saga:tabs/male_tapejara.png" width={101} height={130}/>]($content/fauna/piscivores/tapejara)
+
+    </div>
+
+[**Tapejara**]($content/fauna/piscivores/tapejara)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#DBB600"
+    }}>EXPERIMENTAL</div>
 
   </div>
+
+  <div style={{
+    border: "2px solid #e0533d",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/king_titanomyrma.png" width={161} height={130}/>]($content/fauna/insectivores/titanomyrma)
+
+    </div>
+
+[**Titanomyrma**]($content/fauna/insectivores/titanomyrma)
+
+    <div style={{
+      fontSize: "11px",
+      fontWeight: 700,
+      letterSpacing: "0.06em",
+      color: "#e0533d"
+    }}>NOT ADDED</div>
+
+  </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_tree_frog.png" width={171} height={130}/>]($content/fauna/extant/tree_frog)
+
+    </div>
 
 [**Tree Frog**]($content/fauna/extant/tree_frog)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_triceratops.png" width={190} height={121} />]($content/fauna/herbivores/triceratops)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_triceratops.png" width={190} height={121}/>]($content/fauna/herbivores/triceratops)
+
+    </div>
 
 [**Triceratops**]($content/fauna/herbivores/triceratops)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_troodon.png" width={190} height={103} />]($content/fauna/carnivores/troodon)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_troodon.png" width={190} height={103}/>]($content/fauna/carnivores/troodon)
+
+    </div>
 
 [**Troodon**]($content/fauna/carnivores/troodon)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_tylosaurus.png" width={190} height={113} />]($content/fauna/piscivores/tylosaurus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_tylosaurus.png" width={190} height={113}/>]($content/fauna/piscivores/tylosaurus)
+
+    </div>
 
 [**Tylosaurus**]($content/fauna/piscivores/tylosaurus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_tyrannosaurus.png" width={190} height={120} />]($content/fauna/carnivores/tyrannosaurus)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_tyrannosaurus.png" width={190} height={120}/>]($content/fauna/carnivores/tyrannosaurus)
+
+    </div>
 
 [**Tyrannosaurus**]($content/fauna/carnivores/tyrannosaurus)
 
-</div>
-
-<div style={{border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px 8px 12px", background: "rgba(128,128,128,0.06)", textAlign: "center"}}>
-  <div style={{height: "130px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-
-[<Asset location="jurassic-saga:tabs/male_velociraptor.png" width={171} height={130} />]($content/fauna/carnivores/velociraptor)
-
   </div>
+
+  <div style={{
+    border: "1px solid rgba(128,128,128,0.35)",
+    borderRadius: "10px",
+    padding: "10px 8px 12px",
+    background: "rgba(128,128,128,0.06)",
+    textAlign: "center"
+  }}>
+    <div style={{
+      height: "130px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}>
+
+[<Asset location="jurassic-saga:tabs/male_velociraptor.png" width={171} height={130}/>]($content/fauna/carnivores/velociraptor)
+
+    </div>
 
 [**Velociraptor**]($content/fauna/carnivores/velociraptor)
 
-</div>
+  </div>
 
 </div>

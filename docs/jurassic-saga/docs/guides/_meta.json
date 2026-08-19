@@ -1,22 +1,22 @@
 {
-    "getting_started.mdx": {
-        "name": "Getting Started",
-        "icon": "Star"
-    },
-    "creating_an_egg.mdx": {
-        "name": "Creating an Egg",
-        "icon": "Egg"
-    },
-    "plant_creation.mdx": {
-        "name": "Creating an Plant",
-        "icon": "Leaf"
-    },
-        "modifying_dna.mdx": {
-        "name": "DNA Modification",
-        "icon": "Dna"
-    },
-    "cultivating_eggs.mdx": {
-        "name": "Cultivating Eggs",
-        "icon": "EggFried"
-    }
+  "getting_started.mdx": {
+    "name": "Getting Started",
+    "icon": "Star"
+  },
+  "creating_an_egg.mdx": {
+    "name": "Creating an Egg",
+    "icon": "Egg"
+  },
+  "plant_creation.mdx": {
+    "name": "Creating an Plant",
+    "icon": "Leaf"
+  },
+  "modifying_dna.mdx": {
+    "name": "DNA Modification",
+    "icon": "Dna"
+  },
+  "cultivating_eggs.mdx": {
+    "name": "Cultivating Eggs",
+    "icon": "EggFried"
+  }
 }

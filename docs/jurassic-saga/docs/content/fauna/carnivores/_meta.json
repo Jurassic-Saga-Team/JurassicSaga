@@ -1,68 +1,68 @@
 {
-    "achillobator.mdx": {
-        "name": "Achillobator"
-    },
-    "baryonyx.mdx": {
-        "name": "Baryonyx"
-    },
-    "carcharodontosaurus.mdx": {
-        "name": "Carcharodontosaurus"
-    },
-    "ceratosaurus.mdx": {
-        "name": "Ceratosaurus"
-    },
-    "coelurus.mdx": {
-        "name": "Coelurus"
-    },
-    "compsognathus.mdx": {
-        "name": "Compsognathus"
-    },
-    "deinonychus.mdx": {
-        "name": "Deinonychus"
-    },
-    "deinosuchus.mdx": {
-        "name": "Deinosuchus"
-    },
-    "dilophosaurus.mdx": {
-        "name": "Dilophosaurus"
-    },
-    "dracovenator.mdx": {
-        "name": "Dracovenator"
-    },
-    "herrerasaurus.mdx": {
-        "name": "Herrerasaurus"
-    },
-    "metriacanthosaurus.mdx": {
-        "name": "Metriacanthosaurus"
-    },
-    "ornithosuchus.mdx": {
-        "name": "Ornithosuchus"
-    },
-    "ostafrikasaurus.mdx": {
-        "name": "Ostafrikasaurus"
-    },
-    "parasuchus.mdx": {
-        "name": "Parasuchus"
-    },
-    "postosuchus.mdx": {
-        "name": "Postosuchus"
-    },
-    "proceratosaurus.mdx": {
-        "name": "Proceratosaurus"
-    },
-    "procompsognathus.mdx": {
-        "name": "Procompsognathus"
-    },
-    "troodon.mdx": {
-        "name": "Troodon"
-    },
-    "spinosaurus.mdx": {
-        "name": "Spinosaurus"
-    },
-    "tyrannosaurus.mdx": {
-        "name": "Tyrannosaurus"
-    },
-    "velociraptor.mdx": {
-        "name": "Velociraptor"
-    }
+  "achillobator.mdx": {
+    "name": "Achillobator"
+  },
+  "baryonyx.mdx": {
+    "name": "Baryonyx"
+  },
+  "carcharodontosaurus.mdx": {
+    "name": "Carcharodontosaurus"
+  },
+  "ceratosaurus.mdx": {
+    "name": "Ceratosaurus"
+  },
+  "coelurus.mdx": {
+    "name": "Coelurus"
+  },
+  "compsognathus.mdx": {
+    "name": "Compsognathus"
+  },
+  "deinonychus.mdx": {
+    "name": "Deinonychus"
+  },
+  "deinosuchus.mdx": {
+    "name": "Deinosuchus"
+  },
+  "dilophosaurus.mdx": {
+    "name": "Dilophosaurus"
+  },
+  "dracovenator.mdx": {
+    "name": "Dracovenator"
+  },
+  "herrerasaurus.mdx": {
+    "name": "Herrerasaurus"
+  },
+  "metriacanthosaurus.mdx": {
+    "name": "Metriacanthosaurus"
+  },
+  "ornithosuchus.mdx": {
+    "name": "Ornithosuchus"
+  },
+  "ostafrikasaurus.mdx": {
+    "name": "Ostafrikasaurus"
+  },
+  "parasuchus.mdx": {
+    "name": "Parasuchus"
+  },
+  "postosuchus.mdx": {
+    "name": "Postosuchus"
+  },
+  "proceratosaurus.mdx": {
+    "name": "Proceratosaurus"
+  },
+  "procompsognathus.mdx": {
+    "name": "Procompsognathus"
+  },
+  "troodon.mdx": {
+    "name": "Troodon"
+  },
+  "spinosaurus.mdx": {
+    "name": "Spinosaurus"
+  },
+  "tyrannosaurus.mdx": {
+    "name": "Tyrannosaurus"
+  },
+  "velociraptor.mdx": {
+    "name": "Velociraptor"
+  }
 }

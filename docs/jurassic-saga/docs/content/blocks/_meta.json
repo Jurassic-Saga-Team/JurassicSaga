@@ -1,10 +1,10 @@
 {
-    "fence_poles.mdx": {
-        "name": "Fence Poles",
-        "icon": "low_powered_pole"
-    },
-    "tour_rail.mdx": {
-        "name": "Tour Rails",
-        "icon": "tour_rail"
-    }
+  "fence_poles.mdx": {
+    "name": "Fence Poles",
+    "icon": "low_powered_pole"
+  },
+  "tour_rail.mdx": {
+    "name": "Tour Rails",
+    "icon": "tour_rail"
+  }
 }

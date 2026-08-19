@@ -1,22 +1,22 @@
 {
-    "creature_index.mdx": {
-        "name": "Creature Index",
-        "icon": "PawPrint"
-    },
-    "guides": {
-        "name": "Guides",
-        "icon": "BookOpen"
-    },
-    "content": {
-        "name": "Content",
-        "icon": "Boxes"
-    },
-    "references": {
-        "name": "Reference",
-        "icon": "Library"
-    },
-    "addon_development": {
-        "name": "Add-on Development",
-        "icon": "Package"
-    }
+  "creature_index.mdx": {
+    "name": "Creature Index",
+    "icon": "PawPrint"
+  },
+  "guides": {
+    "name": "Guides",
+    "icon": "BookOpen"
+  },
+  "content": {
+    "name": "Content",
+    "icon": "Boxes"
+  },
+  "references": {
+    "name": "Reference",
+    "icon": "Library"
+  },
+  "addon_development": {
+    "name": "Add-on Development",
+    "icon": "Package"
+  }
 }

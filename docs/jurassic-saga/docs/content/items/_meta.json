@@ -1,0 +1,22 @@
+{
+    "fossil.mdx": {
+        "name": "Fossils",
+        "icon": "gifs/fossil.gif"
+    },
+    "genes.mdx": {
+        "name": "Genes"
+    },
+    "egg.mdx": {
+        "name": "Eggs"
+    },
+    "syringe.mdx": {
+        "name": "Syringes"
+    },
+    "meats.mdx": {
+        "name": "Meats"
+    },
+    "guidebook.mdx": {
+        "name": "Guidebook",
+        "icon": "guidebook"
+    }
+}

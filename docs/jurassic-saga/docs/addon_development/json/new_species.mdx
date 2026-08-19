@@ -65,8 +65,16 @@ Let's start by giving the animal an identifier!
 
 This is how the game will recognize it, it will also be summoned that way!
 
-Let's also pick an animation style.
-At this point in time only "simple" exists.
+Let's also pick an animation style. Three are available:
+
+| Value | Use for |
+|---|---|
+| `simple` | Land animals |
+| `simple_aquatic` | Swimming animals |
+| `simple_avian` | Flying animals |
+
+Pick the one that matches the `animal_type` you set later  an `aquatic` animal should use `simple_aquatic`, an `avian` one `simple_avian`.
+
 <CodeTabs>
     ```json !!tabs Animation Style
     {
@@ -300,7 +308,7 @@ This module has some fields that are mandatory, and some that are optional.
 | `guidebookScaling`        | `[float, float]` | Optional | `[1.0, 1.0]` | Baby and adult scale in the guidebook                   |
 | `guidebookOffset`         | `object`         | Optional | `[0,0]`      | Baby and adult position offset in the guidebook         |
 | `signColor`               | `string`         | Optional | -            | Color override for the paddock sign                     |
-| `version`                 | `string`         | Optional | `1.0`        | Version the animal was added                            |
+| `version`                 | `string`         | Optional | `JP1`        | Version the animal was added                            |
 <div style={{ display: 'flex', gap: '2rem' }}>
     <div style={{ flex: 1 }}>
         #### Eras
@@ -392,7 +400,7 @@ This module has some fields that are mandatory, and some that are optional.
             "adult": [5.5, 0.0]
         },
         "signColor": "RED",
-        "version": "4.0"
+        "version": "JP1"
     }
     ```
 </CodeTabs>
@@ -782,11 +790,9 @@ Reminder of the folder structure:
 #### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Animal Model Files</div>
 Let's start by adding the model files, but before we do that we have to find out a few things first.
 
-What version did we use? (You can find this in "misc" under "version" in the JSON file, if it's not there use 1.0)
+What version did we use? (You can find this in "misc" under "version" in the JSON file, if it's not there use JP1)
 <Callout variant="info">
     Replace `[version]` with the version you've found above.
-
-    The version needs a v in front of it! so if you have 1.0 use v1.0
 </Callout>
 
 ```
@@ -802,7 +808,7 @@ What version did we use? (You can find this in "misc" under "version" in the JSO
     An animal name can't contain capital letters!
 </Callout>
 
-Let's now add the geo and animal folder, and add our animal data in there.
+Let's now add the travelers, model and animal folder, and add our animal data in there.
 
 ```
 [addon_name]/
@@ -811,10 +817,11 @@ Let's now add the geo and animal folder, and add our animal data in there.
     resources/
         assets/
             [addon_name]
-                geo/
-                    animal/
-                        [version]/
-                            [animal_name]/
+                travelers/
+                    models/
+                        animal/
+                            [version]/
+                                [animal_name]/
 ```
 
 Drop your geo files in there, with the following format.
@@ -833,12 +840,13 @@ So it'd look like this:
     resources/
         assets/
             [addon_name]
-                geo/
-                    animal/
-                        [version]/
-                            [animal_name]/
-                                [animal_name]_baby.geo.json [*]
-                                [animal_name]_adult.geo.json
+                travelers/
+                    models/
+                        animal/
+                            [version]/
+                                [animal_name]/
+                                    [animal_name]_baby.geo.json [*]
+                                    [animal_name]_adult.geo.json
 ```
 <Callout variant="info">
     If you have "adult_only" set in "base" in the JSON file, you don't need the baby model file.
@@ -857,7 +865,7 @@ Let's start by making a "models" folder, and an item folder in the same director
     resources/
         assets/
             [addon_name]
-                geo/
+                travelers/
                 models/
                     item/
 ```
@@ -994,7 +1002,7 @@ Let's start by making a "signs" folder inside the models folder, in their lets a
     resources/
         assets/
             [addon_name]
-                geo/
+                travelers/
                 models/
                     item/
                     signs/
@@ -1027,7 +1035,7 @@ Inside that file add the following:
 ### <div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }}>Animations</div>
 Now let's continue with the animation files
 
-Let's add an animations folder above the geo folder, and we'll follow the same structure as before,
+Let's add an animations folder in the travelers folder, and we'll follow the same structure as before,
 the animation files should be named appropriately:
 
 Baby
@@ -1044,13 +1052,14 @@ Adult
         assets/
             [addon_name]/
                 models/
-                animations/
-                    animal/
-                        [version]/
-                            [animal_name]/
-                                [animal_name]_baby.animation.json [*]
-                                [animal_name].animation.json
-                geo/
+                travelers/
+                    animations/
+                        animal/
+                            [version]/
+                                [animal_name]/
+                                    [animal_name]_baby.animation.json [*]
+                                    [animal_name].animation.json
+                    models/
 ```
 
 <Callout variant="info">
@@ -1078,9 +1087,8 @@ Let's start off by creating a new folder named textures:
     resources/
         assets/
             [addon_name]/
-                animations/
                 models/
-                geo/
+                travelers/
                 textures/
 ```
 
@@ -1092,9 +1100,8 @@ Add a few more folders like we've done previous, by starting of with a geo folde
     resources/
         assets/
             [addon_name]/
-                animations/
                 models/
-                geo/
+                travelers/
                 textures/
                     geo/
                         animal/
@@ -1167,7 +1174,7 @@ Since some things like paddock signs use this for locating, this has to be very 
                         [version]/
                             [extinct_or_extant]/
                                 [animal_name]/
-        geo/
+        travelers/
 ```
 
 Now that you have that structure implemented let's add the files necessary, but to do this we'll have to figure some things out first.
@@ -1208,9 +1215,8 @@ You'll have to start with the block folder, because the paddock sign is on the b
     resources/
         assets/
             [addon_name]/
-                animations/
                 models/
-                geo/
+                travelers/
                 textures/
                     block/
 ```
@@ -1243,8 +1249,7 @@ Inside the assets folder's [addon_name] we'll add a new file called sounds.json
     resources/
         assets/
             [addon_name]/
-                animations/
-                geo/
+                travelers/
                 models/
                 textures/
                 sounds.json
@@ -1301,8 +1306,7 @@ Now let's add the actual sound files, these go inside a sounds folder in your as
     resources/
         assets/
             [addon_name]/
-                animations/
-                geo/
+                travelers/
                 models/
                 textures/
                 sounds/
@@ -1327,8 +1331,7 @@ The language file is where you define all the display names for your animal. It 
     resources/
         assets/
             [addon_name]/
-                animations/
-                geo/
+                travelers/
                 models/
                 textures/
                 sounds/
@@ -1390,7 +1393,7 @@ These go here:
     resources/
 ```
 
-You'll need one advancement file per cooking method — campfire, smelting, and smoking:
+You'll need one advancement file per cooking method  campfire, smelting, and smoking:
 
 <CodeTabs>
     ```json !!tabs Campfire

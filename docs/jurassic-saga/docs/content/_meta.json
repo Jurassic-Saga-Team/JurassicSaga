@@ -1,0 +1,26 @@
+{
+    "fauna": {
+        "name": "Fauna",
+        "icon": "PawPrint"
+    },
+    "items": {
+        "name": "Items",
+        "icon": "Package"
+    },
+    "machines": {
+        "name": "Machines",
+        "icon": "Dna"
+    },
+    "blocks": {
+        "name": "Blocks",
+        "icon": "Blocks"
+    },
+    "vehicles": {
+        "name": "Vehicles",
+        "icon": "Car"
+    },
+    "other": {
+        "name": "Other",
+        "icon": "Ellipsis"
+    }
+}

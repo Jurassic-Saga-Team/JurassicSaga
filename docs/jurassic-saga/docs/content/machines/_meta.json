@@ -1,0 +1,36 @@
+{
+    "genetic_analyzer.mdx": {
+        "name": "Genetic Analyzer",
+        "icon": "genetic_analyzer"
+    },
+    "gene_isolator.mdx": {
+        "name": "Gene Isolator",
+        "icon": "gene_isolator"
+    },
+    "dna_modifier.mdx": {
+        "name": "DNA Modifier",
+        "icon": "dna_modifier"
+    },
+    "incubator.mdx": {
+        "name": "Incubator",
+        "icon": "incubator"
+    },
+    "flora_cultivator.mdx": {
+        "name": "Flora Cultivator",
+        "icon": "flora_cultivator"
+    },
+    "feeder.mdx": {
+        "name": "Feeders",
+        "icon": "feeder"
+    },
+    "bug_zapper.mdx": {
+        "name": "Bug Zapper",
+        "icon": "bug_zapper"
+    },
+    "geothermal_generator.mdx": {
+        "name": "Geothermal Power Generator"
+    },
+    "substation.mdx": {
+        "name": "Power Substation"
+    }
+}

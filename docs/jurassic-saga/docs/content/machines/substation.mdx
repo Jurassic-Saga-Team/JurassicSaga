@@ -1,0 +1,42 @@
+---
+icon: jurassic-saga:textures/item/manmade/other/substation
+---
+
+# Power Substation
+
+<Asset location="jurassic-saga:textures/item/manmade/other/substation" width={48} height={48} />
+
+| | |
+|---|---|
+| **Power capacity** | 150 |
+| **Power range** | 25 blocks |
+| **Requires** | An existing power source in range |
+
+The Power Substation extends your power network. It does not generate power of its own  it draws from a [Geothermal Power Generator]($content/machines/geothermal_generator) (or another source) and re-broadcasts it, letting you reach parts of your park the generator cannot.
+
+---
+
+## How it works
+
+1. Place the substation within range of an existing power source
+2. It requests power from that source and, while the source is running, becomes a source itself
+3. Anything within **25 blocks** of the substation is now powered
+
+Because a substation only relays while its own source is powering, cutting the generator cuts everything downstream of it.
+
+---
+
+## Range planning
+
+| Block | Range |
+|---|---|
+| [Geothermal Power Generator]($content/machines/geothermal_generator) | 32 blocks |
+| Power Substation | 25 blocks |
+
+Chain substations to cover long perimeter fences, keeping each one inside the previous one's radius.
+
+---
+
+<Callout variant="info">
+    Found an issue or have a suggestion? [Submit feedback](https://forms.gle/qpxsiVat9f6eVm2CA) • [Join Discord](https://discord.gg/3b8k78f)
+</Callout>

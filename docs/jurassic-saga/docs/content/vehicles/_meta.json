@@ -1,0 +1,18 @@
+{
+    "ford_explorer.mdx": {
+        "name": "Ford Explorer",
+        "icon": "ford_explorer"
+    },
+    "jeep_wrangler.mdx": {
+        "name": "Jeep Wrangler",
+        "icon": "jeep_wrangler"
+    },
+    "visitor_helicopter.mdx": {
+        "name": "Visitor Helicopter",
+        "icon": "visitor_helicopter"
+    },
+    "ranger_helicopter.mdx": {
+        "name": "Ranger Helicopter",
+        "icon": "ranger_helicopter"
+    }
+}

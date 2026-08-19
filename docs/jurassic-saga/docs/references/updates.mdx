@@ -12,6 +12,69 @@ All releases are listed below in reverse chronological order (newest first). Cli
 
 ### Latest Release
 
+<details open>
+<summary>**v0.2.2**</summary>
+
+| Field | Details |
+|-------|---------|
+| **Version** | 0.2.2 |
+| **Modloader** | NeoForge 21.1.x / Forge 1.20.1 |
+| **Minecraft** | 1.21.1 / 1.20.1 |
+| **Type** | New Update |
+
+**🦕 New Animals**
+- Boa Imperator
+- Indominus rex
+- Minmi
+
+**🚙 New Vehicles**
+- Gyrosphere
+- Vehicles now have a speedometer
+
+**🏛️ New Structures**
+- Dig Site
+- Raptor Paddock  sparse jungle, with its own loot chest
+- Aviary  rivers
+
+**🧱 New Blocks**
+- Log fences in oak, birch, spruce, jungle, acacia, dark oak, mangrove and cherry
+- Iron pole fence, in all corrugated iron variants
+- Balloon tour checkpoint
+
+**📦 New Items**
+- **Tour Scheduler**  sets up balloon tour routes
+- **Creative Wand**  right-click an animal to open a live editor for it
+- Rope wire and mesh wire
+- A large food lineup: Rex Burger, Dino Dog, Dino Veggie Dog, Fun Fries, Thrillin' Chili, Tylo-Rex Fish Burger, Othy-Rex Veggie Burger, Spicy Spino Curry, Spicy Spino Sail Naan, Fukui Diner Sushi, Takoyaki, Tempura and Yasai Tempura, sandwiches (regular, vegetarian and fish), Paleo Salad, Paleo Fruit Salad, Chilean Sea Bass, Cheese, Tofu, Apple Turnover, Green Apple Jelly, Red Sweet Berry Jelly, Mango Chutney, Mustard and Soy Sauce
+- **Stego Scoops** ice cream in 18 flavours, sorbet in lemon, lime and orange, plus a plain cone
+
+**🔨 Reworks & New Features**
+- Growth rebalanced  the `jsFasterGrowth` game rule is gone, replaced by the `entityGrowthRate` config option (default `5`). See [Game Rules]($references/commands)
+- **Herds reworked**  they track losses and retreat after losing about a third of their members, hand movement over to combat, fleeing, hunger, thirst, resting, sleeping, riding and diving instead of fighting over it, and an animal that loses sight of its leader joins a visible nearby herd instead of chasing something behind terrain. Follow distances and pathing retries retuned
+- Combat disengaging reworked  flee margins, low-health flee threshold, and ignoring trivially small prey
+- Fences, poles and structures moved onto the registry system
+- Animals can now be camouflaged
+- Animals can belong to multiple eras instead of just one
+- Work-in-progress animals can be marked experimental
+- Diet coin icons redone, and a hybrid coin added
+- Balloon Tours, Les Gigantes Hambres and Three Horned Face track lengths corrected
+
+**🐛 Fixes**
+- Fixed a memory leak where a pack kept a dead or despawned hunt target in memory for the leader's whole life
+- Cables and other custom geometry no longer render incorrectly in Iris/Oculus shadow passes
+- Fence cable placement and connections
+- Looping and positional sound playback
+
+**❌ Removed**
+- The `hasEyeLid` animal flag
+- The `rotateHeadWithVehicle` and `carCollisionTest` config options
+
+</details>
+
+---
+
+#### v0.1.11.1
+
 <details>
 <summary>**v0.1.11.1**</summary>
 
@@ -70,7 +133,7 @@ After careful consideration, we are dropping Fabric support going forward. The m
 - Added group stalking behavior to Raptors
 
 **🧪 Experimental Addon System**
-A new system for extending the mod — follow the wiki guides to get started.
+A new system for extending the mod  follow the wiki guides to get started.
 - Custom entity support
 - Custom paddock sign support
 - Custom facility sign support

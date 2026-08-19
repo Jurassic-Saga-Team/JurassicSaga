@@ -4,8 +4,8 @@
         "icon": "Info"
     },
     "ore_levels.mdx": {
-        "name": "Ore Level",
-        "icon": "Stone"
+        "name": "Ore Levels",
+        "icon": "Pickaxe"
     },
     "experimental.mdx": {
         "name": "Experimental Features",
@@ -15,12 +15,20 @@
         "name": "Upcoming Features",
         "icon": "CalendarCheck"
     },
-    "faq.mdx": {
-        "name": "Frequently Asked Questions",
-        "icon": "MessageCircleQuestionMark"
+    "updates.mdx": {
+        "name": "Update History",
+        "icon": "History"
     },
     "commands.mdx": {
         "name": "Commands",
         "icon": "Terminal"
+    },
+    "faq.mdx": {
+        "name": "Frequently Asked Questions",
+        "icon": "MessageCircleQuestion"
+    },
+    "team.mdx": {
+        "name": "The Team",
+        "icon": "Users"
     }
 }

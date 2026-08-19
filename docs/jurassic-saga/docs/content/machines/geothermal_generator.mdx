@@ -1,0 +1,55 @@
+---
+icon: jurassic-saga:textures/item/manmade/other/geothermal_machine
+---
+
+# Geothermal Power Generator
+
+<Asset location="jurassic-saga:textures/item/manmade/other/geothermal_machine" width={48} height={48} />
+
+| | |
+|---|---|
+| **Power output** | Up to 200 |
+| **Power range** | 32 blocks |
+| **Requires** | Magma, Volcanic Magma or Fumarole blocks underneath |
+
+The Geothermal Power Generator is the primary power source for Jurassic Saga's machine network. It draws heat from volcanic blocks beneath it and supplies power to nearby [Fence Poles]($content/blocks/fence_poles) and other powered blocks.
+
+---
+
+## Placement
+
+The generator has **two intake positions** on its underside. Each one is checked independently, and each must contain one of:
+
+- **Magma Block**
+- **Volcanic Magma Block**
+- **Fumarole Block**
+
+Place the generator so that both intakes sit over one of these blocks  a fumarole or geyser is the natural spot.
+
+---
+
+## Power output
+
+Output scales with how many intakes are actually supplied:
+
+| Intakes supplied | Power output |
+|---|---|
+| 0 | 0 (inactive) |
+| 1 | 100 |
+| 2 | 200 |
+
+The generator supplies power to anything within **32 blocks**. To reach further, chain a [Power Substation]($content/machines/substation).
+
+---
+
+## Notes
+
+- The generator must be enabled to produce anything; with no valid blocks beneath it, output is zero
+- Both intakes are re-checked as the world changes, so breaking the magma underneath will cut output immediately
+- `/gamerule jsFencesAlwaysOn true` lets fences run without any power source, if you would rather not build a generator
+
+---
+
+<Callout variant="info">
+    Found an issue or have a suggestion? [Submit feedback](https://forms.gle/qpxsiVat9f6eVm2CA) • [Join Discord](https://discord.gg/3b8k78f)
+</Callout>

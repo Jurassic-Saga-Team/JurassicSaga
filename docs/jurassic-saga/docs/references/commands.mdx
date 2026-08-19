@@ -1,197 +1,177 @@
-<Callout variant="info">
-    The last update on this page was on: 29th March 2026
-</Callout>
+# Game Rules
 
-# Commands
+Jurassic Saga adds its own vanilla game rules, which let you tune breeding, metabolism, machines and fences without touching config files.
 
-This page provides a comprehensive list of all commands available in Jurassic Saga, including their syntax, permissions, and usage examples.
+All of them are set with the standard `/gamerule` command and require operator permissions (OP level 2 or higher).
 
 ---
 
-## Overview
+## Available game rules
 
-Commands in Jurassic Saga allow players and server administrators to:
-- Control creature breeding and growth
-- Manage feeding and metabolism systems
-- Toggle power requirements for fences
-- Adjust machine processing speeds
-- Enable or disable plant spreading
-
----
-
-## Command Syntax
-
-Commands follow standard Minecraft syntax:
-- `/gamerule <ruleName> <value>`
-- Most game rules accept `true` or `false` values
-- Some game rules accept numeric values within a specific range
+| Rule | Type | Default |
+|---|---|---|
+| `jsDropEggs` | boolean | `true` |
+| `jsMetabolism` | boolean | `true` |
+| `jsFeederDrain` | boolean | `true` |
+| `jsPlantSpread` | boolean | `true` |
+| `jsFencesAlwaysOn` | boolean | `false` |
+| `jsIgnoreBuildingConstraints` | boolean | `false` |
+| `jsMachineSpeed` | integer | `50` |
 
 ---
-
-## Available Game Rules
 
 ### jsDropEggs
-**Syntax:** `/gamerule jsDropEggs <true|false>`  
-**Default:** `false`  
-**Description:** Controls whether creatures can lay eggs naturally.
 
-When enabled, creatures will produce eggs over time without requiring the genetic engineering system.
+**Syntax:** `/gamerule jsDropEggs <true|false>`
+**Default:** `true`
 
-**Usage Example:**
+Controls whether extant animals periodically lay eggs on their own, the way vanilla chickens do.
+
+This affects the [Ostrich]($content/fauna/extant/ostrich), [Alligator]($content/fauna/extant/alligator) and [Reed Frog]($content/fauna/extant/reed_frog). It has no effect on extinct creatures, which are only obtainable through the DNA pipeline.
+
 ```
-/gamerule jsDropEggs true
-```
-
----
-
-### jsFasterGrowth
-**Syntax:** `/gamerule jsFasterGrowth <true|false>`  
-**Default:** `false`  
-**Description:** Accelerates creature growth from baby to adult stage.
-
-Useful for testing or speeding up park development.
-
-**Usage Example:**
-```
-/gamerule jsFasterGrowth true
-```
-
----
-
-### jsFeederDrain
-**Syntax:** `/gamerule jsFeederDrain <true|false>`  
-**Default:** `true`  
-**Description:** Controls whether [**Feeders**](@jurassic-saga:feeder) consume food items when feeding creatures.
-
-When set to `false`, feeders will feed creatures without depleting their food supply, effectively providing unlimited food.
-
-**Usage Example:**
-```
-/gamerule jsFeederDrain false
-```
-
----
-
-### jsFencesAlwaysOn
-**Syntax:** `/gamerule jsFencesAlwaysOn <true|false>`  
-**Default:** `false`  
-**Description:** Allows [**Fence Poles**](@jurassic-saga:fence_pole) to operate without requiring power from a Geothermal Power Generator.
-
-When enabled, electric fences remain active without a power source.
-
-**Usage Example:**
-```
-/gamerule jsFencesAlwaysOn true
-```
-
----
-
-### jsMachineSpeed
-**Syntax:** `/gamerule jsMachineSpeed <value>`  
-**Range:** `10-500` (approximate)  
-**Default:** `100` (assumed)  
-**Description:** Adjusts the processing speed of machines like the [**Genetic Analyzer**](@jurassic-saga:genetic_analyzer), [**DNA Modifier**](@jurassic-saga:dna_modifier), and [**Incubator**](@jurassic-saga:incubator).
-
-Higher values increase processing speed. Lower values slow down machines.
-
-**Usage Example:**
-```
-/gamerule jsMachineSpeed 200
+/gamerule jsDropEggs false
 ```
 
 ---
 
 ### jsMetabolism
-**Syntax:** `/gamerule jsMetabolism <true|false>`  
-**Default:** `true`  
-**Description:** Controls whether creatures require food and water to survive.
 
-When disabled, creatures will not become hungry or thirsty. Useful for creative building or testing.
+**Syntax:** `/gamerule jsMetabolism <true|false>`
+**Default:** `true`
 
-**Usage Example:**
+Controls whether creatures consume food and water.
+
+When disabled, creatures never become hungry or thirsty  useful for creative building.
+
 ```
 /gamerule jsMetabolism false
+```
+
+---
+
+### jsFeederDrain
+
+**Syntax:** `/gamerule jsFeederDrain <true|false>`
+**Default:** `true`
+
+Controls whether [Feeders]($content/machines/feeder) consume their stored food when they dispense it.
+
+When disabled, feeders serve creatures without depleting their supply, giving you effectively unlimited food. Applies to the herbivore, carnivore and aquatic feeders.
+
+```
+/gamerule jsFeederDrain false
 ```
 
 ---
 
 ### jsPlantSpread
-**Syntax:** `/gamerule jsPlantSpread <true|false>`  
-**Default:** `false`  
-**Description:** Allows prehistoric plants to spread naturally to nearby blocks.
 
-When enabled, plants grown from the [**Flora Cultivator**](@jurassic-saga:flora_cultivator) can propagate like vanilla plants.
+**Syntax:** `/gamerule jsPlantSpread <true|false>`
+**Default:** `true`
 
-**Usage Example:**
+Controls whether prehistoric plants spread to nearby blocks on their own.
+
+When disabled, plants stay exactly where you put them.
+
 ```
-/gamerule jsPlantSpread true
-```
-
----
-
-## Permissions
-
-All game rule commands require operator permissions on servers. Players must have OP level 2 or higher to use `/gamerule` commands.
-
-**To grant operator permissions:**
-```
-/op <playername>
+/gamerule jsPlantSpread false
 ```
 
 ---
 
-## Usage Examples
+### jsFencesAlwaysOn
 
-### Creative Mode Setup
-Disable metabolism and enable unlimited food for building:
+**Syntax:** `/gamerule jsFencesAlwaysOn <true|false>`
+**Default:** `false`
+
+Allows [Fence Poles]($content/blocks/fence_poles) and their cables to stay electrified without a power source.
+
+```
+/gamerule jsFencesAlwaysOn true
+```
+
+---
+
+### jsIgnoreBuildingConstraints
+
+**Syntax:** `/gamerule jsIgnoreBuildingConstraints <true|false>`
+**Default:** `false`
+
+Removes the placement restrictions applied when running wire between fence poles, letting you connect them freely.
+
+```
+/gamerule jsIgnoreBuildingConstraints true
+```
+
+---
+
+### jsMachineSpeed
+
+**Syntax:** `/gamerule jsMachineSpeed <value>`
+**Default:** `50`
+
+Sets how much progress machines make per tick  the value is added to a machine's progress counter each tick, so **higher is faster** and the relationship is linear. Doubling it halves the processing time.
+
+Affects the [Genetic Analyzer]($content/machines/genetic_analyzer), [DNA Modifier]($content/machines/dna_modifier), [Incubator]($content/machines/incubator) and [Flora Cultivator]($content/machines/flora_cultivator). Nests use half this value.
+
+<Callout variant="warning">
+    This rule has no enforced minimum or maximum. Very large values finish everything almost instantly, and `0` stops the affected machines entirely.
+</Callout>
+
+```
+/gamerule jsMachineSpeed 100
+```
+
+---
+
+## Examples
+
+**Creative building**  no hunger, no food drain:
+
 ```
 /gamerule jsMetabolism false
 /gamerule jsFeederDrain false
 ```
 
-### Fast Development
-Speed up creature growth and machine processing:
+**Faster testing**  double machine throughput and skip fence wiring rules:
+
 ```
-/gamerule jsFasterGrowth true
-/gamerule jsMachineSpeed 500
+/gamerule jsMachineSpeed 100
+/gamerule jsIgnoreBuildingConstraints true
 ```
 
-### Natural Ecosystem
-Enable egg laying and plant spreading for a self-sustaining park:
-```
-/gamerule jsDropEggs true
-/gamerule jsPlantSpread true
-```
+**Tidy park**  stop plants from creeping into your paths:
 
-### Easy Mode
-Disable power requirements and metabolism:
 ```
-/gamerule jsFencesAlwaysOn true
-/gamerule jsMetabolism false
+/gamerule jsPlantSpread false
 ```
 
 ---
 
-## Tips
+## Growth speed is not a game rule
 
-- Game rules persist across server restarts and world saves
-- Changes to game rules take effect immediately
-- Use `/gamerule` without arguments to see all available game rules
-- Experiment with different combinations to find the best settings for your playstyle
-- For multiplayer servers, communicate game rule changes with your players
-- Some game rules (like `jsMachineSpeed`) may impact server performance at extreme values
+There used to be a `jsFasterGrowth` game rule. It was removed in v0.2.2 and replaced by the **`entityGrowthRate`** config option, set in the mod's settings rather than with a command.
+
+| | |
+|---|---|
+| **Default** | `5` |
+| **Range** | `0.5` – `10` |
+| **Meaning** | `1` equals one real-life year of growth per half hour in-game |
+
+Higher values grow animals faster.
 
 ---
 
-## Trivia
+## Notes
 
-- The `js` prefix in all game rules stands for "Jurassic Saga"
-- Game rules allow players to customize their experience without modifying game files
-- The `jsMachineSpeed` range was determined through developer testing for optimal balance
-- These game rules were added to accommodate different playstyles, from hardcore survival to creative park building
+- Game rules are stored per world and persist across restarts
+- Changes take effect immediately, with no restart required
+- Run `/gamerule` with no arguments to list every rule, vanilla and modded
+- The `js` prefix stands for "Jurassic Saga"
 
 ---
 
 <Callout variant="info">
-    Know a command that's not listed here? [Submit feedback](https://forms.gle/qpxsiVat9f6eVm2CA) • [Join Discord](https://discord.gg/3b8k78f)
+    Found an issue or have a suggestion? [Submit feedback](https://forms.gle/qpxsiVat9f6eVm2CA) • [Join Discord](https://discord.gg/3b8k78f)
 </Callout>

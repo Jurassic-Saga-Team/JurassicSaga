@@ -13,6 +13,138 @@ All releases are listed below in reverse chronological order (newest first). Cli
 ### Latest Release
 
 <details open>
+    <summary>**v0.3**</summary>
+
+    | Field | Details |
+    |-------|---------|
+    | **Version** | 0.3 |
+    | **Modloader** | NeoForge 21.1.x / Forge 1.20.1 |
+    | **Minecraft** | 1.21.1 / 1.20.1 |
+    | **Type** | Big Update |
+
+    **🦕 New Animals**
+    - JP3: Dakotaraptor
+    - JW2: Teratophoneus
+    - JW4: Distortus Rex
+    - Chaos Effect: Velocirapteryx, Archaeopteryx
+    - Legacy: Mawsonia, Leptictidium, Inostrancevia, Rhizodus
+    - Misc: Gracilisuchus, Sacabambaspis
+    - Kenner: Estemmenosuchus, Coelophysis
+    - Mattel: Rhamphorhynchus
+
+    **🎨 New Cosmetic Skins**
+    - Legacy: Mawsonia, Leptictidium, Inostrancevia, Rhizodus, Alvarezsaurus, Stegosaurus, Triceratops
+    - Steppe: Rhizodus
+    - Ocean: Herrerasaurus
+    - Forest: Gracilisuchus
+
+    **🦕 Animal Updates**
+    - Velociraptor reworked with new animations
+    - Mesolimulus no longer tries to parkour
+    - New spawn egg colors
+    - Hybridization: Velocirapteryx (Velociraptor + Archaeopteryx) and Distortus Rex (Tyrannosaurus + Basilisk + Alamosaurus or Brachiosaurus)
+
+    **💡 AI & Behavior**
+    - Animal behavior reworked around per-species profiles for appetite, fleeing, foraging, hunting, idling, schooling and enrichment
+    - Hunting is now phased: animals ambush, stalk, pursue, hunt in packs, call out to each other, observe and break off a chase
+    - Smarter targeting: animals skip herdmates, only go after prey, and decide whether to attack based on relative size, hunger, aggression and herd size
+    - Hunger, thirst and stamina are tracked separately from breeding; gestation, breeding cooldown and the father's genes now have their own system (existing saves keep their data)
+    - Animals flee earlier from larger threats, and bolder animals hold their ground longer
+    - Hunt detection range depends on the size of both animals
+    - Fixed animals not recognizing threats that were targeting them
+    - Animals scatter during thunderstorms
+    - Carnivores smell a player holding a Rafflesia from 40 blocks away and walk over to it, then lose interest for a while once they reach it
+    - Improved food searching, eating and drinking
+    - Flocks take off and land together
+    - Fish and other schooling animals now form natural flocks of up to 50
+    - New flying, gliding, crab, amphibious and general navigation
+
+    **⚡ Power System**
+    - Rebuilt power grid with poles, substations and generators linking into networks
+    - Storm outages: during thunderstorms, generators can trip and cables can be damaged
+    - Power visualization overlay
+    - New transmission pole
+    - New power and flag cables
+    - Cables now have health
+    - New solar panel
+    - Substation and geothermal generator reworked
+    - Existing cables are migrated automatically
+    - Jade tooltips for poles and power machines (1.21.1)
+
+    **❤️‍🩹 Performance**
+    - Cables and poles are now batched, which is much faster with many of them
+    - Cables use level of detail, so distant ones are cheaper to draw
+    - Faster rendering for machines, feeders, cameras and generators
+    - Fish scan for threats less often, and animal hunger and thirst sync to the client less often
+    - 323 textures optimized: 3.39 MB down to 2.24 MB (about 34% smaller)
+
+    **💻 Tablet & Cameras**
+    - New camera tablet with home, map, creature and security pages
+    - New security camera
+    - Cameras can now see far chunks
+    - Cameras now support scroll-wheel zoom
+
+    **🖨️ New Blocks & Machines**
+    - Boom gate
+    - Redstone gates
+    - Entity Gates
+    - Fountain
+    - Omnivore feeder
+    - Glass now connects into seamless panes
+    - Fence variants: dark and rusted looks for steel fences, chosen per player
+    - Flag spools
+    - New item models for the wrench, JP gate, vehicle gate and visitor center doors
+
+    **🪧 Signs & Murals**
+    - Murals, placed as wall entities
+    - Attraction signs, with about 80 new backgrounds
+
+    **🚛 Vehicles**
+    - New Truck
+    - New Boat Tour vehicle
+
+    **🌱 New Plants & Trees**
+    - Trees: Psaronius, Walchia, Glossopteris, Baiera, Macginitiea, Mango (the blocks are in game, but the trees don't grow yet)
+    - Hanging moss and vines, Maize, Paracycas
+    - Aquatic: Praebarrettia, small and large sea sponges, Caninia, Escumasia, Essexella, Glycymeris, Ludwigia, Streptelasma
+    - Forest floor: leaf litter, mulch, fern floor
+    - Land plants: Ankyropteris, Belemnopteris, Cecropsis, Coniopteris (4 variants), Dillhoffia, Florissantia, Otozamites, Rafflesia, Scytophyllum (2 variants), Vojnovskya
+    - Tall plants: Leptocycas (with fruit and seeds), Schizoneura
+    - Dead bushes: normal, burnt, bleached and mossy, each in a large and a small version, generating in matching biomes
+    - Floating plants: Saxonipollis and Jaguariba in 9 colors
+    - Herbs: Coriander and Cumin, grown from seeds or found wild; Mediterranean Scrub Forest now generates wild Coriander
+    - New DNA types for plants: tree, vine, tall plant, floating plant, semi-aquatic plant, coral and marine; the new plants can be unlocked through the DNA system
+
+    **🪓 New Items**
+    - Sugar Theory candy: candy apple, candy corn, chocolate bar, gummy dinos in several colors, oreo chimas
+    - Coriander Leaves, Coriander Seeds, Cumin Seeds, Leptocycas Seeds and Leptocycas Fruit
+    - Tablet, attraction sign and mural items
+
+    **🌍 World Generation**
+    - Biome tweaks
+
+    **🔊 Audio**
+    - Music files compressed for a smaller download
+
+    **🔧 Config & Game Rules**
+    - New display options: machine render distance, batched cables and batched poles
+    - Maximum entity growth rate raised from 10 to 30
+    - New game rules: jsPowerOutages and jsInfinitePowerRange
+    - Game rule changes now apply to connected clients immediately
+    - New tour GUIs and JEI updates
+
+    **Other Changes**
+    - Requires Traveler's Lib 1.0 or newer
+
+</details>
+
+---
+
+### Previous Releases
+
+#### v0.2.3
+
+<details>
     <summary>**v0.2.3**</summary>
 
     | Field | Details |
@@ -37,8 +169,6 @@ All releases are listed below in reverse chronological order (newest first). Cli
 </details>
 
 ---
-
-### Previous Releases
 
 #### v0.2.2
 

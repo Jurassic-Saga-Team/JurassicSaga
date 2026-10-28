@@ -1,5 +1,8 @@
 ---
+ref: coelurus
+id: jurassic-saga:coelurus
 icon: jurassic-saga:inventory/coelurus_coin
+
 history:
   - version: 0.1
     date: 25.08.2025
@@ -9,30 +12,41 @@ history:
     date: 06.03.2026
     changes:
       - Coelurus Baby
+
+custom:
+    Health: "Adult 35 Health (x17.5 Hearts)"
+    Behavior: "Hostile"
+    Diet: "Carnivore"
+    Size: "2.5 Blocks Long, 1 Blocks Tall"
+    Drops: "Coelurus Raw Meat, Coelurus Remains"
+    Breedable: "N/A"
+    Obtained: "Fossil Revival"
+    Egg Type: "Alligator Egg"
+    Time Period: "Late Jurassic"
+    Achievement: "The Brushland Shadow"
+
+infobox:
+  title: Coelurus
+  inventory:
+    - jurassic-saga:inventory/coelurus_fossil_remains
+    - jurassic-saga:inventory/coelurus_coin
+    - jurassic-saga:inventory/coelurus_meat.webp
+    - jurassic-saga:inventory/coelurus_spawn_egg.webp
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_coelurus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_coelurus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_coelurus.png
 ---
 
 
 <Callout variant="info">
-    The last update on this page was on: 17th June 2026 (v0.1.11.1)
+    The last update on this page was on: 28th October 2026 (v0.3)
 </Callout>
 
 # Coelurus agilis
-
-<Asset location="jurassic-saga:inventory/coelurus_fossil_remains" width={48} height={48}/> <Asset location="jurassic-saga:inventory/coelurus_coin" width={48} height={48}/>
-
-| | |
-|---|---|
-| **Health** | Adult 15 Health (x7.5 Hearts) |
-| **Behavior** | Hostile (Requires 2) |
-| **Diet** | Carnivore |
-| **Size** | 3 Blocks Long, 2 Blocks Tall |
-| **Drops** | Coelurus Remains, Coelurus Raw Meat |
-| **Breedable** | Not yet implemented |
-| **Obtained** | Fossil Revival |
-| **Egg Type** | Alligator Egg |
-| **Time Period** | Late Jurassic |
-| **Achievement** | The Brushland Shadow |
-
 
 *Coelurus* (sɪˈljʊərəs, "si-LURE-əs") is a genus of small coelurosaurian dinosaur from the **Late Jurassic** of North America.  
 Known for its lightweight build and long legs, it was likely a fast, agile predator or opportunistic scavenger.
@@ -43,7 +57,7 @@ Known for its lightweight build and long legs, it was likely a fast, agile preda
 - Slender, lightweight body built for speed
 - Long legs and narrow torso, giving it a "shadow-through-the-brush" silhouette
 - Small head with sharp teeth suited for catching small prey
-- In-game size: **3 blocks long** and **2 blocks tall**
+- In-game size: **2.5 blocks long** and **1 blocks tall**
 
 ---
 
@@ -81,7 +95,6 @@ When defeated, Coelurus may drop:
 <table style={{borderCollapse: "collapse"}}>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Death</td>
-        <td>Played when it dies</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_death.ogg"/></td>
     </tr>
 </table>
@@ -90,22 +103,18 @@ When defeated, Coelurus may drop:
 <table style={{borderCollapse: "collapse"}}>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Hurt 1</td>
-        <td>Played when taking damage</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_hurt01.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Hurt 2</td>
-        <td>Played when taking damage</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_hurt02.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Hurt 3</td>
-        <td>Played when taking damage</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_hurt03.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Hurt 4</td>
-        <td>Played when taking damage</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_hurt04.ogg"/></td>
     </tr>
 </table>
@@ -114,62 +123,50 @@ When defeated, Coelurus may drop:
 <table style={{borderCollapse: "collapse"}}>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 1</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living01.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 2</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living02.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 3</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living03.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 4</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living04.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 5</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living05.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 6</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living06.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 7</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living07.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 8</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living08.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 9</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living09.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 10</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living10.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 11</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living11.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Ambient 12</td>
-        <td>Played randomly while alive</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_js_living12.ogg"/></td>
     </tr>
 </table>
@@ -178,22 +175,18 @@ When defeated, Coelurus may drop:
 <table style={{borderCollapse: "collapse"}}>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Threat 1</td>
-        <td>Played when threatening nearby players or mobs</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_threat01.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Threat 2</td>
-        <td>Played when threatening nearby players or mobs</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_threat02.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Threat 3</td>
-        <td>Played when threatening nearby players or mobs</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_threat03.ogg"/></td>
     </tr>
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{fontWeight: "bold"}}>Threat 4</td>
-        <td>Played when threatening nearby players or mobs</td>
         <td><Audio controls src="jurassic-saga:sounds/coelurus/coelurus_threat04.ogg"/></td>
     </tr>
 </table>
@@ -207,17 +200,17 @@ When defeated, Coelurus may drop:
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{textAlign: "center"}}>
             <img width={256} src="https://i.imgur.com/FSjAS5k.png" alt="Coelurus by Iron"/>
-<div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-Coelurus by Iron
-<sup>[[1]](https://discord.com/channels/476209601075740672/615231162893205521/1474038774987096213)</sup>
-</div>
+            <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+            Coelurus by Iron
+            <sup>[[1]](https://discord.com/channels/476209601075740672/615231162893205521/1474038774987096213)</sup>
+            </div>
         </td>
         <td style={{textAlign: "center"}}>
             <img width={256} src="https://i.imgur.com/Hh2hhja.png" alt="Coelurus by Iron"/>
-<div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-Coelurus by Iron
-<sup>[[2]](https://discord.com/channels/476209601075740672/615231162893205521/1473792699441090561)</sup>
-</div>
+            <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+            Coelurus by Iron
+            <sup>[[2]](https://discord.com/channels/476209601075740672/615231162893205521/1473792699441090561)</sup>
+            </div>
         </td>
     </tr>
 </table>
@@ -227,24 +220,24 @@ Coelurus by Iron
     <tr style={{backgroundColor: "transparent"}}>
         <td style={{textAlign: "center"}}>
             <img width={256} src="https://i.imgur.com/cytEeGK.png" alt="Coelurus Showcase"/>
-<div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-Coelurus Showcase
-<sup>[[3]](https://discord.com/channels/476209601075740672/620220431294529536/620663382978478080)</sup>
-</div>
+            <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+            Coelurus Showcase
+            <sup>[[3]](https://discord.com/channels/476209601075740672/620220431294529536/620663382978478080)</sup>
+            </div>
         </td>
         <td style={{textAlign: "center"}}>
             <img width={256} src="https://i.imgur.com/Qtz4EUD.png" alt="Baby Coelurus Showcase"/>
-<div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-Baby Coelurus Showcase
-<sup>[[4]](https://discord.com/channels/476209601075740672/620220431294529536/1479521355660525842)</sup>
-</div>
+            <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+            Baby Coelurus Showcase
+            <sup>[[4]](https://discord.com/channels/476209601075740672/620220431294529536/1479521355660525842)</sup>
+            </div>
         </td>
         <td style={{textAlign: "center"}}>
             <img width={256} src="https://i.imgur.com/74QaVqn.png" alt="Coelurus Vivid Showcase"/>
-<div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
-Coelurus Vivid Showcase
-<sup>[[5]](https://discord.com/channels/476209601075740672/620220431294529536/1485726154676633832)</sup>
-</div>
+            <div style={{marginTop: "6px", fontSize: "14px", opacity: 0.8}}>
+            Coelurus Vivid Showcase
+            <sup>[[5]](https://discord.com/channels/476209601075740672/620220431294529536/1485726154676633832)</sup>
+            </div>
         </td>
     </tr>
 </table>
@@ -263,30 +256,3 @@ Coelurus Vivid Showcase
 </Callout>
 
 ---
-
-## Variants
-
-<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(230px, 1fr))", gap: "14px", marginTop: "12px" }}>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/male_coelurus.png" width={220}/>
-
-**Male**
-
-  </div>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/female_coelurus.png" width={220}/>
-
-**Female**
-
-  </div>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/baby_coelurus.png" width={220}/>
-
-**Baby**
-
-  </div>
-
-</div>

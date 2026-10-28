@@ -1,5 +1,5 @@
 <Callout variant="info">
-    The last update on this page was on: 28th April 2026
+    The last update on this page was on: 28th October 2026
 </Callout>
 
 # How to edit an animal
@@ -28,7 +28,7 @@ You could use a plain datapack + resource-pack, but for simplicity we'll use a [
 <Callout variant="warning">
     I won't reference pack.mcmeta anymore from this point forwards, it should still be there.
 </Callout>
-We'll not use the addon_data/ folder, but it needs to be there for the parser
+We'll not use the addon_data/ folder here, so you can leave it out.
 
 Inside the data folder we'll start adding the necessary folders.
 ```
@@ -50,7 +50,7 @@ Inside the data folder we'll start adding the necessary folders.
 |---------------------|------------|----------|-------------------------------------------------------|
 | `animal`            | `string`   | Required | Resource key of the animal to edit                    |
 | `add_genes`         | `string[]` | Optional | List of skin gene resource keys to add to the animal  |
-| `gendered_variants` | `string[]` | Optional | List of skin genes that have gendered variants        |
+| `gendered_variants` | `string[]` | Optional | Genes from `add_genes` that have gendered variants    |
 | `herd_targets`      | `string[]` | Optional | List of animal resource keys to add as herd targets   |
 | `hunt_targets`      | `string[]` | Optional | List of animal resource keys to add as hunt targets   |
 | `scared_off`        | `string[]` | Optional | List of entity resource keys to add as scared targets |
@@ -130,7 +130,7 @@ Let's now see what gene(s) we've added.
 </Callout>
 Depending on if we have added the same gene in gendered_variants, the texture file should be named appropriately:
 
-(This also applies if you've made an existing gene gendered)
+(To make an existing gene gendered, add it to both `add_genes` and `gendered_variants`)
 
 gendered_variants:
 
@@ -139,6 +139,10 @@ gendered_variants:
 - Female -> `[path]_adult_[gene_name]_female.png`
 
 Otherwise, just one file -> `[path]_adult_[gene_name].png`
+
+<Callout variant="info">
+    Variant textures are only used for extinct animals.
+</Callout>
 
 ```
 ...

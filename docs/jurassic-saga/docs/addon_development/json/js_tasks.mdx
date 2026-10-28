@@ -1,162 +1,261 @@
 <Callout variant="info">
-    The last update on this page was on: 28th April 2026
+    The last update on this page was on: 28th October 2026
 </Callout>
 
 # Animal Tasks
 
-Tasks are added to the `entity_properties` inside the `base` module of your JSON file. They can be added as a plain string if they have no extra properties, or as an object if they do.
+Tasks are added to `entity_properties` inside the `base` module of your JSON file. There are two lists:
+
+- `main_controller` - behaviour tasks (moving, eating, hunting, resting...)
+- `targeting_controller` - tasks that decide **what** the animal targets
+
+A task can be added as a plain string (the full class name) if it has no extra properties, or as an object with a `task` field if it does.
 
 <CodeTabs>
     ```json !!tabs Plain
-    "jp.jurassicsaga.server.animal.entity.obj.tasks.JSFloatTask"
+    "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.JSFloatTask"
     ```
     ```json !!tabs With Properties
     {
-        "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSRandomStrollTask",
+        "task": "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.navigation.JSRandomStrollTask",
         "xRange": 15,
         "yRange": 6
     }
     ```
 </CodeTabs>
 
+<Callout variant="warning">
+    All task classes live under `jp.jurassicsaga.server.entity.animal.entity.obj.tasks`.
+    The old `jp.jurassicsaga.server.animal.entity.obj.tasks` package no longer exists. Tasks using it will fail to load,
+    except for the legacy combat tasks listed at the bottom of this page.
+</Callout>
+
+<Callout variant="info">
+    Only tasks that take nothing but the animal can be loaded from JSON. Species-specific tasks (e.g. `DiloSpitTask`,
+    `ProceratoFleeTask`) and avian-only tasks such as `JSDiveBombTask` can't be used from JSON at the moment.
+</Callout>
+
+---
+
+## Hunting
+
+Hunting is split into a **director** that picks the hunt phase, and **phase tasks** that carry each phase out.
+A hunting animal needs at least `JSHuntDirectorTask` and `JSPursueTask`. Add the optional phase tasks for extra behaviour.
+
+<CodeTabs>
+    ```json !!tabs Example
+    "main_controller": [
+        {
+            "task": "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSHuntDirectorTask",
+            "callout": true,
+            "calloutTicks": 40
+        },
+        "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSPursueTask",
+        "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSCalloutTask",
+        "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSPackHuntTask"
+    ]
+    ```
+</CodeTabs>
+
+### `JSHuntDirectorTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSHuntDirectorTask`
+
+Decides which hunt phase the animal is in (calling, observing, ambushing, stalking, pursuing).
+
+| Property       | Type      | Default | Description                                                |
+|----------------|-----------|---------|------------------------------------------------------------|
+| `callout`      | `boolean` | `false` | Whether the animal emits a callout to alert the pack       |
+| `calloutTicks` | `int`     | -       | How long the callout lasts in ticks (only with `callout`)  |
+| `observe`      | `boolean` | `false` | Whether the animal observes its target before engaging     |
+| `ambush`       | `boolean` | `false` | Whether the animal ambushes its target                     |
+| `stalk`        | `boolean` | `false` | Whether the animal stalks its target before attacking      |
+
+### `JSAdultHuntDirectorTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSAdultHuntDirectorTask`
+
+Same as `JSHuntDirectorTask`, but only adults hunt.
+
+### `JSAquaticHuntDirectorTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSAquaticHuntDirectorTask`
+
+Adult-only hunt director for aquatic animals. Only engages targets that are in water.
+
+### `JSPursueTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSPursueTask`
+
+Chases and attacks the current target. Required for any hunting animal.
+
+### `JSCalloutTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSCalloutTask`
+
+Calls out to the pack before the hunt.
+
+### `JSObserveTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSObserveTask`
+
+Watches the target before engaging.
+
+### `JSAmbushTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSAmbushTask`
+
+Waits for the target to come close, then strikes.
+
+### `JSStalkTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSStalkTask`
+
+Sneaks up on the target before attacking.
+
+### `JSPackHuntTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSPackHuntTask`
+
+Coordinates the hunt with the rest of the pack.
+
 ---
 
 ## Combat
 
-### `JSCombatFollowTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSCombatFollowTask`
-
-The simplest combat task. Follows and attacks the current target.
-
-| Property | Type      | Default | Description                                           |
-|----------|-----------|---------|-------------------------------------------------------|
-| `stalk`  | `boolean` | `false` | Whether the animal stalks its target before attacking |
-
-### `JSHerdCombatFollowTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSHerdCombatFollowTask`
-
-The most advanced combat task. Supports pack hunting, observing, stalking, and callouts.
-
-| Property       | Type      | Default | Description                                            |
-|----------------|-----------|---------|--------------------------------------------------------|
-| `stalk`        | `boolean` | `false` | Whether the animal stalks its target before attacking  |
-| `observe`      | `boolean` | `false` | Whether the animal observes its target before engaging |
-| `callout`      | `boolean` | `false` | Whether the animal emits a callout to alert the pack   |
-| `calloutTicks` | `int`     |        | How long the callout lasts in ticks                    |
-
 ### `JSTargetTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSTargetTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.JSTargetTask`
 
-Decides what to attack based on the hunt targets set in the social properties of the JSON.
+Decides what to attack based on the hunt targets set in the social module of the JSON. Goes in `targeting_controller`.
 
 | Property  | Type      | Default | Description                                                    |
 |-----------|-----------|---------|----------------------------------------------------------------|
 | `mustSee` | `boolean` | `false` | Whether the animal must have line of sight to target something |
 
+### `JSChaseStragglerTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.target.JSChaseStragglerTask`
+
+Targets prey that falls behind its herd. Goes in `targeting_controller`.
+
 ### `JSTargetNearby`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSTargetNearby`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.JSTargetNearby`
 
 Attacks anything that comes close, as long as it isn't the same entity type.
 
 ### `JSRevengeOrRunTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSRevengeOrRunTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.JSRevengeOrRunTask`
 
 When the animal is attacked, decides whether to retaliate or retreat.
 
 ### `JSAttackFenceTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSAttackFenceTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.JSAttackFenceTask`
 
-Attacks a nearby JurassicSaga fence when the animal is frustrated.
-
-### `JSAvianGroundAttack`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSAvianGroundAttack`
-
-Avian only. Attacks the current target while on the ground.
-
-### `AquaticCombatFollow`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.combat.AquaticCombatFollow`
-
-Follows and attacks the current target, but only runs while in water.
+Attacks a nearby Jurassic Saga fence when the animal is frustrated.
 
 ---
 
 ## Metabolism
 
 ### `JSFindFoodTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSFindFoodTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.metabolism.JSFindFoodTask`
 
 Finds and moves towards nearby food when the animal is hungry.
 
 ### `JSFindWaterTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSFindWaterTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.metabolism.JSFindWaterTask`
 
 Finds and moves towards nearby water when the animal is thirsty.
 
-| Property | Type  | Default | Description                             |
-|----------|-------|---------|-----------------------------------------|
-| `range`  | `int` |        | The range in blocks to search for water |
+| Property        | Type      | Default | Description                                              |
+|-----------------|-----------|---------|----------------------------------------------------------|
+| `range`         | `int`     | -       | The range in blocks to search for water                  |
+| `requiresShore` | `boolean` | -       | Whether the animal must drink from a shoreline           |
 
 ### `JSGrazeTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSGrazeTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.metabolism.JSGrazeTask`
 
 Finds and eats nearby edible blocks. Intended for herbivores.
+
+### `JSMateTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.metabolism.JSMateTask`
+
+Finds a partner and breeds when the animal is ready.
 
 ---
 
 ## Misc
 
-### `JSDiveBombTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.misc.JSDiveBombTask`
-
-Avian only. Circles the target, dives in to attack, then circles again.
-
 ### `JSLookAroundTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.misc.JSLookAroundTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.misc.JSLookAroundTask`
 
 Looks around while idle.
 
 ### `JSRestTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.misc.JSRestTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.misc.JSRestTask`
 
 Sits down when idle.
+
+### `JSCrawlTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.misc.JSCrawlTask`
+
+Plays the crawl state while the animal's path goes through low (crawl) spaces.
 
 ---
 
 ## Navigation
 
 ### `JSFleeTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSFleeTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.navigation.JSFleeTask`
 
 Flees from a flee target if one is found or already set.
 
+| Property | Type  | Default | Description                      |
+|----------|-------|---------|----------------------------------|
+| `range`  | `int` | -       | How far the animal flees, blocks |
+
 ### `JSFlopTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSFlopTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.navigation.JSFlopTask`
 
 For aquatic animals on land. Makes the animal flop up and down.
 
+### `JSSchoolingTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.navigation.JSSchoolingTask`
+
+For aquatic animals. Swims together as a school.
+
 ### `JSRandomStrollTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSRandomStrollTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.navigation.JSRandomStrollTask`
 
 Finds a random nearby position and moves towards it.
 
 | Property | Type  | Default | Description                                   |
 |----------|-------|---------|-----------------------------------------------|
-| `xRange` | `int` |        | The horizontal range to search for a position |
-| `yRange` | `int` |        | The vertical range to search for a position   |
+| `xRange` | `int` | -       | The horizontal range to search for a position |
+| `yRange` | `int` | -       | The vertical range to search for a position   |
 
 ---
 
 ## Core
 
 ### `JSFloatTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.JSFloatTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.JSFloatTask`
 
 Makes the animal float at its eye height in water.
 
 ### `JSOpenDoorTask`
-`jp.jurassicsaga.server.animal.entity.obj.tasks.JSOpenDoorTask`
+`jp.jurassicsaga.server.entity.animal.entity.obj.tasks.JSOpenDoorTask`
 
 Allows the animal to open nearby doors.
+
+---
+
+## Legacy combat tasks
+
+The old combat tasks have been replaced by the hunting system above. For older addons, these names are still accepted
+**with the old package name** and are converted automatically into `JSHuntDirectorTask` + `JSPursueTask`, plus a
+phase task for every flag that is set to `true`.
+
+| Legacy name                                                                    | Accepted properties                                                 |
+|--------------------------------------------------------------------------------|---------------------------------------------------------------------|
+| `jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSCombatFollowTask`     | `stalk`, `observe`, `ambush`, `pack`, `callout`, `calloutTicks`     |
+| `jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSHerdCombatFollowTask` | `stalk`, `observe`, `ambush`, `pack`, `callout`, `calloutTicks`     |
+| `jp.jurassicsaga.server.animal.entity.obj.tasks.combat.AquaticCombatFollow`    | `stalk`, `observe`, `ambush`, `pack`, `callout`, `calloutTicks`     |
+| `jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSAvianGroundAttack`    | `stalk`, `observe`, `ambush`, `pack`, `callout`, `calloutTicks`     |
+
+<Callout variant="warning">
+    Use the new hunting tasks for new addons. `calloutTicks` defaults to `40` when using a legacy task.
+</Callout>
 
 ---
 

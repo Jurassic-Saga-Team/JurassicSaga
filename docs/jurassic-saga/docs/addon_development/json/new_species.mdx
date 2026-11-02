@@ -1,5 +1,5 @@
 <Callout variant="info">
-    The last update on this page was on: 28th April 2026
+    The last update on this page was on: 28th October 2026
 </Callout>
 
 # Adding a new species
@@ -287,7 +287,7 @@ This module has some fields that are mandatory, and some that are optional.
 | Field                     | Type             | Required | Default      | Description                                             |
 |---------------------------|------------------|----------|--------------|---------------------------------------------------------|
 | `era`                     | `string`         | Required | -            | Era the animal lived in (e.g. `JURASSIC`, `CRETACEOUS`) |
-| `maxHeadRotation`         | `[float, float]` | Required | -            | Max head X and Y rotation                               |
+| `maxHeadRotation`         | `[int, int]`     | Required | -            | Max head X and Y rotation                               |
 | `babyAnimations`          | `boolean`        | Optional | `false`      | Whether the animal has baby animations                  |
 | `genderedVariants`        | `boolean`        | Optional | `false`      | Whether the animal has gendered variants                |
 | `mammal`                  | `boolean`        | Optional | `false`      | Whether the animal is a mammal                          |
@@ -298,7 +298,6 @@ This module has some fields that are mandatory, and some that are optional.
 | `isNew`                   | `boolean`        | Optional | `false`      | Whether the animal is newly added                       |
 | `disableCorpseDrops`      | `boolean`        | Optional | `false`      | Whether the animal's corpse drops items                 |
 | `extinct`                 | `boolean`        | Optional | `false`      | Whether the animal is extinct                           |
-| `hasEyeLid`               | `boolean`        | Optional | `true`       | Whether the animal has eyelids                          |
 | `babyGuidebook`           | `boolean`        | Optional | `true`       | Whether the animal has a baby guidebook entry           |
 | `showInGuidebook`         | `boolean`        | Optional | `false`      | Whether the animal appears in the guidebook             |
 | `machineScale`            | `float`          | Optional | `1.0`        | Scale of the animal in machines                         |
@@ -308,7 +307,7 @@ This module has some fields that are mandatory, and some that are optional.
 | `guidebookScaling`        | `[float, float]` | Optional | `[1.0, 1.0]` | Baby and adult scale in the guidebook                   |
 | `guidebookOffset`         | `object`         | Optional | `[0,0]`      | Baby and adult position offset in the guidebook         |
 | `signColor`               | `string`         | Optional | -            | Color override for the paddock sign                     |
-| `version`                 | `string`         | Optional | `JP1`        | Version the animal was added                            |
+| `version`                 | `string`         | Optional | `jp1`        | Version the animal is from, lowercase (see below)       |
 <div style={{display: 'flex', gap: '2rem'}}>
   <div style={{flex: 1}}>
 #### Eras
@@ -326,7 +325,7 @@ This module has some fields that are mandatory, and some that are optional.
 | `CRETACEOUS` | Cretaceous period |
 | `PALEOGENE` | Paleogene period |
 | `NEOGENE` | Neogene period |
-| `QUATERNARY` | Quaternary period |
+| `PLEISTOCENE` | Pleistocene epoch |
   </div>
   <div style={{flex: 1}}>
 #### Sign Colors
@@ -337,10 +336,24 @@ This module has some fields that are mandatory, and some that are optional.
 | `PURPLE` |
 | `RED` |
 | `WHITE` |
+| `HYBRID` |
 | `YELLOW` |
 | `FACILITY` |
   </div>
 </div>
+
+#### Versions
+| Category | Values |
+|----------|--------|
+| Jurassic Park | `jp1`, `jp2`, `jp3`, `jp_novel` |
+| Jurassic World | `jw1`, `jw2`, `jw3`, `jw4`, `jwcc` |
+| Games | `games_l`, `games_jwe`, `games_jpog` |
+| Toys | `toys_c`, `toys_k`, `toys_m` |
+| Misc | `misc_legacy`, `misc_games`, `misc_extant`, `misc_other` |
+
+<Callout variant="warning">
+    The version must be lowercase. An unknown version falls back to `jp1`.
+</Callout>
 
 <CodeTabs>
     ```json !!tabs Misc Module
@@ -357,7 +370,6 @@ This module has some fields that are mandatory, and some that are optional.
     "isNew": [Boolean],
     "disableCorpseDrops": [Boolean],
     "extinct": [Boolean],
-    "hasEyeLid": [Boolean],
     "babyGuidebook": [Boolean],
     "showInGuidebook": [Boolean],
     "machineScale": [Float],
@@ -387,7 +399,6 @@ This module has some fields that are mandatory, and some that are optional.
     "isNew": true,
     "disableCorpseDrops": true,
     "extinct": true,
-    "hasEyeLid": false,
     "babyGuidebook": false,
     "showInGuidebook": false,
     "machineScale": 1.0,
@@ -400,7 +411,7 @@ This module has some fields that are mandatory, and some that are optional.
     "adult": [5.5, 0.0]
 },
     "signColor": "RED",
-    "version": "JP1"
+    "version": "jp1"
 }
     ```
 </CodeTabs>
@@ -416,12 +427,11 @@ This module has some fields that are mandatory, and some that are optional.
 | `huntTargets`         | `string[]` | Required | `[]`    | List of fully qualified class names the animal will hunt      |
 | `scaredOf`            | `string[]` | Required | `[]`    | List of fully qualified class names the animal is scared of   |
 | `herdTargets`         | `string[]` | Required | `[]`    | List of fully qualified class names the animal will herd with |
-| `maxDistanceToLeader` | `float`    | Required | `500.0` | Max distance the animal can be from the pack leader           |
-| `minDistanceToLeader` | `float`    | Required | `100.0` | Min distance the animal keeps from the pack leader            |
+| `maxDistanceToLeader` | `int`      | Required | -       | Max distance the animal can be from the pack leader           |
+| `minDistanceToLeader` | `int`      | Required | -       | Min distance the animal keeps from the pack leader            |
 | `maxHerdSize`         | `int`      | Required | `1`     | Maximum number of animals in a herd                           |
 | `naturalAggression`   | `float`    | Required | `0.0`   | Natural aggression level, clamped between `0` and `5`         |
 | `herd_with_self`      | `boolean`  | Optional | `false` | Whether the animal will herd with its own kind                |
-| `usesNest`            | `boolean`  | Optional | `false` | Whether the animal uses a nest                                |
 
 <CodeTabs>
     ```json !!tabs Social Module
@@ -429,12 +439,11 @@ This module has some fields that are mandatory, and some that are optional.
     "huntTargets": [String[]],
     "scaredOf": [String[]],
     "herdTargets": [String[]],
-    "maxDistanceToLeader": [Float],
-    "minDistanceToLeader": [Float],
+    "maxDistanceToLeader": [Int],
+    "minDistanceToLeader": [Int],
     "maxHerdSize": [Int],
     "naturalAggression": [Float],
-    "herd_with_self": [Boolean],
-    "usesNest": [Boolean]
+    "herd_with_self": [Boolean]
 }
     ```
     ```json !!tabs Example
@@ -444,17 +453,16 @@ This module has some fields that are mandatory, and some that are optional.
     "net.minecraft.world.entity.player.Player"
     ],
     "scaredOf": [
-    "jp.jurassicsaga.server.animal.entity.extant.terrestial.v1.TroodonEntity"
+    "jp.jurassicsaga.server.entity.animal.entity.jp.jp1.TroodonEntity"
     ],
     "herdTargets": [
-    "jp.jurassicsaga.server.animal.entity.extant.terrestial.v2.AchillobatorEntity"
+    "jp.jurassicsaga.server.entity.animal.entity.jp.jp_novel.AchillobatorEntity"
     ],
     "maxDistanceToLeader": 900,
     "minDistanceToLeader": 400,
     "maxHerdSize": 2,
     "naturalAggression": 0.2,
-    "herd_with_self": true,
-    "usesNest": true
+    "herd_with_self": true
 }
     ```
 </CodeTabs>
@@ -474,7 +482,7 @@ This module has some fields that are mandatory, and some that are optional.
 | `hasCoin`            | `boolean`    | Optional | `false`   | Whether the animal drops a coin                   |
 | `hasMeat`            | `boolean`    | Optional | `true`    | Whether the animal drops meat                     |
 | `hasDrops`           | `boolean`    | Optional | `true`    | Whether the animal has any drops                  |
-| `hasFossil`          | `boolean`    | Optional | `true`    | Whether the animal has a fossil item              |
+| `hasFossil`          | `boolean`    | Optional | `true`    | Whether the animal has a fossil item (extinct only) |
 | `hasPlushie`         | `boolean`    | Optional | `false`   | Whether the animal has a plushie item             |
 | `hasEgg`             | `boolean`    | Optional | `true`    | Whether the animal has an egg item                |
 | `bucketable`         | `boolean`    | Optional | `false`   | Whether the animal can be bucketed                |
@@ -501,6 +509,7 @@ This module has some fields that are mandatory, and some that are optional.
 | `ALLIGATOR`| Alligator egg |
 | `SPIDER` | Spider egg sac |
 | `FISH` | Fish egg |
+| `EMBRYO_CONTAINER` | Embryo container |
 | `BASILISK` | Basilisk egg |
   </div>
 </div>
@@ -548,14 +557,14 @@ This module has some fields that are mandatory, and some that are optional.
 |---------------------|-----------|----------|---------|----------------------------------------------------|
 | `animalType`        | `string`  | Required | -       | The type of animal (e.g. `REPTILE`, `MAMMAL`)      |
 | `fov`               | `int`     | Required | -       | Field of view of the animal in degrees             |
-| `maxTurnRate`       | `float`   | Required | -       | Maximum turn rate of the animal                    |
+| `maxTurnRate`       | `int`     | Required | -       | Maximum turn rate of the animal                    |
+| `sizeDimorphism`    | `int`     | Required | -       | Size difference in percent between male and female |
 | `turnSmoothRate`    | `float`   | Required | -       | How smoothly the animal turns                      |
 | `renderScale`       | `float`   | Required | -       | Scale of the animal when rendered                  |
-| `locator`           | `string`  | Required | -       | The locator bone used for attachments              |
-| `sizeDimorphism`    | `float`   | Optional | `0`     | Size difference in percent between male and female |
-| `adult_only`        | `boolean` | Optional | `false` | Whether the animal only spawns as an adult         |
-| `has_genders`       | `boolean` | Optional | `false` | Whether the animal has genders                     |
-| `entity_properties` | `object`  | Optional | -       | Controller task configuration for the animal       |
+| `entity_properties` | `object`  | Required | -       | Task lists for the animal (see below)              |
+| `locator`           | `string`  | Optional | -       | How models/textures are found. Use `base_locator`, without it your animal has no model or texture |
+| `adult_only`        | `boolean` | Optional | `false` | Whether the animal only has an adult model/texture (needs `locator`) |
+| `has_genders`       | `boolean` | Optional | `true`  | Whether the animal has male/female textures (needs `locator`) |
 
 #### Animal Types
 | Value                          | Description                                          |
@@ -576,6 +585,10 @@ This module has some fields that are mandatory, and some that are optional.
 | `MOLLUSK`                      | Soft-bodied invertebrates e.g. snail, octopus        |
 | `CEPHALOPOD`                   | Head-footed mollusks e.g. squid, cuttlefish          |
 
+<Callout variant="info">
+    More types exist, e.g. `ARCHOSAUR`, `THEROPOD`, `PTEROSAUR`, `ICHTHYOSAUR`, `SAUROPTERYGIAN` and `PELYCOSAUR`.
+</Callout>
+
 **See [**Jurassic Saga Task Sheet**](js_tasks) for all the tasks and information about them.**
 
 <CodeTabs>
@@ -583,8 +596,8 @@ This module has some fields that are mandatory, and some that are optional.
     "base": {
     "animalType": [String],
     "fov": [Int],
-    "maxTurnRate": [Float],
-    "sizeDimorphism": [Float],
+    "maxTurnRate": [Int],
+    "sizeDimorphism": [Int],
     "turnSmoothRate": [Float],
     "renderScale": [Float],
     "locator": [String],
@@ -609,25 +622,26 @@ This module has some fields that are mandatory, and some that are optional.
     "has_genders": true,
     "entity_properties": {
     "main_controller": [
-    "jp.jurassicsaga.server.animal.entity.obj.tasks.JSFloatTask",
+    "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.JSFloatTask",
 {
-    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSFleeTask",
+    "task": "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.navigation.JSFleeTask",
     "range": 30
 },
 {
-    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.navigation.JSRandomStrollTask",
+    "task": "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.navigation.JSRandomStrollTask",
     "xRange": 15,
     "yRange": 6
 },
-    "jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSFindFoodTask",
-    "jp.jurassicsaga.server.animal.entity.obj.tasks.metabolism.JSFindWaterTask",
-    "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSRevengeOrRunTask",
-    "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSHerdCombatFollowTask",
-    "jp.jurassicsaga.server.animal.entity.obj.tasks.misc.JSRestTask"
+    "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.metabolism.JSFindFoodTask",
+    "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.metabolism.JSFindWaterTask",
+    "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.JSRevengeOrRunTask",
+    "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSHuntDirectorTask",
+    "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.hunt.JSPursueTask",
+    "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.misc.JSRestTask"
     ],
     "targeting_controller": [
 {
-    "task": "jp.jurassicsaga.server.animal.entity.obj.tasks.combat.JSTargetTask",
+    "task": "jp.jurassicsaga.server.entity.animal.entity.obj.tasks.combat.JSTargetTask",
     "mustSee": true
 }
     ]
@@ -790,7 +804,7 @@ Reminder of the folder structure:
 #### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Animal Model Files</div>
 Let's start by adding the model files, but before we do that we have to find out a few things first.
 
-What version did we use? (You can find this in "misc" under "version" in the JSON file, if it's not there use JP1)
+What version did we use? (You can find this in "misc" under "version" in the JSON file, if it's not there use jp1)
 <Callout variant="info">
     Replace `[version]` with the version you've found above.
 </Callout>
@@ -876,12 +890,12 @@ All these questions can be answered with the item module in the JSON file:
 1. Do we have a coin enabled? (or is the animal extinct? because extinct animals always have a coin)
 2. Do we have meat enabled?
 3. Do we have drops enabled?
-4. Do we have fossil enabled?
+4. Do we have fossil enabled? (fossils only exist for extinct animals)
 5. Is the animal bucket-able?
 
 Let's create files based of the questionnaire.
 
-If you've answered yes to 3. you can skip this part of the guide.
+If you've answered no to 3. you can skip the hatch egg, spawn egg and bucket files.
 ```
 ...
     models/
@@ -911,12 +925,16 @@ For the examples there are two last questions,
 | `coin_bird`        | Animal Type | Animal type is `BIRD`      |
 | `coin_fish`        | Animal Type | Animal type is `FISH`      |
 | `coin_insect`      | Animal Type | Animal type is `INSECT`    |
+| `coin_hybrid`      | Animal Type | Animal type is `FANTASY`   |
 | `coin_carnivore`   | Diet Type   | Diet is `CARNIVORE`        |
 | `coin_herbivore`   | Diet Type   | Diet is `HERBIVORE`        |
-| `coin_insectovore` | Diet Type   | Diet is `INSECTOVORE`      |
 | `coin_none`        | Diet Type   | Diet is `NONE`             |
 | `coin_omnivore`    | Diet Type   | Diet is `OMNIVORE`         |
 | `coin_piscivore`   | Diet Type   | Diet is `PISCIVORE`        |
+
+<Callout variant="warning">
+    There is no coin background for `INSECTOVORE` or `OVIVORE` diets, pick the closest one (e.g. `coin_insect` or `coin_carnivore`).
+</Callout>
 
 We'll reference the eggType as [egg_type] and the coin as [coin]. Make sure the types are always used in lowercase, so OSTRICH becomes ostrich!
 
@@ -929,7 +947,7 @@ Use the format above for the actual file names.
         "parent": "minecraft:item/generated",
         "textures": {
         "layer0": "jurassicsaga:item/natural/entity/default_coins/coin_[coin]",
-        "layer1": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_coin"
+        "layer1": "[addon_name]:item/natural/entity/animal/[version]/[animal_name]/[animal_name]_coin"
     }
     }
     ```
@@ -937,7 +955,7 @@ Use the format above for the actual file names.
     {
         "parent": "minecraft:item/generated",
         "textures": {
-        "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_cooked"
+        "layer0": "[addon_name]:item/natural/entity/animal/[version]/[animal_name]/[animal_name]_cooked"
     }
     }
     ```
@@ -945,7 +963,7 @@ Use the format above for the actual file names.
     {
         "parent": "minecraft:item/generated",
         "textures": {
-        "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_raw"
+        "layer0": "[addon_name]:item/natural/entity/animal/[version]/[animal_name]/[animal_name]_raw"
     }
     }
     ```
@@ -961,7 +979,7 @@ Use the format above for the actual file names.
     {
         "parent": "minecraft:item/generated",
         "textures": {
-        "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_fossil_remains"
+        "layer0": "[addon_name]:item/natural/entity/animal/[version]/[animal_name]/[animal_name]_fossil_remains"
     }
     }
     ```
@@ -974,7 +992,7 @@ Use the format above for the actual file names.
     {
         "parent": "minecraft:item/generated",
         "textures": {
-        "layer0": "[addon_name]:item/natural/entity/animal/[version]/extinct/[animal_name]/[animal_name]_bucket"
+        "layer0": "[addon_name]:item/natural/entity/animal/[version]/[animal_name]/[animal_name]_bucket"
     }
     }
     ```
@@ -982,7 +1000,7 @@ Use the format above for the actual file names.
 <Callout variant="info">
     Replace `[version]` with the version you've found above.
 
-    The version needs a v in front of it! so if you have 1.0 use v1.0
+    The version is the lowercase id, e.g. `jp1` or `games_jpog`.
 
     Replace `[addon_name]` and `[animal_name]` with your actual addon and animal names.
 
@@ -992,44 +1010,9 @@ That should be all the animal item models!
 
 #### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Paddock Sign Model File</div>
 
-Let's add the paddock sign model now,
-
-Let's start by making a "signs" folder inside the models folder, in their lets also add a "paddock" folder.
-```
-[addon_name]/
-    addon_data/
-    data/
-    resources/
-        assets/
-            [addon_name]
-                travelers/
-                models/
-                    item/
-                    signs/
-                        paddock/
-```
-
-In that folder we'll add a new file with our animal name:
-```
-[addon_name]/
-...
-    models/
-        item/
-        signs/
-            paddock/
-                [animal_name].json
-```
-Inside that file add the following:
-<CodeTabs>
-    ```json !!tabs Paddock Sign
-    {
-        "parent": "minecraft:item/generated",
-        "textures": {
-        "layer0": "[addon_name]:block/manmade/other/paddock_sign/[animal_name]"
-    }
-    }
-    ```
-</CodeTabs>
+<Callout variant="info">
+    The paddock sign doesn't need a model file anymore, it's generated from the texture. See Paddock Sign Texture below.
+</Callout>
 ----
 
 ### <div style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '1rem' }}>Animations</div>
@@ -1149,6 +1132,9 @@ If you want to add variants that's done like this:
 <Callout variant="info">
     I've used chaos_effect as an example, but you can do this for any of the skin genes.
     `_adult_female` and `_adult_male` are only used when `has_genders: true`, otherwise use `_adult`.
+
+    Variant textures are only used when the animal is `extinct`. If `genderedVariants` is `true` in "misc", add
+    `[animal_name]_adult_[gene]_male.png` and `[animal_name]_adult_[gene]_female.png` instead.
 </Callout>
 
 ----
@@ -1156,12 +1142,7 @@ If you want to add variants that's done like this:
 #### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Item Textures</div>
 Now let's add the item textures
 
-Let's first of all figure out if the animal is extinct or extant, you can find this in "misc" under "extinct"
-<Callout variant="info">
-    Replace [extinct_or_extant] based of the found information, if you dont have extinct set, use extant.
-</Callout>
-
-Since some things like paddock signs use this for locating, this has to be very specific.
+Since some things like the paddock sign and guidebook use this for locating, this has to be very specific.
 
 ```
 [addon_name]/
@@ -1172,8 +1153,7 @@ Since some things like paddock signs use this for locating, this has to be very 
                 entity/
                     animal/
                         [version]/
-                            [extinct_or_extant]/
-                                [animal_name]/
+                            [animal_name]/
         travelers/
 ```
 
@@ -1184,13 +1164,13 @@ All these questions can be answered with the item module in the JSON file:
 1. Do we have a coin enabled? (or is the animal extinct? because extinct animals always have a coin)
 2. Do we have meat enabled?
 3. Do we have drops enabled?
-4. Do we have fossil enabled?
+4. Do we have fossil enabled? (fossils only exist for extinct animals)
 5. Is the animal bucket-able?
 
-If you've answered no to 3, skip the following step.
+If you've answered no to 3, you don't need the bucket texture.
 ```
 ...
-    [extinct_or_extant]/
+    [version]/
         [animal_name]/
             [animal_name]_coin.png [1.]
             [animal_name]_cooked.png [2.]
@@ -1207,7 +1187,11 @@ If you've answered no to 3, skip the following step.
 #### <div style={{ fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>Paddock Sign Texture</div>
 Let's add the paddock sign, this step should be fairly simple.
 
-You'll have to start with the block folder, because the paddock sign is on the block atlas:
+<Callout variant="info">
+    Paddock signs are only available for extinct animals.
+</Callout>
+
+The paddock sign lives on its own sign atlas, so it goes in a `signs/paddock` folder inside textures:
 ```
 [addon_name]/
     addon_data/
@@ -1218,18 +1202,9 @@ You'll have to start with the block folder, because the paddock sign is on the b
                 models/
                 travelers/
                 textures/
-                    block/
-```
-
-Let's now let's add the paddock sign to the designated folder:
-```
-...
-    textures/
-        block/
-            manmade/
-                other/
-                    paddock_sign/
-                        [animal_name].png
+                    signs/
+                        paddock/
+                            [animal_name].png
 ```
 As you can see this is very specific again, and this is because the paddock sign renderer references it.
 
@@ -1376,6 +1351,11 @@ That should be everything from the resources!
 </Callout>
 
 You are nearly there, it's just a few simple things now!
+
+<Callout variant="warning">
+    The folder names below are for 1.21.1. On 1.20.1 use the plural names: `advancements/`, `recipes/` and `tags/items/`.
+    On 1.20.1 the recipe `"result"` is just the item id string, e.g. `"result": "[addon_name]:[animal_name]_cooked"`.
+</Callout>
 
 Let's start with the advancements for the cooking recipes. You can skip this if you don't have meats.
 
@@ -1564,9 +1544,10 @@ Next we'll register our items into the relevant tags, these go here:
                 tags/
                     item/
                         carnivore_edible.json
+                        cooked_meats.json
                         fertilized_eggs.json
                         fossil.json
-                        dna.json
+                        [version]_tag.json
 ```
 
 <br>
@@ -1578,6 +1559,14 @@ Next we'll register our items into the relevant tags, these go here:
         "replace": false,
         "values": [
         "[addon_name]:[animal_name]_raw",
+        "[addon_name]:[animal_name]_cooked"
+        ]
+    }
+    ```
+    ```json !!tabs cooked_meats
+    {
+        "replace": false,
+        "values": [
         "[addon_name]:[animal_name]_cooked"
         ]
     }
@@ -1598,17 +1587,21 @@ Next we'll register our items into the relevant tags, these go here:
         ]
     }
     ```
-    ```json !!tabs dna
+    ```json !!tabs [version]_tag
     {
         "replace": false,
         "values": [
-        "[addon_name]:[animal_name]_coin"
+        "[addon_name]:[animal_name]_hatch_egg"
         ]
     }
     ```
 </CodeTabs>
 <Callout variant="info">
     Only add the tags relevant to your animal based on what you enabled in the items module.
+
+    `[version]_tag` (e.g. `jp1_tag.json`) is only for extinct animals.
+    For aquatic animals (`FISH`, `AQUATIC_REPTILE`, `AQUATIC_MAMMAL`) use `piscivore_edible` instead of `carnivore_edible`,
+    and `raw_fish` / `cooked_fish` instead of `cooked_meats`.
 </Callout>
 
 That's it, the whole guide!

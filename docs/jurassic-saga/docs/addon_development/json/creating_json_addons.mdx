@@ -1,5 +1,5 @@
 <Callout variant="info">
-    The last update on this page was on: 28th April 2026
+    The last update on this page was on: 28th October 2026
 </Callout>
 
 # Creating JSON Addons
@@ -62,11 +62,16 @@ To start off lets the generic structure.
     Adding an pack.png is optional, but it'd standout more.
 </Callout>
 
+<Callout variant="info">
+    `pack_format` depends on your Minecraft version. Use `48` for the data pack and `34` for the resource pack on 1.21.1,
+    and `15` for both on 1.20.1.
+</Callout>
+
 <CodeTabs>
     ```json !!tabs data/pack.mcmeta
     {
         "pack": {
-        "pack_format": 34,
+        "pack_format": 48,
         "description": "[your pack description]"
     }
     }
@@ -87,10 +92,9 @@ To start off lets the generic structure.
 
 Let's look at what you want to do;
 
-- [**Adding a new species**](guides/new_species)
-- [**Modifying an existing species**](guides/existing_modification)
-- [**Additional Paddock Signs**](guides/paddock_sign)
-- [**Additional Facility Signs**](guides/facility_sign)
+- [**Adding a new species**](new_species)
+- [**Modifying an existing species**](existing_modification)
+- [**Additional Paddock & Facility Signs**](signs)
 
 ---
 

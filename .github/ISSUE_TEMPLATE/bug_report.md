@@ -25,9 +25,8 @@ If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
  - Version: [e.g. 1.21.1]
- - Modloader: [Fabric/Neoforge]
+ - Modloader: [Forge/Neoforge]
  - Travelers Version:
- - Azure Version:
 
 **Additional context**
 Add any other context about the problem here.

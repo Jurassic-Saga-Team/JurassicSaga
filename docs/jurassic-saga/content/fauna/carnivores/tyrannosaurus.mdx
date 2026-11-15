@@ -4,10 +4,12 @@ id: jurassic-saga:tyrannosaurus
 icon: jurassic-saga:inventory/tyrannosaurus_coin
 
 history:
-  - version: 0.1
+  - version: '0.1'
+    date: null
     changes:
       - Added Tyrannosaurus
   - version: 0.1.3
+    date: null
     changes:
       - Fixed an issue where some of the textures didn't work properly (cyclops)
       - Reimplemented stalking to Tyrannosaurus
@@ -19,31 +21,47 @@ history:
   - version: 0.1.9
     date: 06.03.2026
     changes:
-      - Tyrannosaurus  Chaos Effect
----
+      - Tyrannosaurus Chaos Effect
 
+custom:
+    Health: "Adult 120 Health (x60 Hearts)"
+    Behavior: "Hostile"
+    Diet: "Carnivore"
+    Size: "17 Blocks Long, 7 Blocks Tall"
+    Drops: "Tyrannosaurus Raw Meat, Tyrannosaurus Remains"
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
+    Egg Type: "Ostrich Egg"
+    Time Period: "Late Cretaceous"
+    Achievement: "We Have A T-rex!"
+
+infobox:
+  title: Tyrannosaurus
+  inventory:
+    - jurassic-saga:inventory/tyrannosaurus_fossil_remains
+    - jurassic-saga:inventory/tyrannosaurus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_tyrannosaurus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_tyrannosaurus.png
+    - name: Baby
+      display: jurassic-saga:tabs/baby_tyrannosaurus.png
+    - name: River
+      display: jurassic-saga:tabs/river_tyrannosaurus.png
+    - name: Forest
+      display: jurassic-saga:tabs/forest_tyrannosaurus.png
+    - name: Cyclops
+      display: jurassic-saga:tabs/forest_secret_tyrannosaurus.png
+    - name: Chaos Effect
+      display: jurassic-saga:tabs/chaos_effect_tyrannosaurus.png
+---
 
 <Callout variant="info">
     The last update on this page was on: 26th June 2026 (v0.1.11.1)
 </Callout>
 
 # Tyrannosaurus rex
-
-<Asset location="jurassic-saga:inventory/tyrannosaurus_fossil_remains" width={48} height={48}/> <Asset location="jurassic-saga:inventory/tyrannosaurus_coin" width={48} height={48}/>
-
-| | |
-|---|---|
-| **Health** | Adult 120 Health (x60 Hearts) |
-| **Behavior** | Hostile |
-| **Diet** | Carnivore |
-| **Size** | 17 Blocks Long, 7 Blocks Tall |
-| **Drops** | Tyrannosaurus Raw Meat, Tyrannosaurus Remains |
-| **Breedable** | Not yet implemented |
-| **Obtained** | Fossil Revival |
-| **Egg Type** | Ostrich Egg |
-| **Time Period** | Late Cretaceous |
-| **Achievement** | We Have A T-rex! |
-
 
 Tyrannosaurus (meaning "tyrant lizard") was a massive theropod dinosaur that lived in **North America** during the **Late Cretaceous period**, around 73–66 million years ago.  
 It is one of the most famous dinosaurs, known for its enormous skull, powerful jaws, and bone-crushing bite force.  
@@ -360,10 +378,6 @@ Tyrannosaurus Chaos Effect Showcase
 - Tyrannosaurus lived closer in time to us than to the Stegosaurus!
 - A fully grown T-Rex can reach 7 to 8 tons on average, with some specimens being able to reach 9 tons! That's 3 tons more than the average African Elephant!
 - A Tyrannosaurus doesn't care if you offend its tiny arms, it'd eat you either way!
-
----
-
-## Trivia
 - The River cosmetic skin is a mixture of the novel description and Kenner's Electronic Tyrannosaurus<sup>[[10]](https://jurassicpark.fandom.com/wiki/Tyrannosaurus_rex/Novels#1995_Isla_Sorna_Expedition)</sup><sup>[[11]](https://jurassicpark.fandom.com/wiki/Electronic_Tyrannosaurus_rex)</sup>
 - The Forest cosmetic skin is based on the Tyrannosaurus design from the Dino Crisis series<sup>[[12]](https://dinocrisis.fandom.com/wiki/Tyrannosaurus)</sup>
 - Naming a Tyrannosaurus "Cyclop" through a nametag with the forest skin active will give you a special secret variant<sup>[[13]](https://dinocrisis.fandom.com/wiki/Tyrannosaurus#Noah's_Ark)</sup>
@@ -375,58 +389,3 @@ Tyrannosaurus Chaos Effect Showcase
 </Callout>
 
 ---
-
-## Variants
-
-<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(230px, 1fr))", gap: "14px", marginTop: "12px" }}>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/male_tyrannosaurus.png" width={220}/>
-
-**Male**
-
-  </div>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/female_tyrannosaurus.png" width={220}/>
-
-**Female**
-
-  </div>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/baby_tyrannosaurus.png" width={220}/>
-
-**Baby**
-
-  </div>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/river_tyrannosaurus.png" width={220}/>
-
-**River**
-
-  </div>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/forest_tyrannosaurus.png" width={220}/>
-
-**Forest**
-
-  </div>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/forest_secret_tyrannosaurus.png" width={220}/>
-
-**Cyclops**
-
-  </div>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/chaos_effect_tyrannosaurus.png" width={220}/>
-
-**Chaos Effect**
-
-  </div>
-
-</div>

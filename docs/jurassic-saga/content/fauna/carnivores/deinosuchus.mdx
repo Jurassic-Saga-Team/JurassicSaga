@@ -5,10 +5,33 @@ icon: jurassic-saga:inventory/deinosuchus_coin
 
 history:
   - version: 0.1.11
+    date: null
     changes:
       - Added Deinosuchus
----
 
+custom:
+    Health: "Adult 200 Health (x100 Hearts)"
+    Behavior: "Hostile"
+    Diet: "Piscivore"
+    Size: "12 Blocks Long, 1 Blocks Tall"
+    Drops: "Deinosuchus Raw Meat, Deinosuchus Remains"
+    Breedable: "Not yet implemented"
+    Obtained: "Fossil Revival"
+    Egg Type: "Alligator"
+    Time Period: "Late Cretaceous"
+    Achievement: "King of the Lakeside"
+
+infobox:
+  title: Deinosuchus
+  inventory:
+    - jurassic-saga:inventory/deinosuchus_fossil_remains
+    - jurassic-saga:inventory/deinosuchus_coin
+  tabs:
+    - name: Male
+      display: jurassic-saga:tabs/male_deinosuchus.png
+    - name: Female
+      display: jurassic-saga:tabs/female_deinosuchus.png
+---
 
 <Callout variant="danger">
     This creature is still not fully implemented, you must enable Experimental Features to be able get it. It's also
@@ -20,22 +43,6 @@ history:
 </Callout>
 
 # Deinosuchus
-
-<Asset location="jurassic-saga:inventory/deinosuchus_fossil_remains" width={48} height={48}/> <Asset location="jurassic-saga:inventory/deinosuchus_coin" width={48} height={48}/>
-
-| | |
-|---|---|
-| **Health** | Adult 200 Health (x100 Hearts) |
-| **Behavior** | Hostile |
-| **Diet** | Piscivore |
-| **Size** | 12 Blocks Long, 1 Blocks Tall |
-| **Drops** | Deinosuchus Raw Meat, Deinosuchus Remains |
-| **Breedable** | Not yet implemented |
-| **Obtained** | Fossil Revival |
-| **Egg Type** | Alligator |
-| **Time Period** | Late Cretaceous |
-| **Achievement** | King of the Lakeside |
-
 
 *Deinosuchus* was a colossal crocodylian from the **Late Cretaceous**, one of the largest predators of its ecosystem despite not being a dinosaur.
 It lurked in rivers, swamps, and coastal waters, ambushing anything unlucky enough to wander too close to the water's edge.
@@ -211,23 +218,3 @@ Deinosuchus Showcase
 </Callout>
 
 ---
-
-## Variants
-
-<div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(230px, 1fr))", gap: "14px", marginTop: "12px" }}>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/male_deinosuchus.png" width={220}/>
-
-**Male**
-
-  </div>
-
-  <div style={{ border: "1px solid rgba(128,128,128,0.35)", borderRadius: "10px", padding: "10px", background: "rgba(128,128,128,0.06)", textAlign: "center" }}>
-<Asset location="jurassic-saga:tabs/female_deinosuchus.png" width={220}/>
-
-**Female**
-
-  </div>
-
-</div>

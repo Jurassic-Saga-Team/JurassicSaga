@@ -10,1001 +10,775 @@
 </Callout>
 
 {/*
-  ==========================================================================
   HOW TO ADD A CREATURE
-
-  Copy one block below and fill in: NAME, ASSET, WIDTH/HEIGHT, PATH.
-  Keep the cards in alphabetical order.
-
-  !! STYLE KEYS MUST BE QUOTED !!
-  Write style={{"border": "1px solid red"}} - NOT style={{border: "1px solid red"}}.
-  The wiki sanitizer only keeps style properties whose key is a quoted string
-  literal; an unquoted key is parsed as an identifier and the property is
-  silently dropped, which flattens the grid into one colourless column.
-  A plain string style="..." is worse - it crashes the page (React needs an
-  object). Values must be quoted strings too, and only known CSS properties
-  survive: use "backgroundColor", not the "background" shorthand.
-
-  !! DO NOT RE-INDENT !!
-  Card <div>s and both [link] lines start at column 0, with a blank line
-  between cards. Indenting the [link] lines turns them into code blocks.
-
-  --- normal creature -------------------------------------------------------
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
-
-[<Asset location="jurassic-saga:index_images/NAME.webp" width={190} height={110}/>]($content/fauna/GROUP/NAME)
-
-  </div>
-
-[**Name**]($content/fauna/GROUP/NAME)
-
-</div>
-
-  --- status badge (optional) -----------------------------------------------
-  Put this just before the card's closing </div>, and change the card border.
-  Experimental -> border "2px solid #DBB600", color "#DBB600", EXPERIMENTAL
-  Not added    -> border "2px solid #e0533d", color "#e0533d", NOT ADDED
-
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
-  ==========================================================================
+  1. Find the matching letter section (the "---------- X ----------" comments) and copy any card block inside it (<div ...> down to </div>).
+  2. Paste it in alphabetical position and change the 4 things that differ:
+       - the image name (index_images/NAME.webp) and its width/height
+       - the page id after "@jurassic-saga:" (appears twice: image link + name link)
+       - the **Name** text
+  3. Status (optional): for experimental, change the border to "2px solid #DBB600" and add the badge line
+     from an existing experimental card. Same for not-added with #e0533d.
+  Keep style keys quoted, and keep the [link] lines at column 0 (indenting turns them into code blocks).
 */}
 
 <div style={{"display": "grid", "gridTemplateColumns": "repeat(auto-fill, minmax(200px, 1fr))", "gap": "14px", "marginTop": "16px"}}>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+{/* ---------- A ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/achillobator.webp" width={187} height={130}/>](@jurassic-saga:achillobator)
-
-  </div>
 
 [**Achillobator**](@jurassic-saga:achillobator)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/alamosaurus.webp" width={190} height={97}/>](@jurassic-saga:alamosaurus)
-
-  </div>
 
 [**Alamosaurus**](@jurassic-saga:alamosaurus)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/albertosaurus.webp" width={187} height={130}/>](@jurassic-saga:albertosaurus)
 
-  </div>
-
 [**Albertosaurus**](@jurassic-saga:albertosaurus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/alligator.webp" width={190} height={94}/>](@jurassic-saga:alligator)
-
-  </div>
 
 [**Alligator**](@jurassic-saga:alligator)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/alvarezsaurus.webp" width={190} height={94}/>](@jurassic-saga:alvarezsaurus)
 
-  </div>
-
 [**Alvarezsaurus**](@jurassic-saga:alvarezsaurus)
+
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/apatosaurus.webp" width={190} height={95}/>](@jurassic-saga:apatosaurus)
-
-  </div>
 
 [**Apatosaurus**](@jurassic-saga:apatosaurus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- B ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/bananogmius.webp" width={167} height={130}/>](@jurassic-saga:bananogmius)
-
-  </div>
 
 [**Bananogmius**](@jurassic-saga:bananogmius)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/baryonyx.webp" width={190} height={119}/>](@jurassic-saga:baryonyx)
-
-  </div>
 
 [**Baryonyx**](@jurassic-saga:baryonyx)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/basilisk.webp" width={190} height={94}/>](@jurassic-saga:basilisk)
-
-  </div>
 
 [**Basilisk**](@jurassic-saga:basilisk)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/boa_imperator.webp" width={190} height={92}/>](@jurassic-saga:boa_imperator)
-
-  </div>
 
 [**Boa Imperator**](@jurassic-saga:boa_imperator)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/bonito.webp" width={189} height={130}/>](@jurassic-saga:bonito)
-
-  </div>
 
 [**Bonito**](@jurassic-saga:bonito)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/brachiosaurus.webp" width={136} height={130}/>](@jurassic-saga:brachiosaurus)
-
-  </div>
 
 [**Brachiosaurus**](@jurassic-saga:brachiosaurus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/butterfly.webp" width={95} height={130}/>](@jurassic-saga:butterfly)
-
-  </div>
 
 [**Butterfly**](@jurassic-saga:butterfly)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- C ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/callovosaurus.webp" width={190} height={122}/>](@jurassic-saga:callovosaurus)
-
-  </div>
 
 [**Callovosaurus**](@jurassic-saga:callovosaurus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/cameroceras.webp" width={190} height={87}/>](@jurassic-saga:cameroceras)
-
-  </div>
 
 [**Cameroceras**](@jurassic-saga:cameroceras)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/carcharodontosaurus.webp" width={190} height={113}/>](@jurassic-saga:carcharodontosaurus)
 
-  </div>
-
 [**Carcharodontosaurus**](@jurassic-saga:carcharodontosaurus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/cearadactylus.webp" width={126} height={130}/>](@jurassic-saga:cearadactylus)
-
-  </div>
 
 [**Cearadactylus**](@jurassic-saga:cearadactylus)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/ceratosaurus.webp" width={190} height={114}/>](@jurassic-saga:ceratosaurus)
 
-  </div>
-
 [**Ceratosaurus**](@jurassic-saga:ceratosaurus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/coelophysis.webp" width={190} height={125}/>](@jurassic-saga:coelophysis)
 
-  </div>
-
 [**Coelophysis**](@jurassic-saga:coelophysis)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/coelurus.webp" width={182} height={130}/>](@jurassic-saga:coelurus)
-
-  </div>
 
 [**Coelurus**](@jurassic-saga:coelurus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/compsognathus.webp" width={190} height={121}/>](@jurassic-saga:compsognathus)
-
-  </div>
 
 [**Compsognathus**](@jurassic-saga:compsognathus)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/corythosaurus.webp" width={190} height={120}/>](@jurassic-saga:corythosaurus)
 
-  </div>
-
 [**Corythosaurus**](@jurassic-saga:corythosaurus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- D ---------- */}
+
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/deinonychus.webp" width={164} height={130}/>](@jurassic-saga:deinonychus)
 
-  </div>
-
 [**Deinonychus**](@jurassic-saga:deinonychus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/deinosuchus.webp" width={190} height={96}/>](@jurassic-saga:deinosuchus)
 
-  </div>
-
 [**Deinosuchus**](@jurassic-saga:deinosuchus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/dilophosaurus.webp" width={190} height={119}/>](@jurassic-saga:dilophosaurus)
-
-  </div>
 
 [**Dilophosaurus**](@jurassic-saga:dilophosaurus)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/dimorphodon.webp" width={178} height={130}/>](@jurassic-saga:dimorphodon)
 
-  </div>
-
 [**Dimorphodon**](@jurassic-saga:dimorphodon)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/dinilysia.webp" width={190} height={93}/>](@jurassic-saga:dinilysia)
 
-  </div>
-
 [**Dinilysia**](@jurassic-saga:dinilysia)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/diplomystus.webp" width={165} height={130}/>](@jurassic-saga:diplomystus)
-
-  </div>
 
 [**Diplomystus**](@jurassic-saga:diplomystus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/dracovenator.webp" width={190} height={127}/>](@jurassic-saga:dracovenator)
-
-  </div>
 
 [**Dracovenator**](@jurassic-saga:dracovenator)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/dryosaurus.webp" width={190} height={123}/>](@jurassic-saga:dryosaurus)
-
-  </div>
 
 [**Dryosaurus**](@jurassic-saga:dryosaurus)
 
 </div>
 
-<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- E ---------- */}
+
+<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/erythrosuchus.webp" width={190} height={106}/>](@jurassic-saga:erythrosuchus)
 
-  </div>
-
 [**Erythrosuchus**](@jurassic-saga:erythrosuchus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
 
 </div>
 
-<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/estemmenosuchus.webp" width={190} height={128}/>](@jurassic-saga:estemmenosuchus)
 
-  </div>
-
 [**Estemmenosuchus**](@jurassic-saga:estemmenosuchus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/euoplocephalus.webp" width={190} height={118}/>](@jurassic-saga:euoplocephalus)
-
-  </div>
 
 [**Euoplocephalus**](@jurassic-saga:euoplocephalus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- G ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/gallimimus.webp" width={161} height={130}/>](@jurassic-saga:gallimimus)
-
-  </div>
 
 [**Gallimimus**](@jurassic-saga:gallimimus)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/geosternbergia.webp" width={119} height={130}/>](@jurassic-saga:geosternbergia)
 
-  </div>
-
 [**Geosternbergia**](@jurassic-saga:geosternbergia)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/goat.webp" width={139} height={130}/>](@jurassic-saga:goat)
-
-  </div>
 
 [**Goat**](@jurassic-saga:goat)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/guapote.webp" width={141} height={130}/>](@jurassic-saga:guapote)
-
-  </div>
 
 [**Guapote**](@jurassic-saga:guapote)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- H ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/hadrosaurus.webp" width={190} height={129}/>](@jurassic-saga:hadrosaurus)
-
-  </div>
 
 [**Hadrosaurus**](@jurassic-saga:hadrosaurus)
 
 </div>
 
-<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/hainosaurus.webp" width={190} height={110}/>](@jurassic-saga:hainosaurus)
 
-  </div>
-
 [**Hainosaurus**](@jurassic-saga:hainosaurus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/herrerasaurus.webp" width={190} height={117}/>](@jurassic-saga:herrerasaurus)
-
-  </div>
 
 [**Herrerasaurus**](@jurassic-saga:herrerasaurus)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- I ---------- */}
+
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/feindominus.webp" width={190} height={118}/>](@jurassic-saga:indominus)
 
-  </div>
-
 [**Indominus**](@jurassic-saga:indominus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- L ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/lambeosaurus.webp" width={190} height={117}/>](@jurassic-saga:lambeosaurus)
-
-  </div>
 
 [**Lambeosaurus**](@jurassic-saga:lambeosaurus)
 
 </div>
 
-<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/leptoceratops.webp" width={187} height={130}/>](@jurassic-saga:leptoceratops)
 
-  </div>
-
 [**Leptoceratops**](@jurassic-saga:leptoceratops)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/ludodactylus.webp" width={100} height={130}/>](@jurassic-saga:ludodactylus)
-
-  </div>
 
 [**Ludodactylus**](@jurassic-saga:ludodactylus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- M ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/maiasaura.webp" width={190} height={124}/>](@jurassic-saga:maiasaura)
-
-  </div>
 
 [**Maiasaura**](@jurassic-saga:maiasaura)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/mamenchisaurus.webp" width={190} height={86}/>](@jurassic-saga:mamenchisaurus)
 
-  </div>
-
 [**Mamenchisaurus**](@jurassic-saga:mamenchisaurus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/mawsonia.webp" width={176} height={130}/>](@jurassic-saga:mawsonia)
 
-  </div>
-
 [**Mawsonia**](@jurassic-saga:mawsonia)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/arid_meganeura.webp" width={190} height={101}/>](@jurassic-saga:meganeura)
-
-  </div>
 
 [**Meganeura**](@jurassic-saga:meganeura)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/mesolimulus.webp" width={190} height={98}/>](@jurassic-saga:mesolimulus)
-
-  </div>
 
 [**Mesolimulus**](@jurassic-saga:mesolimulus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/metriacanthosaurus.webp" width={190} height={122}/>](@jurassic-saga:metriacanthosaurus)
-
-  </div>
 
 [**Metriacanthosaurus**](@jurassic-saga:metriacanthosaurus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/microceratus.webp" width={190} height={103}/>](@jurassic-saga:microceratus)
-
-  </div>
 
 [**Microceratus**](@jurassic-saga:microceratus)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/minmi.webp" width={190} height={113}/>](@jurassic-saga:minmi)
 
-  </div>
-
 [**Minmi**](@jurassic-saga:minmi)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:tabs/mosquito.png" width={130} height={130}/>](@jurassic-saga:mosquito)
-
-  </div>
 
 [**Mosquito**](@jurassic-saga:mosquito)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/mussaurus.webp" width={190} height={103}/>](@jurassic-saga:mussaurus)
 
-  </div>
-
 [**Mussaurus**](@jurassic-saga:mussaurus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- O ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/oreochima.webp" width={187} height={130}/>](@jurassic-saga:oreochima)
-
-  </div>
 
 [**Oreochima**](@jurassic-saga:oreochima)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/ornithosuchus.webp" width={190} height={114}/>](@jurassic-saga:ornithosuchus)
 
-  </div>
-
 [**Ornithosuchus**](@jurassic-saga:ornithosuchus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/orodromeus.webp" width={190} height={98}/>](@jurassic-saga:orodromeus)
 
-  </div>
-
 [**Orodromeus**](@jurassic-saga:orodromeus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/ostafrikasaurus.webp" width={190} height={112}/>](@jurassic-saga:ostafrikasaurus)
 
-  </div>
-
 [**Ostafrikasaurus**](@jurassic-saga:ostafrikasaurus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/ostrich.webp" width={112} height={130}/>](@jurassic-saga:ostrich)
 
-  </div>
-
-[**Ostrich**](@jurassic-saga:index_images/ostrich)
+[**Ostrich**](@jurassic-saga:ostrich)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/othnielia.webp" width={190} height={96}/>](@jurassic-saga:othnielia)
-
-  </div>
 
 [**Othnielia**](@jurassic-saga:othnielia)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- P ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/palaeoloxodon.webp" width={177} height={130}/>](@jurassic-saga:palaeoloxodon)
-
-  </div>
 
 [**Palaeoloxodon**](@jurassic-saga:palaeoloxodon)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/parasaurolophus.webp" width={190} height={126}/>](@jurassic-saga:parasaurolophus)
-
-  </div>
 
 [**Parasaurolophus**](@jurassic-saga:parasaurolophus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/parasuchus.webp" width={190} height={99}/>](@jurassic-saga:parasuchus)
-
-  </div>
 
 [**Parasuchus**](@jurassic-saga:parasuchus)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/postosuchus.webp" width={190} height={113}/>](@jurassic-saga:postosuchus)
 
-  </div>
-
 [**Postosuchus**](@jurassic-saga:postosuchus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/proceratosaurus.webp" width={190} height={118}/>](@jurassic-saga:proceratosaurus)
-
-  </div>
 
 [**Proceratosaurus**](@jurassic-saga:proceratosaurus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/procompsognathus.webp" width={190} height={120}/>](@jurassic-saga:procompsognathus)
-
-  </div>
 
 [**Procompsognathus**](@jurassic-saga:procompsognathus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/protoceratops.webp" width={166} height={130}/>](@jurassic-saga:protoceratops)
-
-  </div>
 
 [**Protoceratops**](@jurassic-saga:protoceratops)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- R ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/reed_frog.webp" width={130} height={130}/>](@jurassic-saga:reed_frog)
-
-  </div>
 
 [**Reed Frog**](@jurassic-saga:reed_frog)
 
 </div>
 
-<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/rhamphorhynchus.webp" width={130} height={130}/>](@jurassic-saga:rhamphorhynchus)
 
-  </div>
-
 [**Rhamphorhynchus**](@jurassic-saga:rhamphorhynchus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- S ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/segisaurus.webp" width={166} height={130}/>](@jurassic-saga:segisaurus)
-
-  </div>
 
 [**Segisaurus**](@jurassic-saga:segisaurus)
 
 </div>
 
-<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/smilodon.webp" width={147} height={130}/>](@jurassic-saga:smilodon)
 
-  </div>
-
 [**Smilodon**](@jurassic-saga:smilodon)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/spinosaurus.webp" width={190} height={119}/>](@jurassic-saga:spinosaurus)
 
-  </div>
-
 [**Spinosaurus**](@jurassic-saga:spinosaurus)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/stegosaurus.webp" width={174} height={130}/>](@jurassic-saga:stegosaurus)
-
-  </div>
 
 [**Stegosaurus**](@jurassic-saga:stegosaurus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/styracosaurus.webp" width={184} height={130}/>](@jurassic-saga:styracosaurus)
-
-  </div>
 
 [**Styracosaurus**](@jurassic-saga:styracosaurus)
 
 </div>
 
-<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- T ---------- */}
+
+<div style={{"border": "2px solid #DBB600", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/tapejara.webp" width={101} height={130}/>](@jurassic-saga:tapejara)
 
-  </div>
-
 [**Tapejara**](@jurassic-saga:tapejara)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#DBB600"}}>EXPERIMENTAL</div>
 
 </div>
 
-<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "2px solid #e0533d", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/king_titanomyrma.webp" width={161} height={130}/>](@jurassic-saga:titanomyrma)
 
-  </div>
-
 [**Titanomyrma**](@jurassic-saga:titanomyrma)
 
-  <div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
+<div style={{"fontSize": "11px", "fontWeight": "700", "letterSpacing": "0.06em", "color": "#e0533d"}}>NOT ADDED</div>
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/tree_frog.webp" width={171} height={130}/>](@jurassic-saga:tree_frog)
-
-  </div>
 
 [**Tree Frog**](@jurassic-saga:tree_frog)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/triceratops.webp" width={190} height={121}/>](@jurassic-saga:triceratops)
-
-  </div>
 
 [**Triceratops**](@jurassic-saga:triceratops)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/troodon.webp" width={190} height={103}/>](@jurassic-saga:troodon)
-
-  </div>
 
 [**Troodon**](@jurassic-saga:troodon)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/tylosaurus.webp" width={190} height={113}/>](@jurassic-saga:tylosaurus)
-
-  </div>
 
 [**Tylosaurus**](@jurassic-saga:tylosaurus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/tyrannosaurus.webp" width={190} height={120}/>](@jurassic-saga:tyrannosaurus)
-
-  </div>
 
 [**Tyrannosaurus**](@jurassic-saga:tyrannosaurus)
 
 </div>
 
-<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center"}}>
-  <div style={{"height": "130px", "display": "flex", "alignItems": "center", "justifyContent": "center"}}>
+
+{/* ---------- V ---------- */}
+
+<div style={{"border": "1px solid rgba(128,128,128,0.35)", "borderRadius": "10px", "padding": "10px 8px 12px", "backgroundColor": "rgba(128,128,128,0.06)", "textAlign": "center", "display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "space-between"}}>
 
 [<Asset location="jurassic-saga:index_images/velociraptor.webp" width={171} height={130}/>](@jurassic-saga:velociraptor)
-
-  </div>
 
 [**Velociraptor**](@jurassic-saga:velociraptor)
 
